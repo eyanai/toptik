@@ -1,0 +1,76 @@
+# Translation of Nav Menu Images in Serbian
+# This file is distributed under the same license as the Nav Menu Images package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Nav Menu Images\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/nav-menu-images\n"
+"POT-Creation-Date: 2013-03-26 16:01:26+00:00\n"
+"PO-Revision-Date: 2013-07-25 15:22+0200\n"
+"Last-Translator: Milan Dinić <milan@srpski.biz>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: inc/admin.php:83
+msgid ""
+"You need to set an image as a featured image to be able to use it as an menu "
+"item image"
+msgstr ""
+"אתה צריך להגדיר את תמונה כתמונה כוללת את כל תכונות כדי להיות מסוגל להשתמש בו "
+"כתמונת פריט תפריט"
+
+#: inc/admin.php:167 inc/walker.php:84
+msgid "Upload menu item image"
+msgstr "העלה תמונת פריט תפריט"
+
+#: inc/admin.php:174 inc/walker.php:75
+msgid "Change menu item image"
+msgstr "לשנות את התדמית של פריט בתפריט"
+
+#: inc/admin.php:176 inc/walker.php:80
+msgid "Remove menu item image"
+msgstr "הסר את תמונת פריט תפריט"
+
+#: inc/admin.php:221
+msgid "Used on hover?"
+msgstr "שימוש בריחוף ?(במעבר)"
+
+#: inc/admin.php:225
+msgid "Should this image be used on hover"
+msgstr "תמונה זו צריכה להיות בשימוש בריחוף"
+
+#: inc/admin.php:235
+msgid "Used when active?"
+msgstr "שימוש כאשר לינק פעיל"
+
+#: inc/admin.php:239
+msgid "Should this image be used when menu item is active"
+msgstr "תמונה זו צריכה להיות בשימוש כאשר הפריט בתפריט הוא פעיל"
+
+#: nav-menu-images.php:320
+msgid "Donate"
+msgstr "תרום"
+
+#. Plugin Name of the plugin/theme
+msgid "Nav Menu Images"
+msgstr "תמונת תפריט"
+
+#. Plugin URI of the plugin/theme
+msgid "http://blog.milandinic.com/wordpress/plugins/nav-menu-images/"
+msgstr "http://blog.milandinic.com/wordpress/plugins/nav-menu-images/"
+
+#. Description of the plugin/theme
+msgid "Display image as a menu content."
+msgstr "תצוגת תמונות כתוכן תפריט."
+
+#. Author of the plugin/theme
+msgid "Milan Dinić"
+msgstr "Милан Динић"
+
+#. Author URI of the plugin/theme
+msgid "http://blog.milandinic.com/"
+msgstr "http://www.milandinic.com/"

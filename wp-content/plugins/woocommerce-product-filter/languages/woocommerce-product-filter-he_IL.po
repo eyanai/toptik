@@ -1,0 +1,449 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Filter v1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-08-06 10:34+0200\n"
+"Last-Translator: wpadmin <farhadegza@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ woocommerce-product-filter
+#: helper.php:69 options.php:104 widget/category.php:69
+#: widget/nonh_category.php:67
+msgid "Category"
+msgstr "קטגוריה"
+
+# @ woocommerce-product-filter
+#: helper.php:70 options.php:105 widget/attribute.php:71
+#: widget/image_attribute.php:59
+msgid "Attribute"
+msgstr "מאפיינים"
+
+# @ woocommerce-product-filter
+#: helper.php:71 options.php:103
+msgid "All Shop Archive"
+msgstr "כל הארכיונים של החנות"
+
+# @ woocommerce-product-filter
+#: helper.php:72 woocommerce-product-filter.php:182
+msgid "Remove"
+msgstr "הסר"
+
+# @ woocommerce-product-filter
+#: helper.php:238
+msgid "Any category"
+msgstr "כל קטגוריה"
+
+# @ woocommerce-product-filter
+#: helper.php:276
+msgid "Rate"
+msgstr "דרג"
+
+# @ woocommerce-product-filter
+#: helper.php:277
+msgid "Price"
+msgstr "מחיר"
+
+# @ woocommerce-product-filter
+#: helper.php:278
+msgid "Weight"
+msgstr "משקל"
+
+# @ woocommerce-product-filter
+#: helper.php:279
+msgid "Total Sales"
+msgstr "סך מכירה"
+
+# @ woocommerce-product-filter
+#: helper.php:280
+msgid "Length"
+msgstr "אורך"
+
+# @ woocommerce-product-filter
+#: helper.php:281 widget/image_attribute.php:115
+msgid "Width"
+msgstr "רוחב"
+
+# @ woocommerce-product-filter
+#: helper.php:282 widget/image_attribute.php:123
+msgid "Height"
+msgstr "גובה"
+
+# @ woocommerce-product-filter
+#: html.php:224
+msgid "Upload Image"
+msgstr "העלה תמונה"
+
+# @ woocommerce-product-filter
+#: html.php:267
+msgid "Any"
+msgstr "כל"
+
+# @ woocommerce-product-filter
+#: html.php:332
+msgid "Any Category"
+msgstr "כל קטגוריה"
+
+# @ woocommerce-product-filter
+#: options.php:38
+msgid "Changes Saved."
+msgstr "שמור שינויים"
+
+# @ woocommerce-product-filter
+#: options.php:44
+msgid "Security check failed."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:49
+msgid ""
+"Woocommerce not found. Get a version at <a href=\"http://www.woothemes.com/"
+"woocommerce/\">woothemes</a>."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:70
+msgid "Woocommerce AJAX Product Filter"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:75
+msgid "Options"
+msgstr "אפשרויות"
+
+# @ woocommerce-product-filter
+#: options.php:78
+msgid "Loader Image"
+msgstr "טוען תמונה"
+
+# @ woocommerce-product-filter
+#: options.php:91
+msgid "Sidebars"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:93
+msgid "Create new sidebar"
+msgstr "צור סרגל צד חדש"
+
+# @ woocommerce-product-filter
+#: options.php:96 options.php:142 widget/attribute.php:96
+#: widget/category.php:82 widget/custom_slider_meta.php:79
+#: widget/image_attribute.php:94 widget/meta.php:89
+#: widget/nonh_category.php:80 widget/order.php:50 widget/reset.php:50
+msgid "Title"
+msgstr "כותרת"
+
+# @ woocommerce-product-filter
+#: options.php:100 options.php:143
+msgid "Visible To"
+msgstr "נראה ב:"
+
+# @ woocommerce-product-filter
+#: options.php:144
+msgid "Shortcode"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:145
+msgid "Action"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:152
+msgid "New Sidebar"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: options.php:164
+msgid "Save Changes"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:21
+msgid "Product Filter by Attribute"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:22
+msgid ""
+"WooCommerce Product Filter by Attribute. By using this widget you can filter "
+"products by attributes."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:58 widget/category.php:57
+#: widget/custom_slider_meta.php:57 widget/meta.php:57
+#: widget/nonh_category.php:56
+msgid "Display Type"
+msgstr "הצג סוג"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:64 widget/category.php:63 widget/nonh_category.php:62
+msgid "List"
+msgstr "רשימה"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:65 widget/category.php:64
+msgid "Dropdown"
+msgstr "רשימת בחירה"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:66 widget/custom_slider_meta.php:63 widget/meta.php:63
+msgid "Slider"
+msgstr "סליידר"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:106 widget/category.php:92
+#: widget/custom_slider_meta.php:89 widget/image_attribute.php:104
+#: widget/meta.php:99 widget/nonh_category.php:90 widget/order.php:60
+#: widget/reset.php:60
+msgid "Sub Title"
+msgstr "כותרת משנה"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:116 widget/image_attribute.php:83
+#: widget/nonh_category.php:100
+msgid "Query Type"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:122 widget/image_attribute.php:89
+#: widget/nonh_category.php:106
+msgid "OR"
+msgstr "או"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:123 widget/image_attribute.php:90
+#: widget/nonh_category.php:107
+msgid "AND"
+msgstr "ו"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:127 widget/custom_slider_meta.php:99
+#: widget/meta.php:109
+msgid "Range Template"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:137 widget/custom_slider_meta.php:109
+#: widget/meta.php:119
+msgid "Minimum Value"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:145 widget/custom_slider_meta.php:117
+#: widget/meta.php:127
+msgid "Maximum Value"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:154 widget/custom_slider_meta.php:126
+#: widget/meta.php:136
+msgid "Step"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:171 widget/category.php:120
+#: widget/custom_slider_meta.php:143 widget/image_attribute.php:173
+#: widget/meta.php:153 widget/nonh_category.php:139 widget/order.php:78
+#: widget/reset.php:78
+msgid "Print Widget Opener"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:182 widget/category.php:131
+#: widget/custom_slider_meta.php:154 widget/image_attribute.php:184
+#: widget/meta.php:164 widget/nonh_category.php:150 widget/order.php:89
+#: widget/reset.php:88
+msgid "Print Widget Closer"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/category.php:21
+msgid "Product Filter by Category"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/meta.php:21
+msgid "Product Filter by Meta"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/meta.php:22
+msgid ""
+"WooCommerce Product Filter by Meta. By using this widget you can filter "
+"products by WordPress post meta."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/meta.php:68
+msgid "Meta"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: woocommerce-product-filter.php:68
+msgid "Woocommerce Product Filter"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: woocommerce-product-filter.php:68
+msgid "Product Filter"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: woocommerce-product-filter.php:180
+msgid "Create Sidebar"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: woocommerce-product-filter.php:181
+msgid "Cancel"
+msgstr "בטל"
+
+# @ woocommerce-product-filter
+#: widget/attribute.php:185 widget/category.php:134
+#: widget/custom_slider_meta.php:157 widget/image_attribute.php:198
+#: widget/meta.php:167 widget/nonh_category.php:153 widget/order.php:92
+#: widget/reset.php:91
+msgid "Custom CSS Class"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/reset.php:21
+msgid "Product Filter Reset Button"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/reset.php:22
+msgid ""
+"WooCommerce Product Filter reset button. By using this widget users can "
+"reset filters by a click."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: html.php:365
+msgid "Default sorting"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: html.php:366
+msgid "Sort by popularity"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: html.php:367
+msgid "Sort by average rating"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: html.php:368
+msgid "Sort by newness"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: html.php:369
+msgid "Sort by price: low to high"
+msgstr "סנן לפי מחיר: מנמוך לגבוה"
+
+# @ woocommerce-product-filter
+#: html.php:370
+msgid "Sort by price: high to low"
+msgstr "סנן לפי מחיר: מגבוה לנמוך"
+
+# @ woocommerce-product-filter
+#: options.php:84
+msgid "Display No Products Message"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/category.php:22
+msgid ""
+"Woocommerce Product Filter by hierarchical Category. By using this widget "
+"you can filter products by categories."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/image_attribute.php:21
+msgid "Product Filter by Image Attribute"
+msgstr "סינון לפי תמונת מאפיינים"
+
+# @ woocommerce-product-filter
+#: widget/image_attribute.php:22
+msgid ""
+"WooCommerce Product Filter by Image Attribute. By using this widget you can "
+"filter products by images."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/image_attribute.php:195
+msgid "Use Theme Toggle Effect"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/nonh_category.php:21
+msgid "Product Filter by multiple Categories"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/order.php:21
+msgid "Product Filter Order"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: woocommerce-product-filter.php:168
+msgid "No products found which match your selection."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/nonh_category.php:22
+msgid ""
+"Woocommerce Product Filter by Multiple Categories. By using this widget you "
+"can filter products by multiple categories at the same time (Non "
+"Hierarchical)."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/order.php:22
+msgid ""
+"WooCommerce Product Filter Change Order Widget. By using this widget you can "
+"change products order by multiple values."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/category.php:109 widget/nonh_category.php:118
+msgid "Hide Empty"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/nonh_category.php:128
+msgid "Hide On Categories"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/custom_slider_meta.php:21
+msgid "Product Filter by Custom Meta"
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/custom_slider_meta.php:22
+msgid ""
+"WooCommerce Product Filter by Custom Meta. By using this widget you can "
+"filter products by non-native WooCommerce product meta."
+msgstr ""
+
+# @ woocommerce-product-filter
+#: widget/custom_slider_meta.php:68
+msgid "Custom Meta Name"
+msgstr ""

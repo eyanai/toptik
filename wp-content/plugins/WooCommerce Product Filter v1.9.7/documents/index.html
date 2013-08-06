@@ -1,0 +1,510 @@
+<!doctfype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Woocommerce AJAX Product Filter</title>
+	
+	<meta name="description" content="that Thank you for purchasing my plugin. If you have any questions that are beyond the scope of this help file, please feel free to contact. Thanks so much!">
+	<meta name="author" content="Farhad Ahmadi">
+	<meta name="copyright" content="Farhad Ahmadi">
+	<meta name="generator" content="Documenter v1.6 http://rxa.li/documenter">
+	<meta name="date" content="2013-04-12T00:00:00+01:00">
+	
+	<link rel="stylesheet" href="css/documenter_style.css" media="all">
+
+	<script src="js/jquery.1.6.4.js"></script>
+	
+	<script src="js/jquery.scrollTo-1.4.2-min.js"></script>
+	<script src="js/jquery.easing.js"></script>
+	
+	
+	<script>document.createElement('section');var duration=500,easing='swing';</script>
+	<script src="js/script.js"></script>
+	
+	<style>
+		html{background-color:#FFFFFF;color:#383838;}
+		::-moz-selection{background:#444444;color:#DDDDDD;}
+		::selection{background:#444444;color:#DDDDDD;}
+		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_1.png);}
+		a{color:#0000FF;}
+		hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
+		#documenter_sidebar, #documenter_sidebar ol a{background-color:#DDDDDD;color:#222222;}
+		#documenter_sidebar ol a{-webkit-text-shadow:1px 1px 0px #EEEEEE;-moz-text-shadow:1px 1px 0px #EEEEEE;text-shadow:1px 1px 0px #EEEEEE;}
+		#documenter_sidebar ol{border-top:1px solid #AAAAAA;}
+		#documenter_sidebar ol a{border-top:1px solid #EEEEEE;border-bottom:1px solid #AAAAAA;color:#444444;}
+		#documenter_sidebar ol a:hover{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_sidebar ol a.current{background:#444444;color:#DDDDDD;border-top:1px solid #444444;}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+</head>
+<body>
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="documenter_logo"></a>
+		<ol id="documenter_nav">
+			<li><a class="current" href="#documenter_cover">Start</a></li>
+			<li><a href="#features">Features</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#widgets">Widgets</a></li>
+			<li><a href="#widgets_options">Widgets Options</a></li>
+			<li><a href="#options">options</a></li>
+			<li><a href="#shortcode_function">Shortcode and Function</a></li>
+			<li><a href="#ajax_callback">AJAX Callback</a></li>
+			<li><a href="#notes">Notes</a></li>
+
+		</ol>
+		<div id="documenter_copyright">Copyright Farhad Ahmadi 2013<br>
+		made with the <a href="http://rxa.li/documenter">Documenter v1.6</a> 
+		</div>
+	</div>
+	<div id="documenter_content">
+	<section id="documenter_cover"><h1>Woocommerce AJAX Product Filter</h1><h2>Advanced Woocommerce product filtering by category, attribute, meta</h2><hr><ul><li>Created: 12/04/2013</li><li>latest Update: 09/07/2013</li><li>By: Farhad Ahmadi</li><li><a href=""></a></li><li>Email: <a href="mailto:&#97;&#104;&#109;&#46;&#102;&#97;&#114;&#104;&#97;&#100;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#97;&#104;&#109;&#46;&#102;&#97;&#114;&#104;&#97;&#100;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li></ul>
+	
+	<p>
+	<b>WooCommerce AJAX Product Filter</b> (or WooCommerce AJAX Layered Navigation) adds advanced product filtering to your WooCommerce shop. It provides rich Interface for users to filter products by <b>custom attributes</b>, <b>hierarchical categories</b> and <b>custom post meta fields</b> at realtime. 
+	</p>
+	<p>You can build your own store advanced filters with drag and drop in a minute. There is no limit on the number of filters you add to shop; so customers can filter products by nested categories, price, dimension, size, color, weight, rate, sales count,... unlimited more product attributes in three types of UI: Slider, Drop Down and checkbox list. Filters can even be applied on product search results. So you can search and apply filters on your products results.
+	</p>
+	<p>
+	Filter results are loaded via <b>AJAX</b> at realtime but don't worry about <b>SEO</b> Woo AJAX Product Filter uses HTML5 PushState and for old browsers HashTag fallback.
+	</p>
+	This plugin is best for stores with a lot of products and items or multiple product attributes.
+	
+	<p>Thank you for purchasing my plugin. If you have any questions that are beyond the scope of this help file, please feel free to <a href="http://codecanyon.net/user/codenegar?ref=codenegar">contact</a>. Thanks so much!</p></section><section id="features">
+	<h3>Features</h3><hr class="notop">
+<p>&nbsp;
+	</p>
+<ul>
+<li>
+	<strong>Add Unlimited Filters</strong>: There is no limitation, let the customers filter all the way through their needs.
+</li>
+<li>
+	<strong>Three Types of UI</strong>: Slider, Drop Down & Checkbox (Toggle effect).
+</li>
+<li>
+	<strong>Reset All Filters</strong>: Users can reset all filters to default by a single click.
+</li>
+<li>
+	<strong>Merge Sidebars</strong>: Merge sidebars to save space of shop sidebar.
+</li>
+<li>
+	<strong>Filter by Color, Pattern and Image</strong>: Assign an image for each attribute so users can see image instead of text for products filtering.
+</li>
+<li>
+	<strong>Search Engine Optimized (SEO friendly)</strong>: Filtered products  are indexable and users can share links of filtered results.
+</li>
+<li>
+	<strong>HTML5 PushState</strong> & <strong>HTML4 HashTag Fallback</strong>: Best experience in modern browsers beside supporting old browsers.
+</li>
+<li>
+	<strong>Cross Browser Compatibility</strong>:  AJAX loading, PushState,... has been test with all major browsers old versions to latest versions.
+</li>
+<li>
+	<strong>Unlimited Filter for Specific Attributes archive/Categories archive</strong>: If you sell different products with different attributes this feature is for you. By using this feature selected categories or selected attributes can have their own filters without affecting the rest of the shop.
+</li>
+<li>
+	<strong>Sidebar, Shortcode and PHP function generator</strong>
+</li>
+<li>
+	<strong>AJAX Loading Results</strong>: Users can see filtered results at real time.
+</li>
+<li>
+	<strong>Sort by AJAX</strong>: Sort and change order of products by 6 parameters and see results at real time.
+</li>
+<li>
+	<strong>Drag and Drop Filter Building</strong>: Shop admin can drag and drop unlimited widgets and build filters in a minute, each widget with its own different settings.
+</li>
+<li>
+	<strong>Auto Blends With Shop Theme</strong>: Automatically adapts with your shop theme styling so you need no styling.
+</li>
+<li>
+	<strong>Hierarchical Category Navigation</strong>: Users can navigate through hierarchical categories; eg: Clothing > Women > Outwear > Jacket.
+</li>
+<li>
+	<strong>Multiple Categories/Attributes Filtering</strong>: Users can filter product by selecting multiple categories and multiple attributes at the same time (Supports "AND", "OR" Parameters)
+</li>
+
+<li>
+<strong>Built with WordPress Best Practices</strong> If a task has multiple approaches the best one is selected. E.g: Product Filtering functionality only activates at WooCommerce area not everywhere, this makes the plugin fast and small footprint.
+</li>
+</ul>
+</section>
+<section id="installation">
+	<h3>Installation</h3><hr class="notop">
+<ol>
+	<li>
+		<span style="color: rgb(68, 68, 68); font-family: sans-serif; font-size: 13px; line-height: 22px;">Unzip the downloaded file from CodeCanyon, This file contains the actual plugin: <b>woocommerce-product-filter-plugin.zip</b></span>
+	</li>
+	<li>
+		<span style="color: rgb(68, 68, 68); font-family: sans-serif; font-size: 13px; line-height: 22px;">Open wordpress administration area and choose from plugins menu <b>"Add New"</b></span>
+	</li>
+	<img src="assets/images/install_1.png" style="margin-left:10px;" />
+	<li>
+		<span style="color: rgb(68, 68, 68); font-family: sans-serif; font-size: 13px; line-height: 22px;">In the Add New Plugin section click on <b>upload</b></span>
+	</li>
+	<img src="assets/images/install_2.png" style="margin-left:10px;" />
+	<li>
+		<span style="color: rgb(68, 68, 68); font-family: sans-serif; font-size: 13px; line-height: 22px;">In the upload section browse for <b> woocommerce-product-filter-plugin.zip</b> and click on <b>"Install Now"</b> button:</span>
+	</li>
+	<img src="assets/images/install_3.png" style="margin-left:10px;" />
+	<li>
+		<span style="color: rgb(68, 68, 68); font-family: sans-serif; font-size: 13px; line-height: 22px;">Wait to complete plugin installation, then click <b>Activate Plugin</b>
+	</li>
+		<img src="assets/images/install_4.png" style="margin-left:10px;" />
+</ol>
+</section>
+<section id="widgets">
+	<h3>Widgets</h3><hr class="notop">
+<p>
+	After installation, widgets are ready to use. "Woocommerce AJAX Product Filter" installs 8 widgets:
+	<br><img src="assets/images/widgets.png" style="margin-left:10px;" />
+	<ul>
+	<li>
+	<b>Product Filter by Attribute</b>: <br><br>
+	By using this widget you can filter products by attributes. Each shop has its own different attributes,
+	WooCommerce products attributes are listed in:<br>
+	WordPress admin > Products > Attributes
+	<br><img src="assets/images/attributes.png" style="margin:10px;" />
+	</li>
+	<li>
+	<b>Product Filter by Image Attribute</b>: <br><br>
+	By using this widget you can filter products by images instead of text. If you want to filter by color just create a small image filled with color and use this widget.,
+	WooCommerce products attributes are listed in:<br>
+	WordPress admin > Products > Attributes
+	</li>
+	<li>
+	<b>Product Filter by Category</b>: <br><br>
+	By using this widget you can filter products by categories. Each shop has its own different categories and sub-categories,
+	WooCommerce products categories are listed in:<br>
+	WordPress admin > Products > Categories
+	<br><img src="assets/images/categories.png" style="margin:10px;" />
+	</li>
+	<li>
+	<b>Product Filter by Multipe Categories</b>: <br><br>
+	By using this widget you can filter products by multiple categories the same time (Non Hierarchical).
+	WooCommerce products categories are listed in:<br>
+	WordPress admin > Products > Categories
+	</li>
+	<li>
+	<b>Product Filter by Meta</b>:<br><br>
+	By using this widget you can filter products by WordPress post meta. Currently supported self-explanatory metas are:
+	<ul>
+	<li>Rate</li>
+	<li>Price</li>
+	<li>Weight</li>
+	<li>Total Sales</li>
+	<li>Length</li>
+	<li>Width</li>
+	<li>Height</li>
+	</ul>
+	</li>
+	<br>
+	<li>
+	<b>Product Filter by Custom Meta</b>:<br><br>
+	WooCommerce Product Filter by Custom Meta. By using this widget you can filter products by non-native WooCommerce product meta. <br>
+	It supports range slider UI. You need to enter the custom meta name into widget options.
+	</li>
+	<br>
+	<li>
+	<b>Product Filter Reset Button</b>:<br><br>
+	As the name indicates, this widget enables users to reset all filters with a click.
+	</li>
+	<li>
+	<b>Product Filter Order</b>:<br><br>
+	By using this widget you can change products order by multiple values (using AJAX).
+	</li>
+	</ul>
+</p>
+</section>
+<section id="widgets_options">
+<h3>Widgets Options</h3><hr class="notop">
+<p>
+<br><img src="assets/images/widget_attr.png" style="float: right;;" />
+	Widgets have some common settings:
+	<ul>
+	<li>
+	<b>Display Type</b>: Select the type of user interface for the filters. There are three types of UI available:
+		<ul>
+		<li>
+		<b>Slider</b>: Lets you narrow down the list of shown products by selecting minimum and maximum amount.
+		</li>
+		<li>
+		<b>List</b>: Lets you select one or more item to narrow down the list of shown products.
+		</li>
+		<li>
+		<b>Dropdown</b>: Lets you select one item from a list to narrow down the list of shown products.
+		</li>
+		</ul>
+	</li>
+	<br/>
+	<li>
+		<b>Title</b>: The main title for widget.
+	</li>
+	<br/>
+	<li>
+		<b>Sub Title</b>: The title used for current filter.
+	</li>
+	<br/>
+	<li>
+		<b>Query Type</b>: Defines how multiple selections are mixed.
+		<ul>
+		<li>
+			<b>AND</b>: If a user selects two or more attributes, only products with match both attributes will be returned.
+		</li>
+		<li>
+			<b>OR</b>: If a user selects two or more attributes, products which match either attribute will be returned.
+		</li>
+		</ul>
+	</li>
+	<br/>
+	<li>
+		<b>Range Template</b>: In slider filter, this template is used to display minimum, maximum range of selected amounts
+		<ul>
+		<li>
+			<b>%s</b> means selected minimum value
+		</li>
+		
+		<li>
+			<b>%e</b> means selected maximum value
+		</li>
+		
+		</ul>
+		
+	</li>
+	<br/>
+	<li>
+		<b>Step</b>: In slider filter, determines the size or amount of each interval or step the slider takes between the min and max
+	</li>
+	<br/>
+	<li>
+		<b>Widget open/close</b>: To save some space between filters you can control opening and closing wisely. You can group filters by printing first opener and printing last closer.
+		<ul>
+		<li>
+		<b>Print Widget Opener</b>: Check this item to pring HTML code of widget opening.
+		</li>
+		<li>
+		 <b>Print Widget Closer</b>: Check this item to pring HTML code of widget closing.
+		</li>
+		</ul>
+	</li>
+	<br/>
+	<li>
+		<b>Minimum Value</b>: The minimum value of the slider
+	</li>
+	<li>
+		<b>Maximum Value</b>: The maximum value of the slider
+	</li>
+	<br/>
+	</ul>
+</p>
+<br/> 
+<br/> 
+<br/>
+<ul>
+	
+<section id="options">
+	<h3>options</h3><hr class="notop">
+	To access options and configurations open WordPress administration area and choose from Settings menu <b>"Product Filter"</b><br/><br/>
+	<img src="assets/images/options.png" style="margin-left:10px;" /><br/>
+	<img src="assets/images/options1.png" style="margin-left:10px;" /><br/>
+	<ul>
+	<li>
+		<b>Loader Image</b>: Customize loading GIF animation. <br/> 
+	</li>
+	<br/>
+	<li>
+		<b>Display No Products Message:</b>: Some WooCommerce themes don't provide "No Products" action, Enabling this option fixes most of them. <br/> 
+	</li>
+	<br/>
+	<li>
+		<b>Sidebars</b>: By using this option you can generate unlimited sidebars and shortcodes. It's very useful tool if you want to:<br/>
+		<ul>
+		<li>
+		Get shortcodes or PHP functions.
+		</li>
+		<li>
+		Use filters out of sidebar.
+		</li>
+		<li>
+		Sell different items, with different attributes.
+		</li>
+		<li>
+		Display certain filters at custom places of your shop.
+		</li>
+		</ul>
+	</li>
+	By clicking <b>New Sidebar</b> options appears:<br>
+	<img src="assets/images/new_sidebar.png" style="margin-left:10px;" /><br/><br/>
+	<b>New Sidebar</b> let's you choose where sidebar (and it's filters) is displayed.<br/>
+	<ul>
+	<li>
+		<b>All Shop Archive</b>: Dispalys sidebar in main shop archive, Shop tags and shop categories.
+	</li>
+	<li>
+	<b>Category</b>: Dispalys sidebar only in shop categories, you can select multiple categories to dispaly in.
+	</li>
+	<li>
+	<b>Attribute</b>: Dispalys sidebar only in shop attributes, you can select multiple or specific attributes to dispaly in.
+	</li>
+	</ul>
+	<p class="info">
+	If you select no categories / no attributes sidebar is dispalyed in all categories / all attributes.
+	</p>
+	</ul>
+</section>
+<section id="shortcode_function">
+<h3>Shortcode and Function</h3><hr class="notop">
+<p>
+<ul>
+	<li>
+		Shortcode and PHP functions are generated by <a href="#!/options"> sidebar option</a><br/> 
+	</li>
+	<p class="info">
+	A shortcode is a WordPress-specific code that lets you do things with very little effort.<br/> The usage is pretty simple; put shortcode inside a post, page or..., the selected filters appears to users.</span>
+	</p>
+	<li>
+		Copy sidebar generated shortcodes and PHP functions and use it.
+	</li>
+	<img src="assets/images/sample_sidebar.png" style="margin-left:10px;" /><br/>
+	<br/> 
+	
+	<p class="info">
+	By installing this plugin you can use shortcode inside WordPress native "text widget".
+	<img src="assets/images/text_widget.png" style="margin-left:10px;" /><br/>
+	</p>
+</ul>
+<p class="warning">
+	To make shortcode and function work, you should go to WordPress admin &gt;&nbsp;<span style="color: rgb(32, 32, 32); font-family: 'Lucida Grande', Arial, Helvetica, sans-serif; line-height: 20px;">Appearance &gt; Widgets page and add Filters to <span style="color: rgb(32, 32, 32); font-family: 'Lucida Grande', Arial, Helvetica, sans-serif; line-height: 20px;"></span>generated sidebars</span><span style="color: rgb(32, 32, 32); font-family: 'Lucida Grande', Arial, Helvetica, sans-serif; line-height: 20px;">.</span>
+</p>
+<p class="warning">
+	If you want to use shortcode at sidebar make sure that you put it at your theme sidebars not this plugin generated sidebars.
+</p>
+</section>
+<section id="ajax_callback">
+<h3>AJAX Callback</h3><hr class="notop">
+<p>
+<ul>
+	<p class="warning">
+	This section is for advanced users. If you don't know what is this section for or don't know what are you doing; Get help from a developer or freelancer or a friend.
+	</p>
+	<p>
+	<ul>
+	
+	<li>Before AJAX request:</li>
+	<p>	Define a JavaScript function and name it <strong>wcsl_before_ajax</strong> E.G:</p>
+	<pre class="js">
+	function wcsl_before_ajax(){
+		alert("ajax request is starting");
+	}
+	</pre>
+	<strong>wcsl_before_ajax</strong> will be fired before every AJAX request. Note that wcsl_before_ajax function is going to be asynchronous.
+	<br><br>
+	
+	<li>AJAX request successfully completed:</li>
+	<p>	Define a JavaScript function and name it <strong>wcsl_ajax_done</strong> E.G:</p>
+	<pre class="js">
+	function wcsl_ajax_done(){
+		alert("successful request");
+	}
+	</pre>
+	<strong>wcsl_ajax_done</strong> will be fired after a successful AJAX request.
+	<br><br>
+	
+	
+	<li>AJAX request failed: <strong>wcsl_ajax_fail</strong></li>
+	<p>	Define a JavaScript function and name it <strong>wcsl_ajax_fail</strong> E.G:</p>
+	<pre class="js">
+	function wcsl_ajax_fail(){
+		alert("request failed.");
+	}
+	</pre>
+	<strong>wcsl_ajax_fail</strong> will be fired when AJAX request fails to complete.
+	<br><br>
+	
+	
+	<li>An AJAX request fired(Always): <strong>wcsl_after_ajax</strong></li>
+	<p>	Define a JavaScript function and name it <strong>wcsl_after_ajax</strong> E.G:</p>
+	<pre class="js">
+	function wcsl_after_ajax(){
+		alert("after ajax request.");
+	}
+	</pre>
+	<strong>wcsl_after_ajax</strong> will be fired after each AJAX request (done or fail).
+	<br><br>
+	
+	<li>Update custom theme areas: <strong>wcsl_on_update</strong></li>
+	<p>	Define a JavaScript function and name it <strong>wcsl_on_update</strong> E.G:</p>
+	<pre class="js">
+	function wcsl_on_update(){
+		var my_areas = new Array();
+		my_areas[0] = "p.woocommerce-result-count";
+		return my_areas;
+	}
+	</pre>
+	<strong>wcsl_on_update</strong> should return an array of jQuery selectors. Each array item is proccessed as a jQuery selector and will be updated on each AJAX request <br><br>
+	Another example: Some themes don't use WordPress pagination API and use their custom libraries so it's possible that pagination doesn't get updated on AJAX request: <br>
+	<pre class="js">
+	function wcsl_on_update(){
+		var my_areas = new Array();
+		my_areas[0] = "div.woo-pagination";
+		return my_areas;
+	}
+	</pre>
+
+	<br><br>
+	</ul>
+	<div class="info">
+	You need to put your Javascript function somewhere inside your theme. It can be in any <strong>.js</strong> file that is included into WooCommerce area.
+	</div>
+	<br>Possible usages: <br>
+	<ul>
+	<li>Scroll page to top after a successful AJAX request.</li>
+	<li>Shorten products descriptions after a successful AJAX request.</li>
+	<li>Pushing a track event to analytics website after an AJAX request.</li>
+	<li>Hiding products' images loading indicator after a successful AJAX request.</li>
+	<li>Stopping AJAX loading UI and displaying a message after a failed AJAX request.</li>
+	<li>Update custom dynamic widget on each AJAX request.</li>
+	<li>Update and fix missing parts of each refresh.</li>
+	<li>...</li>
+	</ul>
+	</p>
+	
+</section>
+<section id="notes">
+	<h3>notes</h3><hr class="notop">
+	<ul>
+	<li>
+		This plugin uses your WooCommerce installation templates to generate UI of filters, so filters are blended as a part of themes nicely.
+	</li>
+	<br/>
+	<li>
+		DropDown and Checkbox list filters use "WooCommerce Layered Nav" templates.
+	</li>
+	<br/>
+	<li>
+		Slider filters use "WooCommerce Price Filter" templates.
+	</li>
+	<br/>
+	<li>
+		To blend all filters to theme, don't group sliders with DropDowns and checkbox lists.
+	</li>
+	<br/>
+	<li>
+		I have tested this plugin with my archive available WooCommerce themes, but there may be cases which needs some additional styling. If you need help let me know.
+	</li>
+	<br/>
+	<li>
+		You can change any string or text that used in this plugin. Check <a href="http://wordpress.stackexchange.com/questions/57219/how-to-translate-a-plugin-via-po-mo/57243#57243">this tutorial</a> for more information. 
+	</li>
+	<br/>
+	</ul>
+</section>
+
+	</div>
+</body>
+</html>
