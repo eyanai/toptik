@@ -39,7 +39,7 @@ if ( ! $product->is_purchasable() ) return;
 	 			) );
 	 	?>
 
-	 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
+	 	<button type="submit" class="single_add_to_cart_button button alt" id="toptikcart"><?php echo apply_filters('single_add_to_cart_text', __( 'Add to cart', 'woocommerce' ), $product->product_type); ?></button>
 
 	 	<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 

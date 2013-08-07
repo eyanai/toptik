@@ -583,3 +583,39 @@ color: #fff;
 	margin-right: 10px;
 
 }
+.images{
+	position:relative
+}
+.woocommerce-main-image.zoom {
+float: right;
+width: 333px;
+position: absolute;
+right: 0;
+top: 45px;
+}
+.variations_button ,.cart{
+width: 270px;
+height: 30px;
+padding: 7px;
+border: solid 1px #b4b4b4;
+border-radius: 30px;
+position:relative;
+}
+#toptikcart{
+background-image:url(../images/addtocart.png) !important;
+background-repeat:no-repeat;
+width: 239px;
+border: none;
+position: absolute;
+height: 48px;
+text-align: center;
+color: #01afe4;
+font-size: 20px;
+top: -1px;
+right: 84px;
+padding: 0;
+margin: 0;
+}
+#toptikcart:hover{
+	opacity:.85;
+}

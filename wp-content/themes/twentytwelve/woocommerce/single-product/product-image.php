@@ -20,10 +20,10 @@ global $post, $woocommerce, $product;
 			<?php 
 				$calories = woocommerce_get_product_terms( $product->id, 'pa_סידרה', 'names' );
 				if($calories){
-				echo "<span class=\"groop\"><h2>סידרה: </h2>";
+				echo "<span class=\"groop\"><h2> סידרה: </h2> ";
 				foreach ($calories as $cat)
 					  {
-					 echo $cat;
+					 echo " ". $cat;
 					  }	
 				echo "</span>";
 				}
