@@ -66,7 +66,8 @@ class WC_ShareDaddy extends WC_Integration {
      */
     function sharedaddy_code() {
     	global $post;
-
+		
+		
     	if ( $this->enabled == 'yes' && function_exists('sharing_display') ) {
 
     		?><div class="social"><?php echo sharing_display(); ?></div><?php

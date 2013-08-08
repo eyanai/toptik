@@ -12,8 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post, $woocommerce, $product;
 
 ?>
-<div class="images">
 
+
+
+<div class="images">
 
 	<div class="topSingelMata">
 		<h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>

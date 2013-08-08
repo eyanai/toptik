@@ -505,6 +505,20 @@ if ( ! function_exists( 'woocommerce_show_product_thumbnails' ) ) {
 		woocommerce_get_template( 'single-product/product-thumbnails.php' );
 	}
 }
+if ( ! function_exists( 'woocommerce_output_product_data_toptik' ) ) {
+
+	/**
+	 * Output the product tabs.
+	 *
+	 * @access public
+	 * @subpackage	Product/Tabs
+	 * @return void
+	 */
+	function woocommerce_output_product_data_toptik() {
+		woocommerce_get_template( 'single-product/tabs/pretabs.php' );
+	}
+}
+
 if ( ! function_exists( 'woocommerce_output_product_data_tabs' ) ) {
 
 	/**
@@ -676,7 +690,7 @@ if ( ! function_exists( 'woocommerce_variable_add_to_cart' ) ) {
 		global $product;
 
 		// Enqueue variation scripts
-		wp_enqueue_script( 'wc-add-to-cart-variation' );
+		wp_enqueue_script( '&#8249;&#8249;' );
 
 		// Load the template
 		woocommerce_get_template( 'single-product/add-to-cart/variable.php', array(
@@ -747,6 +761,58 @@ if ( ! function_exists( 'woocommerce_product_description_tab' ) ) {
 		woocommerce_get_template( 'single-product/tabs/description.php' );
 	}
 }
+if ( ! function_exists( 'woocommerce_product_return_toptik' ) ) {
+
+	/**
+	 * Output the description tab content.
+	 *
+	 * @access public
+	 * @subpackage	Product/Tabs
+	 * @return void
+	 */
+	function woocommerce_product_return_toptik() {
+		woocommerce_get_template( 'single-product/tabs/return.php' );
+	}
+}
+if ( ! function_exists( 'woocommerce_product_baysafe_toptik' ) ) {
+
+	/**
+	 * Output the description tab content.
+	 *
+	 * @access public
+	 * @subpackage	Product/Tabs
+	 * @return void
+	 */
+	function woocommerce_product_baysafe_toptik() {
+		woocommerce_get_template( 'single-product/tabs/baysafe.php' );
+	}
+}
+if ( ! function_exists( 'woocommerce_product_contactUs_toptik' ) ) {
+
+	/**
+	 * Output the description tab content.
+	 *
+	 * @access public
+	 * @subpackage	Product/Tabs
+	 * @return void
+	 */
+	function woocommerce_product_contactUs_toptik() {
+		woocommerce_get_template( 'single-product/tabs/contactUs.php' );
+	}
+}
+if ( ! function_exists( 'woocommerce_product_topsepping_toptik' ) ) {
+
+	/**
+	 * Output the description tab content.
+	 *
+	 * @access public
+	 * @subpackage	Product/Tabs
+	 * @return void
+	 */
+	function woocommerce_product_topsepping_toptik() {
+		woocommerce_get_template( 'single-product/tabs/topsepping.php' );
+	}
+}
 if ( ! function_exists( 'woocommerce_product_additional_information_tab' ) ) {
 
 	/**
@@ -789,26 +855,55 @@ if ( ! function_exists( 'woocommerce_default_product_tabs' ) ) {
 		// Description tab - shows product content
 		if ( $post->post_content )
 			$tabs['description'] = array(
-				'title'    => __( 'Description', 'woocommerce' ),
+				'title'    => '<span class="decTab"></span>'.__( 'Description', 'woocommerce' ),
 				'priority' => 10,
 				'callback' => 'woocommerce_product_description_tab'
 			);
 
 		// Additional information tab - shows attributes
-		if ( $product->has_attributes() || ( get_option( 'woocommerce_enable_dimension_product_attributes' ) == 'yes' && ( $product->has_dimensions() || $product->has_weight() ) ) )
+/*		if ( $product->has_attributes() || ( get_option( 'woocommerce_enable_dimension_product_attributes' ) == 'yes' && ( $product->has_dimensions() || $product->has_weight() ) ) )
 			$tabs['additional_information'] = array(
-				'title'    => __( 'Additional Information', 'woocommerce' ),
+				'title'    => '<span class="tecTab"></span>'.__( 'Additional Information', 'woocommerce' ),
 				'priority' => 20,
 				'callback' => 'woocommerce_product_additional_information_tab'
-			);
+			);*/
 
 		// Reviews tab - shows comments
-		if ( comments_open() )
+		/*if ( comments_open() )
 			$tabs['reviews'] = array(
-				'title'    => sprintf( __( 'Reviews (%d)', 'woocommerce' ), get_comments_number( $post->ID ) ),
-				'priority' => 30,
+				'title'    => sprintf("<span class='commentTab'></aspn>". __( 'Reviews (%d)', 'woocommerce' ), get_comments_number( $post->ID ) ),
+				'priority' => 70,
 				'callback' => 'comments_template'
+			);*/
+			
+		if(get_field('returns', $product->ID, $format_value))
+			$tabs['returns'] = array(
+				'title'    => sprintf('<span class="returnTab"></span>החזרות', get_comments_number( $post->ID ) ),
+				'priority' => 60,
+				'callback' => 'woocommerce_product_return_toptik'
 			);
+		
+		if(get_field('baysafe', $product->ID, $format_value))
+			$tabs['baysafe'] = array(
+				'title'    => sprintf('<span class="bayTab"></span>קנייה בטוחה', get_comments_number( $post->ID ) ),
+				'priority' => 40,
+				'callback' => 'woocommerce_product_baysafe_toptik'
+			);
+		
+		if(get_field('contactUs', $product->ID, $format_value)||get_field('contectDef', $product->ID, $format_value))
+			$tabs['contactUs'] = array(
+				'title'    => sprintf('<span class="contactUstab"></span>צור קשר', get_comments_number( $post->ID ) ),
+				'priority' => 30,
+				'callback' => 'woocommerce_product_contactUs_toptik'
+			);
+		
+		if(get_field('topsepping', $product->ID, $format_value))
+			$tabs['topsepping'] = array(
+				'title'    => sprintf('<span class="topsepping"></span>משלוחים', get_comments_number( $post->ID ) ),
+				'priority' => 50,
+				'callback' => 'woocommerce_product_topsepping_toptik'
+			);
+
 
 		return $tabs;
 	}
@@ -864,7 +959,7 @@ if ( ! function_exists( 'woocommerce_output_related_products' ) ) {
 	 * @return void
 	 */
 	function woocommerce_output_related_products() {
-		woocommerce_related_products( 2, 2 );
+		woocommerce_related_products( 4,0 );
 	}
 }
 

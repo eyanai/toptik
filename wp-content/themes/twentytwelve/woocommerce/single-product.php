@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 get_header('shop'); ?>
 
+
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -38,9 +39,10 @@ get_header('shop'); ?>
 		do_action('woocommerce_after_main_content');
 	?>
 
+	<?php if(!is_single()):?>
 	<div class="singel_r">
 	
-	<?php
+	<?php 
 		/**
 		 * woocommerce_sidebar hook
 		 *
@@ -50,5 +52,6 @@ get_header('shop'); ?>
 		
 	?>
 	</div>
-
+	
+	<?php endif;?>
 <?php get_footer('shop'); ?>

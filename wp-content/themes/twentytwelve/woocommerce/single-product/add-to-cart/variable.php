@@ -15,11 +15,14 @@ global $woocommerce, $product, $post;
 <?php do_action('woocommerce_before_add_to_cart_form'); ?>
 
 <form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
+
 	<table class="variations" cellspacing="0">
 		<tbody>
 			<?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
 				<tr>
-					<td class="label"><label for="<?php echo sanitize_title($name); ?>"><?php echo $woocommerce->attribute_label( $name ); ?></label></td>
+					<td class="label"><label for="<?php echo sanitize_title($name); ?>"><?php //echo $woocommerce->attribute_label( $name ); ?><span class="titelWcon variation"><h2>בחר צבע</h2></span></label></td>
+				</tr>
+				<tr>	
 					<td class="value"><select id="<?php echo esc_attr( sanitize_title($name) ); ?>" name="attribute_<?php echo sanitize_title($name); ?>">
 						<option value=""><?php echo __( 'Choose an option', 'woocommerce' ) ?>&hellip;</option>
 						<?php

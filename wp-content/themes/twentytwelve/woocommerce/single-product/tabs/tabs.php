@@ -31,7 +31,7 @@ if ( ! empty( $tabs ) ) : ?>
 		</ul>
 		<?php foreach ( $tabs as $key => $tab ) : ?>
 
-			<div class="panel entry-content" id="tab-<?php echo $key ?>">
+			<div class="panel entry-content clear" id="tab-<?php echo $key ?>">
 				<?php call_user_func( $tab['callback'], $key, $tab ) ?>
 			</div>
 

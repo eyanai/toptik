@@ -30,10 +30,10 @@ $products = new WP_Query( $args );
 $woocommerce_loop['columns'] 	= $columns;
 
 if ( $products->have_posts() ) : ?>
-
+<div class="titelWcon releted"></div>
 	<div class="related products">
 
-		<h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+		<span class="titelWcon related"><h2><?php _e( 'Related Products', 'woocommerce' ); ?></h2></span>
 
 		<?php woocommerce_product_loop_start(); ?>
 
@@ -50,3 +50,19 @@ if ( $products->have_posts() ) : ?>
 <?php endif;
 
 wp_reset_postdata();
+
+
+if ( has_nav_menu( 'brands' ) ) {?>
+	<div class="brandsCon clear">
+		<div class="recommendedtop"><h2>המותגים שלנו</h2></div>
+<?php
+    wp_nav_menu(array('theme_location'  => 'brands','container'=> 'div','container_class' => 'brandsMenu',));
+	echo "</div>";
+}  
+			
+ ?>
+
+
+
+
+	<div class="recommendedtop goto"><h2 class="gotop"></h2></div>

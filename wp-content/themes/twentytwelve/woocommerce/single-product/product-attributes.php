@@ -25,7 +25,7 @@ if ( empty( $attributes ) && ( ! $product->enable_dimensions_display() || ( ! $p
 		<?php if ( $product->has_weight() ) : ?>
 
 			<tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
-				<th><?php _e( 'Weight', 'woocommerce' ) ?></th>
+				<th><span class="weiAttr"></span><?php _e( 'Weight', 'woocommerce' ) ?></th>
 				<td class="product_weight"><?php echo $product->get_weight() . ' ' . esc_attr( get_option('woocommerce_weight_unit') ); ?></td>
 			</tr>
 
@@ -34,7 +34,7 @@ if ( empty( $attributes ) && ( ! $product->enable_dimensions_display() || ( ! $p
 		<?php if ( $product->has_dimensions() ) : ?>
 
 			<tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
-				<th><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
+				<th><span class="dimAttr"></span><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
 				<td class="product_dimensions"><?php echo $product->get_dimensions(); ?></td>
 			</tr>
 
@@ -49,12 +49,46 @@ if ( empty( $attributes ) && ( ! $product->enable_dimensions_display() || ( ! $p
 		?>
 
 		<tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
-			<th><?php echo $woocommerce->attribute_label( $attribute['name'] ); ?></th>
+			<th><?php 
+					$att=$woocommerce->attribute_label( $attribute['name']);
+				
+				switch ( $att)
+					{
+					case 'אחריות':
+							echo '<span class="gerAtt"></span> ';
+							echo $woocommerce->attribute_label( $attribute['name'] );
+					  break;
+					case 'צורת נשיאה':
+							echo'<span class="caarAtt"></span> ';
+							echo $woocommerce->attribute_label( $attribute['name'] );
+					  break;
+					  case 'חומרים':
+					  		echo '<span class="metAtt"></span> ';
+							echo $woocommerce->attribute_label( $attribute['name'] );
+					  break;
+					  case 'נפח':
+					  		echo '<span class="volAtt"></span> ';
+							echo $woocommerce->attribute_label( $attribute['name'] );
+					  break;
+					  case 'נעילה':
+					  	echo '<span class="locAtt"></span> ';
+						echo $woocommerce->attribute_label( $attribute['name'] );	
+					  break;
+					  case 'סוג':
+					  		echo '<span class="typAtt"></span> ';
+							echo $woocommerce->attribute_label( $attribute['name'] );
+					  break;
+					default:
+						echo $woocommerce->attribute_label( $attribute['name'] );
+					}?>
+			</th>
 			<td><?php
 				if ( $attribute['is_taxonomy'] ) {
 
 					$values = woocommerce_get_product_terms( $product->id, $attribute['name'], 'names' );
 					echo apply_filters( 'woocommerce_attribute', wpautop( wptexturize( implode( ', ', $values ) ) ), $attribute, $values );
+					
+					
 
 				} else {
 

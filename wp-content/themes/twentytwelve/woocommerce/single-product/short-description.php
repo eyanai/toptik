@@ -13,6 +13,9 @@ global $post;
 
 if ( ! $post->post_excerpt ) return;
 ?>
-<div itemprop="description">
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+
+<div itemprop="description" class="socialDescrip">
+<?php echo '<div class="social"><div class="titelWcon"></div>'.do_shortcode('[ssba]').'<div class="titelWcon"></div></div>'; 
+	?>
+	<?php //echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
 </div>

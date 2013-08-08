@@ -1769,6 +1769,7 @@ img#wpstats {
 	width:60px;
 	height:30px;
 
+	line-height: 30px;
 }
 .top_nav-menu li.personal{
 	background-image:url(images/top_nav_items.png);

@@ -34,6 +34,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	?>
 
 	<div class="summary entry-summary">
+	<?php if($field = get_field('logo_toptik', $product->ID, $format_value)):?>
+		<div class="logoSingel">
+			<?php
+					$field = get_field('logo_toptik', $product->ID, $format_value);
+					$img= wp_get_attachment_image_src($field,array(335,45));
+			?>	
+			<img src="<?php echo $img[0];?>">
+		</div>
+	<?php endif;?>
+
 
 		<?php
 			/**
@@ -50,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		?>
 
 	</div><!-- .summary -->
-
+		
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook
@@ -58,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		 * @hooked woocommerce_output_product_data_tabs - 10
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+		do_action( 'woocommerce_after_single_product_summary');
 	?>
 
 </div><!-- #product-<?php the_ID(); ?> -->
