@@ -14,5 +14,5 @@ global $product;
 
 <?php if ( $price_html = $product->get_price_html() ) : ?>
 	<span class="price"><?php echo $price_html; ?></span>
-	<span class="price"><?php woocommerce_template_nosingle_meta();?></span>
+	<?php woocommerce_template_nosingle_meta();?>
 <?php endif; ?>

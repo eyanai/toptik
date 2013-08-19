@@ -13,18 +13,17 @@ global $woocommerce;
 
 $woocommerce->show_messages();
 ?>
-
 <?php do_action( 'woocommerce_before_cart' ); ?>
 
 <form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<table class="shop_table cart" cellspacing="0">
+<table class="shop_table cart">
 	<thead>
 		<tr>
-			<th class="product-remove">&nbsp;</th>
-			<th class="product-thumbnail">&nbsp;</th>
+			<th class="product-remove">הסר </th>
+			<th class="product-thumbnail">מוצר</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
 			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
@@ -40,7 +39,7 @@ $woocommerce->show_messages();
 				$_product = $values['data'];
 				if ( $_product->exists() && $values['quantity'] > 0 ) {
 					?>
-					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?>">
+					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?> cartToptik">
 						<!-- Remove from cart link -->
 						<td class="product-remove">
 							<?php

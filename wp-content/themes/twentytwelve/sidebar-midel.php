@@ -21,7 +21,7 @@ if ( ! is_active_sidebar( 'sidebar-5' ) && ! is_active_sidebar( 'sidebar-6' ) )
 // If we get this far, we have widgets. Let do this.
 ?>
 
-<div id="banners" class="widget-area" role="complementary">
+<div id="banners" class="widget-area middel" role="complementary">
 	<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
 	<div class="first banner">
 		<?php dynamic_sidebar( 'sidebar-5' ); ?>

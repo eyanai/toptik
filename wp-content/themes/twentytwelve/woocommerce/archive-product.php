@@ -153,14 +153,19 @@ get_header('shop'); ?>
 
 			$query = new WP_Query( $args );
 			// The Loop
+			$gallmainCount=1;
 			if ( $query->have_posts() ) {
+				
 				while ( $query->have_posts() ) {
 					$query->the_post();
 			?>
-			
-				<?php echo get_the_post_thumbnail( $post->ID,array(719,419)); ?> 
-			
+					
+				<?php 
+					$act=($gallmainCount==1)?'actgall':'';
+					echo get_the_post_thumbnail( $post->ID,array(719,419), array('id' =>$gallmainCount,'class'=>$act)); ?> 
+							
 			<?php
+				$gallmainCount++;
 				}
 			} else {
 				//echo "no posts found";
@@ -168,7 +173,22 @@ get_header('shop'); ?>
 			/* Restore original Post Data */
 			wp_reset_postdata();
 
-?>			</div><!--bigBox-->
+?>			
+			<?php if($gallmainCount>1):
+			?>
+				<div class="pointergall">
+				<?php
+					for ($i=1; $i<=$gallmainCount-1; $i++)
+						  {
+						 ?>
+						 <span class="pointer<?php if($i==1)echo ' act'?>" data-idpoint=<?php echo $i;?>><?php echo $i;?></span>
+				<?php		 
+						  }
+				?>	
+					
+				</div>
+			<?php endif?>
+			</div><!--bigBox-->
 		</div><!--bigSlide-->
 		<!----------------------r side--------------------------------->
 		<?php
@@ -287,7 +307,7 @@ get_header('shop'); ?>
 	 	$mach=get_option('ye_plugin_options');
 	 	$top=$mach['ye_rec_top'];
 		$down=$mach['ye_rec_down'];
-		
+			//echo "<pre>".print_r($terms,1)."</pre>";
 	 ?>
 	 
 	<div class="recommendedtop"><h2><?php echo $terms[2]->description;?></h2></div>
@@ -301,6 +321,7 @@ get_header('shop'); ?>
 				while ( $query->have_posts() ) {
 					$query->the_post();
 			?>
+
 			
 				
 				<li <?php post_class( $classes ); ?>>
@@ -358,7 +379,7 @@ get_header('shop'); ?>
 	<!------------------------------botoom recommend-------------------------------------------------->	
 	 <?php $terms = get_terms("home_options"); ?>
 	 
-	<div class="recommendedtop"><h2><?php echo $terms[2]->description;?></h2></div>
+	<div class="recommendedtop"><h2><?php echo $terms[3]->description;?></h2></div>
 		<?php
 		$args = array( 'post_type' => 'product', 'posts_per_page' => $down,'home_options' => "מומלצים-תחתון");
 			

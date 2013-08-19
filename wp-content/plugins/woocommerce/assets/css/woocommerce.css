@@ -985,7 +985,7 @@ padding-right:1.2em
 .woocommerce table.shop_attributes, .woocommerce-page table.shop_attributes {
 	border: 1px;
 	margin-bottom: 1.618em;
-	width: 250px;
+	width: 210px;
 	float: right;
 	clear: right;
 	border: solid 1px #c4c4c4;
@@ -1023,6 +1023,8 @@ padding-right:1.2em
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px
+;
+	direction: rtl;
 }
 .woocommerce table.shop_table th, .woocommerce-page table.shop_table th {
 	font-weight: bold;
@@ -1063,13 +1065,14 @@ padding-right:1.2em
 }
 .woocommerce td.product-name dl.variation dt, .woocommerce-page td.product-name dl.variation dt {
 	font-weight: bold;
-	float: left;
-	clear: left;
+	float: right;
+	clear: right;
 	margin: 0 .25em 0 0;
 	padding: 0
 }
 .woocommerce td.product-name dl.variation dd, .woocommerce-page td.product-name dl.variation dd {
-	margin: 0 0 .25em 0
+	margin: 1px 5px 0.25em 0;
+	float: right;
 }
 .woocommerce td.product-name p.backorder_notification, .woocommerce-page td.product-name p.backorder_notification {
 	font-size: 0.83em
@@ -1174,7 +1177,7 @@ padding-right:1.2em
 	border-left: 2px solid rgba(0,0,0,0.1)
 }
 .woocommerce ul.cart_list li dl dt, .woocommerce ul.product_list_widget li dl dt, .woocommerce-page ul.cart_list li dl dt, .woocommerce-page ul.product_list_widget li dl dt {
-	float: left;
+	float: right;
 	clear: left;
 	margin-right: .25em
 }
@@ -1489,6 +1492,7 @@ padding-top:2px
 	background: #ebe9eb;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ebe9eb), to(#dfdbdf));
 	background: -webkit-linear-gradient(#ebe9eb, #dfdbdf);
+
 	background: -moz-linear-gradient(center top, #ebe9eb 0%, #dfdbdf 100%);
 	background: -moz-gradient(center top, #ebe9eb 0%, #dfdbdf 100%);
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);

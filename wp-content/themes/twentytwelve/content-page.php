@@ -10,6 +10,9 @@
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<header class="entry-header">
+		<div class="titelWcon"></div>
+		<?php echo get_the_post_thumbnail($post->ID,'full')?>
+		<div class="titelWcon"></div>	
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
 

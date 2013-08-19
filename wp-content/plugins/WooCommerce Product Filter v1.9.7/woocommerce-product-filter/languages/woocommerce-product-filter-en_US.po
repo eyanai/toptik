@@ -1,0 +1,478 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Product Filter v1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-07-11 21:30:03+0000\n"
+"Last-Translator: wpadmin <farhadegza@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: helper.php:69
+#: options.php:104
+#: widget/category.php:69
+#: widget/nonh_category.php:67
+#@ woocommerce-product-filter
+msgid "Category"
+msgstr ""
+
+#: helper.php:70
+#: options.php:105
+#: widget/attribute.php:71
+#: widget/image_attribute.php:59
+#@ woocommerce-product-filter
+msgid "Attribute"
+msgstr ""
+
+#: helper.php:71
+#: options.php:103
+#@ woocommerce-product-filter
+msgid "All Shop Archive"
+msgstr ""
+
+#: helper.php:72
+#: woocommerce-product-filter.php:182
+#@ woocommerce-product-filter
+msgid "Remove"
+msgstr ""
+
+#: helper.php:238
+#@ woocommerce-product-filter
+msgid "Any category"
+msgstr ""
+
+#: helper.php:276
+#@ woocommerce-product-filter
+msgid "Rate"
+msgstr ""
+
+#: helper.php:277
+#@ woocommerce-product-filter
+msgid "Price"
+msgstr ""
+
+#: helper.php:278
+#@ woocommerce-product-filter
+msgid "Weight"
+msgstr ""
+
+#: helper.php:279
+#@ woocommerce-product-filter
+msgid "Total Sales"
+msgstr ""
+
+#: helper.php:280
+#@ woocommerce-product-filter
+msgid "Length"
+msgstr ""
+
+#: helper.php:281
+#: widget/image_attribute.php:115
+#@ woocommerce-product-filter
+msgid "Width"
+msgstr ""
+
+#: helper.php:282
+#: widget/image_attribute.php:123
+#@ woocommerce-product-filter
+msgid "Height"
+msgstr ""
+
+#: html.php:224
+#@ woocommerce-product-filter
+msgid "Upload Image"
+msgstr ""
+
+#: html.php:267
+#@ woocommerce-product-filter
+msgid "Any"
+msgstr ""
+
+#: html.php:332
+#@ woocommerce-product-filter
+msgid "Any Category"
+msgstr ""
+
+#: options.php:38
+#@ woocommerce-product-filter
+msgid "Changes Saved."
+msgstr ""
+
+#: options.php:44
+#@ woocommerce-product-filter
+msgid "Security check failed."
+msgstr ""
+
+#: options.php:49
+#@ woocommerce-product-filter
+msgid "Woocommerce not found. Get a version at <a href=\"http://www.woothemes.com/woocommerce/\">woothemes</a>."
+msgstr ""
+
+#: options.php:70
+#@ woocommerce-product-filter
+msgid "Woocommerce AJAX Product Filter"
+msgstr ""
+
+#: options.php:75
+#@ woocommerce-product-filter
+msgid "Options"
+msgstr ""
+
+#: options.php:78
+#@ woocommerce-product-filter
+msgid "Loader Image"
+msgstr ""
+
+#: options.php:91
+#@ woocommerce-product-filter
+msgid "Sidebars"
+msgstr ""
+
+#: options.php:93
+#@ woocommerce-product-filter
+msgid "Create new sidebar"
+msgstr ""
+
+#: options.php:96
+#: options.php:142
+#: widget/attribute.php:96
+#: widget/category.php:82
+#: widget/custom_slider_meta.php:79
+#: widget/image_attribute.php:94
+#: widget/meta.php:89
+#: widget/nonh_category.php:80
+#: widget/order.php:50
+#: widget/reset.php:50
+#@ woocommerce-product-filter
+msgid "Title"
+msgstr ""
+
+#: options.php:100
+#: options.php:143
+#@ woocommerce-product-filter
+msgid "Visible To"
+msgstr ""
+
+#: options.php:144
+#@ woocommerce-product-filter
+msgid "Shortcode"
+msgstr ""
+
+#: options.php:145
+#@ woocommerce-product-filter
+msgid "Action"
+msgstr ""
+
+#: options.php:152
+#@ woocommerce-product-filter
+msgid "New Sidebar"
+msgstr ""
+
+#: options.php:164
+#@ woocommerce-product-filter
+msgid "Save Changes"
+msgstr ""
+
+#: widget/attribute.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter by Attribute"
+msgstr ""
+
+#: widget/attribute.php:22
+#@ woocommerce-product-filter
+msgid "WooCommerce Product Filter by Attribute. By using this widget you can filter products by attributes."
+msgstr ""
+
+#: widget/attribute.php:58
+#: widget/category.php:57
+#: widget/custom_slider_meta.php:57
+#: widget/meta.php:57
+#: widget/nonh_category.php:56
+#@ woocommerce-product-filter
+msgid "Display Type"
+msgstr ""
+
+#: widget/attribute.php:64
+#: widget/category.php:63
+#: widget/nonh_category.php:62
+#@ woocommerce-product-filter
+msgid "List"
+msgstr ""
+
+#: widget/attribute.php:65
+#: widget/category.php:64
+#@ woocommerce-product-filter
+msgid "Dropdown"
+msgstr ""
+
+#: widget/attribute.php:66
+#: widget/custom_slider_meta.php:63
+#: widget/meta.php:63
+#@ woocommerce-product-filter
+msgid "Slider"
+msgstr ""
+
+#: widget/attribute.php:106
+#: widget/category.php:92
+#: widget/custom_slider_meta.php:89
+#: widget/image_attribute.php:104
+#: widget/meta.php:99
+#: widget/nonh_category.php:90
+#: widget/order.php:60
+#: widget/reset.php:60
+#@ woocommerce-product-filter
+msgid "Sub Title"
+msgstr ""
+
+#: widget/attribute.php:116
+#: widget/image_attribute.php:83
+#: widget/nonh_category.php:100
+#@ woocommerce-product-filter
+msgid "Query Type"
+msgstr ""
+
+#: widget/attribute.php:122
+#: widget/image_attribute.php:89
+#: widget/nonh_category.php:106
+#@ woocommerce-product-filter
+msgid "OR"
+msgstr ""
+
+#: widget/attribute.php:123
+#: widget/image_attribute.php:90
+#: widget/nonh_category.php:107
+#@ woocommerce-product-filter
+msgid "AND"
+msgstr ""
+
+#: widget/attribute.php:127
+#: widget/custom_slider_meta.php:99
+#: widget/meta.php:109
+#@ woocommerce-product-filter
+msgid "Range Template"
+msgstr ""
+
+#: widget/attribute.php:137
+#: widget/custom_slider_meta.php:109
+#: widget/meta.php:119
+#@ woocommerce-product-filter
+msgid "Minimum Value"
+msgstr ""
+
+#: widget/attribute.php:145
+#: widget/custom_slider_meta.php:117
+#: widget/meta.php:127
+#@ woocommerce-product-filter
+msgid "Maximum Value"
+msgstr ""
+
+#: widget/attribute.php:154
+#: widget/custom_slider_meta.php:126
+#: widget/meta.php:136
+#@ woocommerce-product-filter
+msgid "Step"
+msgstr ""
+
+#: widget/attribute.php:171
+#: widget/category.php:120
+#: widget/custom_slider_meta.php:143
+#: widget/image_attribute.php:173
+#: widget/meta.php:153
+#: widget/nonh_category.php:139
+#: widget/order.php:78
+#: widget/reset.php:78
+#@ woocommerce-product-filter
+msgid "Print Widget Opener"
+msgstr ""
+
+#: widget/attribute.php:182
+#: widget/category.php:131
+#: widget/custom_slider_meta.php:154
+#: widget/image_attribute.php:184
+#: widget/meta.php:164
+#: widget/nonh_category.php:150
+#: widget/order.php:89
+#: widget/reset.php:88
+#@ woocommerce-product-filter
+msgid "Print Widget Closer"
+msgstr ""
+
+#: widget/category.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter by Category"
+msgstr ""
+
+#: widget/meta.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter by Meta"
+msgstr ""
+
+#: widget/meta.php:22
+#@ woocommerce-product-filter
+msgid "WooCommerce Product Filter by Meta. By using this widget you can filter products by WordPress post meta."
+msgstr ""
+
+#: widget/meta.php:68
+#@ woocommerce-product-filter
+msgid "Meta"
+msgstr ""
+
+#: woocommerce-product-filter.php:68
+#@ woocommerce-product-filter
+msgid "Woocommerce Product Filter"
+msgstr ""
+
+#: woocommerce-product-filter.php:68
+#@ woocommerce-product-filter
+msgid "Product Filter"
+msgstr ""
+
+#: woocommerce-product-filter.php:180
+#@ woocommerce-product-filter
+msgid "Create Sidebar"
+msgstr ""
+
+#: woocommerce-product-filter.php:181
+#@ woocommerce-product-filter
+msgid "Cancel"
+msgstr ""
+
+#: widget/attribute.php:185
+#: widget/category.php:134
+#: widget/custom_slider_meta.php:157
+#: widget/image_attribute.php:198
+#: widget/meta.php:167
+#: widget/nonh_category.php:153
+#: widget/order.php:92
+#: widget/reset.php:91
+#@ woocommerce-product-filter
+msgid "Custom CSS Class"
+msgstr ""
+
+#: widget/reset.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter Reset Button"
+msgstr ""
+
+#: widget/reset.php:22
+#@ woocommerce-product-filter
+msgid "WooCommerce Product Filter reset button. By using this widget users can reset filters by a click."
+msgstr ""
+
+#: html.php:365
+#@ woocommerce-product-filter
+msgid "Default sorting"
+msgstr ""
+
+#: html.php:366
+#@ woocommerce-product-filter
+msgid "Sort by popularity"
+msgstr ""
+
+#: html.php:367
+#@ woocommerce-product-filter
+msgid "Sort by average rating"
+msgstr ""
+
+#: html.php:368
+#@ woocommerce-product-filter
+msgid "Sort by newness"
+msgstr ""
+
+#: html.php:369
+#@ woocommerce-product-filter
+msgid "Sort by price: low to high"
+msgstr ""
+
+#: html.php:370
+#@ woocommerce-product-filter
+msgid "Sort by price: high to low"
+msgstr ""
+
+#: options.php:84
+#@ woocommerce-product-filter
+msgid "Display No Products Message"
+msgstr ""
+
+#: widget/category.php:22
+#@ woocommerce-product-filter
+msgid "Woocommerce Product Filter by hierarchical Category. By using this widget you can filter products by categories."
+msgstr ""
+
+#: widget/image_attribute.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter by Image Attribute"
+msgstr ""
+
+#: widget/image_attribute.php:22
+#@ woocommerce-product-filter
+msgid "WooCommerce Product Filter by Image Attribute. By using this widget you can filter products by images."
+msgstr ""
+
+#: widget/image_attribute.php:195
+#@ woocommerce-product-filter
+msgid "Use Theme Toggle Effect"
+msgstr ""
+
+#: widget/nonh_category.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter by multiple Categories"
+msgstr ""
+
+#: widget/order.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter Order"
+msgstr ""
+
+#: woocommerce-product-filter.php:168
+#@ woocommerce-product-filter
+msgid "No products found which match your selection."
+msgstr ""
+
+#: widget/nonh_category.php:22
+#@ woocommerce-product-filter
+msgid "Woocommerce Product Filter by Multiple Categories. By using this widget you can filter products by multiple categories at the same time (Non Hierarchical)."
+msgstr ""
+
+#: widget/order.php:22
+#@ woocommerce-product-filter
+msgid "WooCommerce Product Filter Change Order Widget. By using this widget you can change products order by multiple values."
+msgstr ""
+
+#: widget/category.php:109
+#: widget/nonh_category.php:118
+#@ woocommerce-product-filter
+msgid "Hide Empty"
+msgstr ""
+
+#: widget/nonh_category.php:128
+#@ woocommerce-product-filter
+msgid "Hide On Categories"
+msgstr ""
+
+#: widget/custom_slider_meta.php:21
+#@ woocommerce-product-filter
+msgid "Product Filter by Custom Meta"
+msgstr ""
+
+#: widget/custom_slider_meta.php:22
+#@ woocommerce-product-filter
+msgid "WooCommerce Product Filter by Custom Meta. By using this widget you can filter products by non-native WooCommerce product meta."
+msgstr ""
+
+#: widget/custom_slider_meta.php:68
+#@ woocommerce-product-filter
+msgid "Custom Meta Name"
+msgstr ""
+

@@ -64,6 +64,7 @@ function twentytwelve_setup() {
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
 	register_nav_menus( array(
 						'brands' => 'תפריט מותגים',
+						'cart_top'=>'תפריט עגלה עליון'
 						
 		) );
 
@@ -542,15 +543,14 @@ function woocommerce_catalog_page_ordering() {
 				'9' 		=> __('9 ', 'woocommerce'),
 				'12' 		=> __('12 ', 'woocommerce'),
 			));
-
+			
+			
 			foreach ( $shopCatalog_orderby as $sort_id => $sort_name )
 				echo '<option value="' . $sort_id . '" ' . selected( $_SESSION['sortby'], $sort_id, false ) . ' >' . $sort_name . '</option>';
 		?>
 </select>
-
 </form>
 <?php
-
 } 
 
 // now we set our cookie if we need to
@@ -562,7 +562,7 @@ function dl_sort_by_page($count) {
   $url=get_site_url();
     setcookie('shop_pageResults', $_POST['woocommerce-sort-by-columns'], time()+1209600, '/', 'your-web-address.com', false); //this will fail if any part of page has been output- hope this works!
     $count = $_POST['woocommerce-sort-by-columns'];
-  }
+	}
   // else normal page load and no cookie
   return $count;
 }

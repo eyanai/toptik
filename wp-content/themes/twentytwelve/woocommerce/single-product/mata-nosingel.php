@@ -11,14 +11,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $post, $product;
 ?>
+
 <div class="product_meta">
 	<div class="tags_pro">
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 	<?php
 		$size = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
-		echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( '<span class="tag"></span>', 'Tags:', $size, 'woocommerce' ) . ' ', '.</span><br>' );
-	?>
+		echo $product->get_tags( ', ', '<span class="tagged_as">' . _n( '<span class="tag"></span>', 'Tags:', $size, 'woocommerce' ) . ' ', '.</span>' );
+	?><br>
 	</div>
+<?php if($product->get_tags()){
+	}else{
+	echo "</a>";
+}?>
+
 
 
 	<?php

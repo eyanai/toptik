@@ -1,0 +1,60 @@
+label {
+	width: 200px;
+	float: left;
+	margin-right: 1em;
+}
+.postbox .hndle {
+	cursor: default !important;
+}
+.post-types-container {
+	width: 215px;
+	height: 100px;
+	overflow-y: scroll;
+	line-height: 170%;
+}
+.padleft {
+	padding-left: 10px;
+}
+.post-types-container {
+	padding: 4px;
+}
+#poststuff {
+	line-height: 200%;
+}
+.handlediv {
+	display: none;
+}
+#sidebars {
+	width: 580px !important;
+}
+div#sidebars-contain {
+	white-space:nowrap;
+	margin-left: 211px;
+}
+div#sidebars-contain table {
+	margin: 1em 0;
+	border-collapse: collapse;
+}
+div#sidebars-contain table td, div#sidebars-contain table th {
+	border: 1px solid #eee;
+	padding: .6em 10px;
+	text-align: left;
+}
+.ui-dialog .ui-state-error {
+	padding: .3em;
+}
+.validateTips {
+	border: 1px solid transparent;
+	padding: 0.3em;
+}
+.inside {
+}
+#sidebar_title {
+	width: 330px;
+}
+.chzn-select {
+	min-width: 100px;
+}
+div.chzn-container div.chzn-drop {
+	z-index: 999;
+}

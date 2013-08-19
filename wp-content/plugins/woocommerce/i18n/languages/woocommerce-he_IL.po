@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.8\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2013-03-04 09:46:16+00:00\n"
-"PO-Revision-Date: 2013-08-04 13:15+0200\n"
+"PO-Revision-Date: 2013-08-18 15:09+0200\n"
 "Last-Translator: jb <jb@jb.es>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -379,18 +379,20 @@ msgid ""
 "Sorry, \"%s\" is not in stock. Please edit your cart and try again. We "
 "apologise for any inconvenience caused."
 msgstr ""
+"מצטערים, \"%s\" אזל מהמלאי. אנא ערוך את עגלת הקניות שלך ונסה שנית. אנו "
+"מתנצלים על אי הנוחות שנגרמה. "
 
 # @ woocommerce
 #: classes/class-wc-cart.php:818
 msgid "Sorry, &quot;%s&quot; cannot be purchased."
-msgstr ""
+msgstr "מצטערים, &quot;%s&quot; לא יכול להירכש"
 
 # @ woocommerce
 #: classes/class-wc-cart.php:825
 msgid ""
 "You cannot add &quot;%s&quot; to the cart because the product is out of "
 "stock."
-msgstr ""
+msgstr "אינך יכול להוסיף &quot;%s&quot;  לעגלת הקניות מאחר והמוצר אזל מהמלאי"
 
 # @ woocommerce
 #: classes/class-wc-cart.php:830
@@ -398,6 +400,8 @@ msgid ""
 "You cannot add that amount of &quot;%s&quot; to the cart because there is "
 "not enough stock (%s remaining)."
 msgstr ""
+"אינך יכול להוסיף כמות זו של &quot;%s&quot;  לעגלת הקניות, מאחר ואין מספיק "
+"במלאי ( %s  נותרו)"
 
 # @ woocommerce
 #: classes/class-wc-cart.php:842 classes/class-wc-cart.php:856
@@ -479,6 +483,7 @@ msgstr "ממתינים להשלמה מלאה"
 msgid ""
 "Sorry, your session has expired. <a href=\"%s\">Return to homepage &rarr;</a>"
 msgstr ""
+"מצטערים, פג תוקפה של פעילותך. <a href=\"%s\"> חזור לעמוד הבית &rarr;</a> "
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:438 woocommerce-functions.php:1632
@@ -488,7 +493,7 @@ msgstr "שדה נדרש"
 # @ woocommerce
 #: classes/class-wc-checkout.php:451
 msgid "(%s) is not a valid postcode/ZIP."
-msgstr ""
+msgstr "(%s)  אינו מיקוד תקף"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:472
@@ -519,39 +524,39 @@ msgstr "Invalid email/username."
 #: classes/class-wc-checkout.php:550
 msgid ""
 "An account is already registered with that username. Please choose another."
-msgstr ""
+msgstr "קיים חשבון עם שם משתמש זה. אנא בחר שם משתמש אחר"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:560
 msgid "Please enter an account password."
-msgstr ""
+msgstr "אנא הקלד את סיסמת החשבון"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:563
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:85
 #: woocommerce-functions.php:731 woocommerce-functions.php:1562
 msgid "Passwords do not match."
-msgstr ""
+msgstr "הסיסמה אינה מתאימה"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:567
 msgid "An account is already registered with your email address. Please login."
-msgstr ""
+msgstr "קיים חשבון עם כתובת מייל זו. אנא התחבר"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:573
 msgid "You must accept our Terms &amp; Conditions."
-msgstr ""
+msgstr "עליך לקבל את הגבלות ותנאי האתר"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:582
 msgid "Invalid shipping method."
-msgstr ""
+msgstr "שיטת משלוח אינה חוקית"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:595
 msgid "Invalid payment method."
-msgstr ""
+msgstr "אופן תשלום אינו חוקי"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:635 woocommerce-core-functions.php:2485
@@ -578,7 +583,7 @@ msgstr "Afghanistan"
 # @ woocommerce
 #: classes/class-wc-countries.php:38
 msgid "&#197;land Islands"
-msgstr ""
+msgstr "איי הארץ (אולנד)"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:39
@@ -608,77 +613,77 @@ msgstr "Anguilla"
 # @ woocommerce
 #: classes/class-wc-countries.php:44
 msgid "Antarctica"
-msgstr ""
+msgstr "אנטרטיקה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:45
 msgid "Antigua and Barbuda"
-msgstr ""
+msgstr "אנטיגואה וברבודה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:46
 msgid "Argentina"
-msgstr ""
+msgstr "ארגנטינה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:47
 msgid "Armenia"
-msgstr ""
+msgstr "ארמניה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:48
 msgid "Aruba"
-msgstr ""
+msgstr "ארובה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:49
 msgid "Australia"
-msgstr ""
+msgstr "אוסטרליה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:50
 msgid "Austria"
-msgstr ""
+msgstr "אוסטריה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:51
 msgid "Azerbaijan"
-msgstr ""
+msgstr "אזרבייג'ן"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:52
 msgid "Bahamas"
-msgstr ""
+msgstr "בהאמס"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:53
 msgid "Bahrain"
-msgstr ""
+msgstr "בחריין"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:54
 msgid "Bangladesh"
-msgstr ""
+msgstr "בנגלדש"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:55
 msgid "Barbados"
-msgstr ""
+msgstr "ברבדוס"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:56
 msgid "Belarus"
-msgstr ""
+msgstr "בלרוס"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:57
 msgid "Belgium"
-msgstr ""
+msgstr "בלגיה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:58
 msgid "Belau"
-msgstr ""
+msgstr "פלאו"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:59
@@ -688,61 +693,61 @@ msgstr "Belize"
 # @ woocommerce
 #: classes/class-wc-countries.php:60
 msgid "Benin"
-msgstr ""
+msgstr "בנין"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:61
 msgid "Bermuda"
-msgstr ""
+msgstr "ברמודה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:62
 msgid "Bhutan"
-msgstr ""
+msgstr "בהוטן"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:63
 msgid "Bolivia"
-msgstr ""
+msgstr "בוליביה"
 
 #: classes/class-wc-countries.php:64
 msgid "Bonaire, Saint Eustatius and Saba"
-msgstr ""
+msgstr "סנט אוסטתיוס"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:65
 msgid "Bosnia and Herzegovina"
-msgstr ""
+msgstr "בוסניה והרצגובינה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:66
 msgid "Botswana"
-msgstr ""
+msgstr "בוטסואנה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:67
 msgid "Bouvet Island"
-msgstr ""
+msgstr "בובה"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:68
 msgid "Brazil"
-msgstr ""
+msgstr "ברזיל"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:69
 msgid "British Indian Ocean Territory"
-msgstr ""
+msgstr "הטריטוריה הבריטית באוקיינוס ההודי"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:70
 msgid "British Virgin Islands"
-msgstr ""
+msgstr "איי הבתולה הבריטיים"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:71
 msgid "Brunei"
-msgstr ""
+msgstr "ברוניי"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:72
@@ -1863,7 +1868,7 @@ msgstr "איזור"
 # @ woocommerce
 #: classes/class-wc-countries.php:877
 msgid "Zip"
-msgstr ""
+msgstr "מיקוד"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:880
@@ -1898,7 +1903,7 @@ msgstr "עיר/ מדינה"
 #: classes/class-wc-countries.php:930 classes/class-wc-countries.php:931
 #: classes/class-wc-countries.php:991
 msgid "State / County"
-msgstr ""
+msgstr "מדינה / מחוז"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:955
@@ -1939,7 +1944,7 @@ msgstr "דירה, צמוד, יחידה וכו' (לא חובה)"
 # @ woocommerce
 #: classes/class-wc-countries.php:1038
 msgid "Email Address"
-msgstr ""
+msgstr "כתובת אי-מייל"
 
 # @ woocommerce
 #: classes/class-wc-countries.php:1044
@@ -1986,12 +1991,12 @@ msgstr "קופון כבר הוחל"
 msgid ""
 "Sorry, coupon \"%s\" has already been applied and cannot be used in "
 "conjunction with other coupons."
-msgstr ""
+msgstr "מצטערים, קופון \"%s\" היה בשימוש ואינו יכול להצטרף לקופונים אחרים "
 
 # @ woocommerce
 #: classes/class-wc-coupon.php:459
 msgid "Coupon usage limit has been reached."
-msgstr ""
+msgstr "הגעת למגבלת שימוש בקופון"
 
 # @ woocommerce
 #: classes/class-wc-coupon.php:462
@@ -2001,7 +2006,7 @@ msgstr "קופון פג תוקף"
 # @ woocommerce
 #: classes/class-wc-coupon.php:465
 msgid "The minimum spend for this coupon is %s."
-msgstr ""
+msgstr "הוצאה מינימאלית לקופון זה היא %s. "
 
 #: classes/class-wc-coupon.php:468
 msgid "Sorry, this coupon is not applicable to your cart contents."
@@ -2019,7 +2024,7 @@ msgstr "אנא הכנס קוד קופון"
 # @ woocommerce
 #: classes/class-wc-customer.php:628 classes/class-wc-customer.php:638
 msgid "File %d"
-msgstr ""
+msgstr "קובץ  %d"
 
 # @ woocommerce
 #: classes/class-wc-emails.php:246
@@ -2029,19 +2034,19 @@ msgstr "הערות"
 # @ woocommerce
 #: classes/class-wc-emails.php:281
 msgid "Product low in stock"
-msgstr ""
+msgstr "מלאי נמוך למוצר"
 
 # @ woocommerce
 #: classes/class-wc-emails.php:286 classes/class-wc-emails.php:318
 #: classes/class-wc-emails.php:362
 msgid "Variation #%s of %s"
-msgstr ""
+msgstr "מגוון #%s של  %s"
 
 # @ woocommerce
 #: classes/class-wc-emails.php:288 classes/class-wc-emails.php:320
 #: classes/class-wc-emails.php:364
 msgid "Product #%s - %s"
-msgstr ""
+msgstr "מוצר  #%s - %s"
 
 # @ woocommerce
 #: classes/class-wc-emails.php:290
@@ -2061,12 +2066,12 @@ msgstr "אזל מהמלאי."
 # @ woocommerce
 #: classes/class-wc-emails.php:357
 msgid "Product Backorder"
-msgstr ""
+msgstr "הזמנה חוזרת למוצר"
 
 # @ woocommerce
 #: classes/class-wc-emails.php:366
 msgid "%s units of %s have been backordered in order #%s."
-msgstr ""
+msgstr "  יחידות של %s ממתינות להגעה מהמלאי בהזמנה #%s.  %s "
 
 # @ woocommerce
 #: classes/class-wc-order.php:283
@@ -2077,7 +2082,7 @@ msgstr " "
 # @ woocommerce
 #: classes/class-wc-order.php:858
 msgid "&nbsp;<small>%svia %s</small>"
-msgstr ""
+msgstr "&nbsp;<small>%svia %s</small>"
 
 # @ woocommerce
 #: classes/class-wc-order.php:923
@@ -2112,29 +2117,29 @@ msgstr "סה\"כ:"
 #: classes/class-wc-order.php:1034 templates/cart/totals.php:145
 #: templates/checkout/review-order.php:151
 msgid "(Includes %s)"
-msgstr ""
+msgstr "(כולל %s )"
 
 # @ woocommerce
 #: classes/class-wc-order.php:1183 classes/class-wc-order.php:1185
 #: classes/class-wc-order.php:1188
 msgid "WooCommerce"
-msgstr ""
+msgstr "WooCommerce"
 
 # @ woocommerce
 #: classes/class-wc-order.php:1235
 msgid "Order status changed from %s to %s."
-msgstr ""
+msgstr "סטטוס הזמנה השתנה מ %s ל  %s."
 
 # @ woocommerce
 #: classes/class-wc-order.php:1461 woocommerce-ajax.php:1163
 #: woocommerce-ajax.php:1164
 msgid "Item #%s stock reduced from %s to %s."
-msgstr ""
+msgstr "פריט #%s  מלאי הופחת מ %s ל  %s."
 
 # @ woocommerce
 #: classes/class-wc-order.php:1473
 msgid "Order item stock reduced successfully."
-msgstr ""
+msgstr "המוצר שמוזמן הופחת מהמלאי בהצלחה"
 
 # @ woocommerce
 #: classes/class-wc-product-external.php:56
@@ -2172,17 +2177,17 @@ msgstr "הזמנתך הושלמה "
 
 #: classes/emails/class-wc-email-customer-completed-order.php:28
 msgid "Your {blogname} order from {order_date} is complete"
-msgstr ""
+msgstr "ההזמנה שלך {blogname} מ {order_date} מוכנה"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-completed-order.php:37
 msgid "Your order is complete - download your files"
-msgstr ""
+msgstr "הזמנתך הושלמה - הורד את קבציך"
 
 #: classes/emails/class-wc-email-customer-completed-order.php:38
 msgid ""
 "Your {blogname} order from {order_date} is complete - download your files"
-msgstr ""
+msgstr "ההזמנה שלך {blogname} מ {order_date} מוכנה - הורד את קבציך"
 
 #: classes/emails/class-wc-email-customer-completed-order.php:141
 #: classes/emails/class-wc-email-new-order.php:128
@@ -2215,36 +2220,37 @@ msgid ""
 "Customer invoice emails can be sent to the user containing order info and "
 "payment links."
 msgstr ""
+"מייל חשבונית לקוח המכיל מידע על הזמנתך ולינקים לתשלום יכול להשלח למשתמש   "
 
 #: classes/emails/class-wc-email-customer-invoice.php:33
 msgid "Invoice for order {order_number} from {order_date}"
-msgstr ""
+msgstr "חשבונית להזמנה {order_number} מ {order_date}"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-invoice.php:34
 msgid "Invoice for order {order_number}"
-msgstr ""
+msgstr "חשבונית להזמנה {order_number}"
 
 #: classes/emails/class-wc-email-customer-invoice.php:36
 msgid "Your {blogname} order from {order_date}"
-msgstr ""
+msgstr "ההזמנה שלך {blogname}  מ {order_date}"
 
 #: classes/emails/class-wc-email-customer-invoice.php:37
 msgid "Order {order_number} details"
-msgstr ""
+msgstr "פרטי הזמנה {order_number} "
 
 #: classes/emails/class-wc-email-customer-invoice.php:158
 msgid "Email subject (paid)"
-msgstr ""
+msgstr "נושא המייל (שולם)"
 
 #: classes/emails/class-wc-email-customer-invoice.php:165
 msgid "Email heading (paid)"
-msgstr ""
+msgstr "כותרת המייל (שולם)"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-new-account.php:31
 msgid "New account"
-msgstr ""
+msgstr "חשבון חדש"
 
 #: classes/emails/class-wc-email-customer-new-account.php:32
 msgid ""
@@ -2257,41 +2263,41 @@ msgstr ""
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-new-account.php:37
 msgid "Your account on {blogname}"
-msgstr ""
+msgstr "החשבון שלך על {blogname}"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-new-account.php:38
 msgid "Welcome to {blogname}"
-msgstr ""
+msgstr "ברוך הבא {blogname}"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-note.php:29
 msgid "Customer note"
-msgstr ""
+msgstr "הערות לקוח"
 
 #: classes/emails/class-wc-email-customer-note.php:30
 msgid "Customer note emails are sent when you add a note to an order."
-msgstr ""
+msgstr "מייל הערות לקוח נשלח כאשר נוספת הערה להזמנתך"
 
 #: classes/emails/class-wc-email-customer-note.php:35
 msgid "Note added to your {blogname} order from {order_date}"
-msgstr ""
+msgstr "הערה נוספה להזמנתך  {blogname} ב {order_date}"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-note.php:36
 msgid "A note has been added to your order"
-msgstr ""
+msgstr "הערה נוספה להזמנתך"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-processing-order.php:24
 msgid "Processing order"
-msgstr ""
+msgstr "הזמנה בתהליך"
 
 #: classes/emails/class-wc-email-customer-processing-order.php:25
 msgid ""
 "This is an order notification sent to the customer after payment containing "
 "order details."
-msgstr ""
+msgstr "זוהי התראת הזמנה הנשלחת ללקוח לאחר תשלום המכילה מידע על ההזמנה "
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-processing-order.php:27
@@ -2300,7 +2306,7 @@ msgstr "תודה על הזמנתך"
 
 #: classes/emails/class-wc-email-customer-processing-order.php:28
 msgid "Your {blogname} order receipt from {order_date}"
-msgstr ""
+msgstr "קבלה של הזמנתך {blogname}   מ {order_date}"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-reset-password.php:36
@@ -2312,16 +2318,16 @@ msgstr "Reset password"
 msgid ""
 "Customer reset password emails are sent when a customer resets their "
 "password."
-msgstr ""
+msgstr "מייל איפוס סיסמת לקוח נשלח כאשר לקוח מאפס את סיסמתו"
 
 #: classes/emails/class-wc-email-customer-reset-password.php:42
 msgid "Password Reset for {blogname}"
-msgstr ""
+msgstr "סיסמא אופסה ל {blogname}"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-customer-reset-password.php:43
 msgid "Password Reset Instructions"
-msgstr ""
+msgstr "הנחיות לאיפוס סיסמא"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-new-order.php:24
@@ -2330,26 +2336,26 @@ msgstr "הזמנה חדשה"
 
 #: classes/emails/class-wc-email-new-order.php:25
 msgid "New order emails are sent when an order is received/paid by a customer."
-msgstr ""
+msgstr "מייל הזמנה חדשה נשלח כאשר הזמנה מתקבלת/שולמה ע\"י הלקוח"
 
 # @ woocommerce
 #: classes/emails/class-wc-email-new-order.php:27
 msgid "New customer order"
-msgstr ""
+msgstr "הזמנת לקוח חדש"
 
 #: classes/emails/class-wc-email-new-order.php:28
 msgid "[{blogname}] New customer order ({order_number}) - {order_date}"
-msgstr ""
+msgstr "הזמנת לקוח חדש [{blogname}] ({order_number}) - {order_date}  "
 
 #: classes/emails/class-wc-email-new-order.php:121
 msgid "Recipient(s)"
-msgstr ""
+msgstr "נמען/ים"
 
 #: classes/emails/class-wc-email-new-order.php:123
 msgid ""
 "Enter recipients (comma separated) for this email. Defaults to <code>%s</"
 "code>."
-msgstr ""
+msgstr "אנא הכנס נמען/ים למייל זה."
 
 # @ woocommerce
 #: classes/emails/class-wc-email-new-order.php:130
@@ -2357,6 +2363,8 @@ msgid ""
 "This controls the email subject line. Leave blank to use the default "
 "subject: <code>%s</code>."
 msgstr ""
+"זה שולט בשורת הנושא במייל. השאר ריק כדי להשתמש בנושא ברירת מחדל: <code>%s</"
+"code>. "
 
 #: classes/emails/class-wc-email-new-order.php:137
 msgid ""
@@ -2369,12 +2377,12 @@ msgstr ""
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:28
 msgid "Bacs"
-msgstr ""
+msgstr "Bacs"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:65
 msgid "Enable Bank Transfer"
-msgstr ""
+msgstr "אפשר העברה בנקאית"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:69
@@ -2398,7 +2406,7 @@ msgstr "כותרת"
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:106
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:86
 msgid "This controls the title which the user sees during checkout."
-msgstr ""
+msgstr "זה שולט בכותרת שרואה הלקוח במהלך התנתקות"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:72
@@ -2409,7 +2417,7 @@ msgstr "העברה בנקאית"
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:76
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:70
 msgid "Customer Message"
-msgstr ""
+msgstr "הודעת לקוח"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:78
@@ -2417,6 +2425,8 @@ msgid ""
 "Give the customer instructions for paying via BACS, and let them know that "
 "their order won't be shipping until the money is received."
 msgstr ""
+"תן ללקוח הנחיות בנוגע לתשלום באמצעות בקס, ויידע אותו כי הזמנתו לא תישלח עד "
+"שכספו יתקבל"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:79
@@ -2425,44 +2435,46 @@ msgid ""
 "as the payment reference. Your order wont be shipped until the funds have "
 "cleared in our account."
 msgstr ""
+"העבר את התשלום ישירות לחשבון הבנק שלנו. אנא השתמש במספר ההזמנה כסימוכין "
+"לתשלום. הזמנתך לא תישלח עד שהתשלום לא יאושר בחשבוננו "
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:82
 msgid "Account Details"
-msgstr ""
+msgstr "פרטי חשבון"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:84
 msgid "Optionally enter your bank details below for customers to pay into."
-msgstr ""
+msgstr "לחלופין, הכנס את פרטי הבנק שלך מתחת על מנת שלקוחות ישלמו אליו"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:88
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:163
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:203
 msgid "Account Name"
-msgstr ""
+msgstr "שם חשבון"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:94
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:164
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:204
 msgid "Account Number"
-msgstr ""
+msgstr "מספר חשבון"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:100
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:165
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:205
 msgid "Sort Code"
-msgstr ""
+msgstr "מספר בנק"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:106
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:166
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:206
 msgid "Bank Name"
-msgstr ""
+msgstr "שם בנק"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:112
@@ -2474,12 +2486,12 @@ msgstr "IBAN"
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:117
 msgid "BIC (formerly Swift)"
-msgstr ""
+msgstr "BIC (Swift לשעבר)"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:136
 msgid "BACS Payment"
-msgstr ""
+msgstr "תשלום BACS"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:137
@@ -2487,12 +2499,13 @@ msgid ""
 "Allows payments by BACS (Bank Account Clearing System), more commonly known "
 "as direct bank/wire transfer."
 msgstr ""
+"אפשר תשלום עם BACS (Bank Account Clearing System), הידוע כהעברה בנקאית ישירה"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:158
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:200
 msgid "Our Details"
-msgstr ""
+msgstr "הפרטים שלנו"
 
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:168
@@ -2503,7 +2516,7 @@ msgstr "BIC"
 # @ woocommerce
 #: classes/gateways/bacs/class-wc-gateway-bacs.php:234
 msgid "Awaiting BACS payment"
-msgstr ""
+msgstr "ממתין לתשלום באמצעות BACS"
 
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:28
@@ -2513,13 +2526,13 @@ msgstr "Cheque"
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:59
 msgid "Enable Cheque Payment"
-msgstr ""
+msgstr "אפשר תשלום בצ'ק"
 
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:66
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:90
 msgid "Cheque Payment"
-msgstr ""
+msgstr "תשלום בצ'ק"
 
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:72
@@ -2527,6 +2540,8 @@ msgid ""
 "Let the customer know the payee and where they should be sending the cheque "
 "to and that their order won't be shipping until you receive it."
 msgstr ""
+"יידע את הלקוח בנוגע למוטב ולאן לשלוח את הצ'ק, ועל כך שהזמנתו לא תישלח עד "
+"שתקבל זאת"
 
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:73
@@ -2534,6 +2549,8 @@ msgid ""
 "Please send your cheque to Store Name, Store Street, Store Town, Store "
 "State / County, Store Postcode."
 msgstr ""
+"אנא שלח את ההמחאה לשם החנות, רחוב החנות, עיר החנות, מדינת/מחוז החנות, מיקוד "
+"החנות."
 
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:91
@@ -2542,38 +2559,41 @@ msgid ""
 "you probably wouldn't but it does allow you to make test purchases for "
 "testing order emails and the 'success' pages etc."
 msgstr ""
+"אפשר תשלום בצ'ק. מדוע שתקבל המחאות בימים אלו ובתקופה זו? קרוב לוודאי שלא "
+"תקבל, אך המחאה מאפשרת לך לערוך מבדק לרכישות על מנת לבחון מיילים של הזמנות, "
+"הצלחת 'עמודים' וכו'"
 
 # @ woocommerce
 #: classes/gateways/cheque/class-wc-gateway-cheque.php:147
 msgid "Awaiting cheque payment"
-msgstr ""
+msgstr "ממתין לתשלום המחאה"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:27
 #: classes/gateways/cod/class-wc-gateway-cod.php:54
 #: classes/gateways/cod/class-wc-gateway-cod.php:90
 msgid "Cash on Delivery"
-msgstr ""
+msgstr "תשלום בזמן המשלוח"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:55
 msgid "Have your customers pay with cash (or by other means) upon delivery."
-msgstr ""
+msgstr "גרום ללקוח שלך לשלם במזומן (או באמצעי אחר) בזמן המשלוח"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:80
 msgid "Enable COD"
-msgstr ""
+msgstr "אפשר ת.ב.מ"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:81
 msgid "Enable Cash on Delivery"
-msgstr ""
+msgstr "אפשר תשלום בזמן המשלוח"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:89
 msgid "Payment method title that the customer will see on your website."
-msgstr ""
+msgstr "כותרת אמצעי תשלום שהלקוח יראה באתר שלך"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:94
@@ -2581,33 +2601,33 @@ msgstr ""
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:132
 #: woocommerce-template.php:748
 msgid "Description"
-msgstr ""
+msgstr "תיאור"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:96
 msgid "Payment method description that the customer will see on your website."
-msgstr ""
+msgstr "תיאור אמצעי התשלום שהלקוח יראה באתר שלך"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:97
 #: classes/gateways/cod/class-wc-gateway-cod.php:103
 msgid "Pay with cash upon delivery."
-msgstr ""
+msgstr "שלם במזומן בזמן המשלוח"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:100
 msgid "Instructions"
-msgstr ""
+msgstr "הנחיות"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:102
 msgid "Instructions that will be added to the thank you page."
-msgstr ""
+msgstr "הנחיות שיתווספו לעמוד התודה"
 
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:106
 msgid "Enable for shipping methods"
-msgstr ""
+msgstr "אפשר שיטות משלוח"
 
 #: classes/gateways/cod/class-wc-gateway-cod.php:111
 msgid ""
@@ -2620,55 +2640,55 @@ msgstr ""
 # @ woocommerce
 #: classes/gateways/cod/class-wc-gateway-cod.php:176
 msgid "Payment to be made upon delivery."
-msgstr ""
+msgstr "תשלום ייעשה בזמן המשלוח"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:31
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:196
 msgid "Mijireh Checkout"
-msgstr ""
+msgstr "יציאה Mijireh"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:143
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:321
 msgid "Mijireh error:"
-msgstr ""
+msgstr "שגיאה Mijireh:"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:160
 msgid "Enable Mijireh Checkout"
-msgstr ""
+msgstr "אפשר יציאה Mijireh"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:164
 msgid "Access Key"
-msgstr ""
+msgstr "קוד גישה"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:166
 msgid "The Mijireh access key for your store."
-msgstr ""
+msgstr "קוד גישה לחנות שלך The Mijireh"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:174
 msgid "Credit Card"
-msgstr ""
+msgstr "כרטיס אשראי"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:180
 msgid "Pay securely with you credit card."
-msgstr ""
+msgstr "שלם בצורה בטוחה עם כרטיס האשראי שלך"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:181
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:134
 msgid "This controls the description which the user sees during checkout."
-msgstr ""
+msgstr "זה שולט בתיאור שהלקוח רואה בזמן התנתקות"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:200
 msgid "Get started with Mijireh Checkout"
-msgstr ""
+msgstr "התחל עם יציאה Mijireh"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:201
@@ -2686,12 +2706,12 @@ msgstr ""
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:203
 msgid "Join for free"
-msgstr ""
+msgstr "הצטרף בחינם"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:203
 msgid "Learn more about WooCommerce and Mijireh"
-msgstr ""
+msgstr "למד עוד על WooCommerce and Mijireh"
 
 # @ woocommerce
 #: classes/gateways/mijireh/class-wc-gateway-mijireh.php:207
@@ -2712,47 +2732,48 @@ msgstr "PayPal"
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:90
 msgid "PayPal standard"
-msgstr ""
+msgstr "סטנדרט של PayPal"
 
 # @ woocommerce
 msgid ""
 "PayPal standard works by sending the user to PayPal to enter their payment "
 "information."
 msgstr ""
+"סטנדרט של PayPal עובדים באמצעות שליחת המשתמש לPayPal להכנסת פרטי התשלום."
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:103
 msgid "Gateway Disabled"
-msgstr ""
+msgstr "כניסה נחסמה"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:103
 msgid "PayPal does not support your store currency."
-msgstr ""
+msgstr "PayPal לא תומך במטבע החנות שלך"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:121
 msgid "Enable PayPal standard"
-msgstr ""
+msgstr "אפשר סטנדרט של PayPal"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:135
 msgid ""
 "Pay via PayPal; you can pay with your credit card if you don't have a PayPal "
 "account"
-msgstr ""
+msgstr "שלם דרך PayPal; אפשר לשלם עם כרטיס האשראי שלך אם אין לך חשבון PayPal"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:138
 msgid "PayPal Email"
-msgstr ""
+msgstr "PayPal אי-מייל"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:140
 msgid ""
 "Please enter your PayPal email address; this is needed in order to take "
 "payment."
-msgstr ""
+msgstr "אנא הכנס את כתובת המייל שלך בPayPal; זה נדרש לשם גביית התשלום"
 
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:146
 msgid "Invoice Prefix"
@@ -2771,12 +2792,12 @@ msgstr ""
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:153
 msgid "Submission method"
-msgstr ""
+msgstr "שיטת הגשה"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:155
 msgid "Use form submission method."
-msgstr ""
+msgstr "השתמש בטופס שיטת הגשה"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:156
@@ -2784,11 +2805,12 @@ msgid ""
 "Enable this to post order data to PayPal via a form instead of using a "
 "redirect/querystring."
 msgstr ""
+"אפשר לזה להעביר נתוני הזמנה לPayPal דרך טופס במקום  redirect/querystring. "
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:160
 msgid "Page Style"
-msgstr ""
+msgstr "סגנון עמוד"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:162
@@ -2796,26 +2818,28 @@ msgid ""
 "Optionally enter the name of the page style you wish to use. These are "
 "defined within your PayPal account."
 msgstr ""
+"לחלופין, הכנס את שם סגנון העמוד שברצונך להשתמש. זה מוגדר בתוך חשבון הPayPal "
+"שלך."
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:165
 msgid "Optional"
-msgstr ""
+msgstr "אופציונלי"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:168
 msgid "Shipping options"
-msgstr ""
+msgstr "אפשרויות משלוח"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:173
 msgid "Shipping details"
-msgstr ""
+msgstr "פרטי משלוח"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:175
 msgid "Send shipping details to PayPal instead of billing."
-msgstr ""
+msgstr "שלח פרטי משלוח לPayPal במקום חיוב "
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:177
@@ -2836,7 +2860,7 @@ msgstr "עקיפת כתובת"
 msgid ""
 "Enable \"address_override\" to prevent address information from being "
 "changed."
-msgstr ""
+msgstr "אפשר \"address_override\" למנוע ממידע על הכתובת להשתנות"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:184
@@ -2844,11 +2868,13 @@ msgid ""
 "PayPal verifies addresses therefore this setting can cause errors (we "
 "recommend keeping it disabled)."
 msgstr ""
+"PayPal מוודאים כתובות לכן הגדרה זו יכולה לגרום לשגיאות (אנו ממליצים לחסום "
+"אותה) "
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:188
 msgid "Gateway Testing"
-msgstr ""
+msgstr "בדיקת שער"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:193
@@ -2858,29 +2884,33 @@ msgstr "PayPal Sandbox"
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:195
 msgid "Enable PayPal sandbox"
-msgstr ""
+msgstr "אפשר PayPal sandbox"
 
 # @ woocommerce
 msgid ""
 "PayPal sandbox can be used to test payments. Sign up for a developer account "
 "<a href=\"%s\">here</a>."
 msgstr ""
+"PayPal sandbox יכול לשמש לבחינת תשלומים. הירשם לחשבון מפתח <a href=\"%s\"> "
+"כאן </a>."
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:200
 msgid "Debug Log"
-msgstr ""
+msgstr "חיבור איתור שגיאות"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:202
 msgid "Enable logging"
-msgstr ""
+msgstr "אפשר התחברות"
 
 # @ default
 msgid ""
 "Log PayPal events, such as IPN requests, inside <code>woocommerce/logs/"
 "paypal.txt</code>"
 msgstr ""
+"התחבר לאירועי PayPal, כמו בקשות IPN, בתוך <code>woocommerce/logs/paypal.txt</"
+"code>"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:313
@@ -2897,7 +2927,7 @@ msgstr "משלוח דרך"
 msgid ""
 "Thank you for your order. We are now redirecting you to PayPal to make "
 "payment."
-msgstr ""
+msgstr "תודה על הזמנתך. אנו מתחברים לPayPal להעברת התשלום."
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:435
@@ -2913,41 +2943,41 @@ msgstr "בטל הזמנה &amp; שחזר סל"
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:489
 msgid ""
 "Thank you for your order, please click the button below to pay with PayPal."
-msgstr ""
+msgstr "תודה על הזמנתך, נא לחץ על הכפתור מטה כדי לשלם באמצעות PayPal."
 
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:634
 msgid "Validation error: PayPal amounts do not match (gross %s)."
-msgstr ""
+msgstr "שגיאת אימות: כמויות PAYPAL אינן תואמות (gross %s). "
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:652
 msgid "IPN payment completed"
-msgstr ""
+msgstr "תשלום IPN הושלם"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:664
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:672
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:690
 msgid "Payment %s via IPN."
-msgstr ""
+msgstr "תשלום %s דרך IPN."
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:677
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:695
 msgid "Order refunded/reversed"
-msgstr ""
+msgstr "החזר/החלף הזמנה"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:678
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:696
 msgid "Order %s has been marked as refunded - PayPal reason code: %s"
-msgstr ""
+msgstr "הזמנה %s סומנה כהחזר - קוד סיבה PayPal: %s"
 
 # @ woocommerce
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:681
 #: classes/gateways/paypal/class-wc-gateway-paypal.php:699
 msgid "Payment for order %s refunded/reversed"
-msgstr ""
+msgstr "התשלום עבור הזמנה %s הוחזר/הוחלף"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:26
@@ -2960,11 +2990,13 @@ msgid ""
 "Google Analytics is a free service offered by Google that generates detailed "
 "statistics about the visitors to a website."
 msgstr ""
+"גוגל ניתוחים הוא שירות חופשי המוצע ע\"י גוגל היוצר סטטיסטיקות מפורטות על "
+"המבקרים באתר"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:62
 msgid "Google Analytics ID"
-msgstr ""
+msgstr "תעודת זהות של גוגל ניתוחים"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:63
@@ -2972,11 +3004,13 @@ msgid ""
 "Log into your google analytics account to find your ID. e.g. <code>UA-XXXXX-"
 "X</code>"
 msgstr ""
+"התחבר לחשבון שלך בגוגל ניתוחים ע\"מ למצוא את תעודת הזהות שלך. למשל <code>UA-"
+"XXXXX-X</code>"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:68
 msgid "Tracking code"
-msgstr ""
+msgstr "קוד מעקב"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:69
@@ -2984,22 +3018,24 @@ msgid ""
 "Add tracking code to your site's footer. You don't need to enable this if "
 "using a 3rd party analytics plugin."
 msgstr ""
+"הוסף קוד מעקב לתחתית העמוד שלך. אינך צריך לאפשר זאת אם אתה משתמש בתוסף "
+"ניתוחים צד שלישי "
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:75
 msgid "Add eCommerce tracking code to the thankyou page"
-msgstr ""
+msgstr "הוסף eCommerce קוד מעקב לעמוד התודה"
 
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:81
 msgid "Add event tracking code for add to cart actions"
-msgstr ""
+msgstr "הוסף קוד מעקב אירוע לפעולות הוספה לעגלה"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:113
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:168
 #: woocommerce-ajax.php:1725
 msgid "Guest"
-msgstr ""
+msgstr "אורח"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:201
@@ -3028,17 +3064,17 @@ msgstr "ShareDaddy"
 # @ woocommerce
 #: classes/integrations/sharedaddy/class-wc-sharedaddy.php:27
 msgid "ShareDaddy is a sharing plugin bundled with JetPack."
-msgstr ""
+msgstr "ShareDaddy הוא תוסף שיתוף יחד עם JetPack."
 
 # @ woocommerce
 #: classes/integrations/sharedaddy/class-wc-sharedaddy.php:51
 msgid "Output ShareDaddy button?"
-msgstr ""
+msgstr "כפתור  ShareDaddy פלט? "
 
 # @ woocommerce
 #: classes/integrations/sharedaddy/class-wc-sharedaddy.php:52
 msgid "Enable this option to show the ShareDaddy button on the product page."
-msgstr ""
+msgstr "אפשר אופציה זו כדי להראות את כפתור ShareDaddy בעמוד המוצר."
 
 # @ woocommerce
 #: classes/integrations/sharethis/class-wc-sharethis.php:29
@@ -3051,11 +3087,12 @@ msgid ""
 "ShareThis offers a sharing widget which will allow customers to share links "
 "to products with their friends."
 msgstr ""
+"ShareThis מציעה שיתוף יישום אשר יאפשר ללקוחות לשתף קישורים למוצרים עם חבריהם "
 
 # @ woocommerce
 #: classes/integrations/sharethis/class-wc-sharethis.php:63
 msgid "ShareThis Publisher ID"
-msgstr ""
+msgstr "תעודת זהות של מפרסם ShareThis "
 
 # @ woocommerce
 #: classes/integrations/sharethis/class-wc-sharethis.php:64
@@ -3063,6 +3100,8 @@ msgid ""
 "Enter your %1$sShareThis publisher ID%2$s to show social sharing buttons on "
 "product pages."
 msgstr ""
+"הכנס %1$sShareThis  את תעודת זהות מפרסם %2$s כדי להראות את לחצני שיתוף חברתי "
+"בעמודי המוצר.  "
 
 # @ woocommerce
 #: classes/integrations/sharethis/class-wc-sharethis.php:69
@@ -3072,7 +3111,7 @@ msgstr "שתף את הקוד"
 # @ woocommerce
 #: classes/integrations/sharethis/class-wc-sharethis.php:70
 msgid "You can tweak the ShareThis code by editing this option."
-msgstr ""
+msgstr "אפשר להתאים את קוד ShareThis באמצעות עריכת אפשרות"
 
 # @ woocommerce
 #: classes/integrations/shareyourcart/class-wc-shareyourcart.php:22
@@ -3088,10 +3127,14 @@ msgid ""
 "\"http://docs.woothemes.com/document/shareyourcart/\" target=\"__blank"
 "\">documentation</a>."
 msgstr ""
+"הגדל את חשיפת המדיה החברתית שלך ב10%! ShareYourCart עוזר לך להשיג עוד לקוחות "
+"באמצעות לקוחות מרוצים ונמרצים אשר ידברו עם חבריהם על המוצרים שלך. לעזרה עם "
+"ShareYourCart הסתכל ב  <a href=\"http://docs.woothemes.com/document/"
+"shareyourcart/\" target=\"__blank\">documentation</a>."
 
 #: classes/integrations/shareyourcart/class.shareyourcart-wp.php:328
 msgid "Share your cart settings"
-msgstr ""
+msgstr "שתף את הגדרות העגלה שלך"
 
 # @ woocommerce
 #: classes/integrations/shareyourcart/class.shareyourcart-wp.php:342
@@ -3112,7 +3155,7 @@ msgstr "תיעוד"
 # @ woocommerce
 #: classes/integrations/shareyourcart/views/admin-page.php:33
 msgid "Setup your ShareYourCart account"
-msgstr ""
+msgstr "הגדר את חשבון ShareYourCart  שלך"
 
 # @ woocommerce
 #: classes/integrations/shareyourcart/views/admin-page.php:35
@@ -3318,7 +3361,7 @@ msgstr ""
 
 #: classes/shipping/flat-rate/class-wc-shipping-flat-rate.php:176
 msgid "Option Name|Cost|Per-order (yes or no)"
-msgstr ""
+msgstr "אפשרות שם/עלות/לפי סדר (כן או לא)"
 
 # @ woocommerce
 #: classes/shipping/flat-rate/class-wc-shipping-flat-rate.php:467
@@ -3412,7 +3455,7 @@ msgstr "קופון משלוח חינם בתוקף"
 
 #: classes/shipping/free-shipping/class-wc-shipping-free-shipping.php:112
 msgid "A minimum order amount (defined below)"
-msgstr ""
+msgstr "כמות מינימאלית להזמנה (מוגדר מתחת)"
 
 # @ woocommerce
 #: classes/shipping/free-shipping/class-wc-shipping-free-shipping.php:113
@@ -3455,64 +3498,64 @@ msgstr "זמינות"
 # @ woocommerce
 #: classes/shipping/international-delivery/class-wc-shipping-international-delivery.php:70
 msgid "Selected countries"
-msgstr ""
+msgstr "מדינות נבחרות"
 
 # @ woocommerce
 #: classes/shipping/international-delivery/class-wc-shipping-international-delivery.php:71
 msgid "Excluding selected countries"
-msgstr ""
+msgstr "למעט מדינות נבחרות"
 
 # @ woocommerce
 #: classes/shipping/international-delivery/class-wc-shipping-international-delivery.php:75
 msgid "Countries"
-msgstr ""
+msgstr "מדינות"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:25
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:107
 msgid "Local Delivery"
-msgstr ""
+msgstr "משלוח מקומי"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:98
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:78
 msgid "Enable"
-msgstr ""
+msgstr "אפשר"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:100
 msgid "Enable local delivery"
-msgstr ""
+msgstr "אפשר משלוח מקומי"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:111
 msgid "Fee Type"
-msgstr ""
+msgstr "סוג תשלום"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:113
 msgid "How to calculate delivery charges"
-msgstr ""
+msgstr "כיצד לחשב עלות משלוח"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:116
 msgid "Fixed amount"
-msgstr ""
+msgstr "כמות קבועה"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:117
 msgid "Percentage of cart total"
-msgstr ""
+msgstr "אחוז כלל העגלה"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:118
 msgid "Fixed amount per product"
-msgstr ""
+msgstr "כמות קבועה לכל מוצר"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:123
 msgid "Delivery Fee"
-msgstr ""
+msgstr "עמלת משלוח"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:129
@@ -3520,12 +3563,14 @@ msgid ""
 "What fee do you want to charge for local delivery, disregarded if you choose "
 "free. Leave blank to disable."
 msgstr ""
+"איזה תשלום אתה מעוניין לגבות עבור משלוח מקומי, התעלם אם אתה בוחר במשלוח "
+"חינם. השאר ריק כדי לא לאפשר."
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:135
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:91
 msgid "Zip/Post Codes"
-msgstr ""
+msgstr "מיקוד / קוד דואר"
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:137
@@ -3534,23 +3579,25 @@ msgid ""
 "What zip/post codes would you like to offer delivery to? Separate codes with "
 "a comma. Accepts wildcards, e.g. P* will match a postcode of PE30."
 msgstr ""
+"לאיזה מיקוד/קוד דואר אתה מעוניין לאפשר משלוח? הפרד קודים עם פסיק. קבל תווים "
+"כלליים, למשל האות  P* תתאים למיקוד PE30."
 
 # @ woocommerce
 #: classes/shipping/local-delivery/class-wc-shipping-local-delivery.php:172
 msgid ""
 "Local delivery is a simple shipping method for delivering orders locally."
-msgstr ""
+msgstr "משלוח מקומי הוא שיטת משלוח פשוטה למשלוח הזמנות מקומיות"
 
 # @ woocommerce
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:25
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:87
 msgid "Local Pickup"
-msgstr ""
+msgstr "איסוף מקומי"
 
 # @ woocommerce
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:80
 msgid "Enable local pickup"
-msgstr ""
+msgstr "אפשר איסוף מקומי"
 
 # @ woocommerce
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:117
@@ -3562,25 +3609,26 @@ msgid ""
 "When this shipping method is chosen, apply the base tax rate rather than for "
 "the customer's given address."
 msgstr ""
+"כאשר שיטת משלוח זו נבחרת, השתמש בשיעור המס הבסיסי במקום הכתובת שמסר הלקוח"
 
 # @ woocommerce
 #: classes/shipping/local-pickup/class-wc-shipping-local-pickup.php:134
 msgid ""
 "Local pickup is a simple method which allows the customer to pick up their "
 "order themselves."
-msgstr ""
+msgstr "איסוף מקומי הוא שיטה פשוטה המאפשרת ללקוח לאסוף את ההזמנה בעצמם"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-cart.php:54
 #: woocommerce-functions.php:1637
 msgid "Please enter a valid postcode/ZIP."
-msgstr ""
+msgstr "אנא הקלד מיקוד תקף."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-cart.php:65
 #: classes/shortcodes/class-wc-shortcode-cart.php:71
 msgid "Shipping costs updated."
-msgstr ""
+msgstr "עלויות משלוח עודכנו."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-checkout.php:64
@@ -3588,67 +3636,69 @@ msgid ""
 "The order totals have been updated. Please confirm your order by pressing "
 "the Place Order button at the bottom of the page."
 msgstr ""
+"עלות ההזמנה הכללית עודכנה. נא אשר הזמנתך באמצעות לחיצה על לחצן Place Order  "
+"בתחתית העמוד."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:80
 #: woocommerce-core-functions.php:2488 woocommerce-functions.php:1559
 msgid "Please enter your password."
-msgstr ""
+msgstr "נא הכנס סיסמתך."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:95
 msgid "Your password has been reset."
-msgstr ""
+msgstr "סיסמתך אופסה."
 
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:95
 msgid "Log in"
-msgstr ""
+msgstr "התחבר"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:116
 msgid "Enter a username or e-mail address."
-msgstr ""
+msgstr "הכנס שם משתמש או כתובת אי-מייל."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:123
 msgid "There is no user registered with that email address."
-msgstr ""
+msgstr "לא קיים משתמש רשום תחת כתובת מייל זו."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:138
 msgid "Invalid username or e-mail."
-msgstr ""
+msgstr "שם משתמש או כתובת מייל לא תקפים"
 
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:152
 msgid "Password reset is not allowed for this user"
-msgstr ""
+msgstr "לא ניתן לאפס סיסמא למשתמש זה"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:180
 msgid "Check your e-mail for the confirmation link."
-msgstr ""
+msgstr "בדוק את האי-מייל שלך לקישור האימות."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:200
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:205
 #: classes/shortcodes/class-wc-shortcode-lost-password.php:212
 msgid "Invalid key"
-msgstr ""
+msgstr "מקש לא תקף"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-order-tracking.php:53
 msgid "Please enter a valid order ID"
-msgstr ""
+msgstr "אנא הכנס מספר זיהוי הזמנה תקף"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-order-tracking.php:57
 msgid "Please enter a valid order email"
-msgstr ""
+msgstr "אנא הכנס את כתובת המייל התקפה של ההזמנה"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-order-tracking.php:76
 msgid "Sorry, we could not find that order id in our database."
-msgstr ""
+msgstr "מצטערים, לא מצאנו הזמנה זו במאגר שלנו."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-pay.php:65
@@ -3656,7 +3706,7 @@ msgstr ""
 msgid ""
 "Your order has already been paid for. Please contact us if you need "
 "assistance."
-msgstr ""
+msgstr "הזמנתך כבר שולמה. אנא צור קשר עמנו אם אתה זקוק לעזרה."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-pay.php:70
@@ -3664,7 +3714,7 @@ msgstr ""
 #: classes/shortcodes/class-wc-shortcode-view-order.php:49
 #: woocommerce-functions.php:880 woocommerce-functions.php:959
 msgid "Invalid order."
-msgstr ""
+msgstr "הזמנה לא תקפה."
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-pay.php:90
@@ -3674,30 +3724,30 @@ msgstr ""
 #: templates/emails/customer-note.php:22
 #: templates/emails/customer-processing-order.php:18
 msgid "Order:"
-msgstr ""
+msgstr "הזמנה:"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-pay.php:94
 #: templates/checkout/thankyou.php:44
 msgid "Date:"
-msgstr ""
+msgstr "תאריך:"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-pay.php:98
 #: templates/checkout/thankyou.php:48
 msgid "Total:"
-msgstr ""
+msgstr "סך הכל:"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-pay.php:103
 #: templates/checkout/thankyou.php:53
 msgid "Payment method:"
-msgstr ""
+msgstr "אמצעי תשלום:"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-view-order.php:49
 msgid "My Account &rarr;"
-msgstr ""
+msgstr "החשבון שלי &rarr;"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-view-order.php:56
@@ -3705,37 +3755,39 @@ msgid ""
 "Order <mark class=\"order-number\">%s</mark> made on <mark class=\"order-date"
 "\">%s</mark>"
 msgstr ""
+"הזמנה <mark class=\"order-number\">%s</mark> נעשתה ב  <mark class=\"order-"
+"date\">%s</mark>"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-view-order.php:57
 msgid "Order status: <mark class=\"order-status\">%s</mark>"
-msgstr ""
+msgstr "סטטוס הזמנה: <mark class=\"order-status\">%s</mark>"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-view-order.php:63
 #: templates/order/tracking.php:31
 msgid "Order Updates"
-msgstr ""
+msgstr "עדכוני הזמנה"
 
 # @ woocommerce
 #: classes/shortcodes/class-wc-shortcode-view-order.php:69
 msgid "l jS \\of F Y, h:ia"
-msgstr ""
+msgstr "l jS \\of F Y, h:ia"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-best-sellers.php:31
 msgid "Display a list of your best selling products on your site."
-msgstr ""
+msgstr "הצג רשימה של המוצרים הנמכרים הטובים ביותר באתר שלך."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-best-sellers.php:33
 msgid "WooCommerce Best Sellers"
-msgstr ""
+msgstr "המוכרים הטובים ביותר של WooCommerce "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-best-sellers.php:71
 msgid "Best Sellers"
-msgstr ""
+msgstr "המוכרים הטובים ביותר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-best-sellers.php:192
@@ -3753,7 +3805,7 @@ msgstr ""
 #: classes/widgets/class-wc-widget-recently-viewed.php:166
 #: classes/widgets/class-wc-widget-top-rated-products.php:159
 msgid "Title:"
-msgstr ""
+msgstr "כותרת: "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-best-sellers.php:195
@@ -3765,72 +3817,72 @@ msgstr ""
 #: classes/widgets/class-wc-widget-recently-viewed.php:169
 #: classes/widgets/class-wc-widget-top-rated-products.php:162
 msgid "Number of products to show:"
-msgstr ""
+msgstr "מספר מוצרים להצגה:"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-best-sellers.php:199
 msgid "Hide free products"
-msgstr ""
+msgstr "הסתר מוצרים בחינם"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-cart.php:33
 msgid "Display the user's Cart in the sidebar."
-msgstr ""
+msgstr "הצג את עגלת הקניות של המשתמש בסרגל הכלים בצד"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-cart.php:35
 msgid "WooCommerce Cart"
-msgstr ""
+msgstr "עגלת הקניות של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-cart.php:119
 msgid "Hide if cart is empty"
-msgstr ""
+msgstr "הסתר אם עגלת הקניות ריקה"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-featured-products.php:35
 msgid "Display a list of featured products on your site."
-msgstr ""
+msgstr "הצג רשימה של מוצרים נבחרים באתר שלך. "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-featured-products.php:37
 msgid "WooCommerce Featured Products"
-msgstr ""
+msgstr "המוצרים הנבחרים של WooCommerce "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-featured-products.php:75
 msgid "Featured Products"
-msgstr ""
+msgstr "מוצרים נבחרים"
 
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:31
 msgid "Shows active layered nav filters so users can see and deactivate them."
-msgstr ""
+msgstr "מציג מסנני ניווט שכבתיים פעילים כך שמשתמשים יוכלו לראות ולבטל אותם."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:33
 msgid "WooCommerce Layered Nav Filters"
-msgstr ""
+msgstr "מסנני ניווט שכבתיים של WooCommerce "
 
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:62
 msgid "Active filters"
-msgstr ""
+msgstr "מסננים פעילים"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:93
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:99
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:104
 msgid "Remove filter"
-msgstr ""
+msgstr "הסר סינון"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:99
 msgid "Min"
-msgstr ""
+msgstr "מינימום"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav-filters.php:104
 msgid "Max"
-msgstr ""
+msgstr "מקסימום"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:31
@@ -3838,41 +3890,43 @@ msgid ""
 "Shows a custom attribute in a widget which lets you narrow down the list of "
 "products when viewing product categories."
 msgstr ""
+"מציג מאפיין מותאם אישית ביישום המאפשר לך לצמצם רשימה של מוצרים כאשר צופים "
+"בקטגוריות של מוצרים."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:33
 msgid "WooCommerce Layered Nav"
-msgstr ""
+msgstr "ניווט שכבתי של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:100
 msgid "Any %s"
-msgstr ""
+msgstr "כל %s"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:352
 msgid "Attribute:"
-msgstr ""
+msgstr "מאפיין:"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:363
 msgid "Display Type:"
-msgstr ""
+msgstr "סוג תצוגה:"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:365
 msgid "List"
-msgstr ""
+msgstr "רשימה"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:366
 msgid "Dropdown"
-msgstr ""
+msgstr "רשימה נפתחת"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:369
 msgid "Query Type:"
-msgstr ""
+msgstr "סוג שאלה:"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-layered-nav.php:371
@@ -3887,24 +3941,24 @@ msgstr "או"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:31
 msgid "Display a login area and \"My Account\" links in the sidebar."
-msgstr ""
+msgstr "הצג איזור התחברות ו\"My Account\"  לינקים בסרגל הצדדי."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:33
 msgid "WooCommerce Login"
-msgstr ""
+msgstr "חיבור WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:59
 #: classes/widgets/class-wc-widget-login.php:223
 msgid "Customer Login"
-msgstr ""
+msgstr "חיבור משתמש"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:60
 #: classes/widgets/class-wc-widget-login.php:226
 msgid "Welcome %s"
-msgstr ""
+msgstr "ברוך הבא %s"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:76
@@ -3939,7 +3993,7 @@ msgstr "סיסמא"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:120 woocommerce-functions.php:945
 msgid "Login &rarr;"
-msgstr ""
+msgstr "חיבור &rarr;"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:120
@@ -3949,27 +4003,27 @@ msgstr "שכחת סיסמא?"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:222
 msgid "Logged out title:"
-msgstr ""
+msgstr "כותרת ניתוק: "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-login.php:225
 msgid "Logged in title:"
-msgstr ""
+msgstr "כותרת חיבור:"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-onsale.php:31
 msgid "Display a list of your on-sale products on your site."
-msgstr ""
+msgstr "הצג רשימה של המוצרים שלך למכירה באתר שלך."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-onsale.php:33
 msgid "WooCommerce On-sale"
-msgstr ""
+msgstr "למכירה WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-onsale.php:70
 msgid "On Sale"
-msgstr ""
+msgstr "למכירה"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-price-filter.php:33
@@ -3977,21 +4031,23 @@ msgid ""
 "Shows a price filter slider in a widget which lets you narrow down the list "
 "of shown products when viewing product categories."
 msgstr ""
+"מציג מחוון סינון מחיר ביישום המאפשר לך לצמצם את רשימת המוצרים הנראים כאשר "
+"צופים בקטגוריות מוצרים."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-price-filter.php:35
 msgid "WooCommerce Price Filter"
-msgstr ""
+msgstr "מסנן מחיר WooCommerce "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-price-filter.php:136
 msgid "Min price"
-msgstr ""
+msgstr "מחיר מינימאלי"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-price-filter.php:137
 msgid "Max price"
-msgstr ""
+msgstr "מחיר מקסימאלי"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-price-filter.php:138
@@ -4006,38 +4062,38 @@ msgstr "מחיר:"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-price-filter.php:162
 msgid "Filter by price"
-msgstr ""
+msgstr "סינון מחיר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:33
 msgid "A list or dropdown of product categories."
-msgstr ""
+msgstr "רשימה של קטגוריות מוצר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:35
 msgid "WooCommerce Product Categories"
-msgstr ""
+msgstr "קטגוריות מוצר של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:57
 #: woocommerce.php:787 woocommerce.php:789
 msgid "Product Categories"
-msgstr ""
+msgstr "קטגוריות מוצר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:129
 msgid "No product categories exist."
-msgstr ""
+msgstr "לא קיימות קטגוריות למוצר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:188
 msgid "Order by:"
-msgstr ""
+msgstr "סדר לפי:"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:190
 msgid "Category Order"
-msgstr ""
+msgstr "סדר קטגוריות"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:191
@@ -4053,74 +4109,74 @@ msgstr "הראה כרשימת בחירה"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:198
 msgid "Show post counts"
-msgstr ""
+msgstr "הצג ספירות דואר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:201
 msgid "Show hierarchy"
-msgstr ""
+msgstr "הצג היררכיה"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-categories.php:204
 msgid "Only show children for the current category"
-msgstr ""
+msgstr "הצג רק ילדים לקגוריה זו"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-search.php:31
 msgid "A Search box for products only."
-msgstr ""
+msgstr "תיבת חיפוש למוצרים אלו בלבד."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-search.php:33
 msgid "WooCommerce Product Search"
-msgstr ""
+msgstr "חיפוש מוצר של WooCommerce "
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-tag-cloud.php:31
 msgid "Your most used product tags in cloud format."
-msgstr ""
+msgstr "תוויות המוצר השמישות ביותר בפורמט ענן."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-tag-cloud.php:33
 msgid "WooCommerce Product Tags"
-msgstr ""
+msgstr "תוויות מוצר של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-product-tag-cloud.php:58
 #: woocommerce.php:823 woocommerce.php:825
 msgid "Product Tags"
-msgstr ""
+msgstr "תוויות מוצר"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-random-products.php:24
 msgid "WooCommerce Random Products"
-msgstr ""
+msgstr "מוצרים אקראיים של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-random-products.php:27
 msgid "Display a list of random products on your site."
-msgstr ""
+msgstr "הצג רשימה של מוצרים אקראיים באתר שלך."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-random-products.php:46
 msgid "Random Products"
-msgstr ""
+msgstr "מוצרים אקראיים"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-random-products.php:144
 #: classes/widgets/class-wc-widget-recent-products.php:176
 msgid "Show hidden product variations"
-msgstr ""
+msgstr "הצג וריאציות מוצר נסתרות"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recent-products.php:31
 msgid "Display a list of your most recent products on your site."
-msgstr ""
+msgstr "הצג רשימה של המוצרים האחרונים ביותר באתר שלך."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recent-products.php:33
 msgid "WooCommerce Recent Products"
-msgstr ""
+msgstr "המוצרים האחרונים ביותר של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recent-products.php:70
@@ -4130,12 +4186,12 @@ msgstr "מוצר חדש"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recent-reviews.php:31
 msgid "Display a list of your most recent reviews on your site."
-msgstr ""
+msgstr "הצג רשימה של הביקורות האחרונות ביותר באתר שלך."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recent-reviews.php:33
 msgid "WooCommerce Recent Reviews"
-msgstr ""
+msgstr "ביקורות אחרונות ביותר WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recent-reviews.php:71
@@ -4151,12 +4207,12 @@ msgstr "על ידי %1$s"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recently-viewed.php:31
 msgid "Display a list of recently viewed products."
-msgstr ""
+msgstr "הצג רשימה של מוצרים שנצפו לאחרונה."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recently-viewed.php:33
 msgid "WooCommerce Recently Viewed Products"
-msgstr ""
+msgstr "מוצרים שנצפו לאחרונה של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-recently-viewed.php:76
@@ -4166,42 +4222,42 @@ msgstr "נצפה לאחרונה"
 # @ woocommerce
 #: classes/widgets/class-wc-widget-top-rated-products.php:33
 msgid "Display a list of top rated products on your site."
-msgstr ""
+msgstr "הצג רשימה של המוצרים המדורגים ביותר באתר שלך."
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-top-rated-products.php:35
 msgid "WooCommerce Top Rated Products"
-msgstr ""
+msgstr "המוצרים המדורגים ביותר של WooCommerce"
 
 # @ woocommerce
 #: classes/widgets/class-wc-widget-top-rated-products.php:72
 msgid "Top Rated Products"
-msgstr ""
+msgstr "המוצרים המדורגים ביותר"
 
 # @ woocommerce
 #: i18n/states/AU.php:13
 msgid "Australian Capital Territory"
-msgstr ""
+msgstr "טריטוריית הבירה האוסטרלית"
 
 # @ woocommerce
 #: i18n/states/AU.php:14
 msgid "New South Wales"
-msgstr ""
+msgstr "ניו סאות' ווילס"
 
 # @ woocommerce
 #: i18n/states/AU.php:15
 msgid "Northern Territory"
-msgstr ""
+msgstr "הטריטוריה הצפונית"
 
 # @ woocommerce
 #: i18n/states/AU.php:16
 msgid "Queensland"
-msgstr ""
+msgstr "קווינסלנד"
 
 # @ woocommerce
 #: i18n/states/AU.php:17
 msgid "South Australia"
-msgstr ""
+msgstr "דרום אוסטרליה"
 
 # @ woocommerce
 #: i18n/states/AU.php:18
@@ -5924,7 +5980,7 @@ msgstr "No hay productos en el carrito."
 #: templates/cart/mini-cart.php:63 templates/cart/totals.php:92
 #: templates/checkout/review-order.php:93
 msgid "Subtotal"
-msgstr "Subtotal"
+msgstr "סיכום ביניים"
 
 # @ woocommerce
 #: templates/cart/mini-cart.php:69
@@ -5946,7 +6002,7 @@ msgstr "Selecciona un país&hellip;"
 #: templates/cart/shipping-calculator.php:50
 #: templates/cart/shipping-calculator.php:61
 msgid "State / county"
-msgstr "Estado / País"
+msgstr "מדינה/ארץ"
 
 # @ woocommerce
 #: templates/cart/shipping-calculator.php:50 woocommerce-template.php:1377
@@ -6280,7 +6336,7 @@ msgstr "Has recibido un pedido de %s. Su pedido es el siguiente:"
 # @ woocommerce
 #: templates/emails/admin-new-order.php:17
 msgid "Order: %s"
-msgstr "Pedido: %s"
+msgstr "הזמנה: %s"
 
 # @ woocommerce
 #: templates/emails/admin-new-order.php:50
@@ -6380,7 +6436,7 @@ msgstr ""
 #: templates/emails/customer-reset-password.php:14
 #: templates/emails/plain/customer-reset-password.php:13
 msgid "Someone requested that the password be reset for the following account:"
-msgstr ""
+msgstr "מישהו ביקש שהסיסמא תאופס לחשבון זה:"
 
 # @ woocommerce
 #: templates/emails/customer-reset-password.php:15
@@ -6391,12 +6447,12 @@ msgstr "Nombre de usuario: %s"
 #: templates/emails/customer-reset-password.php:16
 #: templates/emails/plain/customer-reset-password.php:16
 msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr ""
+msgstr "אם זו הייתה טעות, התעלם מאי-מייל זה וכלום לא יקרה."
 
 #: templates/emails/customer-reset-password.php:17
 #: templates/emails/plain/customer-reset-password.php:17
 msgid "To reset your password, visit the following address:"
-msgstr ""
+msgstr "לאיפוס סיסמתך, כנס לכתובת זו:"
 
 # @ woocommerce
 #: templates/emails/customer-reset-password.php:20
@@ -6595,6 +6651,8 @@ msgid ""
 "Lost your password? Please enter your username or email address. You will "
 "receive a link to create a new password via email."
 msgstr ""
+"שכחת את סיסמתך? אנא הכנס את שם המשתמש שלך או כתובת מייל. תקבל קישור ליצירת "
+"סיסמה חדשה דרך המייל."
 
 # @ woocommerce
 #: templates/myaccount/form-lost-password.php:28
@@ -6667,7 +6725,7 @@ msgstr "Pedidos Recientes"
 # @ woocommerce
 #: templates/myaccount/my-orders.php:32 woocommerce.php:1025
 msgid "Order"
-msgstr "Pedido"
+msgstr "הזמנה"
 
 # @ woocommerce
 #: templates/myaccount/my-orders.php:33
@@ -6677,7 +6735,7 @@ msgstr "Fecha"
 # @ woocommerce
 #: templates/myaccount/my-orders.php:34
 msgid "Status"
-msgstr "Estado"
+msgstr "מצב"
 
 # @ woocommerce
 #: templates/myaccount/my-orders.php:62
@@ -6711,7 +6769,7 @@ msgstr ""
 # @ woocommerce
 #: templates/order/form-tracking.php:19
 msgid "Order ID"
-msgstr "ID de pedido"
+msgstr "ID הזמנה"
 
 # @ woocommerce
 #: templates/order/form-tracking.php:19
@@ -6839,7 +6897,7 @@ msgstr "Dimensiones"
 # @ woocommerce
 #: templates/single-product/related.php:36
 msgid "Related Products"
-msgstr "Productos Relacionados"
+msgstr "מוצרים דומים"
 
 # @ woocommerce
 #: templates/single-product/review.php:26
@@ -7003,7 +7061,7 @@ msgstr "Estándar"
 msgid ""
 "No products had their stock reduced - they may not have stock management "
 "enabled."
-msgstr ""
+msgstr "לא הופחת מלא מאף מוצר - ייתכן ואין אפשרות לניהול מלאי."
 
 # @ woocommerce
 #: woocommerce-ajax.php:1215 woocommerce-ajax.php:1216
@@ -7014,7 +7072,7 @@ msgstr "El stock del artículo nº %s ha sido incrementado de %s a %s."
 msgid ""
 "No products had their stock increased - they may not have stock management "
 "enabled."
-msgstr ""
+msgstr "לא התווסף מלאי לאף מוצר - ייתכן ואין אפשרות לניהול מלאי."
 
 # @ woocommerce
 #: woocommerce-ajax.php:1244
@@ -7229,7 +7287,7 @@ msgstr "Por favor, elige las opciones del producto&hellip;"
 #: woocommerce-functions.php:378
 msgid ""
 "Please choose the quantity of items you wish to add to your cart&hellip;"
-msgstr ""
+msgstr "אנא בחר את כמות הפריטים שברצונך להוסיף לעגלת הקניות &hellip;"
 
 # @ woocommerce
 #: woocommerce-functions.php:386
@@ -7238,11 +7296,11 @@ msgstr "Por favor, elige un producto para añadirlo a tu carrito&hellip;"
 
 #: woocommerce-functions.php:455
 msgid "Added &quot;%s&quot; to your cart."
-msgstr ""
+msgstr "נוסף &quot;%s&quot; לעגלת הקניות שלך."
 
 #: woocommerce-functions.php:455
 msgid "&quot; and &quot;"
-msgstr ""
+msgstr "&quot; ו &quot;"
 
 # @ woocommerce
 #: woocommerce-functions.php:458
@@ -7443,7 +7501,7 @@ msgstr "Opiniones (%d)"
 #: woocommerce-template.php:990
 msgctxt "breadcrumb"
 msgid "Home"
-msgstr "Inicio"
+msgstr "דף הבית"
 
 # @ woocommerce
 #: woocommerce-template.php:1288 woocommerce.php:1175
@@ -7782,7 +7840,7 @@ msgstr "Variación padre"
 #: woocommerce.php:1015
 msgctxt "Admin menu name"
 msgid "Orders"
-msgstr "Pedidos"
+msgstr "הזמנות"
 
 # @ woocommerce
 #: woocommerce.php:1024
@@ -7837,13 +7895,13 @@ msgstr "Aquí es donde se guardan los pedidos de la tienda."
 # @ woocommerce
 #: woocommerce.php:1061
 msgid "Coupons"
-msgstr "Cupones"
+msgstr "קופונים"
 
 # @ woocommerce
 #: woocommerce.php:1063
 msgctxt "Admin menu name"
 msgid "Coupons"
-msgstr "Cupones"
+msgstr "קופונים"
 
 # @ woocommerce
 #: woocommerce.php:1064
@@ -7868,7 +7926,7 @@ msgstr "Nuevo cupón"
 # @ woocommerce
 #: woocommerce.php:1069
 msgid "View Coupons"
-msgstr "Ver cupones"
+msgstr "צפה בקופונים"
 
 # @ woocommerce
 #: woocommerce.php:1070
@@ -7878,7 +7936,7 @@ msgstr "Ver cupón"
 # @ woocommerce
 #: woocommerce.php:1071
 msgid "Search Coupons"
-msgstr "Buscar cupones"
+msgstr "חפש קופונים"
 
 # @ woocommerce
 #: woocommerce.php:1072
