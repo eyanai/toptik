@@ -66,7 +66,7 @@ if ( ! is_admin() || defined('DOING_AJAX') ) {
 	 */
 	add_action( 'woocommerce_before_shop_loop', 'woocommerce_show_messages', 10 );
 	add_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
-	add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+	add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
 
 	/**
 	 * Product Loop Items
@@ -155,8 +155,8 @@ if ( ! is_admin() || defined('DOING_AJAX') ) {
 	 *
 	 * @see woocommerce_pagination()
 	 */
-	add_action( 'woocommerce_before_shop_loop', 'woocommerce_pagination', 10 );
-	add_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination_end', 10 );
+	add_action( 'woocommerce_before_shop_loop', 'woocommerce_pagination', 20 );
+	add_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination_end', 20 );
 
 	/**
 	 * Product page tabs

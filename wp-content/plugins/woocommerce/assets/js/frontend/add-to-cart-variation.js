@@ -62,7 +62,7 @@
 
 				// Upon changing an option
 				.on( 'change', '.variations select', function( event ) {
-
+					
 					$variation_form = $(this).closest('form.variations_form');
 					$variation_form.find('input[name=variation_id]').val('').change();
 

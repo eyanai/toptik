@@ -543,8 +543,8 @@ function woocommerce_catalog_page_ordering() {
 				'9' 		=> __('9 ', 'woocommerce'),
 				'12' 		=> __('12 ', 'woocommerce'),
 			));
-			
-			
+			 
+			 
 			foreach ( $shopCatalog_orderby as $sort_id => $sort_name )
 				echo '<option value="' . $sort_id . '" ' . selected( $_SESSION['sortby'], $sort_id, false ) . ' >' . $sort_name . '</option>';
 		?>
@@ -574,4 +574,25 @@ add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_page_ordering',
 
 
 
+
+
+
+
+/**
+ * Replace WooCommerce Default Pagination with WP-PageNavi Pagination
+ *
+ * @author WPSnacks.com
+ * @link http://www.wpsnacks.com
+ */
+remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
+function woocommerce_pagination() {
+		wp_pagenavi(array('before'=>'<div class="toppag">','after'=>'</div>')); 		
+	}
+add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
+
+remove_action('woocommerce_pagination_end', 'woocommerce_pagination', 10);
+function woocommerce_pagination_end() {
+	wp_pagenavi(array('before'=>'<div class="btomnav">','after'=>'</div>')); 		
+	}
+add_action( 'woocommerce_pagination_end', 'woocommerce_pagination', 10);
 

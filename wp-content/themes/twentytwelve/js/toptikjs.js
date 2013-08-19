@@ -66,4 +66,19 @@ jQuery(document).ready(function(e) {
 	jQuery('#'+id+'.wp-post-image').addClass('actgall');
 	});
 	
+	
+	
+   cookieCach();
+
 });
+
+function cookieCach(){
+	if(jQuery.cookie('shop_pageResults')){
+		var man=jQuery.cookie('shop_pageResults');
+		jQuery('#woocommerce-sort-by-columns option').each(function(index, element) {
+			if(jQuery(this).val()==man){
+				jQuery(this).attr('selected','selected');
+			}
+		});
+	}
+}

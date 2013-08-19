@@ -14,6 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $post;
 $rating = esc_attr( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating', true ) );
 ?>
+
+
+
 <li itemprop="reviews" itemscope itemtype="http://schema.org/Review" <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
 	<div id="comment-<?php comment_ID(); ?>" class="comment_container">
 
@@ -47,4 +50,5 @@ $rating = esc_attr( get_comment_meta( $GLOBALS['comment']->comment_ID, 'rating',
 				<div class="clear"></div>
 			</div>
 		<div class="clear"></div>
+		
 	</div>

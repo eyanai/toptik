@@ -15,6 +15,29 @@ $enable_slider = get_option('yith_wcmg_enableslider') == 'yes' ? true : false;
 ?>
     <div class="images<?php if($is_IE): ?> ie<?php endif ?>">
 
+
+<div class="topSingelMata">
+		<h1 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h1>
+			<?php 
+				$calories = woocommerce_get_product_terms( $product->id, 'pa_סידרה', 'names' );
+				if($calories){
+				echo "<span class=\"groop\"><h2> סידרה: </h2> ";
+				foreach ($calories as $cat)
+					  {
+					 echo " ". $cat;
+					  }	
+				echo "</span>";
+				}
+			?>
+			<?php if ( $product->is_type( array( 'simple', 'variable' ) ) && get_option( 'woocommerce_enable_sku' ) == 'yes' && $product->get_sku() ) : ?>
+		<span itemprop="productID" class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo $product->get_sku(); ?>.</span></span><br>
+	<?php endif; ?>
+
+	
+	</div>	
+
+
+
         <?php
         if ( has_post_thumbnail() ) {
 

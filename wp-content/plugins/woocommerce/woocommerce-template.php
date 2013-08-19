@@ -690,7 +690,7 @@ if ( ! function_exists( 'woocommerce_variable_add_to_cart' ) ) {
 		global $product;
 
 		// Enqueue variation scripts
-		wp_enqueue_script( '&#8249;&#8249;' );
+		wp_enqueue_script( 'wc-add-to-cart-variation' );
 
 		// Load the template
 		woocommerce_get_template( 'single-product/add-to-cart/variable.php', array(
