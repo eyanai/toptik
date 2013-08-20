@@ -15,7 +15,7 @@ if ( $available_methods ) {
 	// Prepare text labels with price for each shipping method
 	foreach ( $available_methods as $method ) {
 		$method->full_label = $method->label;
-
+		//echo "<pre>".print_r($method,1)."</pre>";
 		if ( $method->cost > 0 ) {
 			if ( $woocommerce->cart->tax_display_cart == 'excl' ) {
 				$method->full_label .= ': ' . woocommerce_price( $method->cost );
@@ -45,7 +45,7 @@ if ( $available_methods ) {
 		echo '<select name="shipping_method" id="shipping_method">';
 
 		foreach ( $available_methods as $method )
-			echo '<option value="' . esc_attr( $method->id ) . '" ' . selected( $method->id, $woocommerce->session->chosen_shipping_method, false ) . '>' . wp_kses_post( $method->full_label ) . '</option>';
+			echo '<option value="' . esc_attr( id ) . '" ' . selected( $method->id, $woocommerce->session->chosen_shipping_method, false ) . ' data-sval="'.$method->cost.'">' . wp_kses_post( $method->full_label ) . '</option>';
 
 		echo '</select>';
 

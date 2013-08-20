@@ -13,7 +13,7 @@
 		<div class="titelWcon"></div>
 		<?php echo get_the_post_thumbnail($post->ID,'full')?>
 		<div class="titelWcon"></div>	
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<span class="titelWcon"><h1 class="entry-title"><?php the_title(); ?></h1></span>
 		</header>
 
 		<div class="entry-content">

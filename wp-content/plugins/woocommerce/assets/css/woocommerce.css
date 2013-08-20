@@ -598,13 +598,13 @@ p.demo_store {
 .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button {
 	font-size: 100%;
 	margin: 0;
-	line-height: 1em;
+	line-height: 30px;
 	cursor: pointer;
 	position: relative;
 	font-family: inherit;
 	text-decoration: none;
 	overflow: visible;
-	padding: 6px 10px;
+	padding: 0px 10px;
 	text-decoration: none;
 	font-weight: bold;
 	-webkit-border-radius: 2px;
@@ -720,7 +720,16 @@ display:none
 	-moz-border-radius-topleft: 2px;
 	-moz-border-radius-bottomleft: 2px;
 	border-top-left-radius: 2px;
-	border-bottom-left-radius: 2px
+	border-bottom-left-radius: 2px;
+	background: rgb(224,224,224); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(224,224,224,1) 0%, rgba(236,236,236,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,224,224,1)), color-stop(100%,rgba(236,236,236,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+
 }
 .woocommerce .quantity noindex:-o-prefocus, .woocommerce .quantity input[type=number], .woocommerce #content .quantity noindex:-o-prefocus, .woocommerce #content .quantity input[type=number], .woocommerce-page .quantity noindex:-o-prefocus, .woocommerce-page .quantity input[type=number], .woocommerce-page #content .quantity noindex:-o-prefocus, .woocommerce-page #content .quantity input[type=number] {
 padding-right:1.2em
@@ -1025,6 +1034,7 @@ padding-right:1.2em
 	border-radius: 5px
 ;
 	direction: rtl;
+	float: right;
 }
 .woocommerce table.shop_table th, .woocommerce-page table.shop_table th {
 	font-weight: bold;
@@ -1067,7 +1077,7 @@ padding-right:1.2em
 	font-weight: bold;
 	float: right;
 	clear: right;
-	margin: 0 .25em 0 0;
+	margin: 1px .25em 0 0;
 	padding: 0
 }
 .woocommerce td.product-name dl.variation dd, .woocommerce-page td.product-name dl.variation dd {
@@ -1082,13 +1092,18 @@ padding-right:1.2em
 }
 .woocommerce table.cart .product-thumbnail, .woocommerce #content table.cart .product-thumbnail, .woocommerce-page table.cart .product-thumbnail, .woocommerce-page #content table.cart .product-thumbnail {
 	min-width: 32px
+;
+	width: 100px;
 }
 .woocommerce table.cart img, .woocommerce #content table.cart img, .woocommerce-page table.cart img, .woocommerce-page #content table.cart img {
-	width: 32px;
+	width: 70px;
 	height: auto
 }
 .woocommerce table.cart th, .woocommerce table.cart td, .woocommerce #content table.cart th, .woocommerce #content table.cart td, .woocommerce-page table.cart th, .woocommerce-page table.cart td, .woocommerce-page #content table.cart th, .woocommerce-page #content table.cart td {
 	vertical-align: middle
+;
+	text-align: center;
+	font-size: 16px;
 }
 .woocommerce table.cart a.remove, .woocommerce #content table.cart a.remove, .woocommerce-page table.cart a.remove, .woocommerce-page #content table.cart a.remove {
 
@@ -1111,6 +1126,8 @@ padding-right:1.2em
 }
 .woocommerce table.cart td.actions, .woocommerce #content table.cart td.actions, .woocommerce-page table.cart td.actions, .woocommerce-page #content table.cart td.actions {
 	text-align: right
+;
+	position: relative;
 }
 .woocommerce table.cart td.actions .coupon, .woocommerce #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon {
 	float: left
@@ -1120,7 +1137,7 @@ padding-right:1.2em
 }
 .woocommerce table.cart td.actions .coupon .input-text, .woocommerce #content table.cart td.actions .coupon .input-text, .woocommerce-page table.cart td.actions .coupon .input-text, .woocommerce-page #content table.cart td.actions .coupon .input-text {
 	width: 80px;
-	float: left;
+	float: right;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -1129,9 +1146,11 @@ padding-right:1.2em
 	-moz-box-shadow: inset 0 1px 4px 0 rgba(0,0,0,0.1);
 	border: 1px solid #dfdbdf;
 	padding: 6px 6px 5px;
-	margin: 0 4px 0 0;
+	margin: 0 80px 0 0;
 	outline: 0;
 	line-height: 1em
+;
+	height: 30px;
 }
 .woocommerce table.cart td.actions .button.alt, .woocommerce #content table.cart td.actions .button.alt, .woocommerce-page table.cart td.actions .button.alt, .woocommerce-page #content table.cart td.actions .button.alt {
 	float: right;
@@ -1215,8 +1234,7 @@ padding-right:1.2em
 }
 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells {
 	width: 48%;
-	float: left
-}
+	float: right;}
 .woocommerce .cart-collaterals .cross-sells ul.products, .woocommerce-page .cart-collaterals .cross-sells ul.products {
 	float: none
 }
@@ -1244,9 +1262,12 @@ padding-right:1.2em
 	width: 47%
 }
 .woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
-	float: right;
+	float: left;
 	width: 48%;
 	text-align: right
+;
+	position: relative;
+	margin-top: 40px;
 }
 .woocommerce .cart-collaterals .cart_totals p, .woocommerce-page .cart-collaterals .cart_totals p {
 	margin: 0
@@ -1337,6 +1358,8 @@ opacity:0
 	margin: 0;
 	outline: 0;
 	line-height: 1em
+;
+	height: 30px;
 }
 .woocommerce form .form-row textarea, .woocommerce-page form .form-row textarea {
 	height: 3.5em;
@@ -1688,6 +1711,7 @@ padding-top:2px
 	-webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
 	border-radius: 1em;
+
 	border: 1px solid #150d14;
 	cursor: pointer;
 	background: #ad74a2;

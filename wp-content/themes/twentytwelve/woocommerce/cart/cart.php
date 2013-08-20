@@ -15,19 +15,19 @@ $woocommerce->show_messages();
 ?>
 <?php do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post">
+<form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" id="cartFrom">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <table class="shop_table cart">
-	<thead>
+	<thead class="cartThead">
 		<tr>
-			<th class="product-remove">הסר </th>
-			<th class="product-thumbnail">מוצר</th>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-remove" id="topremove">הסר </th>
+			<th class="product-thumbnail up"><?php _e( 'Product', 'woocommerce' ); ?></th>
+			<th class="product-name up"></th>
+			<th class="product-price up"><?php _e( 'Price', 'woocommerce' ); ?></th>
+			<th class="product-quantity up"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
+			<th class="product-subtotal up"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -65,13 +65,28 @@ $woocommerce->show_messages();
 								if ( ! $_product->is_visible() || ( ! empty( $_product->variation_id ) && ! $_product->parent_is_visible() ) )
 									echo apply_filters( 'woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key );
 								else
-									printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), apply_filters('woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key ) );
+									//printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), apply_filters('woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key ) );
+									// echo "<pre>".print_r($_product,1)."</pre>";
+									 echo "<span class='cartDes'>". $_product->post->post_excerpt."</span>";
+									echo "<span class=\"cartMetaS\">";
+									$calories = woocommerce_get_product_terms( $_product->id, 'pa_סידרה', 'names' );
+									if($calories){
+									echo "סידרה: ";
+									foreach ($calories as $cat)
+										  {
+										 echo "<span class='red'>".$cat."</span>";
+										  }	
+									
+									}
+									
+									if ( $_product->is_type( array( 'simple', 'variable' ) ) && get_option( 'woocommerce_enable_sku' ) == 'yes' && $_product->get_sku() ) : ?>
+		<?php _e( 'SKU:', 'woocommerce' ); ?> <?php echo $_product->get_sku(); ?>
+	<?php endif; echo "</span>";
 
-								// Meta data
-								echo $woocommerce->cart->get_item_data( $values );
-
-                   				// Backorder notification
-                   				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $values['quantity'] ) )
+			// Meta data
+								echo $woocommerce->cart->get_item_data( $values);
+							                   				// Backorder notification
+                  if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $values['quantity'] ) )
                    					echo '<p class="backorder_notification">' . __( 'Available on backorder', 'woocommerce' ) . '</p>';
 							?>
 						</td>
@@ -117,20 +132,21 @@ $woocommerce->show_messages();
 
 		do_action( 'woocommerce_cart_contents' );
 		?>
-		<tr>
+		<tr class="noborder">
 			<td colspan="6" class="actions">
-
+					
 				<?php if ( $woocommerce->cart->coupons_enabled() ) { ?>
 					<div class="coupon">
 
-						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
+						<label for="coupon_code"><?php //_e( 'Coupon', 'woocommerce' ); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button" id="cuponSub" name="apply_coupon" value="<?php _e( 'Apply Coupon', 'woocommerce' ); ?>" />
 
 						<?php do_action('woocommerce_cart_coupon'); ?>
 
 					</div>
 				<?php } ?>
 
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> <input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
+				<input type="submit" class="button" id="update_cart" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> 
+				<input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
 
 				<?php do_action('woocommerce_proceed_to_checkout'); ?>
 

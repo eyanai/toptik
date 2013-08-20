@@ -16,25 +16,30 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 <div class="cart_totals <?php if ( $woocommerce->customer->has_calculated_shipping() ) echo 'calculated_shipping'; ?>">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
+	
+	<div class="shipping">
+						<span><?php //_e( 'Shipping', 'woocommerce' ); ?></span>
+						<span><?php woocommerce_get_template( 'cart/shipping-methods.php', array( 'available_methods' => $available_methods ) ); ?></span>
+	</div>
+
 
 	<?php if ( ! $woocommerce->shipping->enabled || $available_methods || ! $woocommerce->customer->get_shipping_country() || ! $woocommerce->customer->has_calculated_shipping() ) : ?>
 
-		<h2><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
+		<h2 class="cartTotalH2"><?php _e( 'Cart Totals', 'woocommerce' ); ?></h2>
 
-		<table cellspacing="0">
-			<tbody>
-
-				<tr class="cart-subtotal">
-					<th><strong><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></strong></th>
-					<td><strong><?php echo $woocommerce->cart->get_cart_subtotal(); ?></strong></td>
-				</tr>
+		<div class="subCartTable clear">
+			
+				<div class="cart-subtotal">
+					<span class="transSub"><strong><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></strong></span>
+					<span class="subGeray"><strong><?php echo $woocommerce->cart->get_cart_subtotal(); ?></strong></span>
+				</div>
 
 				<?php if ( $woocommerce->cart->get_discounts_before_tax() ) : ?>
 
-					<tr class="discount">
-						<th><?php _e( 'Cart Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '1', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></th>
-						<td>-<?php echo $woocommerce->cart->get_discounts_before_tax(); ?></td>
-					</tr>
+					<div class="discount">
+						<span class="transSub"><?php _e( 'Cart Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '1', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
+						<span class="subGeray"-<?php echo $woocommerce->cart->get_discounts_before_tax(); ?></span>
+					</div>
 
 				<?php endif; ?>
 
@@ -42,26 +47,29 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 					<?php do_action( 'woocommerce_cart_totals_before_shipping' ); ?>
 
-					<tr class="shipping">
+					<?php /*?><tr class="shipping">
 						<th><?php _e( 'Shipping', 'woocommerce' ); ?></th>
 						<td><?php woocommerce_get_template( 'cart/shipping-methods.php', array( 'available_methods' => $available_methods ) ); ?></td>
 					</tr>
-
+<?php */?>
 					<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
 
 				<?php endif ?>
-
+					<div class="shipVal">
+						<span class="transSub"></span>
+						<span class="subGeray" id="shipnam"></span>
+					</div>
 				<?php foreach ( $woocommerce->cart->get_fees() as $fee ) : ?>
 
-					<tr class="fee fee-<?php echo $fee->id ?>">
-						<th><?php echo $fee->name ?></th>
-						<td><?php
+					<div class="fee fee-<?php echo $fee->id ?>">
+						<span class="transSub"><?php echo $fee->name ?></span>
+						<span class="subGeray"><?php
 							if ( $woocommerce->cart->tax_display_cart == 'excl' )
-								echo woocommerce_price( $fee->amount );
+								echo  woocommerce_price( $fee->amount );
 							else
 								echo woocommerce_price( $fee->amount + $fee->tax );
-						?></td>
-					</tr>
+						?></span>
+					</div>
 
 				<?php endforeach; ?>
 
@@ -79,18 +87,18 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 				<?php if ( $woocommerce->cart->get_discounts_after_tax() ) : ?>
 
-					<tr class="discount">
-						<th><?php _e( 'Order Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '2', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></th>
-						<td>-<?php echo $woocommerce->cart->get_discounts_after_tax(); ?></td>
-					</tr>
+					<div class="discount">
+						<span class="transSub"><?php _e( 'Order Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '2', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
+						<span class="subGeray">-<?php echo $woocommerce->cart->get_discounts_after_tax(); ?></span>
+					</div>
 
 				<?php endif; ?>
 
 				<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
-				<tr class="total">
-					<th><strong><?php _e( 'Order Total', 'woocommerce' ); ?></strong></th>
-					<td>
+				<div class="total">
+					<span class="transSub"><strong><?php _e( 'Order Total', 'woocommerce' ); ?></strong></span>
+					<span class="subGeray">
 						<strong><?php echo $woocommerce->cart->get_total(); ?></strong>
 						<?php
 							// If prices are tax inclusive, show taxes here
@@ -106,13 +114,12 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 								}
 							}
 						?>
-					</td>
-				</tr>
+					</span>
+				</div>
 
 				<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 
-			</tbody>
-		</table>
+		</div>
 
 		<?php if ( $woocommerce->cart->get_cart_tax() ) : ?>
 
@@ -153,7 +160,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<?php endif; ?>
 
 	<?php endif; ?>
-
+	
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
 
 </div>

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.8\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2013-03-04 09:46:16+00:00\n"
-"PO-Revision-Date: 2013-08-18 15:09+0200\n"
+"PO-Revision-Date: 2013-08-20 15:06+0200\n"
 "Last-Translator: jb <jb@jb.es>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -5908,7 +5908,7 @@ msgstr "&larr; Volver A la Tienda"
 #: templates/emails/customer-processing-order.php:23
 #: templates/order/order-details.php:20 woocommerce.php:949
 msgid "Product"
-msgstr "Producto"
+msgstr "מוצר"
 
 # @ woocommerce
 #: templates/cart/cart.php:29 templates/emails/admin-new-order.php:24
@@ -5917,7 +5917,7 @@ msgstr "Producto"
 #: templates/emails/customer-note.php:29
 #: templates/emails/customer-processing-order.php:25
 msgid "Price"
-msgstr "Precio"
+msgstr "מחיר"
 
 # @ woocommerce
 #: templates/cart/cart.php:30 templates/emails/admin-new-order.php:23
@@ -5926,7 +5926,7 @@ msgstr "Precio"
 #: templates/emails/customer-note.php:28
 #: templates/emails/customer-processing-order.php:24
 msgid "Quantity"
-msgstr "Cantidad"
+msgstr "כמות"
 
 # @ woocommerce
 #: templates/cart/cart.php:31 templates/checkout/review-order.php:22
@@ -5954,22 +5954,22 @@ msgstr "Cupón"
 # @ woocommerce
 #: templates/cart/cart.php:127 templates/checkout/form-coupon.php:29
 msgid "Apply Coupon"
-msgstr "Aplicar cupón"
+msgstr "החל קופון"
 
 # @ woocommerce
 #: templates/cart/cart.php:134
 msgid "Update Cart"
-msgstr "Actualizar carrito"
+msgstr "עדכן עגלה"
 
 # @ woocommerce
 #: templates/cart/cart.php:134
 msgid "Proceed to Checkout &rarr;"
-msgstr "Realizar pedido &rarr;"
+msgstr "המשך לתשלום &rarr;"
 
 # @ woocommerce
 #: templates/cart/cross-sells.php:40
 msgid "You may be interested in&hellip;"
-msgstr "Usted puede estar interesado en&hellip;"
+msgstr "  אולי תתעניין ב&hellip;"
 
 # @ woocommerce
 #: templates/cart/mini-cart.php:55
@@ -5990,7 +5990,7 @@ msgstr "Finalizar compra &rarr;"
 # @ woocommerce
 #: templates/cart/shipping-calculator.php:20
 msgid "Calculate Shipping"
-msgstr "Calcular envío"
+msgstr "הוסף משלוח"
 
 # @ woocommerce
 #: templates/cart/shipping-calculator.php:24 woocommerce-template.php:1327
@@ -6012,7 +6012,7 @@ msgstr "Selecciona un estado/província&hellip;"
 # @ woocommerce
 #: templates/cart/shipping-calculator.php:71
 msgid "Update Totals"
-msgstr "Actualizar Totales"
+msgstr "סה\"כ לתשלום"
 
 # @ woocommerce
 #: templates/cart/shipping-methods.php:32
@@ -6040,12 +6040,12 @@ msgstr ""
 # @ woocommerce
 #: templates/cart/totals.php:22
 msgid "Cart Totals"
-msgstr "Total del carrito"
+msgstr "סה\"כ לתשלום"
 
 # @ woocommerce
 #: templates/cart/totals.php:28 templates/checkout/review-order.php:27
 msgid "Cart Subtotal"
-msgstr "Subtotal del carrito"
+msgstr "סכום בניים"
 
 # @ woocommerce
 #: templates/cart/totals.php:35 templates/checkout/review-order.php:34
@@ -6056,22 +6056,22 @@ msgstr "Descuento de carrito"
 # @ woocommerce
 #: templates/cart/totals.php:35 templates/cart/totals.php:120
 msgid "[Remove]"
-msgstr "[Eliminar]"
+msgstr "[הסר]"
 
 # @ woocommerce
 #: templates/cart/totals.php:46 templates/checkout/review-order.php:45
 msgid "Shipping"
-msgstr "Envío"
+msgstr "משלוח"
 
 # @ woocommerce
 #: templates/cart/totals.php:120 templates/checkout/review-order.php:124
 msgid "Order Discount"
-msgstr "Descuento del pedido"
+msgstr "הנחה בקנייה זו"
 
 # @ woocommerce
 #: templates/cart/totals.php:129 templates/checkout/review-order.php:133
 msgid "Order Total"
-msgstr "Total del pedido"
+msgstr "סה\"כ הזמנה"
 
 # @ woocommerce
 #: templates/cart/totals.php:161
@@ -6834,7 +6834,7 @@ msgstr " atrás"
 # @ woocommerce
 #: templates/shop/breadcrumb.php:66
 msgid "Products tagged &ldquo;"
-msgstr "Productos etiquetados &ldquo;"
+msgstr ""
 
 # @ woocommerce
 #: templates/shop/breadcrumb.php:94 templates/shop/breadcrumb.php:196

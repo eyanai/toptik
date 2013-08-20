@@ -679,11 +679,11 @@ footer[role="contentinfo"] a:hover {
 }
 .entry-header {
 	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-bottom: -0.285714rem;
 }
 .entry-header img.wp-post-image {
 	margin-bottom: 24px;
-	margin-bottom: 1.714285714rem;
+	margin-bottom: 0;
 }
 .entry-header .entry-title {
 	font-size: 20px;
@@ -2049,4 +2049,10 @@ height: 45px;
 #searchsubmit {
 width: 150px;
 height: 25px;
+}
+.product-remove{
+	text-align:right;
+}
+.shop_table.cart tr td:first-child{
+	width:10px !important;
 }

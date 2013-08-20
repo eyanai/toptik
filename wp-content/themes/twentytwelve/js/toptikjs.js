@@ -67,7 +67,17 @@ jQuery(document).ready(function(e) {
 	});
 	
 	
-	
+	//shiping and more
+	jQuery('#shipping_method').change(function(){
+	//	sval=jQuery('#shipping_method option:selected').data('sval');
+//		if(sval!=0){
+//			jQuery('#shipnam').text(sval + 'ש"ח');
+//			jQuery('.shipVal').show();
+//		}else{
+//			jQuery('.shipVal').hide();
+//		}
+	});
+	//shipVal
    cookieCach();
 
 });
