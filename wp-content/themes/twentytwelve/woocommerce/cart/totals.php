@@ -13,7 +13,7 @@ global $woocommerce;
 
 $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 ?>
-<div class="cart_totals <?php if ( $woocommerce->customer->has_calculated_shipping() ) echo 'calculated_shipping'; ?>">
+<div class="cart_totals <?php if ( $woocommerce->customer->has_calculated_shipping() ) echo 'calculated_shipping'; ?> toptik">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 	
@@ -126,6 +126,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<div class="sammery">
 			<div class="sammSum">הנחה בקנייה זו: <span class="saveing"></span></div>
 			<div class="sammAll">סה"כ לתשלום: <span class="allSum"></span></div>
+				<a href="<?php echo get_permalink(get_page_by_path('checkout'));?>" class="chackOutCart"></a>
 		</div>
 		<?php if ( $woocommerce->cart->get_cart_tax() ) : ?>
 

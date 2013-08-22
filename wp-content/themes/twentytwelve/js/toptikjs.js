@@ -54,6 +54,38 @@ jQuery(document).ready(function(e) {
 			}
 		});
 	}
+	//slide for wide icons footer
+	
+	jQuery('.lIco').on('mousedown',this,function(){
+		ulPos=parseInt(jQuery('.brandsMenu_wide ul').css('right'));
+		widAll=jQuery('.brandsMenu_wide ul').width();
+		conW=jQuery(".brandsMenu_wide").width();
+		cPos=parseInt(jQuery('.brandsMenu_wide ul').css('right'));
+		nobe=-(widAll);
+		//alert(cPos+'<-->'+nobe);
+			if(cPos-conW>nobe){
+				npos=cPos-180;
+				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
+			}else{
+				return false
+			}
+			
+	});
+	
+	jQuery('.rIco').on('mousedown',this,function(){
+		ulPos=parseInt(jQuery('.brandsMenu_wide ul').css('right'));
+		widAll=jQuery('.brandsMenu_wide ul').width();
+		conW=jQuery(".brandsMenu_wide").width();
+		cPos=parseInt(jQuery('.brandsMenu_wide ul').css('right'));
+		nobe=-(widAll);
+			if(cPos<=0){
+				npos=cPos+180;
+				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
+			}else{
+				return false;
+			}
+			
+	});
 	
 	//home gallery slide
 	jQuery('.pointer').on('click',this,function(){
@@ -80,15 +112,19 @@ jQuery(document).ready(function(e) {
 		saveingAndMore();
 	});
 	
+	
 	jQuery('.lock').on('click',this,function(){
 		popUp('.premitionPop','.cPop');	
 		return  false;
+	});	
+	jQuery('.members').on('click',this,function(){
+		popUp('.loginpop','.cPop');	
+		return  false;
 	});
-		
 	//shipVal
    cookieCach();
 	saveingAndMore();
-	
+	setWW();
 });
 
 function cookieCach(){
@@ -117,9 +153,34 @@ function saveingAndMore(){
 }
 
 function popUp(elm,elmClos){
-	loc=jQuery(document).scrollTop();;
-	jQuery(elm).css('top',loc+'px').fadeToggle();
-	jQuery(elmClos).on('click',this,function(){
-		jQuery(elm).hide();
+	if(elm=='.loginpop'){
+		if(jQuery('.loginPop').children('form').size() > 0){
+			loc=jQuery(document).scrollTop();;
+			jQuery(elm).css('top',loc+'px').fadeToggle();
+			jQuery(elmClos).on('click',this,function(){
+				jQuery(elm).hide();
+			});
+		}else{
+			alert('אתה כבר מוחבר');
+		}
+	}else{
+		loc=jQuery(document).scrollTop();;
+		jQuery(elm).css('top',loc+'px').fadeToggle();
+		jQuery(elmClos).on('click',this,function(){
+			jQuery(elm).hide();
+		});
+	}	
+}
+
+function setWW(){
+	var liw=0;	
+	conW=jQuery('.brandsCon').width();
+	jQuery('.brandsMenu_wide ul li').each(function(index, element) {
+			liw=liw+jQuery(this).width()+15;
 	});
+	jQuery('.brandsMenu_wide ul').css('width',liw+'px');
+	
+	if(liw>conW){
+		jQuery('.lIco,.rIco').show();
+	}
 }

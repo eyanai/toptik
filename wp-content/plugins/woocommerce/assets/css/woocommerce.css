@@ -1233,14 +1233,15 @@ padding-right:1.2em
 	float: left
 }
 .woocommerce .cart-collaterals .cross-sells, .woocommerce-page .cart-collaterals .cross-sells {
-	width: 48%;
-	float: right;}
+	width: 100%;
+	float: right;
+	margin-top: 1em;
+}
 .woocommerce .cart-collaterals .cross-sells ul.products, .woocommerce-page .cart-collaterals .cross-sells ul.products {
 	float: none
 }
 .woocommerce .cart-collaterals .cross-sells ul.products li, .woocommerce-page .cart-collaterals .cross-sells ul.products li {
-	width: 48%
-}
+	width: 205px;}
 .woocommerce .cart-collaterals .shipping_calculator, .woocommerce-page .cart-collaterals .shipping_calculator {
 	width: 48%;
 	text-align: right;

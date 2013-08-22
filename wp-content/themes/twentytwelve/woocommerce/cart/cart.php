@@ -173,9 +173,6 @@ $woocommerce->show_messages();
 	</div><?php */?>
 	<?php //woocommerce_shipping_calculator(); ?>
 	<?php woocommerce_cross_sell_display();?>
-	
-	<?php woocommerce_login_form();?>
-
 </div>
 	<div class="premitionPop">
 		<span class="cPop">סגור</span>
@@ -187,4 +184,11 @@ $woocommerce->show_messages();
 		?>
 		</div>
 	</div>
+	<div class="loginpop">
+		<span class="cPop">סגור</span>
+		<div class="loginPop">
+			<?php woocommerce_login_form();?>
+		</div>
+	</div>
+<?php get_footer('reg');?>
 <?php do_action( 'woocommerce_after_cart' ); ?>

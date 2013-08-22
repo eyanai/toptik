@@ -26,7 +26,7 @@ $meta_query = $woocommerce->query->get_meta_query();
 $args = array(
 	'post_type'           => 'product',
 	'ignore_sticky_posts' => 1,
-	'posts_per_page'      => apply_filters( 'woocommerce_cross_sells_total', 2 ),
+	'posts_per_page'      => apply_filters( 'woocommerce_cross_sells_total', 4),
 	'no_found_rows'       => 1,
 	'orderby'             => 'rand',
 	'post__in'            => $crosssells,
@@ -40,9 +40,9 @@ $woocommerce_loop['columns'] 	= apply_filters( 'woocommerce_cross_sells_columns'
 if ( $products->have_posts() ) : ?>
 
 	<div class="cross-sells">
-
-		<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
-
+		<div class="recommendedtop">
+		<h2 class="crossrec"><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
+		</div>
 		<?php woocommerce_product_loop_start(); ?>
 
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
@@ -56,5 +56,5 @@ if ( $products->have_posts() ) : ?>
 	</div>
 
 <?php endif;
-
+get_sidebar('midel');
 wp_reset_query();

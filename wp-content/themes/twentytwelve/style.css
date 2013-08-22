@@ -495,7 +495,7 @@ body.custom-font-enabled {
 }
 a {
 	outline: none;
-	color: #21759b;
+	color: #000;
 }
 a:hover {
 	color: #0f3647;
