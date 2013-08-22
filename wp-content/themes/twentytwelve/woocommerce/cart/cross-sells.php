@@ -7,6 +7,12 @@
  * @version     1.6.4
  */
 
+?>
+<div class="popupCart">      
+		<a href="#" class="members"></a>
+		<a href="#" class="lock"></a>
+</div>
+<?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce_loop, $woocommerce, $product;

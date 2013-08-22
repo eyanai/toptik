@@ -56,7 +56,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 				<?php endif ?>
 					<div class="shipVal">
-						<span class="transSub"></span>
+						<span class="transSub">משלוח</span>
 						<span class="subGeray" id="shipnam"></span>
 					</div>
 				<?php foreach ( $woocommerce->cart->get_fees() as $fee ) : ?>
@@ -118,9 +118,15 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 				</div>
 
 				<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
+				
+				
+				
 
+		</div><!--subCartTable-->
+		<div class="sammery">
+			<div class="sammSum">הנחה בקנייה זו: <span class="saveing"></span></div>
+			<div class="sammAll">סה"כ לתשלום: <span class="allSum"></span></div>
 		</div>
-
 		<?php if ( $woocommerce->cart->get_cart_tax() ) : ?>
 
 			<p><small><?php
@@ -140,7 +146,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 			<div class="woocommerce-info">
 
 				<p><?php _e( 'No shipping methods were found; please recalculate your shipping and enter your state/county and zip/postcode to ensure there are no other available methods for your location.', 'woocommerce' ); ?></p>
-
+				
 			</div>
 
 		<?php else : ?>

@@ -167,9 +167,24 @@ $woocommerce->show_messages();
 	<?php do_action('woocommerce_cart_collaterals'); ?>
 
 	<?php woocommerce_cart_totals(); ?>
-
-	<?php woocommerce_shipping_calculator(); ?>
+	<?php /*?><div class="popupCart">      ///////////////in cross-sels-disdplay page
+		<a href="#" class="members"></a>
+		<a href="#" class="lock"></a>
+	</div><?php */?>
+	<?php //woocommerce_shipping_calculator(); ?>
+	<?php woocommerce_cross_sell_display();?>
+	
+	<?php woocommerce_login_form();?>
 
 </div>
-
+	<div class="premitionPop">
+		<span class="cPop">סגור</span>
+		<div class="contectPop">
+		<?php 
+			$page = get_page_by_title( 'תנאים והגבלות' );
+			$content = apply_filters('the_content', $page->post_content); 
+			echo $content;
+		?>
+		</div>
+	</div>
 <?php do_action( 'woocommerce_after_cart' ); ?>

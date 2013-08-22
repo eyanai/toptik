@@ -45,7 +45,7 @@ if ( $available_methods ) {
 		echo '<select name="shipping_method" id="shipping_method">';
 
 		foreach ( $available_methods as $method )
-			echo '<option value="' . esc_attr( id ) . '" ' . selected( $method->id, $woocommerce->session->chosen_shipping_method, false ) . ' data-sval="'.$method->cost.'">' . wp_kses_post( $method->full_label ) . '</option>';
+			echo '<option value="' . esc_attr( $method->id ) . '" ' . selected( $method->id, $woocommerce->session->chosen_shipping_method, false ) . ' data-sval="'.$method->cost.'">' . wp_kses_post( $method->full_label ) . '</option>';
 
 		echo '</select>';
 

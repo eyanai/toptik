@@ -180,7 +180,7 @@ if ( ! is_admin() || defined('DOING_AJAX') ) {
 	 *
 	 * @see woocommerce_cross_sell_display()
 	 */
-	add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+	//add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
 
 	/**
 	 * Footer

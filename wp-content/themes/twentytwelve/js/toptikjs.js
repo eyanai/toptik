@@ -68,18 +68,27 @@ jQuery(document).ready(function(e) {
 	
 	
 	//shiping and more
-	jQuery('#shipping_method').change(function(){
-	//	sval=jQuery('#shipping_method option:selected').data('sval');
-//		if(sval!=0){
-//			jQuery('#shipnam').text(sval + 'ש"ח');
-//			jQuery('.shipVal').show();
-//		}else{
-//			jQuery('.shipVal').hide();
-//		}
+	jQuery('body').on('updated_shipping_method',function(){
+		//alert('poo');
+		sval=jQuery('#shipping_method option:selected').data('sval');
+		if(sval!=0){
+			jQuery('#shipnam').text(sval + 'ש"ח');
+			jQuery('.shipVal').show();	
+			}else{
+			jQuery('.shipVal').hide();
+		}
+		saveingAndMore();
 	});
+	
+	jQuery('.lock').on('click',this,function(){
+		popUp('.premitionPop','.cPop');	
+		return  false;
+	});
+		
 	//shipVal
    cookieCach();
-
+	saveingAndMore();
+	
 });
 
 function cookieCach(){
@@ -91,4 +100,26 @@ function cookieCach(){
 			}
 		});
 	}
+}
+
+function saveingAndMore(){
+	save=jQuery('.discount .amount').html();
+	allsum=jQuery('.total .subGeray .amount').html();
+//	alert(allsum);
+	if(save){
+		jQuery('.saveing').html(save);
+		jQuery('.sammSum').show();
+	}else{
+		jQuery('.sammSum').hide();
+	}
+	
+	jQuery('.allSum').html(allsum);
+}
+
+function popUp(elm,elmClos){
+	loc=jQuery(document).scrollTop();;
+	jQuery(elm).css('top',loc+'px').fadeToggle();
+	jQuery(elmClos).on('click',this,function(){
+		jQuery(elm).hide();
+	});
 }

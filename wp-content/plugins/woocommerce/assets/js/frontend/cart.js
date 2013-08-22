@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
 
 			$('div.cart_totals').replaceWith( response );
 			$('body').trigger('updated_shipping_method');
-
+			
 		});
 	})
 
