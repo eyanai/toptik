@@ -339,14 +339,14 @@ get_header('shop'); ?>
 
 	</a>
 	<a href="<?php the_permalink(); ?>" class="more"></a>
-	<div class="ietmClass">
-		<span class="req"></span>
+	<!--<div class="ietmClass">
+		<span class="req"></span>-->
 			<?php
 			
 		//$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-//		echo $product->get_categories( ', ', '<span class="b_cat">' . _n( '', '', $size, 'woocommerce' ) . ' ', '.</span>' );
+		//echo $product->get_categories( ', ', '<span class="b_cat">' . _n( '', '', $size, 'woocommerce' ) . ' ', '.</span>' );
 	?>
-	</div>
+	<!--</div>-->
 	<?php //do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
 </li>

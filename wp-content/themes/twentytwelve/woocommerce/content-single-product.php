@@ -38,9 +38,12 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 		<div class="logoSingel">
 			<?php
 					$field = get_field('logo_toptik', $product->ID, $format_value);
+					
+					// load all 'category' terms for the post
 					$img= wp_get_attachment_image_src($field,array(335,45));
 			?>	
-			<img src="<?php echo $img[0];?>">
+			<img src="<?php echo $img[0];?>"><br>
+
 		</div>
 	<?php endif;?>
 

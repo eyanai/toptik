@@ -125,7 +125,25 @@ jQuery(document).ready(function(e) {
    cookieCach();
 	saveingAndMore();
 	setWW();
-});
+
+	jQuery('#shipping_company,#billing_company').attr('type','date');
+	
+	
+	jQuery('.submit_btb_paypal').on('click',function(){
+		//what to do... when paypal btn clicked
+		jQuery.post('cahck.php', function(data) {
+				  $('.result').html(data);
+				});
+	});
+});//dom redy
+
+
+
+
+
+
+
+
 
 function cookieCach(){
 	if(jQuery.cookie('shop_pageResults')){

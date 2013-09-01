@@ -80,3 +80,5 @@ add_action('admin_init',function(){
 	new TOP_Option();
 });
 
+require_once('usereg.php');
+

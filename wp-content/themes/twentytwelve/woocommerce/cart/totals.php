@@ -126,7 +126,13 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<div class="sammery">
 			<div class="sammSum">הנחה בקנייה זו: <span class="saveing"></span></div>
 			<div class="sammAll">סה"כ לתשלום: <span class="allSum"></span></div>
-				<a href="<?php echo get_permalink(get_page_by_path('checkout'));?>" class="chackOutCart"></a>
+				<a href="<?php 
+					//if($user_login){
+						echo get_permalink(get_page_by_path('checkout'));
+					//}else{
+						//echo get_permalink(get_page_by_path('לקוח חדש'));
+				//	}
+				?>" class="chackOutCart"></a>
 		</div>
 		<?php if ( $woocommerce->cart->get_cart_tax() ) : ?>
 

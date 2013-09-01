@@ -19,7 +19,7 @@ get_header('shop'); ?>
 			
 
 	?>
-<div class="tag-desc"><?php do_action( 'woocommerce_archive_description'); ?></div>
+<div class="tag-desc"> <?php do_action( 'woocommerce_archive_description'); ?></div>
 		
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 

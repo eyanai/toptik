@@ -15,6 +15,6 @@
 				
 							
 				 ?>
-				<?php if($caunter>4):?>
+			
 					<div class="recommendedtop goto"><h2 class="gotop"></h2></div>
-				<?php endif;?>
+			

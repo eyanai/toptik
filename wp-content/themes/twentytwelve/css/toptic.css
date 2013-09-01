@@ -194,8 +194,8 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
 	position: relative;
 	background-image: url(../images/product/hp3bg.png);
 	background-repeat: no-repeat;
-	background-size: 243px 145px;
-	background-position: 0 -4px;
+	background-size: 246px 145px;
+	background-position: -2px -4px;
 	border: solid 1px #c2c3c4;
 }
 .topBannerBox img {
@@ -232,7 +232,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
 .topBannerBox .price {
 	position: absolute;
 	color: #000;
-	font-size: 2em;
+	font-size: 1.7em;
 	bottom: 4px;
 	z-index: 5;
 	right: 5px;
@@ -325,12 +325,13 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 	margin-top: 15px;
+	padding-right: 0.8em;
 }
 .mata_3 h3 {
 	float: right;
 	width: 100%;
-	text-align: center;
-	font-size: 1.7em;
+	padding-right: 0.8em;
+	font-size: 1.5em;
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 }
@@ -395,6 +396,7 @@ recommendedtop.bottom {
 }
 .brandsMenu ul {
 	width: 100%;
+
 	height: 80px;
 }
 .brandsMenu ul li {
@@ -408,7 +410,6 @@ recommendedtop.bottom {
 /*pro_class*/
 .tag-desc {
 	width: 100%;
-	max-height: 200px;
 	margin-bottom: 2em;
 	margin-top: -31px;
 }
@@ -418,6 +419,8 @@ recommendedtop.bottom {
 	background-position: top left, bottom right;
 	padding: 10px 0;
 	background-size: 7px;
+	clear: both;
+	max-height: 200px;
 }
 .term-description p{
 	width:100%;
@@ -440,6 +443,9 @@ recommendedtop.bottom {
 .sku_wrapper {
 	color: #000;
 	font-weight: bold;
+}
+.tags_pro {
+float: right;
 }
 .sku {
 }
@@ -482,6 +488,9 @@ recommendedtop.bottom {
 	line-height: 37px;
 	background-size: 6px;
 	right: 1%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .req {
 	display: block;
@@ -490,7 +499,7 @@ recommendedtop.bottom {
 	float: right;
 	background-image: url(../images/product/req.png);
 	background-repeat: no-repeat;
-	margin: 10px 0;
+	margin: 15px 0;
 }
 .b_cat {
 	display: block;
@@ -499,16 +508,23 @@ recommendedtop.bottom {
 	text-overflow: ellipsis;
 	width: 190px;
 	height: 25px;
-	margin-top: 10px;
+	margin: 3px 2px 0 0;
 	color: #6a717d;
+	float: right;
+	width: 180px;
 }
 .groop {
 	line-height: 10px;
 	height: 10px;
 	display: block;
-	margin: 5px 0;
+	margin: 0px;
 	color: #c62c56;
 	font-weight: bold;
+	float: right;
+	clear: right;
+}
+.tags_pro{
+	float:right;
 }
 .groop h2 {
 	float: right;
@@ -518,7 +534,9 @@ recommendedtop.bottom {
 .sku_wrapper {
 	float: right;
 	display: block;
-	margin: -14px 5px;
+	margin: 2px 5px;
+	float: right;
+	clear: right;
 }
 .page-title.toptik {
 	font-size: 2em;
@@ -666,6 +684,7 @@ margin-bottom: 5px;
 	margin: 3px 10px;
 	height: 10px;
 	float: right;
+	clear: none;
 } 
 .singelPrice .amount{
 	color:#000;
@@ -718,6 +737,7 @@ margin: 0;
 .logoSingel {
 	width: 340px;
 	height: 51px;
+	margin-bottom: 10px;
 }
 .logoSingel img{
 	width: 100%;
@@ -1403,6 +1423,7 @@ color: #636363;
 	clear: both;
 	width: 272px;
 	margin-top: 20px;
+
 	position: relative;
 }
 .sammSum{
@@ -1414,6 +1435,7 @@ color: #636363;
 	padding: 5px;
 	font-weight:bolder;
 	border:solid 1px #0e98d6;
+
 }
 .saveing,.allSum{
 	font-weight: bold;
@@ -1568,4 +1590,85 @@ color: #636363;
 	position: relative;
 	left: 215px;
 	top: 5px;
+}
+.titelWcon h1.newcastomer{
+	font-size: 22px;
+	width: 440px;
+	
+}
+.optionCas{
+	width: 285px;
+	height:250px;
+	float:right;
+	color:#6a717d;
+}
+.optionCas form{
+	margin-top:30px;
+}
+.optionCas form p,.optionCas p{
+	margin-top:15px;
+	color:#7794aa;
+	line-height: 20px;
+}
+.optionCas form input{	
+	float:left;
+}
+.optionCas form input[type="submit"],.submit_btb_cont{
+    background: #000;
+	cursor:pointer;
+    width: 100px;
+    border: none;
+    box-shadow: none;
+    color: #34b5ef;
+    font-size: 14px;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+.optionCas form input[type="submit"]:hover,.submit_btb_cont:hover{
+	opacity:0.85;
+	color: #34b5ef;
+}
+.submit_btb_cont{
+	display:block;
+	float:left;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	text-decoration:none;
+}
+.submit_btb_paypal{
+	background-image:url(../images/detail/paypalbtn.png);
+	display:block;
+	float:left;
+	width: 221px;
+	height: 50px;
+	background-repeat: no-repeat;
+	margin-top: 15px;
+	text-decoration:none;
+}
+.orCastoumer{
+	display:block;
+	float:right;
+	background-image:url(../images/detail/orNewcastoumer.png);
+	background-repeat:no-repeat;
+	width: 57px;
+	height: 260px;
+	background-position: 0px 10px;
+}
+.submit_btb_cont.login{
+	margin-top: 100px;
+}
+.newH2span{
+	color:#6a717d;
+	font-size:18px;
+	font-weight:bolder;
+}
+.newH2{
+	color:#000;
+	font-size:16px;
+	font-weight:normal;
+}
+/*-------------------------------newcastomerReg---------------------------*/
+.titelWcon h1.newcastomer.reg{
+	width:300px;
 }

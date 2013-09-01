@@ -152,7 +152,7 @@ function woocommerce_get_customer_meta_fields() {
 						'description' => ''
 					),
 				'billing_company' => array(
-						'label' => __( 'Company', 'woocommerce' ),
+						'label' => __( 'Birth', 'woocommerce' ),
 						'description' => ''
 					),
 				'billing_address_1' => array(
@@ -201,7 +201,7 @@ function woocommerce_get_customer_meta_fields() {
 						'description' => ''
 					),
 				'shipping_company' => array(
-						'label' => __( 'Company', 'woocommerce' ),
+						'label' => __( 'Birth', 'woocommerce' ),
 						'description' => ''
 					),
 				'shipping_address_1' => array(
@@ -258,6 +258,7 @@ function woocommerce_customer_meta_fields( $user ) {
 				<tr>
 					<th><label for="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $field['label'] ); ?></label></th>
 					<td>
+					<?php // echo $key;?>
 						<input type="text" name="<?php echo esc_attr( $key ); ?>" id="<?php echo esc_attr( $key ); ?>" value="<?php echo esc_attr( get_user_meta( $user->ID, $key, true ) ); ?>" class="regular-text" /><br/>
 						<span class="description"><?php echo wp_kses_post( $field['description'] ); ?></span>
 					</td>

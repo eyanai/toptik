@@ -34,6 +34,8 @@ get_currentuserinfo();
 			if (!$value && ($key=='billing_email' || $key=='shipping_email')) $value = $current_user->user_email;
 			if (!$value && ($key=='billing_country' || $key=='shipping_country')) $value = $woocommerce->countries->get_base_country();
 			if (!$value && ($key=='billing_state' || $key=='shipping_state')) $value = $woocommerce->countries->get_base_state();
+			
+			
 
 			woocommerce_form_field( $key, $field, $value );
 		endforeach;

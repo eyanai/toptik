@@ -284,7 +284,7 @@ if ( ! function_exists( 'woocommerce_taxonomy_archive_description' ) ) {
 	function woocommerce_taxonomy_archive_description() {
 		if ( is_tax( array( 'product_cat', 'product_tag' ) ) && get_query_var( 'paged' ) == 0 ) {
 			$description = apply_filters( 'the_content', term_description() );
-			?><h1 class="page-title toptik"><?php woocommerce_page_title(); ?></h1>
+			?><h1 class="page-title toptik">מוצרי המוצג-<?php woocommerce_page_title(); ?></h1>
 		<?php if ( $description ) {
 				echo '<div class="term-description">' . $description . '</div>';
 			}

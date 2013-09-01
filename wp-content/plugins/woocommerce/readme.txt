@@ -269,7 +269,7 @@ Yes you can! Join in on our [GitHub repository](http://github.com/woothemes/wooc
 * Fix - woocommerce_nav_menu_items - only hide pages, not other objects.
 * Fix - woocommerce_add_tinymce_lang array key.
 * Fix - Find_rates now works with both postcode and city together.
-* Fix - PrettyPhoto content clearfixed.
+* Fix - PrettyPhoto content cfed.
 * Fix - Fix the download method when force SSL is on.
 * Fix - Put back sandbox pending fix. Aparently still needed for some accounts.
 * Fix - Do not sanitize old attribute name to not mess up comparing
