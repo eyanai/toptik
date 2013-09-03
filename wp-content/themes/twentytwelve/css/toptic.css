@@ -69,12 +69,24 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
  .woocommerce-page .widget_layered_nav ul li {
 	background-image:url(../images/ceckbox.png);
 	background-repeat:no-repeat;
-	background-position:right center;
+	background-position:right 6px;
 }
+.woocommerce .widget_layered_nav ul li a{
+	padding-right:5px !important;
+}
+ .woocommerce-page .widget_layered_nav ul li.chosen {
+	 background-position:right -20px;
+ }
+ .codenegar_applied_filter.chosen {
+	background: #e5e5e5;
+}
+Matched CSS Rules
+
 .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-page .widget_layered_nav ul li.chosen a{
-	background: #0e87a5 !important;
+	background: none !important;
 	padding: 0 6px 1px 18px !important;
 	border:none !important;
+	color:#757575 !important;
 }
 .woocommerce .widget_layered_nav ul li a, .woocommerce .widget_layered_nav ul li span, .woocommerce-page .widget_layered_nav ul li a{
 	margin-right:15px;
@@ -130,6 +142,25 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
 	margin-top: 25px;
 }
 /*home_page*/
+.main-navigation li ul li{
+	height:41px;
+	width:150px;
+	border-bottom:solid 2px #666666;
+	border-left:solid 15px #fff;
+	border-right:solid 15px #fff;
+}
+.main-navigation li ul li a {
+	width:auto !important;
+}
+.main-navigation li ul li:last-child{
+	width:100%;
+	border:none;
+}
+.main-navigation li ul li a {
+	background:#fff !important;
+	color:#666 !important; 
+	
+}
 .searchItem #searchsubmit {
 	background-image: url(../images/magnefid.png) !important;
 	background-repeat: no-repeat !important;
@@ -325,7 +356,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 	margin-top: 15px;
-	padding-right: 0.8em;
+	padding-right: 1em;
 }
 .mata_3 h3 {
 	float: right;
@@ -534,7 +565,7 @@ float: right;
 .sku_wrapper {
 	float: right;
 	display: block;
-	margin: 2px 5px;
+	margin: 4px 5px;
 	float: right;
 	clear: right;
 }
@@ -826,6 +857,7 @@ margin: 0;
 	background-position: -264px 0;	
 	display: block;
 	float: right;
+
 	width: 29px;
 	height: 30px;
 	margin-top: -9px;
@@ -1242,6 +1274,42 @@ z-index: 2;
 border-bottom-color: #ffffff;
 color: #01afe4;
 border-top: solid 3px #01afe4;
+}
+.fave.cf {
+clear: both;
+height: 35px;
+}
+.addFav{
+	cursor: pointer;
+	display: block;
+	float: right;
+	background-image: url(../images/detail/faveandmore.png);
+	background-repeat: no-repeat;
+	background-position: -218px 0;
+	width: 130px;
+	height: 29px;
+}
+.sendFr{
+	cursor: pointer;
+	display: block;
+	float: right;
+	background-image: url(../images/detail/faveandmore.png);
+	background-repeat: no-repeat;
+	background-position: -105px 0;
+	width: 102px;
+	height: 29px;
+	margin-right: 10px;
+}
+.printF{
+	cursor: pointer;
+	display: block;
+	float: right;
+	background-image: url(../images/detail/faveandmore.png);
+	background-repeat: no-repeat;
+	background-position: -4px 0;
+	width: 98px;
+	height: 29px;
+	margin-right: 0px;
 }
 /*--------------------------------------------------------------CART_______________________________________________----*/
 #calc_shipping_country {
@@ -1668,6 +1736,13 @@ color: #636363;
 	font-size:16px;
 	font-weight:normal;
 }
+.caroufredsel_wrapper{
+	float:right !important;
+}
+.attachment-shop_single.wp-post-image{
+	float:right;
+}
+
 /*-------------------------------newcastomerReg---------------------------*/
 .titelWcon h1.newcastomer.reg{
 	width:300px;

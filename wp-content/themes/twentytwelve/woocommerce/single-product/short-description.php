@@ -15,6 +15,14 @@ if ( ! $post->post_excerpt ) return;
 ?>
 
 <div itemprop="description" class="socialDescrip">
+<div class="titelWcon"></div>	
+	<div class="fave cf">
+		<span class="addFav"></span>
+		<span class="sendFr"></span>
+		<span class="printF"></span>
+	</div>
+
+
 <?php echo '<div class="social"><div class="titelWcon"></div>'.do_shortcode('[ssba]').'<div class="titelWcon"></div></div>'; 
 	?>
 	<?php //echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>

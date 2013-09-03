@@ -178,7 +178,7 @@ get_header('shop'); ?>
 		</div><!--bigSlide-->
 		<!----------------------r side--------------------------------->
 		<?php
-		$args = array( 'post_type' => 'product', 'posts_per_page' => 2,'home_options' => "גלריה-ראשית");
+		$args = array( 'post_type' => 'product', 'posts_per_page' => 2,'home_options' => "גלריה-ראשית",'orderby' => 'rand');
 
 			$query = new WP_Query( $args );
 			// The Loop
@@ -249,7 +249,7 @@ get_header('shop'); ?>
 		
 		<div class="gallery_3_home">
 		<?php //3 gall botoom......********************************************************************	
-		$args = array( 'post_type' => 'product', 'posts_per_page' => 3,'home_options' => "גלריה-תחתונה");
+		$args = array( 'post_type' => 'product', 'posts_per_page' => 3,'home_options' => "גלריה-תחתונה",'orderby' => 'rand');
 
 			$query = new WP_Query( $args );
 			// The Loop
@@ -298,7 +298,7 @@ get_header('shop'); ?>
 	 
 	<div class="recommendedtop"><h2><?php echo $terms[2]->description;?></h2></div>
 		<?php
-		$args = array( 'post_type' => 'product', 'posts_per_page' => $top,'home_options' => "מומלצים-עליון");
+		$args = array( 'post_type' => 'product', 'posts_per_page' => $top,'home_options' => "מומלצים-עליון",'orderby' => 'rand');
 			
 		$query = new WP_Query( $args );
 		echo "<ul class='products homePage'>";
@@ -367,7 +367,7 @@ get_header('shop'); ?>
 	 
 	<div class="recommendedtop"><h2><?php echo $terms[3]->description;?></h2></div>
 		<?php
-		$args = array( 'post_type' => 'product', 'posts_per_page' => $down,'home_options' => "מומלצים-תחתון");
+		$args = array( 'post_type' => 'product', 'posts_per_page' => $down,'home_options' => "מומלצים-תחתון",'orderby' => 'rand');
 			
 		$query = new WP_Query( $args );
 		echo "<ul class='products homePage'>";

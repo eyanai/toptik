@@ -232,8 +232,8 @@ function twentytwelve_widgets_init() {
 		'description' => 'עבור דף מותגים',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<span class="titelWcon"><h3 class="widget-title">',
-		'after_title' => '</h3></span>',
+		'before_title' => ' <h3 class="widget-top-tik">',
+		'after_title' => '</h3> ',
 	) );
 
 	register_sidebar( array(

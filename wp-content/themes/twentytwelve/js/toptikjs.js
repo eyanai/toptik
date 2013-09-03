@@ -135,6 +135,18 @@ jQuery(document).ready(function(e) {
 				  $('.result').html(data);
 				});
 	});
+	
+	
+	jQuery('.addFav').on('click',this,function(){
+		add_favorite();
+	});
+	
+	jQuery('.printF').on('click',this,function(){
+		window.print();
+	});
+
+
+
 });//dom redy
 
 
@@ -201,4 +213,34 @@ function setWW(){
 	if(liw>conW){
 		jQuery('.lIco,.rIco').show();
 	}
+}
+
+
+function add_favorite() { 
+  title = document.title; 
+  url = document.location; 
+  try { 
+    // Internet Explorer 
+    window.external.AddFavorite( url, title ); 
+  } 
+  catch (e) { 
+    try { 
+      // Mozilla 
+      window.sidebar.addPanel( title, url, "" ); 
+    } 
+    catch (e) { 
+      // Opera 
+      if( typeof( opera ) == "object" ) { 
+        a.rel = "sidebar"; 
+        a.title = title; 
+        a.url = url; 
+        return true; 
+      } 
+      else { 
+        // Unknown 
+        alert( 'Press Ctrl-D to add page to your bookmarks' ); 
+      } 
+    } 
+  } 
+  return false; 
 }
