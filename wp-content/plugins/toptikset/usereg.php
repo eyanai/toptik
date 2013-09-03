@@ -17,11 +17,11 @@
         </p>
         <p>
             <label for="last_name"><?php _e('Last Name','mydomain') ?>
-                <input type="text" name="first_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($first_name)); ?>" size="25" /></label>
+                <input type="text" name="last_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($last_name)); ?>" size="25" /></label>
         </p>
 		<p>
             <label for="Comp_name"><?php _e('Birth Day','mydomain') ?>
-                <input type="date" name="comp_name" id="comp_name" class="input"></label>
+                <input type="date" name="billing_company" id="billing_company" class="date"></label>
         </p>
 		<p>
             <label for="email"><?php _e('Email','mydomain') ?>
@@ -45,7 +45,7 @@
             <label for="zipcode"><?php _e('zipcode','mydomain') ?>
                 <input type="number" name="zipcode" id="zipcode" class="input"></label>
         </p>
-		<h2 class="newH2"><span class="newH2span">סיסמא</span> [<span class="red">*</span>] שדות חובה</h2>
+		<?php /*?><h2 class="newH2"><span class="newH2span">סיסמא</span> [<span class="red">*</span>] שדות חובה</h2>
 		
 		<p>
             <label for="pass"><?php _e('Password','mydomain') ?>
@@ -53,7 +53,7 @@
         </p>
 		<p>
             <label for="repass"><?php _e('rePassword','mydomain') ?>
-                <input type="password" name="pass" id="pass" class="input"></label>
+                <input type="password" name="pass" id="pass" class="input"></label><?php */?>
         </p>
         <?php
 		$newid=wp_create_user('dammy1', 'dammy1','dammy1@mail.com' );
@@ -79,8 +79,18 @@
     add_filter('registration_errors', 'myplugin_registration_errors', 10, 3);
     function myplugin_registration_errors ($errors, $sanitized_user_login, $user_email) {
 
-        if ( empty( $_POST['first_name'] ) )
-            $errors->add( 'first_name_error', __('<strong>ERROR</strong>: You must include a first name.','mydomain') );
+        if ( empty( $_POST['first_name'])||empty( $_POST['last_name'] )|| empty( $_POST['comp_name'] ) )
+            $errors->add( 'first_name_error', __('<strong>שגיאה: </strong>:אנא מלא שדות נדרשים.','mydomain') );
+		/* if ( empty( $_POST['last_name'] ) )
+            $errors->add( 'last_name_error', __('<strong>שגיאה: </strong>:הכנס שם משפחה.','mydomain') );
+		if ( empty( $_POST['comp_name'] ) )
+           $errors->add( 'comp_name_error', __('<strong>שגיאה: </strong>תאריך לידה לא מולא.','mydomain') );
+		if ( empty( $_POST['first_name'] ) )
+            $errors->add( 'first_name_error', __('<strong>שגיאה: </strong>:אתה חייב להכניס את השם שלך.','mydomain') );
+		if ( empty( $_POST['first_name'] ) )
+            $errors->add( 'first_name_error', __('<strong>שגיאה: </strong>:אתה חייב להכניס את השם שלך.','mydomain') );
+		if ( empty( $_POST['first_name'] ) )
+            $errors->add( 'first_name_error', __('<strong>שגיאה: </strong>:אתה חייב להכניס את השם שלך.','mydomain') );*/
 
         return $errors;
     }

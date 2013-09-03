@@ -40,7 +40,7 @@
 		<div class="namItem">
 		<?php global $woocommerce; ?>
 		<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
-		<?php echo sprintf(_n('%d מוצר ב', '%d מוצרים ב', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php //echo $woocommerce->cart->get_cart_total(); ?>
+		<?php echo sprintf(_n('%d <strong>מוצר ב- </strong>', '%d <strong>מוצרים ב- </strong>', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?> - <?php //echo $woocommerce->cart->get_cart_total(); ?>
 		</a>
 		
 			<div id="minicart">

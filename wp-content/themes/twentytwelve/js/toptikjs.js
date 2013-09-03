@@ -146,7 +146,7 @@ jQuery(document).ready(function(e) {
 	});
 
 
-
+	//jQuery('#shipping_company').datepicker();
 });//dom redy
 
 

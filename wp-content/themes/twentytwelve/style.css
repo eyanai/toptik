@@ -1774,7 +1774,7 @@ img#wpstats {
 .top_nav-menu li.personal{
 	background-image:url(images/top_nav_items.png);
 	background-repeat:no-repeat;
-	background-position: -80px 0;
+	background-position: -80px 8px;
 	width: 70px;
 }
 .top_nav-menu li.personal a{
@@ -1783,7 +1783,7 @@ img#wpstats {
 .top_nav-menu li.branch{	
 	background-image: url(images/top_nav_items.png);
 	background-repeat:no-repeat;
-	background-position: -20px -5px;
+	background-position: -20px 2px;
 	width: 60px;
 	margin-right: 5px;
 	border-right: solid 1px #383838;
@@ -1796,7 +1796,7 @@ img#wpstats {
 .top_nav-menu li.blog{
 	background-image: url(images/top_nav_items.png);
 	background-repeat:no-repeat;
-	background-position: 44px -5px;
+	background-position: 44px 3px;
 	width: 63px;
 	margin-right: 5px;
 	border-right: solid 1px #383838;
@@ -1901,7 +1901,7 @@ height: 30px;
 .gift{
 	background-image:url(images/gift.png),url(images/line_menu.jpg) !important;
 	background-repeat:no-repeat !important;
-	background-position: 5px center,right center !important;
+	background-position: 10px center,right center !important;
 }
 
 /*===================fotter=============================*/
@@ -1964,12 +1964,12 @@ opacity:0.85;
 margin-top: 15px;
 }
 .wysija-input{
-position: absolute ;
+float: left;
 right: 45px ;
 top: 63px;
 border-radius: 8px ;
 background-color:#45474b;
-width: 240px;
+width: 185px;
 color:#abacac;
 }
 

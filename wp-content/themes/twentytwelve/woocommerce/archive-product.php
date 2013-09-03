@@ -54,11 +54,11 @@ get_header('shop'); ?>
 				 */
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
-
+				<div class="titelWcon prodoucts"></div>
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
-
+				
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
@@ -264,9 +264,9 @@ get_header('shop'); ?>
 						echo get_the_post_thumbnail('small3');
 						}else{ ?>
 				<?php echo get_the_post_thumbnail( $post->ID,array(100,120));} ?> 
-				<div class="mata_3">
+				<div class="mata_3 home">
 					<h2>רק</h2>
-					<h3><?php echo $product->get_price(); ?> ש"ח</h3>
+					<h3><?php echo $product->get_price_html(); ?></h3>
 					
 					<a href="<?php the_permalink(); ?>" class="baynew"></a>
 

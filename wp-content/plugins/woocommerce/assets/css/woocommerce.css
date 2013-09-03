@@ -359,10 +359,9 @@ p.demo_store {
 }
 .woocommerce div.product .woocommerce-tabs .panel, .woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel, .woocommerce-page #content div.product .woocommerce-tabs .panel {
 	margin: 0 0 0 2em;
-	padding: 0
-;
+	padding: 10px;
 	background-color: #fff;
-	width: 650px;
+	width: 630px;
 }
 .woocommerce div.product p.cart, .woocommerce #content div.product p.cart, .woocommerce-page div.product p.cart, .woocommerce-page #content div.product p.cart {
 	margin-bottom: 2em
@@ -728,6 +727,7 @@ background: -webkit-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,23
 background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* W3C */
+
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
 
 }

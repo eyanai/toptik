@@ -94,6 +94,11 @@ require( get_template_directory() . '/inc/custom-header.php' );
  */
 function twentytwelve_scripts_styles() {
 	global $wp_styles;
+	
+	
+		
+	wp_enqueue_style( 'jqueryUiCss', 'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css' );
+	wp_enqueue_script( 'jquery-ui-core');
 
 	/*
 	 * Adds JavaScript to pages with the comment form to support
@@ -540,7 +545,7 @@ if(!is_admin()){
 function woocommerce_catalog_page_ordering() {
 ?>
 <form action="" method="POST" name="results" class="sortbyform">
-<label for="woocommerce-sort-by-columns" class="sbylabel">מספר תוצאות לעמוד :</label>
+<label for="woocommerce-sort-by-columns" class="sbylabel">מס' תוצאות לעמוד :</label>
 <select name="woocommerce-sort-by-columns" id="woocommerce-sort-by-columns" class="sortby" onchange="this.form.submit()">
 <?php
 

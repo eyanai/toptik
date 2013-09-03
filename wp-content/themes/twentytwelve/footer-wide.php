@@ -1,3 +1,4 @@
+<?php get_sidebar('midel')?>
 <?php
 				if ( has_nav_menu( 'brands' ) ) {?>
 					<div class="brandsCon clear">

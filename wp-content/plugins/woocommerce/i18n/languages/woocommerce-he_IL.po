@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-09-02 09:49+0200\n"
+"PO-Revision-Date: 2013-09-03 11:16+0200\n"
 "Last-Translator: Amit Moreno <amashkif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -638,7 +638,7 @@ msgstr "שם"
 #: admin/woocommerce-admin-reports.php:2093
 #: admin/woocommerce-admin-reports.php:2129
 msgid "SKU"
-msgstr "קוד מוצר"
+msgstr "מק\"ט"
 
 # @ woocommerce
 #: admin/post-types/product.php:94
@@ -1394,7 +1394,7 @@ msgstr "מזהה וריאציה:"
 # @ woocommerce
 #: admin/post-types/writepanels/order-item-html.php:16
 msgid "Product SKU:"
-msgstr "קוד מוצר:"
+msgstr "מק\"ט:"
 
 # @ woocommerce
 #: admin/post-types/writepanels/order-item-html.php:44
@@ -9592,7 +9592,7 @@ msgstr "הוספת קוד מעקב לפעולות סל הקניות"
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:275
 #: templates/single-product/meta.php:19
 msgid "SKU:"
-msgstr "קוד מוצר:"
+msgstr "מק\"ט:"
 
 # @ woocommerce
 #: classes/integrations/google-analytics/class-wc-google-analytics.php:294

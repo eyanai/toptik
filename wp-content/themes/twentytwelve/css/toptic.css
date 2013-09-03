@@ -8,6 +8,7 @@ blue- #01afe4
 .avatar a {
 outline: none;
 color: #000;
+font-weight: bold;
 }
 .titelWcon {
 	background-image: url(../images/titel_w_bg.png);
@@ -92,6 +93,13 @@ Matched CSS Rules
 	margin-right:15px;
 }
 /*breadcrumb*/
+.gift {
+background-image: url(images/gift.png),url(images/line_menu.jpg) !important;
+background-repeat: no-repeat !important;
+background-position: 10px center,right center !important;
+padding-right: 5px;
+text-align: left;
+}
 .here {
 	display: block;
 	color: #01afe4;
@@ -110,6 +118,21 @@ Matched CSS Rules
 	height: 47px;
 	background-position: 0 -19px;
 	line-height: 3.5em;
+}
+.wysija-paragraph {
+width: 100%;
+margin-top: 5px;
+}
+.widget_wysija_cont p label {
+display: block;
+float: right;
+}
+.agree_nwes {
+float: right;
+margin: 8px 0 0 2px;
+}.nwesAgree {
+float: right;
+clear: both;
 }
 .divid {
 	background-image: url(../images/divider.png);
@@ -242,6 +265,7 @@ Matched CSS Rules
 	position: absolute;
 	z-index: 5;
 	margin-right: 5px;
+	padding-top: 2px;
 }
 .widget-area.middel{
 	margin: 0 0;
@@ -293,6 +317,12 @@ Matched CSS Rules
 	float: right;
 	margin: 0 5px 6px 0;
 	height: 204px;
+}
+.mata_3.home del{
+	display:none !important;
+}
+.mata_3.home ins{
+	background:none !important;
 }
 .bigbox {
 	position: absolute;
@@ -356,7 +386,7 @@ Matched CSS Rules
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 	margin-top: 15px;
-	padding-right: 1em;
+	padding-right: 1.2em;
 }
 .mata_3 h3 {
 	float: right;
@@ -395,6 +425,7 @@ Matched CSS Rules
 	height: 30px;
 	clear: both;
 	background-size: 8px;
+	margin-top: 15px;
 }
 recommendedtop.bottom {
 	height: 15px;
@@ -570,7 +601,8 @@ float: right;
 	clear: right;
 }
 .page-title.toptik {
-	font-size: 2em;
+	font-size: 1.6em;
+	margin: 1em 0 0 0;
 }
 .linkCats.clear {
 	height: 202px;
@@ -635,6 +667,7 @@ display: none;
 .woocommerce .widget_layered_nav ul li a, .woocommerce .widget_layered_nav ul li span, .woocommerce-page .widget_layered_nav ul li a, .woocommerce-page .widget_layered_nav ul li span {
 padding: 1px 0;
 float: right !important;
+text-decoration: none;
 }
 .price_slider_wrapper {
 width: 95%;
@@ -1742,8 +1775,17 @@ color: #636363;
 .attachment-shop_single.wp-post-image{
 	float:right;
 }
-
+.cart-contents strong {
+color: #fff;
+font-weight: normal;
+}
 /*-------------------------------newcastomerReg---------------------------*/
 .titelWcon h1.newcastomer.reg{
 	width:300px;
+}
+.titelWcon.prodoucts{
+    clear: both;
+	
+    position: relative;
+    top: -20px;
 }

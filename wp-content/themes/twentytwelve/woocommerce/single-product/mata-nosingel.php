@@ -48,8 +48,8 @@ global $post, $product;
 			<?php
 		global $post, $product;
 		$size = sizeof( get_the_terms( $post->ID, 'product_cat' ) );
-		echo $product->get_categories( ', ', '<span class="b_cat">' . _n( 'Category:', 'Categories:', $size, 'woocommerce' ) . ' ', '.</span>' );
-
+		echo $product->get_categories( ', ', '<span class="b_cat">' . _n( '', '', $size, 'woocommerce' ) . ' ', '.</span>' );
+//'Category:', 'Categories:',
 	?>
 	</div>
 
