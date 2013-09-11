@@ -97,7 +97,7 @@ Matched CSS Rules
 background-image: url(images/gift.png),url(images/line_menu.jpg) !important;
 background-repeat: no-repeat !important;
 background-position: 10px center,right center !important;
-padding-right: 5px;
+padding-right: 16px;
 text-align: left;
 }
 .here {
@@ -105,6 +105,9 @@ text-align: left;
 	color: #01afe4;
 	width: 80px;
 	float: right;
+	font-weight: bold;
+margin-left: 5px;
+
 }
 .woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
 	margin: 0 0 1em;
@@ -225,20 +228,24 @@ clear: both;
 }
 .pointer{
 	display: block;
-	float: right;
-	width: 140px;
-	height: 35px;
-	border-right:solid 1px #dddddd;
-	cursor: pointer;
-	font-weight: bolder;
-	padding: 3px 2px 0 0;
-	text-align: center;
+float: right;
+width: 135px;
+border-top: 3px solid black;
+height: 37px;
+border-right: solid 1px #dddddd;
+cursor: pointer;
+font-weight: bolder;
+padding: 3px 7px 0 0;
+text-align: right;
+
 }
 .pointer:first-child{
 	border-right:none;
 }
 .pointer.act{
-	border-top:solid 2px #18b0ef;
+	border-top: solid 2px #18B0F0;
+background-color: black;
+color: white;
 }
 .topBannerBox {
 	width: 233px;
@@ -356,12 +363,14 @@ clear: both;
 }
 .sText {
 	width: 221px;
-	display: block;
-	height: 30px;
-	overflow: hidden;
-	text-overflow: inherit;
-	white-space: pre-line;
-	position: absolute;
+display: block;
+height: 1em;
+padding-top: 5px;
+overflow: hidden;
+
+white-space: pre-line;
+position: absolute;
+text-overflow: ellipsis;
 }
 .small_3 img {
 	width: 100px !important;
@@ -386,7 +395,7 @@ clear: both;
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 	margin-top: 15px;
-	padding-right: 1.2em;
+	padding-right: 25px;
 }
 .mata_3 h3 {
 	float: right;
@@ -396,6 +405,23 @@ clear: both;
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 }
+.price .amount .shekel{
+	font-size:0.7em;
+	
+}
+.amount .shekel{
+	font-size:0.8em;
+	
+}
+.amount{
+	font-size: 1.7em;
+font-weight: lighter;
+}
+.price .amount{
+	font-size:1.1em;
+	
+}
+
 .baynew {
 	display: block;
 	width: 100px;
@@ -486,7 +512,7 @@ recommendedtop.bottom {
 }
 .term-description p{
 	width:100%;
-	height: 93px;
+	height: 107px;
 	line-height: 25px;
 	overflow: hidden;
 	white-space: pre-line;
@@ -528,7 +554,7 @@ float: right;
 	background-image: url(../images/product/detiles.png);
 	display: block;
 	position: absolute;
-	bottom: 32px;
+	bottom: 37px;
 	left: 5px;
 	width: 78px;
 	height: 28px;
@@ -565,28 +591,30 @@ float: right;
 }
 .b_cat {
 	display: block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	width: 190px;
-	height: 25px;
-	margin: 3px 2px 0 0;
-	color: #6a717d;
-	float: right;
-	width: 180px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+width: 190px;
+height: 36px;
+margin: 4px 2px 0 0;
+color: #6a717d;
+float: right;
+width: 180px;
+padding-right: 2px;
 }
 .groop {
-	line-height: 10px;
-	height: 10px;
-	display: block;
-	margin: 0px;
-	color: #c62c56;
-	font-weight: bold;
-	float: right;
-	clear: right;
+line-height: 1em;
+height: 15px;
+display: block;
+margin: 0px;
+color: #c62c56;
+font-weight: bold;
+float: right;
+clear: right;
 }
 .tags_pro{
-	float:right;
+float: right;
+margin: 5px 0;
 }
 .groop h2 {
 	float: right;
@@ -603,6 +631,7 @@ float: right;
 .page-title.toptik {
 	font-size: 1.6em;
 	margin: 1em 0 0 0;
+	float:right;
 }
 .linkCats.clear {
 	height: 202px;
@@ -742,10 +771,10 @@ margin-bottom: 5px;
 	float:right;
 	color:#c62c56;
 	font-weight:bold;
-	margin: 5px 0;
+	margin: 0 0 5px 0;
 }
 .topSingelMata .sku_wrapper{
-	margin: 3px 10px;
+	margin: 0 10px 3px 10px;
 	height: 10px;
 	float: right;
 	clear: none;
@@ -1062,6 +1091,9 @@ margin-left: 5px;
 }
 .variations .titelWcon  h2 {
 	background-image:url(../images/bg.jpg);
+
+}
+.titelWcon.singel h3,.variations .titelWcon  h2 {
 	width: 80px;
 	text-align:center;
 	margin-right:5px;
@@ -1082,13 +1114,14 @@ margin-left: 5px;
 	float:right;
 }
 .lver,.rver{
-	display:block;
-	width: 10px;
-	position:absolute;
-	height: 40px;
-	top: 5px;
-	text-align: center;
-	cursor: pointer;
+	display: block;
+width: 10px;
+padding-top: 8px;
+position: absolute;
+height: 32px;
+top: 5px;
+text-align: center;
+cursor: pointer;
 }
 .lver{
 	left:0;
@@ -1144,6 +1177,7 @@ margin-left: 5px;
 }
 .shop_attributes th,.shop_attributes .alt th{
 		width: 107px !important;
+		text-align: right;
 		background-image:url(../images/detail/border-var.png) !important;
 		background-repeat:no-repeat !important;
 		background-position:left center !important;
