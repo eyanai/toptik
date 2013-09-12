@@ -103,7 +103,7 @@ text-align: left;
 .here {
 	display: block;
 	color: #01afe4;
-	width: 80px;
+	width: 85px;
 	float: right;
 	font-weight: bold;
 margin-left: 5px;
@@ -405,13 +405,12 @@ text-overflow: ellipsis;
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 }
-.price .amount .shekel{
+.price .shekel{
 	font-size:0.7em;
 	
 }
-.amount .shekel{
+.shekel{
 	font-size:0.8em;
-	
 }
 .amount{
 	font-size: 1.7em;
@@ -420,6 +419,12 @@ font-weight: lighter;
 .price .amount{
 	font-size:1.1em;
 	
+}
+.amount.price_label{
+	font-size:0.8em;
+}
+.from {
+display: none;
 }
 
 .baynew {
@@ -845,7 +850,7 @@ margin: 0;
 	width: 250px;
 }
 .titelWcon.singel h3{
-	margin: 6px 10px 0 0;
+	margin: 1px 10px 0 0;
 	background-image:url(../images/bg.jpg);
 	width: 104px;
 	font-size:20px;
@@ -1096,7 +1101,7 @@ margin-left: 5px;
 .titelWcon.singel h3,.variations .titelWcon  h2 {
 	width: 80px;
 	text-align:center;
-	margin-right:5px;
+	margin-right:0px;
 	font-size: 1.2em;
 	line-height: 30px;
 }
@@ -1693,10 +1698,11 @@ color: #636363;
 	position:absolute;
 	width:15px;
 	height: 100px;
-	border-left:solid 1px #c6c6c9;
+	/* border-left:solid 1px #c6c6c9; */
+	padding-right:5px;
 	background-image:url(../images/bg.jpg);
 	right: 0;
-	top: 20px;
+	top: 35px;
 	display:block;
 	line-height: 100px;
 	z-index:5;
@@ -1707,10 +1713,11 @@ color: #636363;
 	position:absolute;
 	width:15px;
 	height: 100px;
-	border-right:solid 1px #c6c6c9;
+	/* border-right:solid 1px #c6c6c9; */
+	padding-right:5px;
 	background-image:url(../images/bg.jpg);
 	left:0;
-	top: 20px;
+	top: 35px;
 	display:block;
 	line-height: 100px;
 	z-index:5;

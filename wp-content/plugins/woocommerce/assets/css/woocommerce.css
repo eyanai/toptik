@@ -490,10 +490,12 @@ width: 330px;
 }
 .woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 {
 	padding: .5em 7px;
-	margin: 0;
-	font-size: 1em
-;
-	color: #000;
+margin: 0;
+overflow: hidden;
+height: 1.6em;
+text-overflow: ellipsis;
+font-size: 1em;
+color: #000;
 }
 .woocommerce ul.products li.product a, .woocommerce-page ul.products li.product a {
 	text-decoration: none
@@ -563,7 +565,9 @@ width: 330px;
 	float: right
 }
 .woocommerce .woocommerce-ordering select, .woocommerce-page .woocommerce-ordering select {
-	vertical-align: top
+	margin-right: 58px;
+position: relative;
+vertical-align: middle;
 }
 .woocommerce nav.woocommerce-pagination, .woocommerce #content nav.woocommerce-pagination, .woocommerce-page nav.woocommerce-pagination, .woocommerce-page #content nav.woocommerce-pagination {
 	text-align: center
@@ -1018,7 +1022,7 @@ padding-right:1.2em
 }
 .woocommerce table.shop_attributes td, .woocommerce-page table.shop_attributes td {
 	font-style: italic;
-	padding: 0;
+	padding: 0 4px;
 	border-top: 0;
 	border-bottom: 1px dotted rgba(0,0,0,0.1);
 	margin: 0;

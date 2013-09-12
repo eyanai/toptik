@@ -64,7 +64,7 @@ jQuery(document).ready(function(e) {
 		nobe=-(widAll);
 		//alert(cPos+'<-->'+nobe);
 			if(cPos-conW>nobe){
-				npos=cPos-180;
+				npos=cPos-187.4;
 				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
 			}else{
 				return false
@@ -79,7 +79,7 @@ jQuery(document).ready(function(e) {
 		cPos=parseInt(jQuery('.brandsMenu_wide ul').css('right'));
 		nobe=-(widAll);
 			if(cPos<=0){
-				npos=cPos+180;
+				npos=cPos+187.4;
 				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
 			}else{
 				return false;
@@ -191,7 +191,7 @@ function popUp(elm,elmClos){
 				jQuery(elm).hide();
 			});
 		}else{
-			alert('אתה כבר מוחבר');
+			alert('אתה כבר מחובר');
 		}
 	}else{
 		loc=jQuery(document).scrollTop();;
