@@ -14,6 +14,7 @@ global $woocommerce, $wp_query;
 if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() )
 	return;
 ?>
+
 <form class="woocommerce-ordering" method="get">
 	<select name="orderby" class="orderby">
 		<?php
@@ -51,3 +52,4 @@ if ( 1 == $wp_query->found_posts || ! woocommerce_products_will_display() )
 		}
 	?>
 </form>
+<div class="sortBy">מיין על פי:</div>

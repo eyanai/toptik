@@ -163,6 +163,11 @@ p.demo_store {
 	margin-top: 0;
 	padding: 0
 }
+.product_title.entry-title {
+margin-bottom: 8px;
+float: right;
+padding-right: 4px;
+}
 .woocommerce div.product span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price {
 	color: #85ad74;
 	font-size: 1.25em
@@ -400,6 +405,9 @@ p.demo_store {
 .woocommerce div.product form.cart .variations, .woocommerce #content div.product form.cart .variations, .woocommerce-page div.product form.cart .variations, .woocommerce-page #content div.product form.cart .variations {
 	margin-bottom: 1em
 }
+.variations {
+width: 330px;
+}
 .woocommerce div.product form.cart .variations label, .woocommerce #content div.product form.cart .variations label, .woocommerce-page div.product form.cart .variations label, .woocommerce-page #content div.product form.cart .variations label {
 	font-weight: bold
 }
@@ -482,10 +490,12 @@ p.demo_store {
 }
 .woocommerce ul.products li.product h3, .woocommerce-page ul.products li.product h3 {
 	padding: .5em 7px;
-	margin: 0;
-	font-size: 1em
-;
-	color: #000;
+margin: 0;
+overflow: hidden;
+height: 1.6em;
+text-overflow: ellipsis;
+font-size: 1em;
+color: #000;
 }
 .woocommerce ul.products li.product a, .woocommerce-page ul.products li.product a {
 	text-decoration: none
@@ -555,7 +565,9 @@ p.demo_store {
 	float: right
 }
 .woocommerce .woocommerce-ordering select, .woocommerce-page .woocommerce-ordering select {
-	vertical-align: top
+	margin-right: 58px;
+position: relative;
+vertical-align: middle;
 }
 .woocommerce nav.woocommerce-pagination, .woocommerce #content nav.woocommerce-pagination, .woocommerce-page nav.woocommerce-pagination, .woocommerce-page #content nav.woocommerce-pagination {
 	text-align: center
@@ -1013,7 +1025,7 @@ padding-right:1.2em
 }
 .woocommerce table.shop_attributes td, .woocommerce-page table.shop_attributes td {
 	font-style: italic;
-	padding: 0;
+	padding: 0 4px;
 	border-top: 0;
 	border-bottom: 1px dotted rgba(0,0,0,0.1);
 	margin: 0;
@@ -1021,6 +1033,7 @@ padding-right:1.2em
 }
 .woocommerce table.shop_attributes td p, .woocommerce-page table.shop_attributes td p {
 	margin: 0;
+	text-align: right;
 	padding: 8px 0
 }
 .woocommerce table.shop_attributes .alt td, .woocommerce table.shop_attributes .alt th, .woocommerce-page table.shop_attributes .alt td, .woocommerce-page table.shop_attributes .alt th {

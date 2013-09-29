@@ -97,14 +97,17 @@ Matched CSS Rules
 background-image: url(images/gift.png),url(images/line_menu.jpg) !important;
 background-repeat: no-repeat !important;
 background-position: 10px center,right center !important;
-padding-right: 5px;
+padding-right: 16px;
 text-align: left;
 }
 .here {
 	display: block;
 	color: #01afe4;
-	width: 80px;
+	width: 85px;
 	float: right;
+	font-weight: bold;
+margin-left: 5px;
+
 }
 .woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
 	margin: 0 0 1em;
@@ -239,20 +242,24 @@ margin-top: 22px;
 }
 .pointer{
 	display: block;
-	float: right;
-	width: 140px;
-	height: 35px;
-	border-right:solid 1px #dddddd;
-	cursor: pointer;
-	font-weight: bolder;
-	padding: 3px 2px 0 0;
-	text-align: center;
+float: right;
+width: 135px;
+border-top: 3px solid black;
+height: 37px;
+border-right: solid 1px #dddddd;
+cursor: pointer;
+font-weight: bolder;
+padding: 3px 7px 0 0;
+text-align: right;
+
 }
 .pointer:first-child{
 	border-right:none;
 }
 .pointer.act{
-	border-top:solid 2px #18b0ef;
+	border-top: solid 2px #18B0F0;
+background-color: black;
+color: white;
 }
 .topBannerBox {
 	width: 233px;
@@ -370,12 +377,14 @@ margin-top: 22px;
 }
 .sText {
 	width: 221px;
-	display: block;
-	height: 30px;
-	overflow: hidden;
-	text-overflow: inherit;
-	white-space: pre-line;
-	position: absolute;
+display: block;
+height: 1em;
+padding-top: 5px;
+overflow: hidden;
+
+white-space: pre-line;
+position: absolute;
+text-overflow: ellipsis;
 }
 .small_3 img {
 	width: 100px !important;
@@ -400,7 +409,7 @@ margin-top: 22px;
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 	margin-top: 15px;
-	padding-right: 1.2em;
+	padding-right: 25px;
 }
 .mata_3 h3 {
 	float: right;
@@ -410,6 +419,28 @@ margin-top: 22px;
 	color: #000;
 	text-shadow: #eaeaea 3px 3px 1px;
 }
+.price .shekel{
+	font-size:0.7em;
+	
+}
+.shekel{
+	font-size:0.8em;
+}
+.amount{
+	font-size: 1.7em;
+font-weight: lighter;
+}
+.price .amount{
+	font-size:1.1em;
+	
+}
+.amount.price_label{
+	font-size:0.8em;
+}
+.from {
+display: none;
+}
+
 .baynew {
 	display: block;
 	width: 100px;
@@ -500,7 +531,7 @@ recommendedtop.bottom {
 }
 .term-description p{
 	width:100%;
-	height: 93px;
+	height: 107px;
 	line-height: 25px;
 	overflow: hidden;
 	white-space: pre-line;
@@ -542,7 +573,7 @@ float: right;
 	background-image: url(../images/product/detiles.png);
 	display: block;
 	position: absolute;
-	bottom: 32px;
+	bottom: 37px;
 	left: 5px;
 	width: 78px;
 	height: 28px;
@@ -579,28 +610,30 @@ float: right;
 }
 .b_cat {
 	display: block;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	width: 190px;
-	height: 25px;
-	margin: 5px 2px 0 0;
-	color: #6a717d;
-	float: right;
-	width: 180px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+width: 190px;
+height: 36px;
+margin: 4px 2px 0 0;
+color: #6a717d;
+float: right;
+width: 180px;
+padding-right: 2px;
 }
 .groop {
-	line-height: 10px;
-	height: 10px;
-	display: block;
-	margin: 0px;
-	color: #c62c56;
-	font-weight: bold;
-	float: right;
-	clear: right;
+line-height: 1em;
+height: 15px;
+display: block;
+margin: 0px;
+color: #c62c56;
+font-weight: bold;
+float: right;
+clear: right;
 }
 .tags_pro{
-	float:right;
+float: right;
+margin: 5px 0;
 }
 .groop h2 {
 	float: right;
@@ -617,6 +650,7 @@ float: right;
 .page-title.toptik {
 	font-size: 1.6em;
 	margin: 1em 0 0 0;
+	float:right;
 }
 .linkCats.clear {
 	height: 202px;
@@ -756,10 +790,10 @@ margin-bottom: 5px;
 	float:right;
 	color:#c62c56;
 	font-weight:bold;
-	margin: 5px 0;
+	margin: 0 0 5px 0;
 }
 .topSingelMata .sku_wrapper{
-	margin: 3px 10px;
+	margin: 0 10px 3px 10px;
 	height: 10px;
 	float: right;
 	clear: none;
@@ -834,7 +868,7 @@ margin: 0;
 	position: absolute;
 }
 .titelWcon.singel h3{
-	margin: 6px 10px 0 0;
+	margin: 1px 10px 0 0;
 	background-image:url(../images/bg.jpg);
 	width: 104px;
 	font-size:20px;
@@ -1081,9 +1115,12 @@ margin-left: 5px;
 }
 .variations .titelWcon  h2 {
 	background-image:url(../images/bg.jpg);
+
+}
+.titelWcon.singel h3,.variations .titelWcon  h2 {
 	width: 80px;
 	text-align:center;
-	margin-right:5px;
+	margin-right:0px;
 	font-size: 1.2em;
 	line-height: 30px;
 }
@@ -1102,13 +1139,14 @@ margin-left: 5px;
 	float:right;
 }
 .lver,.rver{
-	display:block;
-	width: 10px;
-	position:absolute;
-	height: 40px;
-	top: 5px;
-	text-align: center;
-	cursor: pointer;
+	display: block;
+width: 10px;
+padding-top: 8px;
+position: absolute;
+height: 32px;
+top: 5px;
+text-align: center;
+cursor: pointer;
 }
 .lver{
 	left:0;
@@ -1164,6 +1202,7 @@ margin-left: 5px;
 }
 .shop_attributes th,.shop_attributes .alt th{
 		width: 107px !important;
+		text-align: right;
 		background-image:url(../images/detail/border-var.png) !important;
 		background-repeat:no-repeat !important;
 		background-position:left center !important;
@@ -1682,10 +1721,11 @@ color: #636363;
 	position:absolute;
 	width:15px;
 	height: 100px;
-	border-left:solid 1px #c6c6c9;
+	/* border-left:solid 1px #c6c6c9; */
+	padding-right:5px;
 	background-image:url(../images/bg.jpg);
 	right: 0;
-	top: 27px;
+	top: 35px;
 	display:block;
 	line-height: 100px;
 	z-index:5;
@@ -1696,10 +1736,11 @@ color: #636363;
 	position:absolute;
 	width:15px;
 	height: 100px;
-	border-right:solid 1px #c6c6c9;
+	/* border-right:solid 1px #c6c6c9; */
+	padding-right:5px;
 	background-image:url(../images/bg.jpg);
 	left:0;
-	top: 27px;
+	top: 35px;
 	display:block;
 	line-height: 100px;
 	z-index:5;

@@ -536,6 +536,9 @@ a:hover {
 	margin: 1.714285714rem 0 0;
 }
 
+.mainform{
+height:614px;
+}
 /* Header */
 .site-header {
 	padding: 24px 0;
@@ -669,6 +672,107 @@ footer[role="contentinfo"] a {
 footer[role="contentinfo"] a:hover {
 	color: #21759b;
 }
+
+body {
+	background: #555;
+}
+
+
+
+input[type=checkbox] {
+	visibility: hidden;
+}
+
+
+ input[type=checkbox] {
+	width: 20px;	
+	margin: 0 auto;
+	position: relative;
+}
+
+.nwesAgree label {
+	cursor: pointer;
+position: absolute;
+width: 13px;
+height: 14px;
+margin-top: 26px;
+right: 0;
+display: inline-block;
+border-radius: 4px;
+-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+background: #fcfff4;
+background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.nwesAgree label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+width: 5px;
+	height: 4px;
+	background: transparent;
+	top: 3px;
+	left: 3px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.nwesAgree label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.5;
+}
+
+.nwesAgree input[type=checkbox]:checked  label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+ input[type=checkbox]:checked  label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.nwesAgree input[type=checkbox]:checked  {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+  label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+ input[type=checkbox]:checked  {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.agreeCheckbox{
+  direction: rtl;
+position: relative;
+vertical-align: top;
+margin-top: 23px;
+display: inline-block;
+font-size: 0.8em;
+}
+
 
 
 /* =Main content and comment content
@@ -1774,11 +1878,11 @@ img#wpstats {
 .top_nav-menu li.personal{
 	background-image:url(images/top_nav_items.png);
 	background-repeat:no-repeat;
-	background-position: -80px 8px;
+	background-position: -80px 3px;
 	width: 70px;
 }
 .top_nav-menu li.personal a{
-	margin: 5px 13px;
+	margin: 0px 13px;
 }
 .top_nav-menu li.branch{	
 	background-image: url(images/top_nav_items.png);
@@ -1788,7 +1892,7 @@ img#wpstats {
 	margin-right: 5px;
 	border-right: solid 1px #383838;
 	height: 20px;
-	margin-top: 5px;
+	margin-top: 0px;
 }
 .top_nav-menu li.branch a{
 	margin: 0px 16px;
@@ -1801,7 +1905,7 @@ img#wpstats {
 	margin-right: 5px;
 	border-right: solid 1px #383838;
 	height: 20px;
-	margin-top: 5px;
+	margin-top: 0px;
 
 }
 .top_nav-menu li.blog a{
@@ -1812,14 +1916,21 @@ img#wpstats {
 	width: 240px;
 	float: left;
 	background: #fff;
-	top: 3px;
+	top: 5px;
 	border-radius: 25px;
+	
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+-webkit-appearance: none;
+-webkit-border-radius: 0.5em;
 }
 #searchform {
-height: 26px;
+height: 22px;
 }
 #searchform .inTopS{
 	border-radius: 0px 25px 25px 0px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+-webkit-appearance: none;
+-webkit-border-radius: 0.5em;
 }
 .searchItem .inputTop{
 	width:30px;
@@ -1829,8 +1940,12 @@ height: 26px;
 	background-color: transparent;
 	position:absolute;
 	left: 10px;
-	top: 6px;
+	top: 4px;
 	border: none;
+	
+	/* background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	-webkit-appearance: none;
+	-webkit-border-radius: 0.5em; */
 }
 .namItem .cart-contents{
 	color:#01afe4;
@@ -2023,6 +2138,10 @@ color:#abacac;
 	position:absolute;
 	left: 0;
 	top: 80px;
+	width:93px;
+}
+.twitLike.rl.count-ready #widget{
+	text-align:left;
 }
 .telephon{
 	background-image:url(images/tellphone.png);
@@ -2056,3 +2175,21 @@ height: 25px;
 .shop_table.cart tr td:first-child{
 	width:10px !important;
 }
+
+.sortBy{
+	position: absolute;
+right: 263px;
+margin-top:5px;
+display: inline-block;
+vertical-align: middle;
+}
+/* <div class="nwesAgree">
+	<input type="checkbox" value="None" id="nwesAgree" name="agree" />
+	<label for="nwesAgree"></label>
+	<div class="agreeCheckbox">הריני מאשר קבלת מיליים פירסומיים</div>
+</div> */
+
+
+/* <span class="shekel">₪</span><span class="amount">35</span> */
+
+/*	 <div class="amount price_label maxPriceSlide">₪100</div><div class="amount price_label">-</div>  <div class="amount price_label minPriceSlide">₪0</div> */
