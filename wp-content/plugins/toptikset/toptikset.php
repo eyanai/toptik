@@ -43,6 +43,8 @@ class TOP_Option{
 		// add_settings_field( $id, $title, $callback, $page, $section, $args );
 		add_settings_field('ye_rec_top','מומלצים עליון :',array($this,'ye_rec_top_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_rec_down','מומלצים תחתון :',array($this,'ye_rec_down_setting'),__FILE__,'ye_main_section');
+		add_settings_field('ye_paypal_mail','הכנס חשבון PAYPAL לזיכוי :',array($this,'ye_down_paypal'),__FILE__,'ye_main_section');
+
 	}
 	
 	
@@ -70,6 +72,15 @@ class TOP_Option{
 			echo "<option value='$item' $selected>$item</option>";
 		}
 	}
+	
+	
+	public function ye_down_paypal(){
+		echo "<input type='email' name='ye_plugin_options[ye_paypal_mail]' value='".$this->options['ye_paypal_mail']."'/>";	
+		}
+	
+
+	
+	
 }
 
 add_action('admin_menu',function(){
@@ -81,4 +92,5 @@ add_action('admin_init',function(){
 });
 
 require_once('usereg.php');
+require_once('getway.php');
 

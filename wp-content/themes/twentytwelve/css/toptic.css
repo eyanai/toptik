@@ -133,6 +133,8 @@ margin: 8px 0 0 2px;
 }.nwesAgree {
 float: right;
 clear: both;
+font-size: 0.9em;
+margin-top: 22px;
 }
 .divid {
 	background-image: url(../images/divider.png);
@@ -163,6 +165,18 @@ clear: both;
 	float: left;
 	height: 30px;
 	margin-top: 25px;
+
+
+
+
+
+
+
+
+
+
+
+
 }
 /*home_page*/
 .main-navigation li ul li{
@@ -570,7 +584,7 @@ float: right;
 	text-overflow: ellipsis;
 	width: 190px;
 	height: 25px;
-	margin: 3px 2px 0 0;
+	margin: 5px 2px 0 0;
 	color: #6a717d;
 	float: right;
 	width: 180px;
@@ -619,14 +633,14 @@ float: right;
 	background-position: center 33px;
 }
 .recommendedtop.goto .gotop {
-	margin: 0 auto;
-	background-image: url(../images/top.png);
-	background-repeat: no-repeat;
-	width: 150px;
-	height: 150px;
-	display: block;
-	cursor: pointer;
-	margin-top: 12px;
+margin: 0 auto;
+background-image: url(../images/top.png);
+background-repeat: no-repeat;
+width: 76px;
+height: 150px;
+display: block;
+cursor: pointer;
+margin-top: 12px;
 }
 .woocommerce-breadcrumb.end {
 	position: relative;
@@ -810,10 +824,14 @@ margin: 0;
 .tecdeitel{
 	float:right;
 	clear: both;
+	position: relative;
+	width: 360px;
+	margin-top: -16px;
 }
 .titelWcon.singel {
 	float: right;
-	width: 250px;
+	width: 100%;
+	position: absolute;
 }
 .titelWcon.singel h3{
 	margin: 6px 10px 0 0;
@@ -1041,11 +1059,12 @@ clear:both;
 	height: 225px;
 	background-repeat: no-repeat;
 	position: relative;
+
 	top: 45px;
 	right: -34px;
 }
 .yith_magnifier_thumbnail{
-	width: 87px !important;
+	width: 84px !important;
 margin-left: 5px;
 }
 .yith_magnifier_thumbnail img{
@@ -1070,12 +1089,13 @@ margin-left: 5px;
 }
 .value{
 	position:relative;
+	width: 100%;
 }
 .imageVer{
 	border:solid 1px #c1c2c2;
 	overflow:hidden;
 	height:50px;
-	width:100%;
+	width: 340px;
 	position:relative;
 }
 .single_variation_wrap{
@@ -1352,10 +1372,11 @@ height: 35px;
 .titelWcon h1{
 	margin: 6px 10px 0 0;
 	background-image:url(../images/bg.jpg);
-	width: 104px;
+	width: 150px;
 	font-weight:bold;
 	text-align: center;
 	padding:0 5px;
+	display: block;
 }
 .cart_table_item.cartToptik {
 	float: right;
@@ -1412,6 +1433,7 @@ text-align: right;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap;
+
 	margin: 0 0 5px !important;
 }
 .variation{
@@ -1457,7 +1479,7 @@ border-right: solid 1px #c6c6c7;
 	padding: 5px;
 	position: absolute;
 	left: 0;
-	bottom: -65px;
+	bottom: -75px;
 	z-index: 15;
 } 
 #coupon_code {
@@ -1475,7 +1497,7 @@ margin-top: 2px !important;
 	padding: 10px 0 0 0;
 	height: 33px;
 	position: absolute;
-	top: -100px;
+	top: -115px;
 	left: 10px;
 } 
 #shipping_method{
@@ -1554,7 +1576,7 @@ color: #636363;
 }
 .popupCart{
 	float:right;
-	margin-top: 15%;
+	/*margin-top: 15%;*/
 }
  a.members{
 	 background-image:url(../images/cart/members.png);
@@ -1628,6 +1650,7 @@ color: #636363;
 .cross-sells .products li{
 	margin-right: 46px !important;
 }
+
 .cross-sells .products li:last-child{
 	margin-right:0 !important;
 }
@@ -1662,7 +1685,7 @@ color: #636363;
 	border-left:solid 1px #c6c6c9;
 	background-image:url(../images/bg.jpg);
 	right: 0;
-	top: 20px;
+	top: 27px;
 	display:block;
 	line-height: 100px;
 	z-index:5;
@@ -1676,7 +1699,7 @@ color: #636363;
 	border-right:solid 1px #c6c6c9;
 	background-image:url(../images/bg.jpg);
 	left:0;
-	top: 20px;
+	top: 27px;
 	display:block;
 	line-height: 100px;
 	z-index:5;
@@ -1779,6 +1802,13 @@ color: #636363;
 color: #fff;
 font-weight: normal;
 }
+#cuponSub {
+float: left;
+margin-top: 0px !important;
+}
+.cartTotalH2 {
+display: none;
+}
 /*-------------------------------newcastomerReg---------------------------*/
 .titelWcon h1.newcastomer.reg{
 	width:300px;
@@ -1788,4 +1818,41 @@ font-weight: normal;
 	
     position: relative;
     top: -20px;
+}
+/*------------------------------tranzila-----------------------------------------*/
+.tranzilaSelect{
+	color:#666;
+	background:#fff;
+}
+#tranzilaTable{
+    width: 450px;
+    position: relative;
+}
+#tranzilaTable input[type='submit']{
+    background: #000;
+
+    border: none;
+    height: 45px;
+    width: 250px;
+    color: #01afe4;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 35px;
+}
+.entry-content.tranzilaRight {
+width: 540px;
+float: right;
+}
+.tranzilaLeft {
+width: 350px;
+float: right;
+padding-top: 16px;
+}
+.tranzilaLeft h2{
+	text-align:center;
+}
+#paypal_btn{
+	background-image:url(../images/detail/paypalbtn.png);
+	background-color: transparent;
+	border: none;
 }

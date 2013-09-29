@@ -248,7 +248,7 @@ p.demo_store {
 }
 .woocommerce div.product .woocommerce-tabs, .woocommerce #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs {
 	width: 600px;
-	float: right;
+	float: left;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs, .woocommerce #content div.product .woocommerce-tabs ul.tabs, .woocommerce-page div.product .woocommerce-tabs ul.tabs, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs {
 	list-style: none;
@@ -278,7 +278,7 @@ p.demo_store {
 	box-shadow: 0 3px 3px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.6);
 	margin: 0 -2px;
 	padding: 0 10px;
-	width: 108px;
+	width: 100px;
 	height: 40px;
 }
 .woocommerce div.product .woocommerce-tabs ul.tabs li a, .woocommerce #content div.product .woocommerce-tabs ul.tabs li a, .woocommerce-page div.product .woocommerce-tabs ul.tabs li a, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li a {
@@ -361,7 +361,7 @@ p.demo_store {
 	margin: 0 0 0 2em;
 	padding: 10px;
 	background-color: #fff;
-	width: 630px;
+	width: 591px;
 }
 .woocommerce div.product p.cart, .woocommerce #content div.product p.cart, .woocommerce-page div.product p.cart, .woocommerce-page #content div.product p.cart {
 	margin-bottom: 2em
@@ -728,6 +728,8 @@ background: -o-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 
 background: -ms-linear-gradient(top,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(224,224,224,1) 0%,rgba(236,236,236,1) 100%); /* W3C */
 
+
+
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
 
 }
@@ -998,6 +1000,7 @@ padding-right:1.2em
 	float: right;
 	clear: right;
 	border: solid 1px #c4c4c4;
+	margin-top: 40px;
 }
 .woocommerce table.shop_attributes th, .woocommerce-page table.shop_attributes th {
 	width: 150px;
@@ -1268,7 +1271,7 @@ padding-right:1.2em
 	text-align: right
 ;
 	position: relative;
-	margin-top: 40px;
+	margin-top: 56px;
 }
 .woocommerce .cart-collaterals .cart_totals p, .woocommerce-page .cart-collaterals .cart_totals p {
 	margin: 0
@@ -1601,6 +1604,7 @@ padding-top:2px
 }
 .woocommerce .addresses .title .edit, .woocommerce-page .addresses .title .edit {
 	float: right
+
 }
 .woocommerce ol.commentlist.notes li.note p.meta, .woocommerce-page ol.commentlist.notes li.note p.meta {
 	font-weight: bold;

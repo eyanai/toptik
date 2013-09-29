@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-09-03 11:16+0200\n"
+"PO-Revision-Date: 2013-09-03 14:49+0200\n"
 "Last-Translator: Amit Moreno <amashkif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -7005,7 +7005,7 @@ msgstr ""
 #: classes/class-wc-cart.php:889 templates/cart/mini-cart.php:68
 #: woocommerce-functions.php:497 woocommerce.php:1210
 msgid "View Cart &rarr;"
-msgstr "צפה בסל הקניות שלך"
+msgstr "לסל הקניות"
 
 # @ woocommerce
 #: classes/class-wc-cart.php:867
@@ -8655,7 +8655,7 @@ msgstr ""
 # @ woocommerce
 #: classes/class-wc-order.php:950
 msgid "Cart Subtotal:"
-msgstr "סיכום ביניים של סל הקניות:"
+msgstr "סיכום ביניים:"
 
 # @ woocommerce
 #: classes/class-wc-order.php:962
@@ -12513,7 +12513,7 @@ msgstr "הוסף קופון"
 # @ woocommerce
 #: templates/cart/cart.php:134
 msgid "Update Cart"
-msgstr "עדכון סל הקניות"
+msgstr "עדכן עגלה"
 
 # @ woocommerce
 #: templates/cart/cart.php:134
@@ -12590,7 +12590,7 @@ msgstr "סך הכל"
 # @ woocommerce
 #: templates/cart/totals.php:28 templates/checkout/review-order.php:27
 msgid "Cart Subtotal"
-msgstr "סיכום ביניים של סל הקניות"
+msgstr "סיכום ביניים "
 
 # @ woocommerce
 #: templates/cart/totals.php:35 templates/checkout/review-order.php:34

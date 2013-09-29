@@ -390,7 +390,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 		}
 
 		$paypal_args = apply_filters( 'woocommerce_paypal_args', $paypal_args );
-
+		
 		return $paypal_args;
 	}
 
@@ -578,7 +578,6 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
         	do_action( "valid-paypal-standard-ipn-request", $_POST );
 
 		} else {
-
 			wp_die( "PayPal IPN Request Failure" );
 
    		}
@@ -776,7 +775,132 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
         return $order;
 	}
 
+	
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function generate_paypal_form_toptik( $order_id ) {
+		global $woocommerce;
+
+		$order = new WC_Order( $order_id );
+
+		if ( $this->testmode == 'yes' ):
+			$paypal_adr = $this->testurl . '?test_ipn=1&';
+		else :
+			$paypal_adr = $this->liveurl . '?';
+		endif;
+
+		$paypal_args = $this->get_paypal_args( $order );
+
+		$paypal_args_array = array();
+
+		foreach ($paypal_args as $key => $value) {
+			$paypal_args_array[] = '<input type="hidden" name="'.esc_attr( $key ).'" value="'.esc_attr( $value ).'" />';
+		}
+
+		$woocommerce->add_inline_js( '
+			jQuery("body").block({
+					message: "' . esc_js( __( 'Thank you for your order. We are now redirecting you to PayPal to make payment.', 'woocommerce' ) ) . '",
+					baseZ: 99999,
+					overlayCSS:
+					{
+						background: "#fff",
+						opacity: 0.6
+					},
+					css: {
+				        padding:        "20px",
+				        zindex:         "9999999",
+				        textAlign:      "center",
+				        color:          "#555",
+				        border:         "3px solid #aaa",
+				        backgroundColor:"#fff",
+				        cursor:         "wait",
+				        lineHeight:		"24px",
+				    }
+				});
+			jQuery("#submit_paypal_payment_form").click();
+		' );
+
+		return '<form action="'.esc_url( $paypal_adr ).'" method="post" id="paypal_payment_form" target="_top">
+				' . implode( '', $paypal_args_array) . '
+				<input type="submit" class="button alt" id="submit_paypal_payment_form" value="' . __( 'Pay via PayPal', 'woocommerce' ) . '" /> <a class="button cancel" href="'.esc_url( $order->get_cancel_order_url() ).'">'.__( 'Cancel order &amp; restore cart', 'woocommerce' ).'</a>
+			</form>';
+
+	}
+
+
+
+	
+	
+	
+function toptik_get(){
+	
+	global $woocommerce;
+
+	if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) :
+		$order = new WC_Order( $order_id );
+	
+		if ( $this->testmode == 'yes' ):
+				$paypal_adr = $this->testurl . '?test_ipn=1&';
+			else :
+				$paypal_adr = $this->liveurl . '?';
+		endif;
+
+		$paypal_args = $this->get_paypal_args( $order );
+		$paypal_args_array = array();
+
+		foreach ($paypal_args as $key => $value) {
+			$paypal_args_array[] = '<input type="hidden" name="'.esc_attr( $key ).'" value="'.esc_attr( $value ).'" />';
+		}
+		?>
+		<!-------------!>
+		
+		<!-------------!>
+		<?php
+		echo '<form action="'.esc_url( $paypal_adr ).'" method="post" id="paypal_payment_form" target="_top">
+				' . implode( '', $paypal_args_array);
+		
+		$i=1;
+		foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $cart_item ) :
+			$paycart=$woocommerce->cart->get_cart();
+			$_product = $cart_item['data'];
+			// Only display if allowed
+			if ( ! apply_filters('woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) || ! $_product->exists() || $cart_item['quantity'] == 0 )
+				continue;
+			// Get price
+			$product_price = get_option( 'woocommerce_tax_display_cart' ) == 'excl' ? $_product->get_price_excluding_tax() : $_product->get_price_including_tax();
+			?>
+			<input type="hidden" name="item_name_<?php echo $i?>" value="<?php echo apply_filters('woocommerce_widget_cart_product_title', $_product->get_title(), $_product ); ?>">
+			<input type="hidden" name="amount_<?php echo $i?>" value="<?php echo $product_price;?>">
+			<input type="hidden" name="quantity_<?php echo $i?>" value="<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', $cart_item['quantity'], $cart_item, $cart_item_key ); ?>">
+			<?php 
+			$i++;
+			endforeach;
+		echo	'<input type="submit" class="button alt" id="submit_paypal_payment_form" value="' . __( 'Pay via PayPal', 'woocommerce' ) . '" />
+			</form>';
+	else : 
+		 _e( 'No products in the cart.', 'woocommerce' ); ?>
+	<?php endif; ?>
+		
+<?php	
 }
+	
+	
+	
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////castoum
+}//end class
+
+
+
+
+/////////////////////////////////////////////////
+
+
+
 
 class WC_Paypal extends WC_Gateway_Paypal {
 	public function __construct() {

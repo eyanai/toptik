@@ -162,6 +162,20 @@ $woocommerce->show_messages();
 
 </form>
 
+
+
+
+	
+	<?php 
+		$pay=new WC_Gateway_Paypal;
+		echo print_r( get_class_methods ('WC_Gateway_Paypal'));
+		//$pay->toptik_get();
+		//do_action('toptik_get');
+		//toptik_get();
+	?>
+
+
+
 <div class="cart-collaterals">
 
 	<?php do_action('woocommerce_cart_collaterals'); ?>

@@ -15,4 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php do_action('woocommerce_cart_is_empty'); ?>
 
+<?php //init_form_fields(); 
+	
+
+
+?>
 <p><a class="button" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>"><?php _e( '&larr; Return To Shop', 'woocommerce' ) ?></a></p>

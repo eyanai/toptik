@@ -577,6 +577,7 @@ function woocommerce_checkout_action() {
  */
 function woocommerce_pay_action() {
 	global $woocommerce;
+	
 
 	if ( isset( $_POST['woocommerce_pay'] ) && $woocommerce->verify_nonce( 'pay' ) ) {
 
@@ -630,7 +631,7 @@ function woocommerce_pay_action() {
 				}
 
 			} else {
-
+				
 				// No payment was required for order
 				$order->payment_complete();
 				wp_safe_redirect( get_permalink( woocommerce_get_page_id( 'thanks' ) ) );
