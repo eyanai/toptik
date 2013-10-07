@@ -1,0 +1,65 @@
+*** PayPal Express Change Log ***
+
+2013.09.16 - version 2.0.6
+ * Tweak - Added filter wc_gateway_paypal_express_checkout_button_html
+ * Tweak - Update API call to include version/headers
+
+2013.08.23 - version 2.0.5
+ * Fix - `woocommerce_checkout_update_order_meta` action invoked after order creation for improved 3rd party plugin compatibility
+
+2013.08.09 - version 2.0.4
+ * Tweak - Updated hash call
+
+2013.08.09 - version 2.0.3
+ * Fix - Don't show payment button on checkout page for free orders
+
+2013.07.26 - version 2.0.2
+ * Tweak - Minor code standards update
+ * Misc - Rebrand
+
+2013.07.23 - version 2.0.1
+ * Tweak - Adjust request
+
+2013.03.01 - version 2.0.0
+ * WooCommerce 2.0 compatibility
+
+2013.01.05 - version 1.1.0
+ * Fixed VAT (included) tax calculations
+ * Added better error output to cart page when debug is turned on
+ * Added check for no state code in shipping address
+
+2012.12.05 - version 1.0.11
+ * Updater
+
+2012.11.05 - version 1.0.10
+ * Added conversion of non-US states to abbreviation before saving to WC order so shipping can be calculated correctly.
+
+2012.10.03 - verison 1.0.9
+ * Support subscribe to newsletter extension on the return page.
+
+2012.08.31 - verison 1.0.8
+ * Fixed CSS for hiding checkout button option
+
+2012.07.05 - version 1.0.7
+ * Fixed product name urlencode for special characters to PayPal Express standard.
+
+2012.07.02 - version 1.0.6
+ * Added option for PayPal Account Optional setting.
+
+2012.05.31 - version 1.0.5
+ * Changed redirect call from header() to wp_redirect().
+
+2012.05.26 - version 1.0.4
+ * Fixed PPE call when permalinks are set to 'default'.
+
+2012.05.24 - version 1.0.3
+ * Added coupons/discounts as line items instead of product price adjustments.
+
+2012.05.16 - version 1.0.2
+ * Fixed sandbox/live setting.
+
+2012.05.11 - version 1.0.1
+ * Fix install path
+
+2012.05.10 - version 1.0
+ * First Release

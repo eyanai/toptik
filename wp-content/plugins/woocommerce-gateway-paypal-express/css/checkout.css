@@ -1,0 +1,6 @@
+.info .paypal_checkout_button {
+	float: right;
+}
+.paypal_checkout_button img {
+	vertical-align: middle;
+}

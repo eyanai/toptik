@@ -1,0 +1,8 @@
+.cart input.checkout-button,
+.cart a.checkout-button {
+	display: none !important;
+}
+
+.cart .paypal_checkout_button img {
+	vertical-align: middle;
+}

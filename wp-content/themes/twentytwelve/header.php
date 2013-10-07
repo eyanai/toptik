@@ -74,7 +74,7 @@
 			<hgroup>
 				<h3>לכל שאלה התקשרו אלינו</h3>
 				<h3>בין חמישי לשיש בין השעות 8:30 עד 17:30</h3>
-				<h3><a href="<?php echo $pageUrl->guid;?>" class="black">לחצו כאן</a> לרשימת הסניפים המלאה  </h3>
+				<h3><a href="<?php echo $pageUrl->guid;?>" class="black">לחצו כאן</a> ליצירת קשר </h3>
 		</hgroup>
 		</div>
 
