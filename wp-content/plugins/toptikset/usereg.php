@@ -1,6 +1,6 @@
 <?php
     //1. Add a new form element...
-    add_action('register_form','myplugin_register_form');
+  //  add_action('register_form','myplugin_register_form');
     function myplugin_register_form (){
         $first_name = ( isset( $_POST['first_name'] ) ) ? $_POST['first_name']: '';
         ?>
@@ -56,7 +56,7 @@
                 <input type="password" name="pass" id="pass" class="input"></label><?php */?>
         </p>
         <?php
-		$newid=wp_create_user('dammy1', 'dammy1','dammy1@mail.com' );
+		$newid=wp_create_user('dammy5', 'dammy5','dammy1@mail.com' );
 		update_user_meta($newid, 'billing_company', '13-06-79');
 		
 		//$user_data = array(

@@ -1673,6 +1673,9 @@ color: #636363;
 
 
 
+
+
+
 .contectPop{
 	width:100%;
 	height:100%;
@@ -2379,5 +2382,63 @@ background-position: -80px 3px;
 width: 70px;
 margin-top: 0px;
 }
-	
-	
+/*---------------------------------contactForm--------------------------*/
+.contactForm{
+background-image: url(../images/others/contactUs.png);
+background-repeat: no-repeat;
+background-position: 0px 0px;
+width: 100%;
+margin-top: 0px;
+
+
+height: 480px;
+position: relative;
+background-size: 100%;
+}
+.contactForm form{
+    width: 400px;
+
+    top: 95px;
+    position: absolute;
+    right: 45px;
+}	
+.contactForm form label{
+    width: 80px;
+
+    display: block;
+    float: right;
+    margin: 10px 0 0 0;
+    clear: right;
+}
+.contactForm form input,.contactForm form textarea{
+    margin: 10px 0 0 0;
+
+}
+.contactForm form textarea{
+	height:45px;
+	resize:none;
+}
+.contactForm form input[type='submit']{
+	text-decoration:none;
+	background: #1f1f1f ;
+	color: #01afe4;
+	position: relative ;
+	width: 100px;
+	height: 30px;
+	font-size: .95em;
+	font-weight: bolder;
+	border-radius: 35px ;
+	padding: 0 10px 0 0;
+	line-height: 30px;
+	float:right;	
+	margin-top: 30px;
+
+}
+/*----------------------------regular page-----------------------*/
+.regularpage-sidebar {
+width: 225px;
+overflow: hidden;
+}
+.banneReg {
+	margin-bottom:1em;
+}

@@ -291,6 +291,18 @@ register_sidebar( array(
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	
+	
+	register_sidebar( array(
+		'name' => __( 'איזור עבור באנרים לדף רגיל', 'twentytwelve' ),
+		'id' => 'sidebar-banner-reg',
+		'description' => 'עבור 3 איזורי באנרים לפי עיצוב ',
+		'before_widget' => '<aside id="%1$s" class="banneReg %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<span class="titelWcon"><h3 class="widget-title">',
+		'after_title' => '</h3></span>',
+	) );
+	
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 

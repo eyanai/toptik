@@ -44,7 +44,8 @@
 		</a>
 		
 			<div id="minicart">
-				<?php woocommerce_mini_cart();?>
+				<?php //woocommerce_mini_cart();?>
+				<?php  get_template_part( 'cart', 'top' ); ?>
 			</div>	
 				
 		</div>
@@ -58,8 +59,9 @@
 	<div class="avatar">
 		<span class="avatarIcon"></span>
 		<h2 class="blue">החשבון שלך</h2>
-		<?php $pageUrl = get_page_by_title( 'My Account' ); ?>
-		<a href="<?php echo $pageUrl->guid;?>">הכנס</a> לחשבון שלך או <a href="<?php echo $pageUrl->guid;?>">הצטרף</a>
+		<?php $pageUrl = get_page_by_title( 'החשבון שלי' ); ?>
+		<?php $pageUrl2 = get_page_by_title('הרשמה' ); ?>
+		<a href="<?php echo $pageUrl->guid;?>">הכנס</a> לחשבון שלך או <a href="<?php echo $pageUrl2->guid;?>">הצטרף</a>
 	</div>
 	
 	<?php $header_image = get_header_image();

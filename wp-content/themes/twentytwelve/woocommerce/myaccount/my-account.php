@@ -69,7 +69,7 @@ if(isset($_POST['passSub'])){
 			?>
 				<script>
 					setTimeout(function(){
-						document.write('hallo111');
+	//					document.write('hallo111');
 					},3000);
 				</script>
 			<?php
