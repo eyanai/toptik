@@ -61,6 +61,7 @@
 		<h2 class="blue">החשבון שלך</h2>
 		<?php $pageUrl = get_page_by_title( 'החשבון שלי' ); ?>
 		<?php $pageUrl2 = get_page_by_title('הרשמה' ); ?>
+		<?php $pageUrl3 = get_page_by_title('צור קשר' ); ?>
 		<a href="<?php echo $pageUrl->guid;?>">הכנס</a> לחשבון שלך או <a href="<?php echo $pageUrl2->guid;?>">הצטרף</a>
 	</div>
 	
@@ -76,7 +77,7 @@
 			<hgroup>
 				<h3>לכל שאלה התקשרו אלינו</h3>
 				<h3>בין חמישי לשיש בין השעות 8:30 עד 17:30</h3>
-				<h3><a href="<?php echo $pageUrl->guid;?>" class="black">לחצו כאן</a> ליצירת קשר </h3>
+				<h3><a href="<?php echo $pageUrl3->guid;?>" class="black">לחצו כאן</a> ליצירת קשר </h3>
 		</hgroup>
 		</div>
 
