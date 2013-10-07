@@ -34,6 +34,10 @@ jQuery(document).ready(function(e) {
 				jQuery('#pa_color').change();
 		});	
 		
+		//new -for regular selection
+		var imgw=jQuery('.imgcolor').length;
+		jQuery('.varslide').css('width',imgw+'px');
+		
 		//slide of the image variatin
 		
 		jQuery('.lver').on('click',this,function(){
@@ -146,7 +150,32 @@ jQuery(document).ready(function(e) {
 	});
 
 
+	ecolorSelection();
 	//jQuery('#shipping_company').datepicker();
+	
+	
+	personalNav();
+	
+	jQuery('.toptikviwebtm').on('click',function(){
+			order=jQuery(this).data('singel');
+			//alert(order);
+			if(jQuery(this).hasClass('print')){
+				window.print() ;
+			}else{
+				mysingelorder(order);
+				jQuery(this).addClass('toprint').text('הדפס הזמנה').addClass('print');
+				return false;
+			}
+	});
+	
+	jQuery('.resetPersonalOrder').on('click',this,function(){
+	
+	jQuery('.toshoworder').hide().removeClass('toshoworder');
+	//jQuery('.toshoworder').hide().removeClass('toshoworder');
+	jQuery('.singel_order').show();
+	jQuery('.toptikviwebtm').removeClass('toprint print').text('פרטי הזמנה');
+	});
+		
 });//dom redy
 
 
@@ -243,4 +272,80 @@ function add_favorite() {
     } 
   } 
   return false; 
+}
+//////////////////////////new color selection
+function ecolorSelection(){
+	var imgw=jQuery('.imgcolor').length*50;
+		jQuery('.varslide').css('width',imgw+'px');
+		
+		//slide of the image variatin
+		
+	jQuery('.lver').on('click',this,function(){
+			nobe=(imgw-45);
+			cPos=parseInt(jQuery('.varslide').css('right'));
+			if(cPos<=0 && imgw>315){
+				npos=cPos+25;
+				jQuery('.varslide').css('right',npos+'px');
+			}
+		});
+		
+		
+		
+	jQuery('.rver').on('click',this,function(){
+			nobe=-(imgw-90);
+			cPos=parseInt(jQuery('.varslide').css('right'));
+			now=imgw+cPos;
+			console.log(now);
+			if(cPos>nobe && imgw>315 && now>315){
+				npos=cPos-25;
+				jQuery('.varslide').css('right',npos+'px');
+			}
+		});
+}
+/////////////////personal eara
+
+function personalNav(){
+	personalreset();
+	jQuery('.myinfo').on('click',this,function(){
+		jQuery('.personalorder,.passwordC').hide();
+		jQuery('.myinfo_div').show();
+		jQuery('.infonev').removeClass('act');
+		jQuery(this).addClass('act');
+		//return false;
+	});
+
+jQuery('.myorder').on('click',this,function(){
+		jQuery('.myinfo_div,.passwordC').hide();
+		jQuery('.personalorder').show();
+		jQuery('.infonev').removeClass('act');
+		jQuery(this).addClass('act');
+		//return false;
+	});
+jQuery('.passChang').on('click',this,function(){
+		jQuery('.myinfo_div,.personalorder').hide();
+		jQuery('.passwordC').show();
+		jQuery('.infonev').removeClass('act');
+		jQuery(this).addClass('act');
+	//return false;
+});
+}
+	
+function personalreset(){
+	jQuery('.personalorder,.passwordC').hide();
+	jQuery('.myinfo_div').show();
+}
+
+function mysingelorder(order_id){
+	jQuery('.singel_order').hide();
+	jQuery('#'+order_id+'_orderTop').show().addClass('toshoworder');
+	jQuery('#'+order_id+'_singelDetail').show().addClass('toshoworder');
+	//alert(order_id);
+	/*jQuery.post(ajax_object.ajaxurl, {
+				post_id:order_id,
+				action: 'singel_order',
+			}
+			, function(data) {
+				alert(data);
+					
+			});*/
 }

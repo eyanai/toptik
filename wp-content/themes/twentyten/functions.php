@@ -554,3 +554,5 @@ function twentyten_get_gallery_images() {
 
 	return $images;
 }
+
+

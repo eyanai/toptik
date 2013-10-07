@@ -44,6 +44,7 @@ class TOP_Option{
 		add_settings_field('ye_rec_top','מומלצים עליון :',array($this,'ye_rec_top_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_rec_down','מומלצים תחתון :',array($this,'ye_rec_down_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_paypal_mail','הכנס חשבון PAYPAL לזיכוי :',array($this,'ye_down_paypal'),__FILE__,'ye_main_section');
+		add_settings_field('ye_credit','אחוזי קרדיט :',array($this,'ye_credit_set'),__FILE__,'ye_main_section');
 
 	}
 	
@@ -78,6 +79,9 @@ class TOP_Option{
 		echo "<input type='email' name='ye_plugin_options[ye_paypal_mail]' value='".$this->options['ye_paypal_mail']."'/>";	
 		}
 	
+	public function ye_credit_set(){
+		echo "<input type='number' name='ye_plugin_options[ye_credit]' min='0' max='100' value='".$this->options['ye_credit']."'/>";	
+		}
 
 	
 	

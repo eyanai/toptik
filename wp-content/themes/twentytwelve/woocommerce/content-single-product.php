@@ -34,18 +34,29 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	?>
 
 	<div class="summary entry-summary">
-	<?php if($field = get_field('logo_toptik', $product->ID, $format_value)):?>
+	
 		<div class="logoSingel">
 			<?php
-					$field = get_field('logo_toptik', $product->ID, $format_value);
-					
+					global $post;
+					//$field = get_field('logo_toptik', $product->ID, $format_value);
+					$terms = get_the_terms($post->ID, 'product_tag');
+					if( !empty($terms) )
+						{
+							$term = array_pop($terms);
+							$custom_field = get_field('logo_toptik', 'product_tag_' . $term->term_id );
+							// do something with $custom_field
+							//echo print_r($custom_field,1);
+						//	echo $custom_field['sizes']['shop_catalog'];
+							
+							echo "<img src='".$custom_field['url']."' width='335' height='45'><br>";
+						}
 					// load all 'category' terms for the post
-					$img= wp_get_attachment_image_src($field,array(335,45));
+					//$img= wp_get_attachment_image_src($field,array(335,45));
 			?>	
-			<img src="<?php echo $img[0];?>"><br>
+			
 
 		</div>
-	<?php endif;?>
+	
 
 
 		<?php

@@ -144,7 +144,17 @@ $woocommerce->show_messages();
 
 					</div>
 				<?php } ?>
-
+				<div class="borderDabel">
+					<div class="singelCredit cart">
+						<?php 
+						
+							$cPrice=(int)$woocommerce->cart->total;
+							$topCredit=getCredit();
+							
+							echo "<span class='credirArrow'> &nbsp;".$cPrice*$topCredit ."</span> &nbsp; נקודות קרדיט שתצבור ברכישה זו <span class='topPlus'>+</span>";
+						?>
+					</div>
+				</div>
 				<input type="submit" class="button" id="update_cart" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> 
 				<input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
 
@@ -168,7 +178,7 @@ $woocommerce->show_messages();
 	
 	<?php 
 		$pay=new WC_Gateway_Paypal;
-		echo print_r( get_class_methods ('WC_Gateway_Paypal'));
+		//echo print_r( get_class_methods ('WC_Gateway_Paypal'));
 		//$pay->toptik_get();
 		//do_action('toptik_get');
 		//toptik_get();

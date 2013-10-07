@@ -526,6 +526,7 @@ function toptikSearch(){
 
 	add_image_size( 'gall_r', 232, 137,true ); //300 pixels wide (and unlimited height)
 	add_image_size( 'small3', 100, 120, true ); //(cropped)
+	add_image_size( 'logo_singel', 335, 45,true );
 
 
 if(!is_admin()){
@@ -610,3 +611,32 @@ function woocommerce_pagination_end() {
 	}
 add_action( 'woocommerce_pagination_end', 'woocommerce_pagination', 10);
 
+
+//get credit val
+function getCredit(){
+	$mach=get_option('ye_plugin_options');
+	$credit=$mach['ye_credit'];
+	if($credit){
+		return (int)$credit/100;
+	}
+}
+
+/////////////////////////////////////////////////////////ajax/////////////////////////////////////////
+wp_enqueue_script( 'ajax-script', get_stylesheet_directory_uri().'/js/ajax.js', array('jquery'), 1.0 ); // jQuery will be included automatically
+	// get_template_directory_uri() . '/js/confuse.js'; // Inside a parent theme
+	// get_stylesheet_directory_uri() . '/js/confuse.js'; // Inside a child theme
+	// plugins_url( '/js/script.js', __FILE__ ); // Inside a plugin
+wp_localize_script( 'ajax-script', 'ajax_object', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) ); // setting ajaxurl
+
+add_action( 'wp_ajax_singel_order', 'ajax_singel_order' ); // ajax for logged in users
+add_action( 'wp_ajax_nopriv_ajax_singel_ordern', 'ajax_singel_order' ); // ajax for not logged in users
+
+function ajax_singel_order(){
+	//$postid=$_POST['post_id'];
+	$WCorder = new WC_Order();
+	$order=$WCorder->get_order('302');
+	//echo "yanai";
+	
+	echo $order->id;
+	die;
+}

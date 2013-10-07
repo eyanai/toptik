@@ -62,6 +62,10 @@ if ( empty( $attributes ) && ( ! $product->enable_dimensions_display() || ( ! $p
 							echo'<span class="caarAtt"></span> ';
 							echo $woocommerce->attribute_label( $attribute['name'] );
 					  break;
+					case 'גלגלים':
+							echo'<span class="wheels"></span> ';
+							echo $woocommerce->attribute_label( $attribute['name'] );
+					  break;
 					  case 'חומרים':
 					  		echo '<span class="metAtt"></span> ';
 							echo $woocommerce->attribute_label( $attribute['name'] );

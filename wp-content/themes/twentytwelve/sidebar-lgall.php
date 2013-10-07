@@ -24,4 +24,5 @@ if ( ! is_active_sidebar( 'sidebar-4' ))
 	<div class="lGallSidebar">
 		<?php dynamic_sidebar( 'sidebar-4' ); ?>
 	</div><!-- .second -->
+	
 	<?php endif; ?>
