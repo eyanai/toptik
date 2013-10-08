@@ -2057,8 +2057,14 @@ padding-top: 16px;
 	/* float:right; */
 	margin-top: 10px;   float: right;   clear: left;   height:15px;
 }
-.flotr input{
-	float:none !important;
+.flotr input {
+    float: none !important;
+}
+.flotr input:not([type="radio"]){
+    width: 290px;
+}
+.infoL input:not([type="radio"]){
+    width: 290px;
 }
 #infoForm input:not([type="radio"]),.passwordC input{
 	border:solid 1px #b2c4d4;
@@ -2121,6 +2127,10 @@ h2.normaldevid{
 	background-position:left center;
 	margin:0px 0px !important;
 }
+.personalArea h2.normaldevid {
+    position: relative;
+    top:-30px;
+}
 h2.normaldevid span{
 	background-color:#fff;
 	display:block;
@@ -2130,17 +2140,22 @@ h2.normaldevid span.long{
 	width:230px;
 }
 .sumCredit{
-	width: 260px;
-	height: 42px;
-	background-color: #ebebeb;
-	border: solid 1px #cacaca;
-	line-height: 42px;
-	padding: 5px;
-	font-weight:bold;
-	color:#000;
-	
-	font-size: 1.5em;
+	width: 250px;
+height: 42px;
+background-color: #ebebeb;
+border: solid 1px #cacaca;
+line-height: 42px;
+padding: 5px;
+font-weight: bold;
+color: #000;
+font-size: 1.5em;
+top: -17px;
+position: relative;
+text-align: left;
+padding-left: 15px;
 }
+
+
 .sumCredit span{
     width: 126px;
 	
@@ -2148,6 +2163,14 @@ h2.normaldevid span.long{
     float: right;
     color: #5e5e5e;
     font-size: .85em;
+    text-align: right;
+}
+
+.personalArea .newH2{
+    margin-bottom: 2px;
+}
+.personalArea .infoL .newH2 {
+    margin-bottom: 9px;
 }
 .personalorder{
 	/* height:auto; */
@@ -2161,6 +2184,8 @@ hr {
 }
 .hrdabel{
 	border: 1px outset #cacaca;
+    margin-top: 12px !important;
+margin-bottom: 12px !important;
 }
 .normaldevid.ordernam{
 	color:#6a717d;
@@ -2177,21 +2202,22 @@ hr {
 }
 .singel_order{
 	position:relative;
+    margin-top: 41px;
 }
 .toptikviwebtm,.toprint{
-	text-decoration:none;
-	background: #1f1f1f ;
-	color: #01afe4;
-	position: absolute ;
-	top: 30px ;
-	left: 15px;
-	width: 80px;
-	height: 30px;
-	font-size: .95em;
-	font-weight: bolder;
-	border-radius: 35px ;
-	padding: 0 10px 0 0;
-	line-height: 30px;
+	text-decoration: none;
+background: #1f1f1f;
+color: #01afe4;
+position: absolute;
+top: 0px;
+left: 15px;
+width: 122px;
+height: 30px;
+font-size: 0.98em;
+font-weight: bolder;
+border-radius: 35px;
+line-height: 30px;
+text-align: center;
 }
 .orderDetailSingel{
 	display:none;
@@ -2204,6 +2230,11 @@ hr {
 	float: right;
 	width: 215px;
 	padding-right: 15px;
+    padding-bottom :20px; 
+}
+.singelorderR h2{
+    margin-bottom: 4px !important;
+   
 }
 .personalTabelFooter {
 position: relative;
@@ -2242,18 +2273,20 @@ background:#fff;
 .entry-content .personal{
 	background:#fff;
 border-collapse: separate;
+font-size: 0.9rem;
 }
 .entry-content .personal .product-name{
 	width: 99px;
 }
 .product-thumbnail.personal a{
-	display:block;
-	width:90px;
-	height:90px;
-	padding:3px;
-	border: solid 1px #ededed;
-	float:right;
-	margin: 0 5px;
+	display: block;
+width: 90px;
+height: 90px;
+padding: 1px;
+border: solid 1px #ededed;
+float: right;
+
+margin: auto;
 }
 .pStitel{
 	display:block;
@@ -2274,16 +2307,16 @@ border-collapse: separate;
 	margin: 5px;
 }
 .product-name.up.personal {
-width: 90px;
+width: 226px;
 }
 .product-castoum.up.personal{
 	width: 350px;
 }
 .product-quantity.up.personal {
-width: 140px;
+width: 107px;
 }
 .product-subtotal.up.personal {
-width: 150px;
+width: 80px;
 }
 .product-personal-name {
 width: 300px;
@@ -2309,6 +2342,7 @@ width: 150px;
 border: solid 1px #ededed;
 text-align: center;
 }
+
 .toptikPersonalOrder{
 	clear:both;
 	
@@ -2347,6 +2381,13 @@ position: relative;
 clear: both;
 
 background: #FFF;
+}
+.castoumDetail .hrdabel{
+    top: 11px;
+position: relative;
+}
+.castoumDetail .product-personal-name{
+    padding-right: 7px;
 }
 .printE{
 	width:100%;

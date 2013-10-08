@@ -23,7 +23,7 @@ $customer_orders = get_posts( array(
 
 if ( $customer_orders ) : ?>
 
-	<h2 class="normaldevid"><span><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Orders', 'woocommerce' ) ); ?></span></h2>
+	<!--<h2 class="normaldevid"><span><?php echo apply_filters( 'woocommerce_my_account_my_orders_title', __( 'Recent Orders', 'woocommerce' ) ); ?></span></h2>-->
 
 	<section class="my_account_orders_toptik">
 
@@ -47,13 +47,13 @@ if ( $customer_orders ) : ?>
 				?>	
 						<span class="nobr1">קוד הזמנה :</span>	<?php echo $order->get_order_number(); ?>
 						<br>
-
-						<span class="nobr2">תאריך הזמנה :</span>
+                        
+                        <span class="nobr3">סטטוס הזמנה :</span>
+						<?php echo ucfirst( __( $status->name, 'woocommerce' ) ); ?><br>
+						
+                        <span class="nobr2">תאריך הזמנה :</span>
 						<time datetime="<?php echo date('Y-m-d', strtotime( $order->order_date ) ); ?>" title="<?php echo esc_attr( strtotime( $order->order_date ) ); ?>"><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></time>
 						<br>
-						
-						<span class="nobr3">סטטוס הזמנה :</span>
-						<?php echo ucfirst( __( $status->name, 'woocommerce' ) ); ?><br>
 						
 						<span class="nobr4">סה"כ הזמנה :</span>	
 						<?php  echo sprintf( $order->get_formatted_order_total(), $item_count ); ?>
@@ -94,25 +94,26 @@ if ( $customer_orders ) : ?>
 					<hr class="hrdabel">
 				
 	<div class="orderDetailSingel cf" id="<?php echo $caunterorder;?>_singelDetail">			
-		<div class="singelorderR">
-			<h2>כתובת לשליחת קבלה</h2>
+		
+        <div class="singelorderR">
+			<h2>כתובת לשליחת קבלה:</h2>
 			<?php 
 			//echo $order->id."<br>";
 			//echo $order->status."<br>";
 			//echo $order->order_date."<br>";
-			echo $order->billing_first_name." ";
+			echo $order->billing_first_name."<br>";
 			echo $order->billing_last_name."<br>";
 			echo $order->billing_email."<br>";
 			echo $order->billing_phone."<br>";
-			echo $order->order_total."<br>";
+			//echo $order->order_total."<br>";
 			echo $order->billing_address_1."<br>";
 			echo $order->billing_city."<br>";
 			echo $order->billing_postcode."<br>";?>
 		</div>
 		<div class="singelorderR">
-			<h2>כתובת למשלוח</h2>
+			<h2>כתובת למשלוח:</h2>
 			<?php
-			echo $order->shipping_first_name." ";
+			echo $order->shipping_first_name."<br>";
 			echo $order->shipping_last_name."<br>";
 			echo $order->shipping_email."<br>";
 			echo $order->shipping_phone."<br>";
@@ -121,19 +122,22 @@ if ( $customer_orders ) : ?>
 			echo $order->shipping_postcode."<br>";?>
 		</div>
 		<div class="singelorderR">
-			<h2>אמצעי תשלום</h2>
+			<h2>אמצעי תשלום:</h2>
 			<?php
 			echo $order->payment_method."<br>";
 			 ?>
 		</div>
 		<div class="singelorderR">
-			<h2>צורת משלוח</h2>
+			<h2>צורת משלוח:</h2>
 			<?php
 			echo $order->shipping_method."<br>";
 			 ?>
 		</div>
 		
+        
+
 		<div class="castoumDetail cf"><!-------------------order detil---->
+            <hr class="hrdabel">
 			<?php 
 			$order = new WC_Order($order->id);
 			
@@ -175,9 +179,39 @@ if ( $customer_orders ) : ?>
 										?>
 								</td>
 								<td class="product-personal-name">	
-								<?php	
+								<!--<?php	
 								echo 	apply_filters( 'woocommerce_order_table_product_title', '<a href="' . get_permalink( $item['product_id'] ) . '">' . $item['name'] . '</a>', $item );
-								?>
+								?>-->
+
+                                    <?php
+								if ( ! $_product->is_visible() || ( ! empty( $_product->variation_id ) && ! $_product->parent_is_visible() ) )
+									echo apply_filters( 'woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key );
+								else
+									//printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), apply_filters('woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key ) );
+									// echo "<pre>".print_r($_product,1)."</pre>";
+									 echo "<span class='cartDes'>". $_product->post->post_excerpt."</span>";
+									echo "<span class=\"cartMetaS\">";
+									$calories = woocommerce_get_product_terms( $_product->id, 'pa_סידרה', 'names' );
+									if($calories){
+									echo "סידרה: ";
+									foreach ($calories as $cat)
+										  {
+										 echo "<span class='red'>".$cat."</span>";
+										  }	
+									
+									}
+									
+									if ( $_product->is_type( array( 'simple', 'variable' ) ) && get_option( 'woocommerce_enable_sku' ) == 'yes' && $_product->get_sku() ) : ?>
+		<?php _e( 'SKU:', 'woocommerce' ); ?> <?php echo $_product->get_sku(); ?>
+	<?php endif; echo "</span>";
+
+			// Meta data
+								echo $woocommerce->cart->get_item_data( $values);
+							                   				// Backorder notification
+                  if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $values['quantity'] ) )
+                   					echo '<p class="backorder_notification">' . __( 'Available on backorder', 'woocommerce' ) . '</p>';
+							?>
+
 								</td>	
 								<td class="product-price presonal">
 										<?php

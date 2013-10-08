@@ -124,13 +124,13 @@ $woocommerce->show_messages(); ?>
 			<label for="last_name"><span class="red">*</span>משפחה פרטי</label><input type="text" name="last_name" required value="<?php echo get_user_meta($user_ID,'billing_last_name',true)?>"><br>
 			<label for="birth"><span class="red">*</span>תאריך לידה</label><input type="date" name="birth" required value="<?php echo get_user_meta($user_ID,'billing_company',true)?>"><br>
 			<label for="email"><span class="red">*</span>אימייל</label><input type="email" name="email" required value="<?php echo get_user_meta($user_ID,'billing_email',true)?>"><br>
-			<label for="phone"><span class="red">*</span>טלפון</label><input type="number" name="phone" required value="<?php echo get_user_meta($user_ID,'billing_phone',true)?>">
+			<label for="phone"><span class="red">*</span>טלפון</label><input type="text" name="phone" required value="<?php echo get_user_meta($user_ID,'billing_phone',true)?>">
 		</div>
 		<div class="infoL">
 			<h2 class="newH2"><span class="newH2span"><span class="red">*</span>כתובת</span> [<span class="red">*</span>] שדות חובה</h2><br>
 			<label for="address"><span class="red">*</span>כתובת מלאה</label><input type="text" name="address" required value="<?php if(get_user_meta($user_ID,'billing_address_1',true)!=''){echo get_user_meta($user_ID,'billing_address_1',true);}else{echo "רחוב";}?>"><br>
 			<label for="city"><span class="red">*</span>עיר</label><input type="text" name="city" value="<?php echo get_user_meta($user_ID,'billing_city',true)?>" required><br>
-			<label for="zipcode"><span class="red">*</span>מיקוד</label><input type="number" name="zipcode" value="<?php echo get_user_meta($user_ID,'billing_post_code',true)?>" required><br>
+			<label for="zipcode"><span class="red">*</span>מיקוד</label><input type="text" name="zipcode" value="<?php echo get_user_meta($user_ID,'billing_post_code',true)?>" required><br>
 			<label for="mailBox"><span class="red">*</span>ת"ד</label><input type="text" name="mailBox" value="<?php echo get_user_meta($user_ID,'billing_address_2',true)?>" required>
 			
 		</div>

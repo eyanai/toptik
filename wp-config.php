@@ -22,7 +22,7 @@ define('DB_NAME', 'new_topTik');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'cambium#1');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -32,6 +32,8 @@ define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -80,6 +82,8 @@ define('WPLANG', 'he_IL');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+
 
 /* That's all, stop editing! Happy blogging. */
 
