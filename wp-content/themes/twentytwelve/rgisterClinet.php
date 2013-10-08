@@ -178,9 +178,18 @@ if(isset($_POST['newuser'])){
 <?php
 //		echo woocommerce_login_form();
 //		 global $current_user;
-//		if($user_login){
-			echo "אתה כבר מחובר...";
-?>
+		if($user_login):?>
+<div class="alredyRegister">
+		 אתה כבר מחובר...<br>
+		מיד תעבור לדף הבית
+				 
+</div>	
+<script>
+		setTimeout(function(){
+			window.location='<?php echo get_home_url(); ?>';
+		},5000);
+</script>	 
+<?php endif; ?>
 <div class="leftside_register">
 <?php get_footer('claer');?>
 </div>

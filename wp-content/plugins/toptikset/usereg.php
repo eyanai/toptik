@@ -6,27 +6,40 @@
         ?>
 		<h2 class="newH2"><span class="newH2span">פרטים אישיים</span> [<span class="red">*</span>] שדות חובה</h2>
 		<p>
+            <label for="nickname"><span class="red">*</span> <?php _e('nickname','mydomain') ?>
+             <input type="text" name="nickname" id="nickname" class="input"  size="25" /></label>
+        </p>
+		<p>
+            <label for="email"><span class="red">*</span> <?php _e('email','mydomain') ?>
+             <input type="email" name="email" id="email" class="input"  size="25" /></label>
+        </p>
+		<p>
+            <label for="pass"><span class="red">*</span> <?php _e('password','mydomain') ?>
+             <input type="password" name="pass" id="pass" class="input"  size="25" /></label>
+        </p>
+		<p>
+            <label for="passr"><span class="red">*</span> <?php _e('Confirme password','mydomain') ?>
+             <input type="password" name="passr" id="passr" class="input"  size="25" /></label>
+        </p>
+		<p>
             <label for="first_name">זכר
              <input type="radio" name="sex"  value="זכר"/></label>
 			 <label for="first_name">נקבה
              <input type="radio" name="sex"  value="נקבה"/></label>
         </p>
 		<p>
-            <label for="first_name"><?php _e('First Name','mydomain') ?>
+            <label for="first_name"><span class="red">*</span> <?php _e('First Name','mydomain') ?>
              <input type="text" name="first_name" id="first_name" class="input" value="<?php echo esc_attr(stripslashes($first_name)); ?>" size="25" /></label>
         </p>
         <p>
-            <label for="last_name"><?php _e('Last Name','mydomain') ?>
+            <label for="last_name"><span class="red">*</span> <?php _e('Last Name','mydomain') ?>
                 <input type="text" name="last_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($last_name)); ?>" size="25" /></label>
         </p>
 		<p>
-            <label for="Comp_name"><?php _e('Birth Day','mydomain') ?>
-                <input type="date" name="billing_company" id="billing_company" class="date"></label>
+            <label for="birth">[<span class="red">*</span>] <?php _e('Birth Day','mydomain') ?>
+                <input type="date" name="birth" id="birth" class="date"></label>
         </p>
-		<p>
-            <label for="email"><?php _e('Email','mydomain') ?>
-                <input type="email" name="email" id="email" class="input" ></label>
-        </p>
+
 		<p>
             <label for="phone"><?php _e('Phone','mydomain') ?>
                 <input type="tel" name="phone" id="phone" class="input"></label>
@@ -34,17 +47,18 @@
 		
 		<h2 class="newH2"><span class="newH2span">כתובת למשלוח</span> [<span class="red">*</span>] שדות חובה</h2>
 		<p>
-            <label for="adress"><?php _e('Adress','mydomain') ?>
+            <label for="adress"><span class="red">*</span> <?php _e('Adress','mydomain') ?>
                 <input type="text" name="adress" id="adress" class="input" ></label>
         </p>
 		<p>
-            <label for="city"><?php _e('City','mydomain') ?>
+            <label for="city"><span class="red">*</span> <?php _e('City','mydomain') ?>
                 <input type="text" name="city" id="city" class="input"></label>
         </p>
 		<p>
             <label for="zipcode"><?php _e('zipcode','mydomain') ?>
                 <input type="number" name="zipcode" id="zipcode" class="input"></label>
         </p>
+
 		<?php /*?><h2 class="newH2"><span class="newH2span">סיסמא</span> [<span class="red">*</span>] שדות חובה</h2>
 		
 		<p>
@@ -56,7 +70,7 @@
                 <input type="password" name="pass" id="pass" class="input"></label><?php */?>
         </p>
         <?php
-		$newid=wp_create_user('dammy5', 'dammy5','dammy1@mail.com' );
+		$newid=wp_create_user('dammy66', 'dammy66','dammy1@mail.com' );
 		update_user_meta($newid, 'billing_company', '13-06-79');
 		
 		//$user_data = array(

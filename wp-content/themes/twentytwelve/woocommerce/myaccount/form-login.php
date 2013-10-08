@@ -10,7 +10,6 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce; ?>
-
 <?php $woocommerce->show_messages(); ?>
 
 <?php do_action('woocommerce_before_customer_login_form'); ?>
@@ -55,7 +54,7 @@ global $woocommerce; ?>
 
 	</div>
 
-	<div class="col-2">
+	<?php /*?><div class="col-2">
 
 		<h2><?php _e( 'Register', 'woocommerce' ); ?></h2>
 		<form method="post" class="register">
@@ -103,7 +102,7 @@ global $woocommerce; ?>
 
 		</form>
 
-	</div>
+	</div><?php */?>
 
 </div>
 <?php endif; ?>
