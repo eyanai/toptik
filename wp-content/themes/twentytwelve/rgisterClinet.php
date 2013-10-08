@@ -114,61 +114,53 @@ if(isset($_POST['newuser'])){
 		//echo print_r($alldata,1);?></pre>
 	<form action="<?php $_SERVER['PHP_SELF'];?>" method="post" class="registerForm">
 <h2 class="newH2"><span class="newH2span">פרטים אישיים</span> [<span class="red">*</span>] שדות חובה</h2>
-		<p>
-            <label for="nickname">[<span class="red">*</span>] <?php _e('nickname','mydomain') ?>
-             <input type="text" name="nickname" id="nickname" class="input"  size="25" /></label>
-        </p>
-		<p>
-            <label for="email">[<span class="red">*</span>] <?php _e('email','mydomain') ?>
-             <input type="email" name="email" id="email" class="input"  size="25" /></label>
-        </p>
-		<p>
-            <label for="pass">[<span class="red">*</span>] <?php _e('password','mydomain') ?>
-             <input type="password" name="pass" id="pass" class="input"  size="25" /></label>
-        </p>
-		<p>
-            <label for="passr">[<span class="red">*</span>] <?php _e('Confirme password','mydomain') ?>
-             <input type="password" name="passr" id="passr" class="input"  size="25" /></label>
-        </p>
-		<p>
-            <label for="first_name">זכר
-             <input type="radio" name="sex"  value="זכר"/></label>
-			 <label for="first_name">נקבה
-             <input type="radio" name="sex"  value="נקבה"/></label>
-        </p>
-		<p>
-            <label for="first_name">[<span class="red">*</span>] <?php _e('First Name','mydomain') ?>
-             <input type="text" name="first_name" id="first_name" class="input" value="<?php echo esc_attr(stripslashes($first_name)); ?>" size="25" /></label>
-        </p>
-        <p>
-            <label for="last_name">[<span class="red">*</span>] <?php _e('Last Name','mydomain') ?>
-                <input type="text" name="last_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($last_name)); ?>" size="25" /></label>
-        </p>
-		<p>
-            <label for="birth">[<span class="red">*</span>] <?php _e('Birth Day','mydomain') ?>
-                <input type="date" name="birth" id="birth" class="date"></label>
-        </p>
+			
+            <label for="first_name" class="sex first">זכר</label>
+             <input type="radio" name="sex"  value="זכר"/>
 
-		<p>
-            <label for="phone"><?php _e('Phone','mydomain') ?>
-                <input type="tel" name="phone" id="phone" class="input"></label>
-        </p>
-		
+			 <label for="first_name" class="sex">נקבה</label>
+             <input type="radio" name="sex"  value="נקבה"/><br>
+			
+			<label for="first_name"><span class="red">* </span> <?php _e('שם פרטי','mydomain') ?></label>
+             <input type="text" name="first_name" id="first_name" class="input" value="<?php echo esc_attr(stripslashes($first_name)); ?>" size="25" /><br>
+
+            <label for="last_name"><span class="red">* </span> <?php _e('שם משפחה','mydomain') ?></label>
+                <input type="text" name="last_name" id="last_name" class="input" value="<?php echo esc_attr(stripslashes($last_name)); ?>" size="25" /><br>
+
+            <label for="birth"><span class="red">* </span> <?php _e('תאריך לידה','mydomain') ?></label>
+                <input type="date" name="birth" id="birth" class="date"><br>
+
+            <label for="phone"><span class="red">* </span><?php _e('טלפון','mydomain') ?></label>
+                <input type="tel" name="phone" id="phone" class="input">
+        
 		<h2 class="newH2"><span class="newH2span">כתובת למשלוח</span> [<span class="red">*</span>] שדות חובה</h2>
-		<p>
-            <label for="adress">[<span class="red">*</span>] <?php _e('Adress','mydomain') ?>
-                <input type="text" name="adress" id="adress" class="input" ></label>
-        </p>
-		<p>
-            <label for="city">[<span class="red">*</span>] <?php _e('City','mydomain') ?>
-                <input type="text" name="city" id="city" class="input"></label>
-        </p>
-		<p>
-            <label for="zipcode"><?php _e('zipcode','mydomain') ?>
-                <input type="number" name="zipcode" id="zipcode" class="input"></label>
-        </p>
-		
-		<input type="submit" value=" לאתר הרשם" name="newuser">	 	
+		    <label for="adress"><span class="red">* </span> <?php _e('כתובת','mydomain') ?></label>
+                <input type="text" name="adress" id="adress" class="input" ><br>
+
+            <label for="city"><span class="red">* </span> <?php _e('עיר','mydomain') ?></label>
+                <input type="text" name="city" id="city" class="input"><br>
+
+            <label for="zipcode"><span class="red">* </span><?php _e('מיקוד','mydomain') ?></label>
+                <input type="number" name="zipcode" id="zipcode" class="input"><br>
+			
+			 <label for="zipcode"><span class="red">* </span><?php _e('ת"ד','mydomain') ?></label>
+                <input type="text" name="mailBox" id="mailBox" class="input"><br>
+
+<h2 class="newH2"><span class="newH2span">סיסמא</span> [<span class="red">*</span>] שדות חובה</h2>
+		    <?php /*?><label for="nickname"><span class="red">* </span> <?php _e('nickname','mydomain') ?></label>
+             <input type="text" name="nickname" id="nickname" class="input"  size="25" /><br>
+<?php */?>
+            <label for="email"><span class="red">* </span> <?php _e('אימייל','mydomain') ?></label>
+             <input type="email" name="email" id="email" class="input"  size="25" /><br>
+
+            <label for="pass">[<span class="red">*</span>] <?php _e('סיסמא','mydomain') ?></label>
+             <input type="password" name="pass" id="pass" class="input"  size="25" /><br>
+
+            <label for="passr">[<span class="red">*</span>] <?php _e('אשר סיסמא','mydomain') ?></label>
+             <input type="password" name="passr" id="passr" class="input"  size="25" /><br>
+
+        
+		<input type="submit" value="הרשם לאתר" name="newuser" class="newuser">	 	
 	</form>
 	
 <?php }?>	
@@ -188,11 +180,16 @@ if(isset($_POST['newuser'])){
 		setTimeout(function(){
 			window.location='<?php echo get_home_url(); ?>';
 		},5000);
-</script>	 
+</script>	
+
 <?php endif; ?>
-<div class="leftside_register">
-<?php get_footer('claer');?>
-</div>
+<div class="registerLeftBG">
+	<div class="leftside_register">
+	<?php get_footer('claer');?>
+	</div>
+
+</div> 
+
 		
 </div>	
 <?php

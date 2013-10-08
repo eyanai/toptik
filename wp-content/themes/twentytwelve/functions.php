@@ -644,11 +644,24 @@ add_action( 'wp_ajax_singel_order', 'ajax_singel_order' ); // ajax for logged in
 add_action( 'wp_ajax_nopriv_ajax_singel_ordern', 'ajax_singel_order' ); // ajax for not logged in users
 
 function ajax_singel_order(){
-	//$postid=$_POST['post_id'];
-	$WCorder = new WC_Order();
-	$order=$WCorder->get_order('302');
-	//echo "yanai";
+	$ccat=$_POST['ccat'];
+	$ctag=$_POST['ctag'];
 	
-	echo $order->id;
+	// Setup your custom query
+	$args = array(
+		 'post_type' => 'product',
+		 'tag'=>$ctag
+	
+	);
+	$loop = new WP_Query( $args );
+	
+	while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		
+		<a href="<?php echo get_permalink( $loop->post->ID ) ?>">
+			<?php the_title(); ?>
+		</a>
+	
+	<?php endwhile; wp_reset_query(); // Remember to reset 	
+	//echo $ctag;
 	die;
 }

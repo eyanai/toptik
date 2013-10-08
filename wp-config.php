@@ -22,7 +22,7 @@ define('DB_NAME', 'new_topTik');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'cambium#1');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

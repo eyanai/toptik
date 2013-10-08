@@ -72,9 +72,12 @@ class WC_Widget_Product_Tag_Cloud extends WP_Widget {
 		echo $after_widget;
 	}
 
+
+	
+
 	/**
 	 * update function.
-	 *
+	add_filter()add_filter() *
 	 * @see WP_Widget->update
 	 * @access public
 	 * @param array $new_instance

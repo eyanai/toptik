@@ -176,6 +176,8 @@ jQuery(document).ready(function(e) {
 	jQuery('.toptikviwebtm').removeClass('toprint print').text('פרטי הזמנה');
 	});
 		
+		
+	tagFillter();	
 });//dom redy
 
 
@@ -348,4 +350,25 @@ function mysingelorder(order_id){
 				alert(data);
 					
 			});*/
+}
+////////////filtering by tag
+function tagFillter(){
+	jQuery('.tagcloud a').on('click',this,function(){
+		
+		
+		ccat=jQuery('.page-title.toptik').text();
+		ctag=jQuery(this).text();
+		
+	/*	jQuery.post(ajax_object.ajaxurl, {
+				ctag:ctag,
+				ccat:ccat,	
+				action: 'singel_order',
+			}
+			, function(data) {
+				jQuery('.products').html(data);
+					
+			});
+			
+		return false;*/
+	});
 }

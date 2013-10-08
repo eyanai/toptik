@@ -68,7 +68,7 @@ box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.65);*/
 	height: 15px;
 }
  .woocommerce-page .widget_layered_nav ul li {
-	background-image:url(../images/ceckbox.png);
+	background-image: url(../images/ceckbox.png);
 	background-repeat:no-repeat;
 	background-position:right 6px;
 }
@@ -1219,6 +1219,24 @@ cursor: pointer;
 .woocommerce div.product .woocommerce-tabs ul.tabs:before, .woocommerce #content div.product .woocommerce-tabs ul.tabs:before, .woocommerce-page div.product .woocommerce-tabs ul.tabs:before, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs:before {
 border-bottom: none !important;
 }
+.tagcloud a{
+	display:block;
+	width:100%;
+	font-size: 15px !important;
+	text-decoration: none;
+	margin: 5px 0;
+	background-image: url(../images/ceckbox.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+
+	padding-right: 20px;
+}
+.tagCheck{
+	display:block;
+	float:right;
+	width:20px;
+	height:17px;
+}
 /*---------------------------------------cart------------------------------------*/
 .site-content.full{
 	width:100%;
@@ -1249,6 +1267,13 @@ border-bottom: none !important;
 	width: 100%;
 	height: 50px;
 	display: block;
+
+
+
+
+
+
+
 	text-align: center;
 
 
@@ -1639,6 +1664,7 @@ color: #636363;
 .cross-sells{
 	clear:both;
 }
+
 .popupCart a.lock{
 	 background-image: url(../images/cart/locker.png);
 	 display:block;
@@ -2098,6 +2124,7 @@ padding-top: 16px;
 #infobottom{
 	background: #1f1f1f !important;
 	color: #01afe4 !important;
+
 	position: absolute !important;
 	bottom: 10px !important;
 	left: 15px !important;
@@ -2321,6 +2348,7 @@ width: 80px;
 .product-personal-name {
 width: 300px;
 height: 70px;
+
 border: solid 1px #ededed;
 text-align:center;
 }
@@ -2482,4 +2510,82 @@ overflow: hidden;
 }
 .banneReg {
 	margin-bottom:1em;
+}
+
+/*-----------------------------REGISTER PAGE-------------------*/
+.registerForm{
+	width: 388px;
+	margin:10px 0;
+	position:relative;
+	height: 600px;
+	float: right;
+}
+.registerForm label{
+	width: 164px;
+	display: block;
+	float: right;
+	clear: right;
+	margin: 10px;
+}
+.registerForm input{
+	margin-top: 10px;
+float: right;
+clear: left;
+height: 15px;
+border: solid 1px #b2c4d4;
+box-shadow: 0px 0px 4px 2px #e4eaee;
+width:180px;
+}
+.registerForm .sex{
+	width: 30px; 
+	clear: none;
+}
+.registerForm .sex.first{
+	clear:right;
+}
+.registerForm input[type="radio"]{
+	width:20px;
+}
+
+.newuser{
+	background: #1f1f1f !important;
+	color: #01afe4 !important;
+	bottom: 10px !important;
+	left: 15px !important;
+	width: 150px !important;
+	height: 38px !important;
+	background-repeat: no-repeat !important;
+	font-size: .95em;
+	font-weight: bolder;
+	border-radius: 35px !important;
+	font-size: 16px !important;
+	font-weight: bolder !important;
+	clear:both;
+	margin-bottom:15px;
+	position: absolute;
+}
+.registerLeftBG{
+	background-image:url(../images/others/registerViaCheckoutV3.jpg);
+	background-repeat:no-repeat;
+	width: 582px;
+	background-position: -50px 0;
+	float:left;
+}
+.registerClinet {
+position: relative;
+}
+.alredyRegister {
+font-size: 1.34em;
+position: absolute;
+top: 245px;
+right: 85px;
+color: #01afe4;
+text-shadow: #cacaca 1px 1px 1px;
+}
+.brandsCon.register.clear{
+margin-top:440px;
+}
+.brandsCon.register .menu li{
+	width:170px;
+	margin:0px 10px 5px 0;
 }

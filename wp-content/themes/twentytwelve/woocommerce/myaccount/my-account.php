@@ -119,7 +119,7 @@ $woocommerce->show_messages(); ?>
 			<h2 class="newH2"><span class="newH2span">פרטים אישיים</span> [<span class="red">*</span>] שדות חובה</h2>
 				<?php if(!empty($update)){echo "<span class=\"good\">".$update."</span>";}?>
 			<span class="flotr"><input name="user_sex" type="radio" value="זכר">זכר</span>
-			<span class="flotr"><input name="user_sex" type="radio" value="נקבה">נקבה<span><br>
+			<span class="flotr"><input name="user_sex" type="radio" value="נקבה">נקבה</span><br>
 			<label for="first_name"><span class="red">*</span>שם פרטי</label><input type="text" name="first_name" required  value="<?php echo get_user_meta($user_ID,'billing_first_name',true)?>" ><br>
 			<label for="last_name"><span class="red">*</span>משפחה פרטי</label><input type="text" name="last_name" required value="<?php echo get_user_meta($user_ID,'billing_last_name',true)?>"><br>
 			<label for="birth"><span class="red">*</span>תאריך לידה</label><input type="date" name="birth" required value="<?php echo get_user_meta($user_ID,'billing_company',true)?>"><br>
