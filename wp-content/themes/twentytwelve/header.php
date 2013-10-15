@@ -46,11 +46,14 @@
 			<div id="minicart">
 				<?php //woocommerce_mini_cart();?>
 				<?php  get_template_part( 'cart', 'top' ); ?>
+				<a class="cart-contents-mini" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('לצפייה בעגלה', 'woothemes'); ?>">לעגלת קניות</a>
+
 			</div>	
 				
 		</div>
 		<div class="searchItem">
 			<?php toptikSearch();?>
+
 		</div>
 	</header>
 </div>

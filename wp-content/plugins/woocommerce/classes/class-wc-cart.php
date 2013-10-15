@@ -1924,7 +1924,7 @@ class WC_Cart {
 		 *
 		 * @params int type - 0 for all, 1 for before tax, 2 for after tax
 		 */
-		public function remove_coupons( $type = 0 ) {
+		public function remove_coupons( $type = 0 ) { 
 			global $woocommerce;
 
 			if ( 1 == $type ) {

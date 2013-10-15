@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Cart Page
  *
@@ -9,10 +10,12 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $woocommerce;
+global $woocommerce,$_toptikcredit;
 
+ do_action('woocommerce_cart_credit'); 
 $woocommerce->show_messages();
 ?>
+
 <?php do_action( 'woocommerce_before_cart' ); ?>
 
 <form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" id="cartFrom">
@@ -39,7 +42,7 @@ $woocommerce->show_messages();
 				$_product = $values['data'];
 				if ( $_product->exists() && $values['quantity'] > 0 ) {
 					?>
-					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?> cartToptik">
+					<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?> cartToptik" data-item="<?php echo $_product->id;?>">
 						<!-- Remove from cart link -->
 						<td class="product-remove">
 							<?php
@@ -129,8 +132,17 @@ $woocommerce->show_messages();
 				}
 			}
 		}
-
-		do_action( 'woocommerce_cart_contents' );
+		
+		//var_dump($_product);
+		$new=new WC_Cart;
+		//if($new->add_to_cart('34','3','','',''))echo 'adddddd';
+		//do_action( 'woocommerce_cart_contents' );
+		//echo $cPrice=(int)$woocommerce->cart->total;
+			
+	
+		
+			
+		
 		?>
 		<tr class="noborder">
 			<td colspan="6" class="actions">
@@ -143,6 +155,16 @@ $woocommerce->show_messages();
 						<?php do_action('woocommerce_cart_coupon'); ?>
 
 					</div>
+					<?php if(is_user_logged_in()):?>
+					<div class="credit">
+
+						<label for="coupon_code"><?php //_e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="number" name="credit_val" class="input-text" id="credit_val" value="" /> <input type="submit" class="button" id="creditSub" name="apply_credit" value="החל קרדיט" />
+
+						
+
+					</div>
+					<?php endif;?>
+					
 				<?php } ?>
 				<div class="borderDabel">
 					<div class="singelCredit cart">
@@ -152,13 +174,16 @@ $woocommerce->show_messages();
 							$topCredit=getCredit();
 							
 							echo "<span class='credirArrow'> &nbsp;".$cPrice*$topCredit ."</span> &nbsp; נקודות קרדיט שתצבור ברכישה זו <span class='topPlus'>+</span>";
+							$_SESSION['addcredit']=$cPrice*$topCredit;
 						?>
 					</div>
 				</div>
 				<input type="submit" class="button" id="update_cart" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" /> 
+						<a href="<?php echo home_url(); ?>" class="soppingMore">להמשך קנייה</a>
+
 				<input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e( 'Proceed to Checkout &rarr;', 'woocommerce' ); ?>" />
 
-				<?php do_action('woocommerce_proceed_to_checkout'); ?>
+				<?php //do_action('woocommerce_proceed_to_checkout'); ?>
 
 				<?php $woocommerce->nonce_field('cart') ?>
 			</td>
@@ -167,7 +192,6 @@ $woocommerce->show_messages();
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 	</tbody>
 </table>
-
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 </form>
@@ -176,12 +200,15 @@ $woocommerce->show_messages();
 
 
 	
-	<?php 
+	<?php //do_action('woocommerce_proceed_to_checkout');
 		$pay=new WC_Gateway_Paypal;
 		//echo print_r( get_class_methods ('WC_Gateway_Paypal'));
 		//$pay->toptik_get();
-		//do_action('toptik_get');
+		//
 		//toptik_get();
+		if (!$woocommerce->cart->remove_coupons( sanitize_text_field( '1_138174045' ))) {
+            $woocommerce->show_messages();
+        }
 	?>
 
 
@@ -215,4 +242,7 @@ $woocommerce->show_messages();
 		</div>
 	</div>
 <?php get_footer('reg');?>
+
+<script>
+</script>
 <?php do_action( 'woocommerce_after_cart' ); ?>

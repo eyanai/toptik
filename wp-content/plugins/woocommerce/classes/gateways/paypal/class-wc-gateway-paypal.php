@@ -592,7 +592,7 @@ class WC_Gateway_Paypal extends WC_Payment_Gateway {
 	 * @param array $posted
 	 * @return void
 	 */
-	function successful_request( $posted ) {
+	function successful_refquest( $posted ) {
 		global $woocommerce;
 
 		$posted = stripslashes_deep( $posted );

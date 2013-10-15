@@ -6,6 +6,9 @@ Descriotion: home setting and more...
 Author: yanai edri
 Author URI:cambium.co.il
 Version:1.0*/
+require_once('usercupon.php');
+
+
 class TOP_Option{
 	public $options;
 	

@@ -105,9 +105,9 @@ function woocommerce_paypal_express_init() {
 			$button_markup = '';
 
 			if ( ! empty( $pp_settings['checkout_with_pp_button'] ) && 'yes' == $pp_settings['checkout_with_pp_button'] ) {
-
-				$button_markup .= '<a class="paypal_checkout_button" href="' . add_query_arg( 'pp_action', 'expresscheckout', add_query_arg( 'wc-api', 'WC_Gateway_PayPal_Express', home_url( '/' ) ) ) .'">';
-				$button_markup .= "<img src='https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif' width='145' height='42' style='width: 145px; height: 42px; ' border='0' align='top' alt='Check out with PayPal'/>";
+				$imgurl= get_bloginfo('stylesheet_directory').'/images/cart/checkOut_02.png';	
+				$button_markup .= '<a class="paypal_checkout_button" id="toptikpaypal" href="' . add_query_arg( 'pp_action', 'expresscheckout', add_query_arg( 'wc-api', 'WC_Gateway_PayPal_Express', home_url( '/' ) ) ) .'">';
+				$button_markup .= "<img src='{$imgurl}' width='145' height='42' style='width: 220px; height: 55px; ' border='0' align='top' alt='Check out with PayPal'/>";
 				$button_markup .= "</a>";
 
 			} else {

@@ -9,7 +9,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $woocommerce;
+global $woocommerce,$_toptikcredit,$current_user;
 
 $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 ?>
@@ -39,9 +39,19 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 					<div class="discount">
 						<span class="transSub"><?php _e( 'Cart Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '1', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
 						<span class="subGeray"-<?php echo $woocommerce->cart->get_discounts_before_tax(); ?></span>
+					
 					</div>
+					
 
 				<?php endif; ?>
+				<?php 
+					$creditDis=get_user_meta($current_user->ID,'credit_want',true);
+				if(isset($creditDis) && !empty($creditDis)): ?>
+				<div class="discount">
+						<span class="transSub"><?php _e( 'הנחת קרדיטים', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_credit', '1', $woocommerce->cart->get_cart_url() ) ?>" id="removeCerdit"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
+						<span class="subGeray"><?php echo get_user_meta($current_user->ID ,'credit_want',true);?></span>
+					</div>
+				<?php endif;?>
 
 				<?php if ( $woocommerce->cart->needs_shipping() && $woocommerce->cart->show_shipping() && ( $available_methods || get_option( 'woocommerce_enable_shipping_calc' ) == 'yes' ) ) : ?>
 
@@ -99,7 +109,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 				<div class="total">
 					<span class="transSub"><strong><?php _e( 'Order Total', 'woocommerce' ); ?></strong></span>
 					<span class="subGeray">
-						<strong><?php echo $woocommerce->cart->get_total(); ?></strong>
+						<strong><?php  echo $woocommerce->cart->get_total(); ?></strong>
 						<?php
 							// If prices are tax inclusive, show taxes here
 							if (  $woocommerce->cart->tax_display_cart == 'incl' ) {
@@ -126,6 +136,8 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<div class="sammery">
 			<div class="sammSum">הנחה בקנייה זו: <span class="saveing"></span></div>
 			<div class="sammAll">סה"כ לתשלום: <span class="allSum"></span></div>
+			
+			<?php do_action('woocommerce_proceed_to_checkout'); ?>
 				<a href="<?php 
 					//if($user_login){
 						echo get_permalink(get_page_by_path('checkout'));

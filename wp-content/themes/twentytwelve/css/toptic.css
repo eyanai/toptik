@@ -149,14 +149,14 @@ margin-top: 22px;
 #minicart {
 	position: absolute;
 	z-index: 500;
-	width: 170px;
-	left: 0;
+	width: 400px;
+	left: -150px;
 	top: 35px;
-	background-image: url(../images/bg.jpg);
+	background: #fff;
 	background-repeat: repeat;
-	border: solid 1px #333;
+	border: solid 1px #ececec;
 	padding: 15px;
-	border-radius: 8px;
+	border-radius: 0;
 	box-shadow: #666 3px 3px 3px 2px;
 	display: none;
 }
@@ -1546,7 +1546,7 @@ border-right: solid 1px #c6c6c7;
 	background-image:url(../images/cart/CartV5.png);
 	background-repeat:no-repeat;
 	
-	width: 251px;
+	width: 275px;
 	background-position: right center;
 	border: solid 1px #c6c6c7;
 	padding: 5px;
@@ -1564,14 +1564,14 @@ margin-top: 2px !important;
 	background-image:url(../images/cart/shipping.png);
 	background-repeat:no-repeat;
 	
-	width: 260px;
+	width: 275px;
 	background-position: right center;
 	border: solid 1px #c6c6c7;
 	padding: 10px 0 0 0;
 	height: 33px;
 	position: absolute;
 	top: -115px;
-	left: 10px;
+	left: 0px;
 } 
 #shipping_method{
 	color:#000;
@@ -1803,11 +1803,12 @@ color: #636363;
 .chackOutCart{
 	display:block;
 	background-image:url(../images/cart/checkOut.png);
-	width:497px;
+	width: 264px;
 	height: 55px;
 	position: relative;
-	left: 215px;
+	left: -20px;
 	top: 5px;
+	margin-bottom: 45px;
 }
 .titelWcon h1.newcastomer{
 	font-size: 22px;
@@ -2349,6 +2350,9 @@ width: 80px;
 width: 300px;
 height: 70px;
 
+
+
+
 border: solid 1px #ededed;
 text-align:center;
 }
@@ -2588,4 +2592,143 @@ margin-top:440px;
 .brandsCon.register .menu li{
 	width:170px;
 	margin:0px 10px 5px 0;
+}
+/*))))))))))))))))))))))))))))))))))))))))mini cart((((((((((((((((((((((((((((((((((((((((((((((((((*/
+.shop_table.cart.mini{
+}
+.shop_table.cart.mini .product-name{
+	width:180px;
+	border: none;
+}
+.shop_table.cart.mini .cartDes {
+display: block;
+height: 34px;
+overflow: hidden;
+white-space: normal;
+text-overflow: ellipsis;
+width: 180px;
+color: #000;
+font-size: 16px;
+text-align: right;
+}
+.actions.mini-total {
+	height: 45px;
+	background: #ececec;
+	border: solid 1px #ccc;
+}
+.actions.mini-total span{
+	font-weight:bolder;
+	margin-right:50px;
+	float: left;
+}
+.shop_table.cart.mini .product-remove{
+	width: 15px !important;
+	border: none;
+	padding: 0;
+}
+.shop_table.cart.mini .cartDes p {
+width: 100%;
+height: 34px;
+overflow: hidden;
+margin: 0 0 5px !important;
+white-space:normal;
+text-overflow:ellipsis;
+}
+.shop_table.cart.mini .product-thumbnail{
+	border: none;
+	width: 56px;
+	padding: 0 1px 0 5px;
+}
+.shop_table.cart.mini .product-quantity{
+	width: 80px;
+	padding: 0;
+}
+.shop_table.cart.mini .product-subtotal{
+    padding: 0;
+
+}
+.shop_table.cart.mini .product-subtotal .amount{
+    background: #fff;
+
+    border: none;
+    padding: 0;
+    line-height: 45px;
+    font-size: 16px;
+}
+.shop_table.cart.mini img{
+    width: 60px;
+    float: right;
+    border: solid 1px #ececec;
+}
+.cart-contents-mini{
+background-color: #1f1f1f!important;
+	color: #01afe4 !important;
+	bottom: 10px !important;
+	left: 15px !important;
+	
+width: 120px !important;
+	height: 27px !important;
+	background-repeat: no-repeat !important;
+	font-size: .95em;
+	font-weight: bolder;
+	border-radius: 35px !important;
+	font-size: 16px !important;
+	font-weight: bolder !important;
+	clear:both;
+	margin-bottom: 0px;
+	position: absolute;
+	
+text-align: right;
+	line-height: 27px;
+	text-decoration: none;
+	background-image:url(../images/cart_top.png);
+	
+background-position: -15px center;
+padding-right: 7px;
+}
+/*----------------order checkout----------------------*/
+.orderFImg{
+	background-image:url(../images/others/CheckoutFinal.png);
+	width:205px;
+	height: 240px;
+	float:right;
+	background-position: 0 -7px;
+	margin-left: 35px;
+}
+.orderFinish{
+	font-size:1em;
+	font-weight:bolder;
+	color:#6a717d;
+	margin-top: 35px;
+}
+	
+.soppingMore{
+	background-color: #24b96b!important;
+	color: #fff !important;
+	/* bottom: 10px !important; */
+	/* left: -2px !important; */
+	text-decoration:none;
+	width: 120px !important;
+	height: 27px !important;
+	background-repeat: no-repeat !important;
+	font-size: .95em;
+	font-weight: bolder;
+	border:1px solid #52a37c;
+	border-radius: 35px !important;
+	font-size: 16px !important;
+	font-weight: bolder !important;
+	/* clear:both; */
+	/* margin-bottom: 0px; */
+	padding: 4px 10px;
+	margin: 0px 12px;
+	position: relative;
+	top: -1px;
+}
+#toptikpaypal{
+	display:block;
+	width:250px;
+	height:55px;
+	position:relative;
+	top: 61px;
+	left: 200px;
 }

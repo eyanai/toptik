@@ -633,6 +633,8 @@ function getCredit(){
 	}
 }
 
+
+
 /////////////////////////////////////////////////////////ajax/////////////////////////////////////////
 wp_enqueue_script( 'ajax-script', get_stylesheet_directory_uri().'/js/ajax.js', array('jquery'), 1.0 ); // jQuery will be included automatically
 	// get_template_directory_uri() . '/js/confuse.js'; // Inside a parent theme

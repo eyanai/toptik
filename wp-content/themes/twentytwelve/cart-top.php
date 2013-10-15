@@ -12,18 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
 ?>
 
-<table class="shop_table cart">
-	<thead class="cartThead">
-		<tr>
-			<th class="product-remove" id="topremove">הסר </th>
-			<th class="product-thumbnail up"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-name up"></th>
-			<th class="product-price up"><?php _e( 'Price', 'woocommerce' ); ?></th>
-			<th class="product-quantity up"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="product-subtotal up"><?php _e( 'Total', 'woocommerce' ); ?></th>
-		</tr>
-	</thead>
-	<tbody>
+<table class="shop_table cart mini">
+		<tbody>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
 		<?php
@@ -42,7 +32,7 @@ global $woocommerce;
 
 						<!-- The thumbnail -->
 						<td class="product-thumbnail">
-							<?php
+						<?php
 								$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $values, $cart_item_key );
 
 								if ( ! $_product->is_visible() || ( ! empty( $_product->variation_id ) && ! $_product->parent_is_visible() ) )
@@ -50,10 +40,14 @@ global $woocommerce;
 								else
 									printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), $thumbnail );
 							?>
-						</td>
+													</td>
 
 						<!-- Product Name -->
-						<td class="product-name">
+						<td class="product-name ">
+							
+
+							
+							
 							<?php
 								if ( ! $_product->is_visible() || ( ! empty( $_product->variation_id ) && ! $_product->parent_is_visible() ) )
 									echo apply_filters( 'woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key );
@@ -62,20 +56,7 @@ global $woocommerce;
 									// echo "<pre>".print_r($_product,1)."</pre>";
 									 echo "<span class='cartDes'>". $_product->post->post_excerpt."</span>";
 									echo "<span class=\"cartMetaS\">";
-									$calories = woocommerce_get_product_terms( $_product->id, 'pa_סידרה', 'names' );
-									if($calories){
-									echo "סידרה: ";
-									foreach ($calories as $cat)
-										  {
-										 echo "<span class='red'>".$cat."</span>";
-										  }	
 									
-									}
-									
-									if ( $_product->is_type( array( 'simple', 'variable' ) ) && get_option( 'woocommerce_enable_sku' ) == 'yes' && $_product->get_sku() ) : ?>
-		<?php _e( 'SKU:', 'woocommerce' ); ?> <?php echo $_product->get_sku(); ?>
-	<?php endif; echo "</span>";
-
 			// Meta data
 								echo $woocommerce->cart->get_item_data( $values);
 							                   				// Backorder notification
@@ -85,13 +66,13 @@ global $woocommerce;
 						</td>
 
 						<!-- Product price -->
-						<td class="product-price">
+					<?php /*?>	<td class="product-price">
 							<?php
 								$product_price = get_option('woocommerce_tax_display_cart') == 'excl' ? $_product->get_price_excluding_tax() : $_product->get_price_including_tax();
 
 								echo apply_filters('woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $values, $cart_item_key );
 							?>
-						</td>
+						</td><?php */?>
 
 						<!-- Quantity inputs -->
 						<td class="product-quantity">
@@ -126,8 +107,8 @@ global $woocommerce;
 		do_action( 'woocommerce_cart_contents' );
 		?>
 		<tr class="noborder">
-			<td colspan="6" class="actions">
-					
+			<td colspan="6" class="actions mini-total">
+				סה"כ לתשלום :   <span><?php  echo $woocommerce->cart->subtotal; ?> &#8362;</span>
 					
 			</td>
 		</tr>

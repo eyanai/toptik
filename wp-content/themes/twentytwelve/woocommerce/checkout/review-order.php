@@ -208,5 +208,6 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 		<div class="clear"></div>
 
 	</div>
-
+	<!--script top tik-->
+		<!-- toptik -->
 </div>

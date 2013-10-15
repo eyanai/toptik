@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $woocommerce;
 
 if ( $order ) : ?>
-
 	<?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
 
 		<p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
@@ -32,7 +31,7 @@ if ( $order ) : ?>
 		</p>
 
 	<?php else : ?>
-
+<?php /*?>
 		<p><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></p>
 
 		<ul class="order_details">
@@ -57,7 +56,7 @@ if ( $order ) : ?>
 		</ul>
 		<div class="clear"></div>
 
-	<?php endif; ?>
+<?php */?>	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
@@ -67,3 +66,4 @@ if ( $order ) : ?>
 	<p><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></p>
 
 <?php endif; ?>
+

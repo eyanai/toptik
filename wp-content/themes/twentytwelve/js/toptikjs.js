@@ -372,3 +372,21 @@ function tagFillter(){
 		return false;*/
 	});
 }
+
+/////////////////cart
+jQuery(document).ready(function(e) {
+	
+
+	jQuery('input.plus').on('click',this,function(){
+		jQuery('input.plus').each(function(index, element) {
+			
+			idp=jQuery(this).parent('div').parent('td').parent('tr').data('item');
+			pqunt=jQuery(this).parent('div').children('input[type="number"]').val();	
+			
+			alert(idp+'---'+pqunt);
+		});
+		
+		
+	});
+
+});
