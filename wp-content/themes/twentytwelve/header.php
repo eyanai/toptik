@@ -62,8 +62,8 @@
 	<div class="avatar">
 		<span class="avatarIcon"></span>
 		<h2 class="blue">החשבון שלך</h2>
-		<?php $pageUrl = get_page_by_title( 'לקוח חדש' ); ?>
-		<?php $pageUrl2 = get_page_by_title('הרשמה' ); ?>
+		<?php $pageUrl = get_page_by_title( 'החשבון שלי' ); ?>
+		<?php $pageUrl2 = get_page_by_title('הצטרף' ); ?>
 		<?php $pageUrl3 = get_page_by_title('צור קשר' ); ?>
 		<a href="<?php echo $pageUrl->guid;?>">הכנס</a> לחשבון שלך או <a href="<?php echo $pageUrl2->guid;?>">הצטרף</a>
 	</div>

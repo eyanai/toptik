@@ -1,0 +1,71 @@
+@CHARSET "windows-1255";
+
+
+.scrollable-box{
+	
+	border: 1px solid #696969;
+	border-radius: 5px;
+	background-color: #e4e4e4;
+	margin: 10px 0 10px 0;
+
+	background-image: linear-gradient(top,#D9D9D9 0,#FFFFFF 250px);
+	background-image: -o-linear-gradient(top,#D9D9D9 0,#FFFFFF 250px);
+	background-image: -moz-linear-gradient(top,#D9D9D9 0,#FFFFFF 250px);
+	background-image: -webkit-linear-gradient(top,#D9D9D9 0,#FFFFFF 250px);
+	background-image: -ms-linear-gradient(top,#D9D9D9 0,#FFFFFF 250px);
+
+	
+}
+
+
+.scrollable-box-header .header{
+	display: inline-block;
+	font-size: 1.10em;
+	font-weight: bold;
+}
+
+.scrollable-box-content{
+	padding: 5px;
+	margin: 10px auto auto 20px;
+}
+
+div#sp_tranzila_instructions table{
+	
+	border-spacing: 10px;
+	
+}
+
+.scrollable-box .scrollable-box-header{
+	
+	margin: 0;
+	padding: 8px;
+	background-color: #777;
+	border-radius: 5px;
+}
+.scrollable-box .scrollable-box-header, .scrollable-box a{
+	color: #E39426;
+}
+
+.scrollable-box-header .scrollable-box-button{
+	
+	float: right;
+	display: inline-block;
+	background: transparent url(../images/arrows.png) no-repeat 32px 0px;
+	width: 45px;
+}
+.scrollable-box-header:HOVER {
+	cursor: pointer;
+}
+
+
+#important_instructions_meta_box td{
+	white-space: nowrap;
+}
+
+#important_instructions_meta_box input[type='text']{
+	width: 70em;
+}
+
+
+
+

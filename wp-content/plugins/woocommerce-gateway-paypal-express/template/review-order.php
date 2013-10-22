@@ -9,18 +9,22 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 ?>
 <div id="paypalexpress_order_review">
-
+	<div class="paypalalert">
+		שים לב!<br>
+		באישור העיסקה, מחיר המשלוח יתווסף לחשבון בפייפל.
+	</div>
+	
 	<table class="shop_table">
-		<thead>
+		<?php /*?><thead>
 			<tr>
 				<th class="product-name"><?php _e('Product', 'woocommerce'); ?></th>
 				<th class="product-quantity"><?php _e('Qty', 'woocommerce'); ?></th>
 				<th class="product-total"><?php _e('Totals', 'woocommerce'); ?></th>
 			</tr>
-		</thead>
+		</thead><?php */?>
 		<tfoot>
 
-			<tr class="cart-subtotal">
+			<?php /*?><tr class="cart-subtotal">
 				<th colspan="2"><strong><?php _e('Cart Subtotal', 'woocommerce'); ?></strong></th>
 				<td><?php echo $woocommerce->cart->get_cart_subtotal(); ?></td>
 			</tr>
@@ -33,7 +37,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 			</tr>
 
 			<?php endif; ?>
-
+<?php */?>
 			<?php if ( $woocommerce->cart->needs_shipping() ) : ?>
 
 			<?php do_action('woocommerce_review_order_before_shipping'); ?>
@@ -192,7 +196,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 		</tfoot>
 		<tbody>
-			<?php
+			<?php /*
 				if (sizeof($woocommerce->cart->get_cart())>0) :
 					foreach ($woocommerce->cart->get_cart() as $item_id => $values) :
 						$_product = $values['data'];
@@ -206,7 +210,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 						endif;
 					endforeach;
 				endif;
-
+				*/
 				do_action( 'woocommerce_cart_contents_review_order' );
 			?>
 		</tbody>

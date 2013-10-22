@@ -17,7 +17,7 @@ if ( ! $woocommerce->cart->coupons_enabled() )
 $info_message = apply_filters('woocommerce_checkout_coupon_message', __( 'Have a coupon?', 'woocommerce' ));
 ?>
 
-<p class="woocommerce-info"><?php echo $info_message; ?> <a href="#" class="showcoupon"><?php _e( 'Click here to enter your code', 'woocommerce' ); ?></a></p>
+<?php /*?><p class="woocommerce-info"><?php echo $info_message; ?> <a href="#" class="showcoupon"><?php _e( 'Click here to enter your code', 'woocommerce' ); ?></a></p>
 
 <form class="checkout_coupon" method="post" style="display:none">
 
@@ -30,4 +30,4 @@ $info_message = apply_filters('woocommerce_checkout_coupon_message', __( 'Have a
 	</p>
 
 	<div class="clear"></div>
-</form>
+</form><?php */?>

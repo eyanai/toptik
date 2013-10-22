@@ -9,7 +9,7 @@
 
 ?>
 <div class="popupCart">      
-		<a href="#" class="members"></a>
+		<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'החשבון שלי' ) ) ); ?>" class="members"></a>
 		<a href="#" class="lock"></a>
 </div>
 <?php

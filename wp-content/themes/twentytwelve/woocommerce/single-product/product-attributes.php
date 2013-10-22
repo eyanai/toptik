@@ -34,7 +34,7 @@ if ( empty( $attributes ) && ( ! $product->enable_dimensions_display() || ( ! $p
 		<?php if ( $product->has_dimensions() ) : ?>
 
 			<tr class="<?php if ( ( $alt = $alt * -1 ) == 1 ) echo 'alt'; ?>">
-				<th><span class="dimAttr"></span><?php _e( 'Dimensions', 'woocommerce' ) ?></th>
+				<th><span class="dimAttr"></span><?php _e( 'מידות', 'woocommerce' ) ?></th>
 				<td class="product_dimensions"><?php echo $product->get_dimensions(); ?></td>
 			</tr>
 

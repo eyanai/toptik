@@ -20,7 +20,13 @@ global $woocommerce;
 		echo woocommerce_login_form();
 		 global $current_user;
 		if($user_login){
-			echo "אתה כבר מחובר...";?>
+			echo "אתה כבר מחובר...<br> מיד תעבור לשלב הבא";?>
+			
+		<script>
+				setTimeout(function(){
+					window.location= '<?php echo get_permalink(get_page_by_path('checkout'));?>';
+				},5000);
+		</script>	
 		
 			<a href="<?php echo get_permalink(get_page_by_path('checkout'));?>" class="submit_btb_cont login">המשך</a>	
 		<?php	
@@ -43,15 +49,15 @@ global $woocommerce;
 		<?php 
 		//generate_paypal_form();?>	
 	</div>
-	<span class="orCastoumer"></span>
+	<?php /*?><span class="orCastoumer"></span>
 	<div class="optionCas">
 		<h2 class="newH2span">הזמנה מהירה</h2>
 		<p>במידה ויש לך חשבון פייפאל או אם ברצונך<br>
 			לבצע את התשלום באמצעות מערכת פייפאל<br>
 			לחץ על הכפתור הבא:</p>
 			<a href="" class="submit_btb_paypal"></a>
-	</div>
+	</div><?php */?>
+</div>
 
-</div>	
 <?php
 get_footer(); 

@@ -7,7 +7,7 @@ add_action('woocommerce_credit_reset','reset_credit');
 function user_add_credit(){
 
 global $_toptikcredit;
-	 $_toptikcredit=array('credit'=>'','codcredit'=>'','creditId'=>'');
+	 $_toptikcredit=array('credit'=>'','codcredit'=>'','creditId'=>'','mesg'=>'0');
 
 
 	global $woocommerce, $current_user;
@@ -30,9 +30,10 @@ global $_toptikcredit;
       get_currentuserinfo();
 
       $user_ID=$current_user->ID;
+	  $nomeric=true;
 	  
 	  $wnat=(int)htmlspecialchars($_POST['credit_val']);
-	  if(is_int($wnat)){
+	  if(is_numeric($_POST['credit_val'])){
 	  
 	  $allcredit=(int)get_user_meta($user_ID,'credit',true);
 
@@ -50,10 +51,18 @@ global $_toptikcredit;
 
 
 	if(!empty($cCredit)){
-		$editCupon=addtocupon();
+		if(!is_numeric($_POST['credit_val'])){
+			echo '<div class="woocommerce-error">לא הכנסת מספר- נסה שנית</div>';
+			}else{
+				$editCupon=addtocupon();
+				if($editCupon==1)echo '<div class="woocommerce-message">הקרדיט עודכן בהצלחה.</div>';
+			}
+		
 	}
+
+	
 	if($wnat<=$allcredit && empty($cCredit)){
-			
+			$cupons= new WC_Coupon;
 			
 			
 			$coupon = array(
@@ -86,17 +95,19 @@ global $_toptikcredit;
 					update_user_meta($user_ID, 'credit_want', $wnat );
 					$_toptikcredit['codcredit']=$coupon_code;
 					update_user_meta($user_ID,'cerdit_cupon',$coupon_code);
+					
+					echo '<div class="woocommerce-message">הקרדיט עודכן בהצלחה.</div>';
 				}
 				
 				}else{
 					//send eroor u dont have the same credit
-					if($editCupon!=1)echo "אין לך מספיק קרדיט למימוש";
+					if($editCupon!=1)echo '<div class="woocommerce-error">אין לך מספיק קרדיט למימוש</div>';
 					
 				}
 			}
 		else{
 			//send eroor is not a namber
-			echo "לא הכנסת מספר- נסה שנית";
+			echo '<div class="woocommerce-error">לא הכנסת מספר- נסה שנית</div>';
 		}
 	}//if isset
 	
@@ -112,8 +123,6 @@ global $_toptikcredit;
 		$creditId=get_user_meta($current_user->ID, 'credit_post', true);
 		
 		$newCerdit=$lastwant+$oldcredit;
-		echo "old: ".$oldcredit."<br>";
-		echo "new: ".$codecredit."<br>";
 		
 		//$woocommerce->cart->remove_coupons($_GET['remove_discounts']);
 		//$woocommerce->cart->remove_coupons();
@@ -130,7 +139,9 @@ global $_toptikcredit;
 		update_user_meta($current_user->ID, 'credit_want','');
 		update_user_meta($current_user->ID, 'credit_post','');
 		  $woocommerce->cart->calculate_totals();
-		 unset( $woocommerce->session->coupon_codes, $woocommerce->session->coupon_amounts );  
+		 unset( $woocommerce->session->coupon_codes, $woocommerce->session->coupon_amounts ); 
+		 
+		 echo '<div class="woocommerce-message">הקרדיט הוסר בהצלחה.</div>'; 
 			    
 	}
 }
@@ -161,6 +172,7 @@ function reset_credit($page=''){
 		update_user_meta($current_user->ID, 'credit_post','');
 		
 		unset($_SESSION['addcredit']);
+		
 
 }
 

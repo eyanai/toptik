@@ -268,26 +268,38 @@ if ( $customer_orders ) : ?>
 						<div class="singel_table">
 				
 				<?php
+					$rowcaoun=0;
 					if ( $totals = $order->get_order_item_totals() ) foreach ( $totals as $total ) :
 						?>
+							
 							<span scope="row" class="f1"><?php echo $total['label']; ?></span>
-							<span class="f2"><?php echo $total['value']; ?></span>
+							
+							<span class="f2<?php if($rowcaoun==0)echo ' first';?>"><?php echo str_replace("-",'',$total['value']); ?></span>
 						
 						<?php
+						$rowcaoun++;
 					endforeach;
 				?>
-				
+				<?php if(get_field('credit_order', $order->id)>0):?>
 					<span  class="f1">קרדיט</span>
 					<span class="f2"><?php the_field('credit_order', $order->id); ?> &#8362;</span>
+				<?php endif;?>
 				</div>
 				</div>
 				<div class="toptikPersonalOrder">
-					<div class="discountToptik">הנחה בקניה זו : <span class="topdiscount"></span></div>
-					<div class="sumToptik">סה"כ לתשלום : <span class="topPsum"></span></div>
+					<div class="discountToptik">הנחה בקניה זו : <span class="topdiscount">
+						<?php
+							$creditdos=get_field('credit_order', $order->id);
+							$subsidcount=$order->order_discount+$creditdos;
+							echo $subsidcount."  &#8362;";
+						?>
+					
+					</span></div>
+					<div class="sumToptik">סה"כ לתשלום : <span class="topPsum"><?php echo $order->order_total."  &#8362;";?></span></div>
 				</div>
 				<div class="bDivider"></div>
 				<div class="printE">
-					<a href="#" class="toptikviwebtm toprint print after">הדפס הזמנה</a>
+					<a href="#" class="printAfter" target="new"></a>
 					<a href="#" class="resetPersonalOrder">< חזרה להזמנות שלי </a>
 				</div>
 </div><!-------------------order detil---->

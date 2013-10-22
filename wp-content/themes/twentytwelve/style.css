@@ -689,26 +689,38 @@ input[type=checkbox] {
 	margin: 0 auto;
 	position: relative;
 }
-
+.agree_nwes{
+	visibility:visible !important;
+	
+	position: absolute !important;
+	top: 5px;
+	right: -20px;
+}
 .nwesAgree label {
 	cursor: pointer;
 position: absolute;
-width: 13px;
+
+	width: 163px;
 height: 14px;
-margin-top: 26px;
+
+	top: 0;
 right: 0;
 display: inline-block;
 border-radius: 4px;
--webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
--moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
-background: #fcfff4;
-background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+
+	/* -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5); */
+
+	/* box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5); */
+
+	/* background: #fcfff4; */
+
+	/* background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
 background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); */
 }
 
 .nwesAgree label:after {
@@ -1891,7 +1903,7 @@ img#wpstats {
 	width: 60px;
 	margin-right: 5px;
 	border-right: solid 1px #383838;
-	height: 20px;
+	height: 30px;
 	margin-top: 0px;
 }
 .top_nav-menu li.branch a{
@@ -1904,7 +1916,7 @@ img#wpstats {
 	width: 63px;
 	margin-right: 5px;
 	border-right: solid 1px #383838;
-	height: 20px;
+	height: 30px;
 	margin-top: 0px;
 
 }

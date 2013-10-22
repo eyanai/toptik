@@ -70,7 +70,7 @@ function woocommerce_review_order() {
 	</script>
 	";
 
-	echo '<form method="POST" action="' . add_query_arg( 'pp_action', 'payaction', add_query_arg( 'wc-api', 'WC_Gateway_PayPal_Express', home_url( '/' ) ) ) . '">';
+	echo '<form method="POST" class="formOrderFinel" action="' . add_query_arg( 'pp_action', 'payaction', add_query_arg( 'wc-api', 'WC_Gateway_PayPal_Express', home_url( '/' ) ) ) . '">';
 
 	$template = plugin_dir_path( __FILE__ ) . '/template/review-order.php';
 
@@ -78,11 +78,11 @@ function woocommerce_review_order() {
 
 	do_action( 'woocommerce_ppe_checkout_order_review' );
 
-	echo '<p><a class="button cancel" href="' . $woocommerce->cart->get_cart_url() . '">'.__('Cancel order', 'woothemes').'</a> ';
+	echo '<div class="formOrderFinel" ><p><a class="button cancel orderReVtoptic" href="' . $woocommerce->cart->get_cart_url() . '">'.__('בטל הזמנה', 'woothemes').'</a> ';
 
-	echo '<input type="submit" class="button" value="' . __( 'Place Order','woothemes') . '" /></p>';
+	echo '<input type="submit" class="button orderReVtoptic" value="' . __( 'אשר הזמנה','woothemes') . '" /></p>';
 
-	echo '</form>';
+	echo '</div></form>';
 }
 
 add_shortcode( 'woocommerce_review_order', 'get_woocommerce_review_order' );

@@ -11,7 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
 ?>
-
 <table class="shop_table cart mini">
 		<tbody>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>

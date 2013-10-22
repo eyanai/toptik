@@ -354,11 +354,11 @@ function woocommerce_paypal_express_init() {
 			global $woocommerce;
 
 			if ( $woocommerce->cart->total > 0 ) {
-
-				echo '<p class="woocommerce-info info"><a class="paypal_checkout_button" href="' . add_query_arg( 'pp_action', 'expresscheckout', add_query_arg( 'wc-api', get_class(), home_url( '/' ) ) ) . '">';
-				echo "<img src='https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif' width='145' height='42' style='width: 145px; height: 42px; ' border='0' align='top' alt='Check out with PayPal'/>";
-				echo '</a> ' . apply_filters( 'woocommerce_ppe_checkout_message', __( 'Have a PayPal account?', 'wc-paypal-express' ) ) . '</p>';
-
+				$imgurl= get_bloginfo('stylesheet_directory').'/images/cart/checkOut_02.png';
+				echo '<div class="topTic-cehcohut-ex"><a class="paypal_checkout_button" href="' . add_query_arg( 'pp_action', 'expresscheckout', add_query_arg( 'wc-api', get_class(), home_url( '/' ) ) ) . '">';
+				echo "<img src='$imgurl' width='145' height='42' style='width: 220px; height: 55px; ' border='0' align='top' alt='Check out with PayPal'/>";
+				//echo '</a> ' . apply_filters( 'woocommerce_ppe_checkout_message', __( 'Have a PayPal account?', 'wc-paypal-express' ) ) . '</p>';
+				echo "</a></div>";
 			}
 		}
 

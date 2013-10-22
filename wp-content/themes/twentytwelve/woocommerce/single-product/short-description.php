@@ -17,8 +17,8 @@ if ( ! $post->post_excerpt ) return;
 <div itemprop="description" class="socialDescrip">
 <div class="titelWcon"></div>	
 	<div class="fave cf">
-		<span class="addFav"></span>
-		<span class="sendFr"></span>
+		<!--<span class="addFav"></span>
+		 <a href="mailto:name@email.com?subject=מומלץ מאתר טופתיק" class="sendFr"></a>-->
 		<span class="printF"></span>
 	</div>
 

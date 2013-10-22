@@ -24,13 +24,13 @@
 }
 .single-product.woocommerce .thumbnails #slider-prev,
 .single-product.woocommerce .thumbnails #slider-next {
-    display: none !important;
+    display: none;
     cursor: pointer;
     width: 27px;
     height: 26px;
     background: url('../images/slider-arrow.png') no-repeat left center;
     position: absolute;
-    top: 48%;
+   	top: 560px;
     margin-top: -2px;
 }
 

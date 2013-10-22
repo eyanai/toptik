@@ -1415,9 +1415,12 @@ padding-top:2px
 
 
 .woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last {
-	float: left;
-	width: 47%;
+	float: right;
+	width: 88%;
 	overflow: visible
+;
+	clear: both;
+	text-align: right;
 }
 .woocommerce form .form-row-last, .woocommerce-page form .form-row-last {
 	float: right

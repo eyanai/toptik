@@ -12,8 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce,$_toptikcredit;
 
- do_action('woocommerce_cart_credit'); 
-$woocommerce->show_messages();
+ 	$woocommerce->show_messages();
 ?>
 
 <?php do_action( 'woocommerce_before_cart' ); ?>
@@ -21,7 +20,7 @@ $woocommerce->show_messages();
 <form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" id="cartFrom">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
-
+<?php do_action('woocommerce_cart_credit'); ?>
 <table class="shop_table cart">
 	<thead class="cartThead">
 		<tr>
@@ -158,7 +157,7 @@ $woocommerce->show_messages();
 					<?php if(is_user_logged_in()):?>
 					<div class="credit">
 
-						<label for="coupon_code"><?php //_e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="number" name="credit_val" class="input-text" id="credit_val" value="" /> <input type="submit" class="button" id="creditSub" name="apply_credit" value="החל קרדיט" />
+						<label for="coupon_code"><?php _e( 'קרדיט', 'woocommerce' ); ?>:</label> <input type="text" name="credit_val" class="input-text" id="credit_val" value="" /> <input type="submit" class="button" id="creditSub" name="apply_credit" value="החל קרדיט" />
 
 						
 
@@ -206,9 +205,7 @@ $woocommerce->show_messages();
 		//$pay->toptik_get();
 		//
 		//toptik_get();
-		if (!$woocommerce->cart->remove_coupons( sanitize_text_field( '1_138174045' ))) {
-            $woocommerce->show_messages();
-        }
+		
 	?>
 
 

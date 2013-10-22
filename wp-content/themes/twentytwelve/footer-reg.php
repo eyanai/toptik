@@ -1,5 +1,7 @@
 <?php
 if ( has_nav_menu( 'brands' ) ) {?>
+
+
 	<div class="brandsCon clear">
 		<div class="recommendedtop"><h2>המותגים שלנו</h2></div>
 <?php

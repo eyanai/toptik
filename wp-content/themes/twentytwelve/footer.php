@@ -24,12 +24,14 @@
 			<section class="siteCat">
 				<span class="prodCat "></span>
 				<?php 
+				$number=27;
 				$args = array(
 					'number'     => $number,
 					'orderby'    => $orderby,
 					'order'      => $order,
 					'hide_empty' => $hide_empty,
-					'include'    => $ids
+					'include'    => $ids,
+					'parent' => 0 
 				);
 
 			$product_categories = get_terms( 'product_cat', $args );//array( 'parent' => 0 )
@@ -48,11 +50,17 @@
 			 
 			 }
 			?>
+			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'מפת האתר' ))); ?>" class="proCatLink">מפת האתר</a> 
 			</div>
 			</section>
 			<section class="face_join">
 				<span class="joinUs"></span>
-				<a href="http://www.facebook.com" class="fbjoin" target="new"></a>
+				<?php 
+					$mach=get_option('ye_plugin_options');
+					
+	 				$faceseller=$mach['ye_paypal_face'];
+				?>
+				<a href="<?php echo $faceseller;?>" class="fbjoin" target="new"></a>
 				<div class="fbLike">
 					<div class="fb-like" data-href="http://www.toptik.co.il/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
 					<div id="fb-root"></div>

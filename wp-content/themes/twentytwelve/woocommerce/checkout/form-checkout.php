@@ -23,29 +23,37 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 // filter hook for include new pages inside the payment method
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', $woocommerce->cart->get_checkout_url() ); ?>
-
+<div class="topCheckbox">
+	<input type="radio" class="addreesType" data-val="reg" name="newaddrees" id="regAddrees" checked><label for="reg" class="regLabel" data-val='reg'>כתובת חיוב</label> 
+	<input type="radio" class="addreesType" data-val="new" name="newaddrees" id="newAddrees"><label for="reg"  class="regLabel" data-val='new'>כתובת משלוח</label>
+</div>
 <form name="checkout" method="post" class="checkout" action="<?php echo esc_url( $get_checkout_url ); ?>">
 
 	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
+
+
+
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="col2-set" id="customer_details">
+		<div class="toptik-checkout" id="customer_details">
 
-			<div class="col-1">
+			<div class="col-1 toptik" id="checoutUp">
 
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 
 			</div>
 
-			<div class="col-2">
+			<div class="col-2 toptik" id="checoutDown">
 
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 
 			</div>
 
 		</div>
-
+<div class="casess">
+</div>
+		<div id="youOrder">
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 		<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
@@ -53,7 +61,7 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', $woocommerce-
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_checkout_order_review' ); ?>
-
+	</div>
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

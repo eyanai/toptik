@@ -23,7 +23,7 @@ if(isset($_POST['newuser'])){
 	$nickname=filter_input(INPUT_POST,'nickname',FILTER_SANITIZE_STRING);
 	
 	
-	echo $billing_email.$billing_address_1;
+	//echo $billing_email.$billing_address_1;
 	
 	if(empty($billing_first_name)||empty($billing_last_name)||empty($user_sex)||empty($billing_company)||empty($billing_email)
 		||empty($billing_address_1)||empty($billing_city)||empty($billing_post_code)||empty($pass)){
@@ -59,6 +59,7 @@ if(isset($_POST['newuser'])){
 				update_user_meta($uid,'billing_city',$billing_city);
 				update_user_meta($uid,'billing_post_code',$billing_post_code);
 				update_user_meta($uid,'billing_phone',$billing_phone);
+				update_user_meta($uid,'billing_email',$billing_email);
 			
 				$good='משתמש נוצר בהצלחה...';
 			}
@@ -86,7 +87,14 @@ if(isset($_POST['newuser'])){
 <?php global $current_user;
 		if(!$user_login):?>
 
-<?php if(!empty($good)){echo "<span class=\"good\">".$good."</span>";}else{?>
+<?php if(!empty($good)){echo "<span class=\"good\">".$good."<br></span>";?>
+			מיד תעבור לעמוד התחברות
+			<script>
+			setTimeout(function(){
+				window.location='<?php echo esc_url(get_permalink( woocommerce_get_page_id( 'checkout') ) );?>';
+				},5000);
+			</script>	
+<?php }else{?>
 
 
 	<?php if(!empty($eroor)){echo "<span class=\"eroor\">".$eroor."</span>";}?>
@@ -172,13 +180,26 @@ if(isset($_POST['newuser'])){
 //		 global $current_user;
 		if($user_login):?>
 <div class="alredyRegister">
+		 
 		 אתה כבר מחובר...<br>
-		מיד תעבור לדף הבית
+		מיד תעבור לדף הרלוונטי<br>
+		או לחץ<br>
+
 				 
+
+<?php 
+	$title=get_the_title();
+	if($title=='הצטרף'){
+		$urlrederct=esc_url( get_permalink( get_page_by_title( 'החשבון שלי' ) ) );
+	}else{
+		$urlrederct=esc_url(get_permalink( woocommerce_get_page_id( 'checkout') ) );
+	}
+?>
+	<a href="<?php echo $urlrederct;?>" class="button contin">המשך</a>
 </div>	
 <script>
 		setTimeout(function(){
-			window.location='<?php echo get_home_url(); ?>';
+			window.location='<?php echo $urlrederct; ?>';
 		},5000);
 </script>	
 

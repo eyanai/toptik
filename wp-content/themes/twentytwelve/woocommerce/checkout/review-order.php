@@ -32,7 +32,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 			<tr class="discount">
 				<th><?php _e( 'Cart Discount', 'woocommerce' ); ?></th>
-				<td>-<?php echo $woocommerce->cart->get_discounts_before_tax(); ?></td>
+				<td><?php echo $woocommerce->cart->get_discounts_before_tax(); ?></td>
 			</tr>
 
 			<?php endif; ?>
@@ -80,7 +80,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 			<tr class="discount">
 				<th><?php _e( 'Order Discount', 'woocommerce' ); ?></th>
-				<td>-<?php echo $woocommerce->cart->get_discounts_after_tax(); ?></td>
+				<td><?php echo $woocommerce->cart->get_discounts_after_tax(); ?></td>
 			</tr>
 
 			<?php endif; ?>

@@ -7,7 +7,7 @@ Author: yanai edri
 Author URI:cambium.co.il
 Version:1.0*/
 require_once('usercupon.php');
-
+require_once('toptikWidget.php');
 
 class TOP_Option{
 	public $options;
@@ -46,7 +46,7 @@ class TOP_Option{
 		// add_settings_field( $id, $title, $callback, $page, $section, $args );
 		add_settings_field('ye_rec_top','מומלצים עליון :',array($this,'ye_rec_top_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_rec_down','מומלצים תחתון :',array($this,'ye_rec_down_setting'),__FILE__,'ye_main_section');
-		add_settings_field('ye_paypal_mail','הכנס חשבון PAYPAL לזיכוי :',array($this,'ye_down_paypal'),__FILE__,'ye_main_section');
+		add_settings_field('ye_face_mail','עמוד פייסבוק :',array($this,'ye_down_pace'),__FILE__,'ye_main_section');
 		add_settings_field('ye_credit','אחוזי קרדיט :',array($this,'ye_credit_set'),__FILE__,'ye_main_section');
 
 	}
@@ -78,8 +78,8 @@ class TOP_Option{
 	}
 	
 	
-	public function ye_down_paypal(){
-		echo "<input type='email' name='ye_plugin_options[ye_paypal_mail]' value='".$this->options['ye_paypal_mail']."'/>";	
+	public function ye_down_pace(){
+		echo "<input type='text' name='ye_plugin_options[ye_paypal_face]' value='".$this->options['ye_paypal_face']."'/>";	
 		}
 	
 	public function ye_credit_set(){

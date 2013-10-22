@@ -21,7 +21,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 						<span><?php //_e( 'Shipping', 'woocommerce' ); ?></span>
 						<span><?php woocommerce_get_template( 'cart/shipping-methods.php', array( 'available_methods' => $available_methods ) ); ?></span>
 	</div>
-
+	
 
 	<?php if ( ! $woocommerce->shipping->enabled || $available_methods || ! $woocommerce->customer->get_shipping_country() || ! $woocommerce->customer->has_calculated_shipping() ) : ?>
 
@@ -31,27 +31,36 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 			
 				<div class="cart-subtotal">
 					<span class="transSub"><strong><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></strong></span>
-					<span class="subGeray"><strong><?php echo $woocommerce->cart->get_cart_subtotal(); ?></strong></span>
+					<span class="subGeray" id="cartSubToal" data-subtotls='<?php echo $woocommerce->cart->subtotal;?>'><strong><?php echo $woocommerce->cart->get_cart_subtotal(); ?></strong></span>
 				</div>
-
+				
+				<div class="shipVal">
+						<span class="transSub">משלוח:</span>
+						<span class="subGeray toptik" id="shipnam"></span>
+				</div>
+				
+				<div class="shipVal" id="beforDisc">
+						<span class="transSub">סה"כ לפני הנחה:</span>
+						<span class="subGeray toptik" id="sumValCost"></span>
+				</div>
 				<?php if ( $woocommerce->cart->get_discounts_before_tax() ) : ?>
 
 					<div class="discount">
-						<span class="transSub"><?php _e( 'Cart Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '1', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
-						<span class="subGeray"-<?php echo $woocommerce->cart->get_discounts_before_tax(); ?></span>
-					
+	<!--Cart Discount-->	<span class="transSub"><?php _e( 'קרדיט:', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '1', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
+						<span id='credirdiscout' data-credit='<?php echo $woocommerce->cart->discount_cart; ?>' class="subGeray toptik"> <?php echo $woocommerce->cart->get_discounts_before_tax();?> </span>
+						
 					</div>
 					
 
 				<?php endif; ?>
-				<?php 
+				<?php /*
 					$creditDis=get_user_meta($current_user->ID,'credit_want',true);
 				if(isset($creditDis) && !empty($creditDis)): ?>
 				<div class="discount">
 						<span class="transSub"><?php _e( 'הנחת קרדיטים', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_credit', '1', $woocommerce->cart->get_cart_url() ) ?>" id="removeCerdit"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
 						<span class="subGeray"><?php echo get_user_meta($current_user->ID ,'credit_want',true);?></span>
 					</div>
-				<?php endif;?>
+				<?php endif; */?>
 
 				<?php if ( $woocommerce->cart->needs_shipping() && $woocommerce->cart->show_shipping() && ( $available_methods || get_option( 'woocommerce_enable_shipping_calc' ) == 'yes' ) ) : ?>
 
@@ -65,10 +74,7 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 					<?php do_action( 'woocommerce_cart_totals_after_shipping' ); ?>
 
 				<?php endif ?>
-					<div class="shipVal">
-						<span class="transSub">משלוח</span>
-						<span class="subGeray" id="shipnam"></span>
-					</div>
+					
 				<?php foreach ( $woocommerce->cart->get_fees() as $fee ) : ?>
 
 					<div class="fee fee-<?php echo $fee->id ?>">
@@ -99,7 +105,8 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 
 					<div class="discount">
 						<span class="transSub"><?php _e( 'Order Discount', 'woocommerce' ); ?> <a href="<?php echo add_query_arg( 'remove_discounts', '2', $woocommerce->cart->get_cart_url() ) ?>"><?php _e( '[Remove]', 'woocommerce' ); ?></a></span>
-						<span class="subGeray">-<?php echo $woocommerce->cart->get_discounts_after_tax(); ?></span>
+						<span class="subGeray" id="saveCupon" data-cupon='	<?php echo ($woocommerce->cart->discount_total)?>'><?php echo $woocommerce->cart->get_discounts_after_tax(); ?></span>
+					
 					</div>
 
 				<?php endif; ?>
@@ -139,11 +146,13 @@ $available_methods = $woocommerce->shipping->get_available_shipping_methods();
 			
 			<?php do_action('woocommerce_proceed_to_checkout'); ?>
 				<a href="<?php 
-					//if($user_login){
-						echo get_permalink(get_page_by_path('checkout'));
-					//}else{
-						//echo get_permalink(get_page_by_path('לקוח חדש'));
-				//	}
+				global $current_user;
+					if(is_user_logged_in()){
+						echo esc_url(get_permalink( woocommerce_get_page_id( 'checkout') ) );
+					}else{
+					//	echo esc_url( get_permalink( get_page_by_title( 'לתשלום' ) ) );
+						echo esc_url( get_permalink( get_page_by_title( 'לקוח חדש' ) ) );
+					}
 				?>" class="chackOutCart"></a>
 		</div>
 		<?php if ( $woocommerce->cart->get_cart_tax() ) : ?>

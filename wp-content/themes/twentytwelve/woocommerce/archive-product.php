@@ -41,8 +41,6 @@ get_header('shop'); ?>
 
 		<?php endif; ?>
 
-		
-
 		<?php if ( have_posts() ) : ?>
 
 			<?php

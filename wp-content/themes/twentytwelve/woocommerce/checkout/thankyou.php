@@ -9,7 +9,10 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-global $woocommerce;
+global $woocommerce,$current_user;
+
+//$order = new WC_Order( $order_id );
+
 
 if ( $order ) : ?>
 	<?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
@@ -62,8 +65,18 @@ if ( $order ) : ?>
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>
+		
+	<div class="orderFinish">
+	<div class="orderFImg"></div>
+		<p>הזמנתך התבצעה בהצלחה:<br>
+			אישור הזמנה  <?php if(!empty($order->id)) echo "מספר ".$order->id; ?> נשלח אליך למייל השמור המערכת
+		</p>
+		<p>תודה שקנית אצלינו</p>
+		<a href="<?php echo home_url(); ?>" class="soppingMore">להמשך קנייה</a>
+	</div>
+<div class="clear"></div>
+<?php do_action('woocommerce_credit_reset'); ?>
 
-	<p><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></p>
 
 <?php endif; ?>
 

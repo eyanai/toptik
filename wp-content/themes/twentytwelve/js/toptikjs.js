@@ -117,21 +117,24 @@ jQuery(document).ready(function(e) {
 	});
 	
 	
+	
 	jQuery('.lock').on('click',this,function(){
-		popUp('.premitionPop','.cPop');	
-		return  false;
+		//popUp('.premitionPop','.cPop');	
+		//return  false;
 	});	
 	jQuery('.members').on('click',this,function(){
-		popUp('.loginpop','.cPop');	
-		return  false;
+		//popUp('.loginpop','.cPop');	
+		//return  false;
 	});
 	//shipVal
    cookieCach();
 	saveingAndMore();
 	setWW();
-
-	jQuery('#shipping_company,#billing_company').attr('type','date');
-	
+	shippingAndCredit();
+	//jQuery('#shipping_company,#billing_company').attr('type','date');
+//		$(function() {
+	//	$( "#datepicker" ).datepicker();
+	  //});
 	
 	jQuery('.submit_btb_paypal').on('click',function(){
 		//what to do... when paypal btn clicked
@@ -163,9 +166,13 @@ jQuery(document).ready(function(e) {
 				window.print() ;
 			}else{
 				mysingelorder(order);
-				jQuery(this).addClass('toprint').text('הדפס הזמנה').addClass('print');
+				jQuery(this).addClass('toprint').text('').addClass('print');
 				return false;
 			}
+	});
+	
+	jQuery('.printAfter').on('click',this,function(){
+					window.print() ;
 	});
 	
 	jQuery('.resetPersonalOrder').on('click',this,function(){
@@ -177,8 +184,34 @@ jQuery(document).ready(function(e) {
 	});
 		
 		
-	tagFillter();	
-});//dom redy
+	tagFillter();
+	addressEdit();	
+	
+	jQuery('#billing_company,#birth').datepicker({
+		 dateFormat: 'dd-mm-yy',
+		dayNamesMin: ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'],  
+		 });
+	
+	Modernizr.load({
+		  test: Modernizr.date,
+		  yep : '',
+		  nope: function() {
+					jQuery('#shipping_company,#billing_company').datepicker();
+	  		}
+		});
+		
+		
+		
+	jQuery('.wysija-submit.wysija-submit-field').on('click',this,function(){
+			if(jQuery('.agree_nwes').attr('checked', true)){
+				return true;
+			}else{
+				alert('אתה חייב להסכים לקבלת מיללים פירסומיים');
+				return false;
+			}
+		
+	});	
+});//dom redy=============================================================================================================
 
 
 
@@ -200,15 +233,38 @@ function cookieCach(){
 }
 
 function saveingAndMore(){
-	save=jQuery('.discount .amount').html();
+	save=parseFloat(jQuery('#saveCupon').data('cupon'));
 	allsum=jQuery('.total .subGeray .amount').html();
-//	alert(allsum);
-	if(save){
-		jQuery('.saveing').html(save);
+	creditsave=0;
+	creditsave=parseFloat(jQuery('#credirdiscout').data('credit'));
+	
+	if(save>0 && creditsave>0){
+		totalsave=save+creditsave;
+	}else{
+		if(save>0){
+			totalsave=save;
+		}else{
+			totalsave=creditsave;
+		}
+	}
+	if(save||creditsave){
+		jQuery('.saveing').html(totalsave +' &#8362;');
 		jQuery('.sammSum').show();
 	}else{
 		jQuery('.sammSum').hide();
 	}
+	
+	
+	sval=jQuery('#shipping_method option:selected').data('sval');
+	if(sval!=0){
+		jQuery('#shipnam').html(sval + ' &#8362;');
+		jQuery('.shipVal').show();	
+	}else{
+		jQuery('.shipVal').hide();
+	}
+	subtotal=jQuery('#cartSubToal').data('subtotls'); 
+	sumtotal=sval+subtotal;
+	jQuery('#sumValCost').html(sumtotal+' &#8362;');
 	
 	jQuery('.allSum').html(allsum);
 }
@@ -390,3 +446,48 @@ jQuery(document).ready(function(e) {
 	});
 
 });
+
+function shippingAndCredit(){
+			sval=jQuery('#shipping_method option:selected').data('sval');
+		if(sval!=0){
+			jQuery('#shipnam').html(sval + ' &#8362;');
+			jQuery('.shipVal').show();	
+			}else{
+			jQuery('.shipVal').hide();
+		}
+		subtotal=jQuery('#cartSubToal').data('subtotls'); 
+		sumtotal=sval+subtotal;
+		jQuery('#sumValCost').html(sumtotal+' &#8362;');
+		jQuery('#beforDisc').show();
+}
+	
+
+function addressEdit(){
+	jQuery('.addreesType,.regLabel').on('click',this,function(){
+		adshow=jQuery(this).data('val');
+		
+		if(adshow=='reg'){
+		 	jQuery('#regAddrees').attr('checked', true);
+			jQuery('#newAddrees').attr('checked', false);
+			jQuery('.new_addrees').hide();
+			jQuery('.reg_addrees').show();
+			jQuery('#checoutUp').show();
+			jQuery('#checoutDown').hide();
+		}else{
+			jQuery('#regAddrees').attr('checked', false);
+			jQuery('#newAddrees').attr('checked', true);
+			jQuery('.new_addrees').show();
+			jQuery('.reg_addrees').hide();
+			jQuery('#checoutUp').hide();
+			jQuery('#checoutDown').show();
+
+		}
+	});
+}
+
+
+
+
+
+//////////////////////////form compier for tranzila////////
+

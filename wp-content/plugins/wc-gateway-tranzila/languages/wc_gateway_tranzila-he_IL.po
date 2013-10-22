@@ -1,0 +1,218 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: W2T\n"
+"POT-Creation-Date: 2013-09-15 21:42+0200\n"
+"PO-Revision-Date: 2013-09-16 10:12-0300\n"
+"Last-Translator: Shmuel <shmuel@planwize.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\Website\\wp-content\\plugins\\wc-"
+"gateway-tranzila\n"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:33
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:126
+msgid "Tranzila"
+msgstr "טרנזילה"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:34
+#, php-format
+msgid ""
+"If you have an %sTranzila account%s, this payment method allows you to "
+"collect payments via Tranzila."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:117
+msgid "Enable/Disable"
+msgstr "הפעל/כבה"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:119
+msgid "Enable Tranzila Payment Gateway"
+msgstr "הפעל סליקה עם טרנזילה"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:123
+msgid "Title"
+msgstr "כותרת"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:125
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:130
+msgid "Description"
+msgstr "תיאור"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:132
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:133
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:561
+msgid "Pay via Tranzila"
+msgstr "בצע תשלום מאובטח"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:137
+msgid "Tranzia Username"
+msgstr "שם משתמש בטרנזילה"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:139
+msgid "The username you have received from Tranzila"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:143
+msgid "iFrame Mode"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:145
+msgid "Enable Tranzila iFrame Checkout"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:148
+msgid ""
+"An iFrame module gives you the option of embedding a payment window inside "
+"your site without redirecting to another site"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:152
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:154
+msgid "Hide security logos"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:157
+msgid ""
+"This is important for your clients knowing they give credit card information "
+"in safe place"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:179
+msgid "iFrame language"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:182
+msgid "Hebrew"
+msgstr "עברית"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:183
+msgid "English"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:184
+msgid "Russian"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:185
+msgid "Spanish"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:186
+msgid "German"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:187
+msgid "French"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:188
+msgid "Japanese"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:190
+msgid "iFrame lang"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:195
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:197
+msgid "Button Text"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:218
+msgid ""
+"This url has been randomly generated for your site. Do not share it with "
+"anybody except Tranzila!"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:220
+msgid ""
+"An activated license key keeps your plugin up to date and opens up our "
+"priority support."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:239
+msgid "Settings"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:266
+msgid "Plugin License Key"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:269
+msgid ""
+"Before you start to use Tranzila, make sure you followed the instructions "
+"below:"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:272
+msgid "Fill in the appropriate fields as follows:"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:280
+msgid "Make sure to enter your Tranzila username in the field setting."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:281
+msgid "Enable tranzila payment gateway and you are ready to collect payments."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:470
+msgid "Tranzila payment failed. Please try again."
+msgstr "התשלום נכשל. אנא נסה שנית."
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:485
+msgid ""
+"Thank you for your order, please click the button below to pay with Tranzila."
+msgstr "תודה רבה על ההזמנה! אנא לחץ על הכפתור לביצוע תשלום  100% מאובטח."
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:514
+msgid ""
+"Thank you for your order. We are now redirecting you to Tranzila to make "
+"payment."
+msgstr ""
+"תודה רבה על ההזמנה! אתה מופנה כעת ישירות לעמוד המאובטח של טרנזילה לביצוע "
+"התשלום. תודה!"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:562
+msgid "Cancel order &amp; restore cart"
+msgstr "חזור לעגלת הקניות"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:720
+#, php-format
+msgid "Validation error: Tranzila amounts do not match (sum %s)."
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:726
+msgid "Credit card company approval number"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:728
+msgid "ABS approval number"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:730
+msgid "Transaction ID"
+msgstr ""
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:733
+msgid "Tranzila payment completed"
+msgstr "התשלום המאובטח הסתיים"
+
+#: C:\wamp\www\Website\wp-content\plugins\wc-gateway-tranzila/class-wc-gateway-tranzila.php:743
+#, php-format
+msgid ""
+"Payment failed. Tranzila response code: %s . Check your tranzila account for "
+"transaction ID #%s"
+msgstr ""
+"התשלום נכשל. קוד שגיאה %s . אנא בדוק את חשבון הטרנזילה שלך לגבי הזמנה ID #%s"

@@ -98,8 +98,10 @@ function twentytwelve_scripts_styles() {
 	
 		
 	wp_enqueue_style( 'jqueryUiCss', 'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css' );
-	wp_enqueue_script( 'jquery-ui-core');
-
+	wp_register_script('modernizer',get_template_directory_uri() . '/js/modernizr.js',array('jquery'),'1.0',true);
+	wp_enqueue_script('modernizer');
+	wp_register_script('jquery-ui',get_template_directory_uri() . '/js/jquery-ui-1.10.3.custom.min.js',array(),'1.1',true);
+	wp_enqueue_script('jquery-ui');
 	/*
 	 * Adds JavaScript to pages with the comment form to support
 	 * sites with threaded comments (when in use).
@@ -666,4 +668,19 @@ function ajax_singel_order(){
 	<?php endwhile; wp_reset_query(); // Remember to reset 	
 	//echo $ctag;
 	die;
+}
+
+
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+     $fields['billing']['billing_company']['placeholder'] = 'תאריך לידה';
+     $fields['billing']['billing_company']['label'] = 'תאריך לידה';
+	 $fields['billing']['billing_address_2']['label'] = 'ת"ד';
+	 $fields['shipping']['shipping_company']['placeholder'] = 'תאריך לידה';
+     $fields['shipping']['shipping_company']['label'] = 'תאריך לידה';
+	 $fields['shipping']['shipping_address_2']['label'] = 'ת"ד';
+     return $fields;
 }
