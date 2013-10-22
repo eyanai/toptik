@@ -647,6 +647,9 @@ wp_localize_script( 'ajax-script', 'ajax_object', array( 'ajaxurl' => admin_url(
 add_action( 'wp_ajax_singel_order', 'ajax_singel_order' ); // ajax for logged in users
 add_action( 'wp_ajax_nopriv_ajax_singel_ordern', 'ajax_singel_order' ); // ajax for not logged in users
 
+add_action( 'wp_ajax_singel_oddpro', 'ajax_singel_oddpror' ); // ajax for logged in users
+add_action( 'wp_ajax_nopriv_singel_oddpro', 'ajax_singel_oddpror' ); // ajax for not logged in users
+
 function ajax_singel_order(){
 	$ccat=$_POST['ccat'];
 	$ctag=$_POST['ctag'];
@@ -670,6 +673,18 @@ function ajax_singel_order(){
 	die;
 }
 
+
+function ajax_singel_oddpror(){
+		$json=$_POST['json'];
+	
+		$cart=new WC_Cart;
+		foreach($json as $key=>$val){
+			$cart->add_to_cart($key,$val);
+		}
+		
+	
+	die;
+}
 
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );

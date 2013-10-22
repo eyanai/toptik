@@ -211,6 +211,40 @@ jQuery(document).ready(function(e) {
 			}
 		
 	});	
+	
+	jQuery('.minicartval').each(function(index, element) {
+		 pval=jQuery(this).val();
+		jQuery(this).data('count',pval);	
+	});
+	
+	jQuery('.minicartval').on('change',this,function(e) {
+      var json={};
+	  jQuery('.minicartval').each(function(index, element) {
+		  json[jQuery(this).data('proid')] = jQuery(this).val();
+		//json+=''+ jQuery(this).data('proid')+',';
+	  	//json+=''+ jQuery(this).val()+',';
+		});
+	  	//json += " }";
+	console.log(json);	
+	  e.preventDefault();
+	  pid=jQuery(this).data('proid');
+	  pval=jQuery(this).val();
+	  //pval=parseInt(pval);
+	  datac=jQuery(this).data('count');	
+	 // datac=parseInt(datac);
+	 	//alert(datac+'<'+pval);
+	 ///if(datac<pval){
+		//addToCart(pid,pval);
+		//}
+	//if(datac>pval){
+		//addToCart(pid,-1);
+		//}
+	 
+	
+		//addToCart(pid,1);
+      	addToCart(json);
+      return false;
+    });  
 });//dom redy=============================================================================================================
 
 
@@ -491,3 +525,36 @@ function addressEdit(){
 
 //////////////////////////form compier for tranzila////////
 
+
+ function addToCart(json) {
+	 	/*	url=jQuery('.shop_table.cart.mini').data('url');
+	 		
+            jQuery.ajax({
+              type: 'POST',
+              url: url+'/?post_type=product&add-to-cart='+p_id,
+              data: { 'product_id':  p_id,
+              'quantity': amount},
+              success: function(response, textStatus, jqXHR){
+                    console.log("Product added");
+					jQuery('#minicart .blockUI.blockOverlay').hide();
+                }/*,
+              dataType: 'JSON'
+            }); */
+      
+	  
+	  	jQuery('#minicart .blockUI.blockOverlay').show();	
+			
+		jQuery.post(ajax_object.ajaxurl, {
+				json:json,
+			//	pval:amount,	
+				action: 'singel_oddpro',
+			}
+			, function(data) {
+				//jQuery('#minicart .blockUI.blockOverlay').hide();
+				location.reload(true);
+			});
+			
+		return false;
+	  }
+
+    

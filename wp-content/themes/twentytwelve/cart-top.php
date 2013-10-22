@@ -11,7 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
 ?>
-<table class="shop_table cart mini">
+<div class="blockUI blockOverlay"><span>מעדכן עגלה נא המתן...</span></div>
+<table class="shop_table cart mini" data-url='<?php echo home_url(); ?>'>
 		<tbody>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
@@ -84,7 +85,7 @@ global $woocommerce;
 									$min 	= apply_filters( 'woocommerce_quantity_input_min', '', $_product );
 									$max 	= apply_filters( 'woocommerce_quantity_input_max', $_product->backorders_allowed() ? '' : $_product->get_stock_quantity(), $_product );
 
-									$product_quantity = sprintf( '<div class="quantity"><input type="number" name="cart[%s][qty]" step="%s" min="%s" max="%s" value="%s" size="4" title="' . _x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) . '" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $step, $min, $max, esc_attr( $values['quantity'] ) );
+									$product_quantity = sprintf( '<div class="quantity"><input type="number"  data-proId="'.$_product->id.'" name="cart[%s][qty]" step="%s" min="%s" max="%s" value="%s" size="4" title="' . _x( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) . '" class="minicartval input-text qty text" maxlength="12" /></div>', $cart_item_key, $step, $min, $max, esc_attr( $values['quantity'] ) );
 								}
 
 								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
@@ -102,7 +103,7 @@ global $woocommerce;
 				}
 			}
 		}
-
+	
 		do_action( 'woocommerce_cart_contents' );
 		?>
 		<tr class="noborder">
@@ -113,3 +114,4 @@ global $woocommerce;
 		</tr>
 </tbody>
 </table>
+<a href="#" id="upMinicart">עדכן עגלה</a>
