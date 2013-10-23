@@ -14,6 +14,9 @@ global $woocommerce, $post;
 $heading = esc_html( apply_filters('woocommerce_product_description_heading', __( 'צור קשר', 'woocommerce' ) ) );
 ?>
 <div class="tabcon contect">
+<?php $def=get_field('contectDef', $product->ID, false);
+	echo $def[0];
+?>
 <?php if(	$field = get_field('contactUs', $product->ID, false) ):?>
 
 

@@ -362,6 +362,8 @@ Matched CSS Rules .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-
 
 
 
+
+
     font-size: 1em;
     margin-top: 15px;
     padding-right: 25px;
@@ -565,6 +567,7 @@ recommendedtop.bottom {
     overflow: hidden;
     padding-right: 2px;
     text-overflow: ellipsis;
+
     white-space: nowrap;
     width: 180px;
 }
@@ -768,7 +771,7 @@ select {
 #toptikcart {
     background-image: url("../images/addtocart.png") !important;
     background-repeat: no-repeat;
-    border: medium none;
+    border: none !important;
     color: #01AFE4;
     font-size: 20px;
     height: 48px;
@@ -779,6 +782,7 @@ select {
     text-align: center;
     top: -1px;
     width: 239px;
+    box-shadow: none;
 }
 #toptikcart:hover {
     opacity: 0.85;
@@ -905,7 +909,7 @@ select {
 .tabcon {
     float: right;
     padding: 10px;
-    width: 96%;
+    width: 284px;
 }
 .tabimg.shpping {
     background-image: url("../images/sepping.jpg");
@@ -944,7 +948,7 @@ select {
 }
 .tabcon.contect .maincon {
     float: right;
-    width: 500px;
+    width: 440px;
 }
 .tabcon.contect h2 {
     font-size: 1.65em;
@@ -2746,13 +2750,14 @@ h1.entry-title-address {
 .shipping_address {
     display: block !important;
 }
+
 .toptik-checkout .col-1.toptik, .toptik-checkout .col-2.toptik {
     position: absolute;
     top: 15px;
     width: 300px;
     z-index: 500;
 }
-#order_comments, #order_comments_field, #shiptobilling {
+#order_comments, #order_comments_field, #shiptobilling,#shipping_company_field,#billing_company_field {
     display: none;
 }
 .toptik-checkout .col-2.toptik {
@@ -2780,7 +2785,7 @@ h1.entry-title-address {
     visibility: collapse;
 }
 #youOrder #payment div.form-row, #youOrder #payment div.form-row {
-    border: medium none;
+    border:  none;
     width: 150px;
 }
 #youOrder #order_review {
@@ -2827,7 +2832,7 @@ h1.entry-title-address {
     width: 250px;
 }
 .topTic-cehcohut-ex {
-    bottom: 150px;
+    top: 872px;
     position: absolute;
     right: 155px;
     z-index: 500;
@@ -3018,4 +3023,7 @@ h1.entry-title-address {
 	font-size: 20px;
 	margin-top: 1em;
 	text-shadow: 0px 0px 3px #000;
+}
+.woocommerce div.product .woocommerce-tabs .panel, .woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel, .woocommerce-page #content div.product .woocommerce-tabs .panel {
+min-height: 380px;
 }

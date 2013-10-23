@@ -367,6 +367,7 @@ padding-right: 4px;
 	padding: 10px;
 	background-color: #fff;
 	width: 591px;
+	margin-bottom: 25px;
 }
 .woocommerce div.product p.cart, .woocommerce #content div.product p.cart, .woocommerce-page div.product p.cart, .woocommerce-page #content div.product p.cart {
 	margin-bottom: 2em

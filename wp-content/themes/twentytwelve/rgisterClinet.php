@@ -5,6 +5,8 @@ Template Name: רישום משתמש חדש
 get_header();
 
 global $current_user;
+//$alldata=get_user_meta($current_user->ID);
+//var_dump($alldata); 
 if(isset($_POST['newuser'])){
 	//echo "new";
 	
@@ -60,6 +62,16 @@ if(isset($_POST['newuser'])){
 				update_user_meta($uid,'billing_post_code',$billing_post_code);
 				update_user_meta($uid,'billing_phone',$billing_phone);
 				update_user_meta($uid,'billing_email',$billing_email);
+				
+				
+				update_user_meta($uid,'shipping_first_name',$billing_first_name);
+				update_user_meta($uid,'shipping_last_name',$billing_last_name);
+				update_user_meta($uid,'shipping_address_1',$billing_address_1);
+				update_user_meta($uid,'shipping_address_2',$billing_address_2);
+				update_user_meta($uid,'shipping_city',$billing_city);
+				update_user_meta($uid,'shipping_post_code',$billing_post_code);
+				update_user_meta($uid,'shipping_phone',$billing_phone);
+				update_user_meta($uid,'shipping_email',$billing_email);
 			
 				$good='משתמש נוצר בהצלחה...';
 			}
@@ -91,7 +103,7 @@ if(isset($_POST['newuser'])){
 			מיד תעבור לעמוד התחברות
 			<script>
 			setTimeout(function(){
-				window.location='<?php echo esc_url(get_permalink( woocommerce_get_page_id( 'checkout') ) );?>';
+				window.location='<?php echo esc_url(get_permalink( get_page_by_title( 'החשבון שלי' ) ) );?>';
 				},5000);
 			</script>	
 <?php }else{?>
