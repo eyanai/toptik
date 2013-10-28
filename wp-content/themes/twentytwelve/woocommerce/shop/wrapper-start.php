@@ -35,12 +35,36 @@ switch( $template ) {
 				// print the IMG HTML
 				echo '<img src="'.$image.'" alt="" class="catImg" />';
 				}
+			
+		if(is_product_tag()){?>
+		
+				<?php 
+				// load all 'category' terms for the post
+					$queried_object = get_queried_object(); 
+					$taxonomy = $queried_object->taxonomy;
+					$term_id = $queried_object->term_id;  
+				// echo $post->ID;
+				
+					$big_banner = get_field('tag_long_img', $taxonomy . '_' . $term_id);
+					if(!empty($big_banner)):
+				?>
+				<img src="<?php echo $big_banner['url']; ?>" class="catImg" />
+					<?php endif;?>
+
+		
+		<?php
+		}	
+			
 			if(!is_single()){
 				echo '<div id="primary" class="site-content"><div id="content" role="main">';
 			}else{
 				echo '<div id="primary" class="site-content singelPage"><div id="content" role="main">';
 			}	
 		
+		
+		
+		
+				
 		break;
 	case 'twentythirteen' :
 		echo '<div id="primary" class="site-content"><div id="content" role="main" class="entry-content twentythirteen">';

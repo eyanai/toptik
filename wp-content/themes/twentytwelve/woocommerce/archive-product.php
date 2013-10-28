@@ -29,7 +29,6 @@ get_header('shop'); ?>
 			
 
 	?>
-		
 
 		<div class="tag-desc">
 			<?php do_action( 'woocommerce_archive_description'); ?>
@@ -133,7 +132,7 @@ get_header('shop'); ?>
 					
 				)
 			);*/
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 5,'home_options' => "גלריה-ראשית");
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 5,'home_options' => "גלריה-ראשית",'orderby' => 'rand');
 
 			$query = new WP_Query( $args );
 			// The Loop

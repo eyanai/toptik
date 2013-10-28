@@ -44,7 +44,7 @@ jQuery(document).ready(function(e) {
 			nobe=(imgw-45);
 			cPos=parseInt(jQuery('.varslide').css('right'));
 			if(cPos<nobe && imgw>240){
-				npos=cPos+25;
+				npos=cPos+60;
 				jQuery('.varslide').css('right',npos+'px');
 			}
 		});
@@ -53,7 +53,7 @@ jQuery(document).ready(function(e) {
 			nobe=-(imgw-90);
 			cPos=parseInt(jQuery('.varslide').css('right'));
 			if(cPos>nobe && imgw>240){
-				npos=cPos-25;
+				npos=cPos-60;
 				jQuery('.varslide').css('right',npos+'px');
 			}
 		});
@@ -84,7 +84,11 @@ jQuery(document).ready(function(e) {
 		nobe=-(widAll);
 			if(cPos<=0){
 				npos=cPos+187.4;
+				if(npos>0){
+					jQuery('.brandsMenu_wide ul').css('right','0px');
+				}else{
 				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
+				}
 			}else{
 				return false;
 			}
@@ -218,32 +222,19 @@ jQuery(document).ready(function(e) {
 	});
 	
 	jQuery('.minicartval').on('change',this,function(e) {
-      var json={};
-	  jQuery('.minicartval').each(function(index, element) {
-		  json[jQuery(this).data('proid')] = jQuery(this).val();
-		//json+=''+ jQuery(this).data('proid')+',';
-	  	//json+=''+ jQuery(this).val()+',';
-		});
-	  	//json += " }";
-	console.log(json);	
-	  e.preventDefault();
-	  pid=jQuery(this).data('proid');
-	  pval=jQuery(this).val();
-	  //pval=parseInt(pval);
-	  datac=jQuery(this).data('count');	
-	 // datac=parseInt(datac);
-	 	//alert(datac+'<'+pval);
-	 ///if(datac<pval){
-		//addToCart(pid,pval);
-		//}
-	//if(datac>pval){
-		//addToCart(pid,-1);
-		//}
-	 
-	
-		//addToCart(pid,1);
-      	addToCart(json);
-      return false;
+	 //setTimeout(function(){
+		  var json={};
+		  
+		  jQuery('.minicartval').each(function(index, element) {
+			  json[jQuery(this).data('proid')] = jQuery(this).val();
+			});
+		console.log(json);	
+		  e.preventDefault();
+		  pid=jQuery(this).data('proid');
+		  pval=jQuery(this).val();
+		  datac=jQuery(this).data('count');	
+			addToCart(json);
+		  return false; //},1000);
     });  
 });//dom redy=============================================================================================================
 
@@ -327,7 +318,7 @@ function setWW(){
 	var liw=0;	
 	conW=jQuery('.brandsCon').width();
 	jQuery('.brandsMenu_wide ul li').each(function(index, element) {
-			liw=liw+jQuery(this).width()+15;
+			liw=liw+jQuery(this).width()+10;
 	});
 	jQuery('.brandsMenu_wide ul').css('width',liw+'px');
 	
@@ -367,7 +358,7 @@ function add_favorite() {
 }
 //////////////////////////new color selection
 function ecolorSelection(){
-	var imgw=jQuery('.imgcolor').length*50;
+	var imgw=jQuery('.imgcolor').length*75;
 		jQuery('.varslide').css('width',imgw+'px');
 		
 		//slide of the image variatin

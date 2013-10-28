@@ -236,10 +236,14 @@ Matched CSS Rules .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-
 .topBannerBox h3 {
     color: #000000;
     font-weight: bold;
+    height: 15px;
     margin-right: 5px;
+    overflow: hidden;
     padding-top: 2px;
     position: absolute;
     text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 100%;
     z-index: 5;
 }
@@ -327,7 +331,11 @@ Matched CSS Rules .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-
 .small_3 h2 {
     color: #000000;
     font-weight: bold;
+    height: 15px;
+    overflow: hidden;
     text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 100%;
 }
 .sText {
@@ -358,12 +366,6 @@ Matched CSS Rules .woocommerce .widget_layered_nav ul li.chosen a, .woocommerce-
 .mata_3 h2 {
     color: #000000;
     float: right;
-
-
-
-
-
-
     font-size: 1em;
     margin-top: 15px;
     padding-right: 25px;
@@ -567,7 +569,6 @@ recommendedtop.bottom {
     overflow: hidden;
     padding-right: 2px;
     text-overflow: ellipsis;
-
     white-space: nowrap;
     width: 180px;
 }
@@ -633,6 +634,7 @@ recommendedtop.bottom {
 }
 .catImg {
     margin-top: 10px;
+    max-height: 170px;
     width: 100%;
 }
 .widget-area.right {
@@ -643,6 +645,8 @@ recommendedtop.bottom {
     color: #000000;
     float: left;
     font-weight: bolder;
+    position: relative;
+    z-index: 500;
 }
 .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
     display: none;
@@ -693,6 +697,7 @@ select {
     height: 120px;
     margin-bottom: 15px;
     position: relative;
+    margin-top: -15px;
 }
 .onsale.singel {
     background-image: url("../images/product/singelSale.png") !important;
@@ -728,7 +733,7 @@ select {
 .topSingelMata h1 {
     color: #000000;
     font-size: 22px;
-    height: 21px;
+    height: 24px;
 }
 .topSingelMata .groop {
     color: #C62C56;
@@ -771,7 +776,8 @@ select {
 #toptikcart {
     background-image: url("../images/addtocart.png") !important;
     background-repeat: no-repeat;
-    border: none !important;
+    border: medium none !important;
+    box-shadow: none;
     color: #01AFE4;
     font-size: 20px;
     height: 48px;
@@ -782,7 +788,6 @@ select {
     text-align: center;
     top: -1px;
     width: 239px;
-    box-shadow: none;
 }
 #toptikcart:hover {
     opacity: 0.85;
@@ -791,9 +796,10 @@ select {
     min-height: 466px;
 }
 .logoSingel {
-    height: 51px;
-    margin-bottom: 10px;
-    width: 340px;
+    height: 70px;
+    margin-bottom: 0px;
+    width: 400px;
+    border: solid 1px #cecece;
 }
 .logoSingel img {
     height: 100%;
@@ -1015,17 +1021,9 @@ select {
     float: left;
     height: 225px;
     position: relative;
-    right: -34px;
-    top: 45px;
+    right: -15px;
+    top: 65px;
     width: 122px;
-}
-.yith_magnifier_thumbnail {
-    margin-left: 5px;
-    width: 84px !important;
-}
-.yith_magnifier_thumbnail img {
-    height: 85px !important;
-    width: 85px !important;
 }
 .imageVer img {
     cursor: pointer;
@@ -1051,10 +1049,11 @@ select {
 }
 .imageVer {
     border: 1px solid #C1C2C2;
-    height: 50px;
+    height: 62px;
     overflow: hidden;
     position: relative;
-    width: 340px;
+    width: 400px;
+    margin-top: 45px;
 }
 .single_variation_wrap {
     float: right;
@@ -1062,12 +1061,13 @@ select {
 .lver, .rver {
     cursor: pointer;
     display: block;
-    height: 32px;
-    padding-top: 8px;
+    height: 42px;
+    padding-top: 15px;
     position: absolute;
     text-align: center;
     top: 5px;
     width: 10px;
+    vertical-align: middle;
 }
 .lver {
     border-right: 1px solid #C1C2C2;
@@ -1082,12 +1082,14 @@ select {
     position: absolute;
     right: 13px;
     top: 0;
-    width: 315px;
+    width: 375px;
+    height: 60px;
 }
 .varslide {
     position: relative;
     right: 0;
     transition: all 0.3s ease-in-out 0s;
+	height:60px;
 }
 .weiAttr, .dimAttr, .gerAtt, .caarAtt, .locAtt, .volAtt, .typAtt, .metAtt {
     background-image: url("../images/detail/attr.png");
@@ -1679,11 +1681,13 @@ a.members {
 .optionCas {
     color: #6A717D;
     float: right;
-    height: 250px;
-    width: 285px;
+    height: 220px;
+    position: relative;
+    width: 339px;
 }
 .optionCas form {
     margin-top: 30px;
+    text-align: right;
 }
 .optionCas form p, .optionCas p {
     color: #7794AA;
@@ -1697,11 +1701,14 @@ a.members {
     background: none repeat scroll 0 0 #000000;
     border: medium none;
     border-radius: 15px 15px 15px 15px;
+    bottom: 0;
     box-shadow: none;
     color: #34B5EF;
     cursor: pointer;
     font-size: 14px;
     font-weight: bolder;
+    left: 0;
+    position: absolute;
     width: 100px;
 }
 .optionCas form input[type="submit"]:hover, .submit_btb_cont:hover {
@@ -1709,10 +1716,13 @@ a.members {
     opacity: 0.85;
 }
 .submit_btb_cont {
+    bottom: 0;
     display: block;
     float: left;
     height: 30px;
+    left: 0;
     line-height: 30px;
+    position: absolute;
     text-align: center;
     text-decoration: none;
 }
@@ -2004,6 +2014,7 @@ h2.normaldevid {
     background-repeat: repeat-x;
     margin: 0 !important;
 }
+
 .personalArea h2.normaldevid {
     position: relative;
     top: -30px;
@@ -2021,7 +2032,6 @@ h2.normaldevid span.long {
     border: 1px solid #CACACA;
     color: #000000;
     font-size: 1.5em;
-
     font-weight: bold;
     height: 42px;
     line-height: 42px;
@@ -2193,6 +2203,7 @@ hr {
 .order_table_item, .personal {
     float: right;
     margin: 5px;
+
     vertical-align: middle !important;
     width: 100%;
 }
@@ -2551,6 +2562,12 @@ hr {
     left: 15px;
     line-height: 27px;
     margin-bottom: 0;
+
+
+
+
+
+
     padding-right: 7px;
     position: absolute;
     text-align: right;
@@ -2663,6 +2680,7 @@ hr {
     background: none repeat scroll 0 0 #000000 !important;
     border: medium none !important;
     border-radius: 15px 15px 15px 15px !important;
+    bottom: 0;
     box-shadow: none !important;
     color: #34B5EF !important;
     cursor: pointer !important;
@@ -2738,6 +2756,7 @@ h1.entry-title-address {
 .toptik-checkout .col-1.toptik label, .toptik-checkout .col-2.toptik label {
     float: right;
     width: 108px;
+
 }
 .toptik-checkout .col-1.toptik input, .toptik-checkout .col-2.toptik input {
     float: right;
@@ -2750,14 +2769,13 @@ h1.entry-title-address {
 .shipping_address {
     display: block !important;
 }
-
 .toptik-checkout .col-1.toptik, .toptik-checkout .col-2.toptik {
     position: absolute;
     top: 15px;
     width: 300px;
     z-index: 500;
 }
-#order_comments, #order_comments_field, #shiptobilling,#shipping_company_field,#billing_company_field {
+#order_comments, #order_comments_field, #shiptobilling, #shipping_company_field, #billing_company_field {
     display: none;
 }
 .toptik-checkout .col-2.toptik {
@@ -2785,7 +2803,7 @@ h1.entry-title-address {
     visibility: collapse;
 }
 #youOrder #payment div.form-row, #youOrder #payment div.form-row {
-    border:  none;
+    border: medium none;
     width: 150px;
 }
 #youOrder #order_review {
@@ -2832,9 +2850,9 @@ h1.entry-title-address {
     width: 250px;
 }
 .topTic-cehcohut-ex {
-    top: 872px;
     position: absolute;
     right: 155px;
+    top: 872px;
     z-index: 500;
 }
 .topCheckbox {
@@ -3001,29 +3019,81 @@ h1.entry-title-address {
 }
 .optionNewCastuomer.clear {
     margin: 0 auto;
-    width: 650px;
+    width: 750px;
 }
 #minicart .blockUI.blockOverlay {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	z-index: 500;
-	background-color: rgba(0,0,0,0.65);
-	top: 0;
-	left: 0;
-	 display:none; 
+    background-color: rgba(0, 0, 0, 0.65);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 500;
 }
-#minicart .blockUI.blockOverlay span{
-	color:#01AFE4;
-	display:block;
-	width:100%;
-	height:100%;
-	vertical-align:middle;
-	text-align:center;
-	font-size: 20px;
-	margin-top: 1em;
-	text-shadow: 0px 0px 3px #000;
+#minicart .blockUI.blockOverlay span {
+    color: #01AFE4;
+    display: block;
+    font-size: 20px;
+    height: 100%;
+    margin-top: 1em;
+    text-align: center;
+    text-shadow: 0 0 3px #000000;
+    vertical-align: middle;
+    width: 100%;
 }
 .woocommerce div.product .woocommerce-tabs .panel, .woocommerce #content div.product .woocommerce-tabs .panel, .woocommerce-page div.product .woocommerce-tabs .panel, .woocommerce-page #content div.product .woocommerce-tabs .panel {
-min-height: 380px;
+    min-height: 380px;
+}
+.product_title.entry-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.footer_nav_rec {
+    width: auto !important;
+}
+.titelWcon.singel.color {
+width: 400px;
+}
+#ssba img {
+width: 45px !important;
+}
+.social{
+	position:relative;
+}
+.socSpan {
+display: inline-block;
+position: relative;
+padding: 0px;
+width:70px;
+}
+.socSpan.pin,.socSpan.goog {
+	width:50px;
+}
+.socSpan .fb-like.fb_edge_widget_with_comment.fb_iframe_widget {
+position: absolute;
+top: -22px;
+z-index: 5000000;
+right: 10px;
+}
+.socSpan iframe{
+ width:3270px !important;
+}
+.socSpan .fb-like.fb_edge_widget_with_comment.fb_iframe_widget span{
+height: 20px;
+width: 452px !important;
+}
+.socSpan.fb{
+	position:absolute;
+	right: -200px;
+	top: 28px;
+}
+.fb_iframe_widget iframe {
+	position: absolute;
+	z-index: 510315;
+	width: 470px;
+}
+.product-categories {
+margin-right: 20px;
 }

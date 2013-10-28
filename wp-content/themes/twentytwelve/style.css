@@ -1,5 +1,5 @@
 /*
-Theme Name: toptik base-Twenty Twelve
+Theme Name: TOPTIK base-TwentyTwelve
 Theme URI: http://wordpress.org/extend/themes/twentytwelve
 Author: the WordPress team
 Author URI: http://wordpress.org/
@@ -542,7 +542,7 @@ height:614px;
 /* Header */
 .site-header {
 	padding: 24px 0;
-	padding: 0 0 1.714285714rem 0;
+	padding: 0 0 1em 0;
 }
 .site-header h1,
 .site-header h2 {
@@ -574,7 +574,7 @@ height:614px;
 }
 .header-image {
 	margin-top: 24px;
-	margin-top: 1.714285714rem;
+	margin-top: 1.714286rem;
 }
 
 /* Navigation Menu */
@@ -940,6 +940,8 @@ article.sticky .featured-post {
 .entry-content li,
 .comment-content li,
 .mu_register li {
+
+
 	margin: 0 0 0 36px;
 	margin: 0 0 0 2.571428571rem;
 }
@@ -1623,7 +1625,7 @@ img#wpstats {
 		padding: 0;
 		position: absolute;
 		top: 100%;
-		z-index: 1;
+		z-index: 10;
 	}
 	.main-navigation li ul ul {
 		top: 0;
@@ -1981,8 +1983,8 @@ height: 30px;
 	height:25px;
 }
 .logo{
-	width:103px;
-	height:99px;
+	width: 223px;
+	height: 119px;
 	margin: 0 auto;
 }
 .avatar{

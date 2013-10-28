@@ -14,7 +14,7 @@ if(isset($_POST['newuser'])){
 	$billing_last_name=filter_input(INPUT_POST,'last_name',FILTER_SANITIZE_STRING);
 	$user_sex=filter_input(INPUT_POST,'sex');
 	$billing_company=filter_input(INPUT_POST,'birth',FILTER_SANITIZE_STRING);
-	$billing_email=filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
+	$billing_email=filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING );
 	$billing_address_1=filter_input(INPUT_POST,'adress',FILTER_SANITIZE_STRING);
 	$billing_address_2=filter_input(INPUT_POST,'mailBox',FILTER_SANITIZE_STRING);
 	$billing_city=filter_input(INPUT_POST,'city',FILTER_SANITIZE_STRING);

@@ -589,7 +589,7 @@ function dl_sort_by_page($count) {
   }
   if (isset($_POST['woocommerce-sort-by-columns'])) { //if form submitted
   $url=get_site_url();
-    setcookie('shop_pageResults', $_POST['woocommerce-sort-by-columns'], time()+1209600, '/', 'your-web-address.com', false); //this will fail if any part of page has been output- hope this works!
+    setcookie('shop_pageResults', $_POST['woocommerce-sort-by-columns'], time()+1209600, '/', 'toptik.co.il.tigris.nethost.co.il', false); //this will fail if any part of page has been output- hope this works!
     $count = $_POST['woocommerce-sort-by-columns'];
 	}
   // else normal page load and no cookie

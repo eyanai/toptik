@@ -48,6 +48,7 @@ global $post, $product;
 $posts = get_field('similar_pro');
  
 if( $posts ): ?>
+<span class="titelWcon singel color"><h3>בחר צבע</h3></span>
 	<div class="imageVer">
 	<span class="rver">‹</span>
 		<div class="imagvarCon">
@@ -57,7 +58,7 @@ if( $posts ): ?>
 	    
 			<?php $color=get_field( "color_pro" ); ?>
 	    	<a href="<?php the_permalink(); ?>" alt='<?php the_title(); ?>' >
-			<?php echo get_the_post_thumbnail( $post->ID, array(45,45), array('title'=>$color,'alt'=>$color,'class'=>'imgcolor')); ?>
+			<?php echo get_the_post_thumbnail( $post->ID, array(60,60), array('title'=>$color,'alt'=>$color,'class'=>'imgcolor')); ?>
 	    	</a>
 
 	<?php endforeach; ?>
