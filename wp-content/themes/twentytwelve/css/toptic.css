@@ -19,6 +19,8 @@ h3.widget-title {
     float: right;
     font-size: 1em;
     text-align: right;
+    margin-right: 15px;
+    padding: 0 13px;
 }
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle {
     border-radius: 1em 1em 1em 1em;
@@ -581,6 +583,10 @@ recommendedtop.bottom {
     height: 15px;
     line-height: 1em;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 190px;
 }
 .tags_pro {
     float: right;
@@ -607,8 +613,8 @@ recommendedtop.bottom {
     width: 292px;
 }
 .brandsCon {
-    border: 1px solid #C4C4C5;
-    padding: 8px;
+/*    border: 1px solid #C4C4C5;
+*/    padding: 8px;
     position: relative;
 }
 .recommendedtop.goto {
@@ -1006,7 +1012,7 @@ select {
 .socialDescrip {
     clear: both;
     float: right;
-    margin-top: 25px;
+    margin-top: -17px;
     width: 100%;
 }
 .socialDescrip li {
@@ -1061,13 +1067,14 @@ select {
 .lver, .rver {
     cursor: pointer;
     display: block;
-    height: 42px;
+    height: 35px;
     padding-top: 15px;
     position: absolute;
     text-align: center;
     top: 5px;
     width: 10px;
     vertical-align: middle;
+    color: #C1C2C2;
 }
 .lver {
     border-right: 1px solid #C1C2C2;
@@ -1237,12 +1244,13 @@ select {
 }
 .social {
     width: 100%;
+    height: 66px;
 }
 .wp-pagenavi {
     direction: rtl;
     float: right;
-    margin-right: 5%;
-    min-width: 100px;
+    margin-right: 50px;
+    width: 140px;
     text-align: center;
 }
 .wp-pagenavi .last, .wp-pagenavi .extend {
@@ -1321,7 +1329,7 @@ select {
     display: block;
     float: right;
     height: 29px;
-    margin-right: 10px;
+    margin-right: 25px;
     width: 102px;
 }
 .printF {
@@ -1332,7 +1340,7 @@ select {
     display: block;
     float: right;
     height: 29px;
-    margin-right: 0;
+    margin-right: 25px;
     width: 98px;
 }
 #calc_shipping_country {
@@ -2405,7 +2413,7 @@ hr {
 }
 .registerForm {
     float: right;
-    height: 600px;
+    height: 780px;
     margin: 10px 0;
     position: relative;
     width: 388px;
@@ -2414,7 +2422,7 @@ hr {
     clear: right;
     display: block;
     float: right;
-    margin: 10px;
+    margin: 25px 10px 10px 10px;
     width: 164px;
 }
 .registerForm input {
@@ -2423,7 +2431,7 @@ hr {
     clear: left;
     float: right;
     height: 15px;
-    margin-top: 10px;
+    margin-top: 25px;
     width: 180px;
 }
 .registerForm .sex {
@@ -2452,7 +2460,7 @@ hr {
 }
 .registerLeftBG {
     background-image: url("../images/others/sutecase.jpg");
-    background-position: 0 0;
+    background-position: 0 80px;
     background-repeat: no-repeat;
     float: left;
     width: 582px;
@@ -2748,6 +2756,7 @@ h1.entry-title-address {
     background-color: #1E85BE !important;
 }
 .toptik-checkout {
+
     float: right;
     height: 630px;
     position: relative;
@@ -3067,9 +3076,13 @@ display: inline-block;
 position: relative;
 padding: 0px;
 width:70px;
+top: 10px;
 }
 .socSpan.pin,.socSpan.goog {
 	width:50px;
+	height: 5px;
+	top: 10px;
+	margin-bottom: 15px;
 }
 .socSpan .fb-like.fb_edge_widget_with_comment.fb_iframe_widget {
 position: absolute;
@@ -3087,7 +3100,7 @@ width: 452px !important;
 .socSpan.fb{
 	position:absolute;
 	right: -200px;
-	top: 28px;
+	top: 37px;
 }
 .fb_iframe_widget iframe {
 	position: absolute;
@@ -3096,4 +3109,109 @@ width: 452px !important;
 }
 .product-categories {
 margin-right: 20px;
+}
+.titelWcon.singel.color h3 {
+margin-right: 10px;
+}
+.titelWcon.socB{
+	margin-top:15px;
+}
+.ui-slider-range.ui-widget-header.ui-corner-all {
+border-radius: 0px !important;
+}
+.price_label .from{
+	display:block;
+	float:right;
+}
+.price_label {
+height: 40px;
+}
+.toptikpricefilter{
+	position:relative;
+}
+.price_fileterToptik {
+display: block;
+float: right;
+}
+.minprice {
+position: absolute;
+top: -40px;
+left: 0px;
+font-weight:bold;
+}
+.maxprice {
+position: absolute;
+top: -38px;
+font-weight:bold;
+}
+.regular-con {
+width: 730px;
+float: left;
+margin-top: 15px;
+}
+.regular-con h1{
+	font-size: 23px;
+
+	/* padding: 0 10px; */
+}
+.regular-con .titelWcon{
+    height: 16px;
+	
+    margin-bottom: 10px;
+}
+.sidebarReg {
+width: 230px;
+float: right;
+margin-top: 15px;
+}
+
+.newitem{
+	position:absolute;
+	background-image:url(../images/product/new.png);
+	background-repeat:no-repeat;
+	display:block;
+	width: 90px;
+	height: 80px;
+	top: 4px;
+	left: 8px;
+}
+.topBannerBox .newitem{
+	position:absolute;
+	background-image:url(../images/product/new.png);
+	background-repeat:no-repeat;
+	display:block;
+	width: 90px;
+	height: 80px;
+	top: 0px;
+	left: 0px;
+}
+.summary.entry-summary .newitem{
+	display:none;
+}
+.sub-menu li:hover,.sub-menu li a:hover,.main-navigation li ul li a:hover{
+	color:#01AFE4 !important;
+}
+.logoSingel.toptik{
+	background-image:url(../images/newLogo.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+.images.topClab {
+width: 540px !important;
+}
+.blubSidebar.empty {
+	background-image: url(../images/membersv22.jpg);
+	background-repeat: no-repeat;
+	width: 330px;
+	float: right;
+	height: 283px;
+	border: 6px solid #fff;
+	margin-right:25px;
+}
+.blubSidebar{
+	margin-right:25px;
+	width: 330px;
+	float: right;
+	min-height: 283px;
+	border: 6px solid #fff;
 }

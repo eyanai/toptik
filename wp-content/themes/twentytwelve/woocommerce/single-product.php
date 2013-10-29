@@ -24,11 +24,16 @@ get_header('shop'); ?>
 		do_action('woocommerce_before_main_content');
 	?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); 
+			 if($post->post_title=='הצטרפות למועדון לקוחות'){
+				 woocommerce_get_template_part('content', 'single-product_toptik' );
+			}else{
+		?>
 
 			<?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php } 
+		endwhile; // end of the loop. ?>
 
 	<?php
 		/**
@@ -48,10 +53,16 @@ get_header('shop'); ?>
 		 *
 		 * @hooked woocommerce_get_sidebar - 10
 		 */
+		 
 		do_action('woocommerce_sidebar');
 		
 	?>
 	</div>
 	
 	<?php endif;?>
+	 <?php if($post->post_title!='הצטרפות למועדון לקוחות'){
+	 	get_sidebar('midel');
+	}else{
+		get_footer('club');
+	}?>
 <?php get_footer('shop'); ?>

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $post, $product;
 ?>
-
+<?php is_old_post(); ?> 
 <div class="product_meta">
 	<div class="tags_pro">
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
@@ -40,7 +40,7 @@ global $post, $product;
 	?>
 
 <?php if ( $product->is_type( array( 'simple', 'variable' ) ) && get_option( 'woocommerce_enable_sku' ) == 'yes' && $product->get_sku() ) : ?>
-		<span itemprop="productID" class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo $product->get_sku(); ?>.</span></span><br>
+		<span itemprop="productID" class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo $product->get_sku(); ?></span></span><br>
 	<?php endif; ?>
 
 		<div class="ietmClass">

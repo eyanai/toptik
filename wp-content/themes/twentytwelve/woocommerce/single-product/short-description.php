@@ -59,6 +59,11 @@ global $post;
 					<!-- Place this tag after the last +1 button tag. -->
 
 		<?php //echo get_permalink( $post->ID ); ?>
-		<div class="titelWcon"></div>
+		<div class="titelWcon socB"></div>
 	</div>
+	<?php
+	 if($post->post_title=='הצטרפות למועדון לקוחות'){
+				 get_sidebar('club');
+			}
+	?>
 </div>

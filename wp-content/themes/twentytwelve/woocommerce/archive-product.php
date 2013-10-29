@@ -324,7 +324,7 @@ get_header('shop'); ?>
 		?>
 
 		<h3><?php the_title(); ?></h3>
-
+		
 		<?php
 			/**
 			 * woocommerce_after_shop_loop_item_title hook

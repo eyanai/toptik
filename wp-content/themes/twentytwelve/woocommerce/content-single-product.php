@@ -89,3 +89,4 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 </div><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+ <?php get_sidebar('midel');?>

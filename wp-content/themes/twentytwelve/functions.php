@@ -305,6 +305,15 @@ register_sidebar( array(
 		'after_title' => '</h3></span>',
 	) );
 	
+	register_sidebar( array(
+		'name' => __( 'עמוד הצטרפות למועדון לקוחות', 'twentytwelve' ),
+		'id' => 'club-atgs',
+		'description' => 'עמוד הצטרפות למועדון לקוחות',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => ' <h3 class="widget-top-tik">',
+		'after_title' => '</h3> ',
+	) );
 }
 add_action( 'widgets_init', 'twentytwelve_widgets_init' );
 
@@ -699,3 +708,19 @@ function custom_override_checkout_fields( $fields ) {
 	 $fields['shipping']['shipping_address_2']['label'] = 'ת"ד';
      return $fields;
 }
+ 
+ 
+ 
+function is_old_post() {
+	 		$mach=get_option('ye_plugin_options');
+	 		$days=$mach['ye_new'];
+
+			$days = (int) $days;
+			$offset = $days*60*60*24;
+			if ( get_post_time() < date('U') - $offset){
+				return false;
+			}else{
+				echo "<span class='newitem'></span>";
+				
+			}	
+ }

@@ -85,6 +85,7 @@ function wp_pagenavi( $args = array() ) {
 			// Previous
 			if ( $paged > 1 && !empty( $options['prev_text'] ) )
 				$out .= $instance->get_single( $paged - 1, 'previouspostslink', $options['prev_text'] );
+				
 
 			if ( $start_page >= 2 && $pages_to_show < $total_pages ) {
 				if ( !empty( $options['dotleft_text'] ) )

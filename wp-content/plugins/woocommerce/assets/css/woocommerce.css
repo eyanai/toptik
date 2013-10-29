@@ -136,6 +136,8 @@ p.demo_store {
 }
 .woocommerce .woocommerce-breadcrumb a, .woocommerce-page .woocommerce-breadcrumb a {
 	color: #777777
+;
+	text-decoration: none;
 }
 .woocommerce .col2-set, .woocommerce-page .col2-set {
 	width: 100%
@@ -171,7 +173,7 @@ float: right;
 padding-right: 4px;
 }
 .woocommerce div.product span.price, .woocommerce div.product p.price, .woocommerce #content div.product span.price, .woocommerce #content div.product p.price, .woocommerce-page div.product span.price, .woocommerce-page div.product p.price, .woocommerce-page #content div.product span.price, .woocommerce-page #content div.product p.price {
-	color: #85ad74;
+	color: #000;
 	font-size: 1.25em
 }
 .woocommerce div.product span.price ins, .woocommerce div.product p.price ins, .woocommerce #content div.product span.price ins, .woocommerce #content div.product p.price ins, .woocommerce-page div.product span.price ins, .woocommerce-page div.product p.price ins, .woocommerce-page #content div.product span.price ins, .woocommerce-page #content div.product p.price ins {
@@ -440,8 +442,8 @@ width: 330px;
 	background-image:url(../images/sale.png);
 	display:block;
 	position:absolute;
-	width:70px;
-	height:75px;
+	width: 90px;
+	height: 90px;
 	z-index: 15;
 }
 .woocommerce .products ul, .woocommerce ul.products, .woocommerce-page .products ul, .woocommerce-page ul.products {
@@ -828,6 +830,7 @@ padding-right:1.2em
 .woocommerce #reviews h2 small a, .woocommerce-page #reviews h2 small a {
 	text-decoration: none;
 	color: #777777
+
 }
 .woocommerce #reviews h3, .woocommerce-page #reviews h3 {
 	margin: 0
@@ -966,6 +969,10 @@ padding-right:1.2em
 	box-sizing: border-box;
 	width: 100%
 }
+
+
+
+
 .woocommerce p.stars:after, .woocommerce-page p.stars:after {
 	content: "";
 	display: block;
@@ -1620,7 +1627,9 @@ padding-top:2px
 	font-size: 1.4em;
 	text-transform: none;
 	line-height: 1.5em
+
 }
+
 .woocommerce .order_details li:last-of-type, .woocommerce-page .order_details li:last-of-type {
 	border: none
 }
@@ -1807,6 +1816,9 @@ padding-top:2px
 }
 .woocommerce .widget_price_filter .ui-slider-horizontal, .woocommerce-page .widget_price_filter .ui-slider-horizontal {
 	height: .5em
+;
+	border-radius: 0px;
+	margin-top: 40px;
 }
 .woocommerce .widget_price_filter .ui-slider-horizontal .ui-slider-range, .woocommerce-page .widget_price_filter .ui-slider-horizontal .ui-slider-range {
 	top: 0;

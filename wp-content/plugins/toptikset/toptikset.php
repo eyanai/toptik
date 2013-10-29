@@ -48,6 +48,7 @@ class TOP_Option{
 		add_settings_field('ye_rec_down','מומלצים תחתון :',array($this,'ye_rec_down_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_face_mail','עמוד פייסבוק :',array($this,'ye_down_pace'),__FILE__,'ye_main_section');
 		add_settings_field('ye_credit','אחוזי קרדיט :',array($this,'ye_credit_set'),__FILE__,'ye_main_section');
+		add_settings_field('ye_new','כמה ימים חדש :',array($this,'ye_new_set'),__FILE__,'ye_main_section');
 
 	}
 	
@@ -84,6 +85,10 @@ class TOP_Option{
 	
 	public function ye_credit_set(){
 		echo "<input type='number' name='ye_plugin_options[ye_credit]' min='0' max='100' value='".$this->options['ye_credit']."'/>";	
+		}
+
+	public function ye_new_set(){
+		echo "<input type='number' name='ye_plugin_options[ye_new]' min='1' max='365' value='".$this->options['ye_new']."'/>";	
 		}
 
 	

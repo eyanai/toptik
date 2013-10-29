@@ -50,7 +50,7 @@ global $woocommerce; ?>
 			אנו זקוקים למספר פרטים ממך.<br>
 			אנא לחצ/י על כפתור "המשך" למעבר לטופס<br>
 			הרישום.</p>
-		<a href="<?php echo get_permalink(get_page_by_path('הרשמה'));?>" class="submit_btb_cont">המשך</a>
+		<a href="<?php echo get_permalink(get_page_by_path('הצטרף'));?>" class="submit_btb_cont">המשך</a>
 		<?php 
 		//generate_paypal_form();?>	
 	</div>

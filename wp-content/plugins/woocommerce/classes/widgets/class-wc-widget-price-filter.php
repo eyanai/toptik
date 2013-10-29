@@ -130,7 +130,7 @@ class WC_Widget_Price_Filter extends WP_Widget {
 		else
 			$form_action = preg_replace( '%\/page/[0-9]+%', '', home_url( $wp->request ) );
 
-		echo '<form method="get" action="' . $form_action . '">
+		echo '<form method="get" action="' . $form_action . '" class="toptikpricefilter">
 			<div class="price_slider_wrapper">
 				<div class="price_slider" style="display:none;"></div>
 				<div class="price_slider_amount">
@@ -138,7 +138,12 @@ class WC_Widget_Price_Filter extends WP_Widget {
 					<input type="text" id="max_price" name="max_price" value="'.esc_attr( $max_price ).'" data-max="'.esc_attr( $max ).'" placeholder="'.__( 'Max price', 'woocommerce' ).'" />
 					<button type="submit" class="button">'.__( 'Filter', 'woocommerce' ).'</button>
 					<div class="price_label" style="display:none;">
-						'.__( 'Price:', 'woocommerce' ).' <span class="from"></span> &mdash; <span class="to"></span>
+							<div class="minprice">
+									<span class="price_fileterToptik min">'.__( "מינ' : ", 'woocommerce' ).'</span> <span class="from"></span>
+							</div>
+							<div class="maxprice">
+									<span class="price_fileterToptik max">'.__( "מקס' : ", 'woocommerce' ).'</span><span class="to"></span>
+							</div>											
 					</div>
 					'.$fields.'
 					<div class="clear"></div>

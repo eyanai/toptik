@@ -114,4 +114,3 @@ global $woocommerce;
 		</tr>
 </tbody>
 </table>
-<a href="#" id="upMinicart">עדכן עגלה</a>

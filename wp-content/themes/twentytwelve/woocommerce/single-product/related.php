@@ -52,6 +52,8 @@ if ( $products->have_posts() ) : ?>
 wp_reset_postdata();
 
 
+ get_sidebar('midel');
+
 
 if ( has_nav_menu( 'brands' ) ) {?>
 					<div class="brandsCon clear">
@@ -63,7 +65,6 @@ if ( has_nav_menu( 'brands' ) ) {?>
 <?php				}  
 				
 				 ?>
-
 
 
 
