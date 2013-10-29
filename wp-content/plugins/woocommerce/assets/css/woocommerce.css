@@ -1049,6 +1049,7 @@ padding-right:1.2em
 	border-top: 0;
 	border-bottom: 1px dotted rgba(0,0,0,0.1);
 	margin: 0;
+	vertical-align: middle;
 	line-height: 1.5em
 }
 .woocommerce table.shop_attributes td p, .woocommerce-page table.shop_attributes td p {

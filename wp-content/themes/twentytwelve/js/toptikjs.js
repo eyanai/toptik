@@ -68,9 +68,12 @@ jQuery(document).ready(function(e) {
 		nobe=-(widAll);
 		//alert(cPos+'<-->'+nobe);
 			if(cPos-conW>nobe){
+				jQuery('.rIco,.lIco').show();
 				npos=cPos-187.4;
 				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
 			}else{
+				jQuery('.rIco').show();
+				jQuery('.lIco').hide();
 				return false
 			}
 			
@@ -86,7 +89,10 @@ jQuery(document).ready(function(e) {
 				npos=cPos+187.4;
 				if(npos>0){
 					jQuery('.brandsMenu_wide ul').css('right','0px');
+					jQuery('.rIco').hide();
+					jQuery('.lIco').show();
 				}else{
+					jQuery('.rIco,.lIco').show();
 				jQuery('.brandsMenu_wide ul').css('right',npos+'px');
 				}
 			}else{
@@ -206,15 +212,15 @@ jQuery(document).ready(function(e) {
 		
 		
 		
-	jQuery('.wysija-submit.wysija-submit-field').on('click',this,function(){
-			if(jQuery('.agree_nwes').attr('checked', true)){
+	/*jQuery('.wysija-submit.wysija-submit-field').on('click',this,function(){
+			if(jQuery('.agree_nwes').attr('checked')==true){
 				return true;
 			}else{
 				alert('אתה חייב להסכים לקבלת מיללים פירסומיים');
 				return false;
 			}
 		
-	});	
+	});	*/
 	
 	jQuery('.minicartval').each(function(index, element) {
 		 pval=jQuery(this).val();
@@ -236,6 +242,10 @@ jQuery(document).ready(function(e) {
 			addToCart(json);
 		  return false; //},1000);
     });  
+	
+	paginationFix();
+	fixThumbnail();
+	formNews();
 });//dom redy=============================================================================================================
 
 
@@ -323,7 +333,7 @@ function setWW(){
 	jQuery('.brandsMenu_wide ul').css('width',liw+'px');
 	
 	if(liw>conW){
-		jQuery('.lIco,.rIco').show();
+		jQuery('.lIco').show();
 	}
 }
 
@@ -548,4 +558,31 @@ function addressEdit(){
 		return false;
 	  }
 
-    
+  function paginationFix(){
+	 all1=jQuery(".wp-pagenavi span.pages").first().text();
+	 if(jQuery('.wp-pagenavi .previouspostslink').length>0){
+	 	jQuery(".wp-pagenavi span.pages").hide();
+	 	jQuery('.wp-pagenavi .previouspostslink').first().after('<span class="pages" style="display:block">'+all1+'</span>');
+		jQuery('.wp-pagenavi .previouspostslink').last().after('<span class="pages" style="display:block">'+all1+'</span>');
+	 }else{
+	 	jQuery(".wp-pagenavi span.pages").show();
+	 }
+}
+
+function fixThumbnail(){
+	if(jQuery('.yith_magnifier_thumbnail li').length<5){
+		jQuery('#slider-prev,#slider-next').hide();	
+	}
+}
+function formNews(){
+	jQuery('.widget_wysija.php_wysija').on('submit',this,function(e){
+		if(jQuery('.agree_nwes').is(':checked')){
+			return true;
+		}else{
+			alert('אנא הסכם לקבלת מיליים פירסומיים');
+			return false;
+		}
+
+		
+	});
+}

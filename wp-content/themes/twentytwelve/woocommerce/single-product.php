@@ -11,6 +11,15 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
+	if(!empty($_GET['added-to-cart'])){
+	?>
+	<script>
+		window.location= '<?php echo get_permalink(get_page_by_path('cart'));?>';
+	</script>
+<?php		
+	}
+
+
 get_header('shop'); ?>
 
 
