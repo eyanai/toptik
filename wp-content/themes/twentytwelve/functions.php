@@ -62,11 +62,14 @@ function twentytwelve_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentytwelve' ) );
+	register_nav_menu( 'linkrec', 'לינקים מומלצים');
 	register_nav_menus( array(
 						'brands' => 'תפריט מותגים',
-						'cart_top'=>'תפריט עגלה עליון'
-						
+						'cart_top'=>'תפריט עגלה עליון',
+						'linkrec'=>'לינקים מומלצים'
 		) );
+		
+		
 
 	/*
 	 * This theme supports custom background color and image, and here
@@ -550,6 +553,7 @@ function toptikSearch(){
 	add_image_size( 'gall_r', 232, 137,true ); //300 pixels wide (and unlimited height)
 	add_image_size( 'small3', 100, 120, true ); //(cropped)
 	add_image_size( 'logo_singel', 335, 45,true );
+	add_image_size( 'product_size', 1000, 1000,true );
 
 
 if(!is_admin()){
@@ -659,6 +663,7 @@ add_action( 'wp_ajax_nopriv_ajax_singel_ordern', 'ajax_singel_order' ); // ajax 
 add_action( 'wp_ajax_singel_oddpro', 'ajax_singel_oddpror' ); // ajax for logged in users
 add_action( 'wp_ajax_nopriv_singel_oddpro', 'ajax_singel_oddpror' ); // ajax for not logged in users
 
+
 function ajax_singel_order(){
 	$ccat=$_POST['ccat'];
 	$ctag=$_POST['ctag'];
@@ -695,6 +700,7 @@ function ajax_singel_oddpror(){
 	die;
 }
 
+
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
 
@@ -724,3 +730,50 @@ function is_old_post() {
 				
 			}	
  }
+
+add_action( 'user_register', 'auto_login_user' );
+function auto_login_user($user_id) {
+    wp_set_current_user($user_id); // set the current wp user
+    wp_set_auth_cookie($user_id); // start the cookie for the current registered user
+	
+}
+
+
+// Redefine user notification function
+if ( !function_exists('wp_new_user_notification') ) {
+
+	function wp_new_user_notification( $user_id, $plaintext_pass = '' ) {
+
+		$user = new WP_User( $user_id );
+
+		$user_login = stripslashes( $user->user_login );
+		$user_email = stripslashes( $user->user_email );
+
+		$message  = sprintf( __('New user registration on %s:'), get_option('blogname') ) . "\r\n\r\n";
+		$message .= sprintf( __('Username: %s'), $user_login ) . "\r\n\r\n";
+		$message .= sprintf( __('E-mail: %s'), $user_email ) . "\r\n";
+
+		@wp_mail(
+			get_option('admin_email'),
+			sprintf(__('[%s] New User Registration'), get_option('blogname') ),
+			$message
+		);
+
+		if ( empty( $plaintext_pass ) )
+			return;
+
+		$message  = __('Hi there,') . "\r\n\r\n";
+		$message .= sprintf( __("Welcome to %s! Here's how to log in:"), get_option('blogname')) . "\r\n\r\n";
+		$message .= wp_login_url() . "\r\n";
+		$message .= sprintf( __('Username: %s'), $user_login ) . "\r\n";
+		$message .= sprintf( __('Password: %s'), $plaintext_pass ) . "\r\n\r\n";
+		$message .= sprintf( __('If you have any problems, please contact me at %s.'), get_option('admin_email') ) . "\r\n\r\n";
+		$message .= __('Adios!');
+
+		wp_mail(
+			$user_email,
+			sprintf( __('[%s] Your username and password'), get_option('blogname') ),
+			$message
+		);
+	}
+}

@@ -8,14 +8,26 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+//$login = 
 
-global $woocommerce; ?>
+//$login = wp_signon( array( 'user_login' =--> $_POST['user-name'], 'user_password' =&gt; $_POST['password'], 'remember' =&gt; $_POST['remember-me'] ), false )
+global $woocommerce, $current_user;
+
+
+$all=get_currentuserinfo();
+var_dump($current_user);
+
+ 
+
+// $user_ID = get_current_user_id();
+//var_dump(get_user_meta($user_ID));
+
+ ?>
 <?php $woocommerce->show_messages(); ?>
 
 <?php do_action('woocommerce_before_customer_login_form'); ?>
 
 <?php if (get_option('woocommerce_enable_myaccount_registration')=='yes') : ?>
-
 <div class="col2-set" id="customer_login">
 
 <?php endif; ?>
@@ -37,7 +49,8 @@ global $woocommerce; ?>
 		<?php	
 		
 		}else{
-			
+			$_SESSION['login-top']='';
+			unset($_SESSION['login-top']);
 		}
 		 $alldata=get_user_meta($current_user->ID);
 		//echo "<pre>".print_r($alldata,1)."</pre>";

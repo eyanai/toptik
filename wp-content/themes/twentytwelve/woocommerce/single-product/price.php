@@ -57,7 +57,7 @@ if( $posts ): ?>
 		<?php setup_postdata($post); ?>
 	    
 			<?php $color=get_field( "color_pro" ); ?>
-	    	<a href="<?php the_permalink(); ?>" alt='<?php the_title(); ?>' >
+	    	<a href="<?php echo post_permalink($post->ID);//the_permalink(); ?>" alt='<?php the_title(); ?>' >
 			<?php echo get_the_post_thumbnail( $post->ID, array(60,60), array('title'=>$color,'alt'=>$color,'class'=>'imgcolor')); ?>
 	    	</a>
 

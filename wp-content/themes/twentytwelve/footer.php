@@ -14,6 +14,12 @@
 	</div><!-- #main .wrapper -->
 </div><!-- #page -->
 <footer id="colophon" role="contentinfo">
+<?php 
+					$mach=get_option('ye_plugin_options');
+					
+	 				$faceseller=$mach['ye_paypal_face'];
+					$linktext=$mach['ye_link'];
+				?>
 		<div class="site-info clear">
 			<section class="newsletter clear">
 				<span class="news"></span>
@@ -22,7 +28,7 @@
 					?>
 			</section>
 			<section class="siteCat">
-				<span class="prodCat "></span>
+				<span class="prodCat "><?php echo $linktext;?></span>
 				<?php 
 				$number=27;
 				$args = array(
@@ -38,28 +44,23 @@
 			?>
 			<div class="linkCats clear">
 			<?php
-			 foreach( $product_categories as $cat ) { 
-			 $tarmId=$cat->term_id;
-			 $cate='product_cat';
-			 $link=get_term_link($cat);
-			//	echo "<pre>".$link."</pre>";
-				?>
-			<a href="<?php echo $link;?>" class="proCatLink"><?php	echo $cat->name;?></a> 
-			 
-			 <?php
-			 
-			 }
-			?>
+			 wp_nav_menu(array('theme_location'  => 'linkrec','container'=> 'div','container_class' => 'linkMenu',));?>
 			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'מפת האתר' ))); ?>" class="proCatLink">מפת האתר</a> 
+			<?php 
+             //foreach( $product_categories as $cat ) { 
+			 //$tarmId=$cat->term_id;
+			 //$cate='product_cat';
+			 //$link=get_term_link($cat);
+			//	echo "<pre>".$link."</pre>";
+				
+			 //}
+			?>
+			
 			</div>
 			</section>
 			<section class="face_join">
 				<span class="joinUs"></span>
-				<?php 
-					$mach=get_option('ye_plugin_options');
-					
-	 				$faceseller=$mach['ye_paypal_face'];
-				?>
+				
 				<a href="<?php echo $faceseller;?>" class="fbjoin" target="new"></a>
 				<div class="fbLike">
 					<div class="fb-like" data-href="http://www.toptik.co.il/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div>
@@ -76,7 +77,16 @@
 				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.toptik.co.il/">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 			</div>	
-			<a href="tel:123456" class="telephon"></a>
+			<?php
+				$mach=get_option('ye_plugin_options');
+	 			$tel=$mach['ye_tel'];
+			?>
+			<a href="tel:<?php echo $tel;?>" class="telephon">
+				<span>	
+				ליצירת קשר בטלפון חייגו:<br>
+				<?php echo $tel;?>
+				</span>
+			</a>
 			</section>
 			<?php wp_nav_menu( array( 'menu_class' => 'footer_nav_rec','menu'=>'recommend') ); ?>
 		</div><!-- .site-info -->

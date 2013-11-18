@@ -64,7 +64,9 @@
 	top:50px !important;
 	border:4px solid #ccc;
 	overflow:hidden;
-}
+	/*----castoum change--*/
+/*	background-size:1800px 1800px!important;
+*/}
 
 .yith_magnifier_gallery {
 	list-style: none;

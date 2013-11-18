@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce v2.0.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-10-27 11:34+0200\n"
+"PO-Revision-Date: 2013-11-17 15:04+0200\n"
 "Last-Translator: Amit Moreno <amashkif@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -7062,7 +7062,7 @@ msgstr "אשר סיסמה"
 #: classes/class-wc-checkout.php:90
 msgctxt "placeholder"
 msgid "Notes about your order, e.g. special notes for delivery."
-msgstr "הערות בנוגע להזמנה שלך והערות מיוחדות בנוגע למשלוח."
+msgstr "בחרת איסוף עצמי נא לציין  בהערה את הסניף המבוקש שם ימתין לך המוצר"
 
 # @ woocommerce
 #: classes/class-wc-checkout.php:152

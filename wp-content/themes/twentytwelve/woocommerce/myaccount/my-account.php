@@ -11,9 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce, $current_user;
 
+
+
+
+
 $all=get_currentuserinfo();
-//var_dump($current_user);
- $user_ID = get_current_user_id();
+var_dump($current_user);
+$user_ID = get_current_user_id();
 //var_dump(get_user_meta($user_ID));
  //echo $user_ID;
  //echo (get_user_meta($user_ID,'credit',true));

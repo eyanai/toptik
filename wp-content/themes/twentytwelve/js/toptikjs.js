@@ -7,6 +7,10 @@ jQuery(document).ready(function(e) {
 			 }, 1000);
 	});
 	
+	jQuery('#menu-recommend a').on('click',this,function(e){
+		e.preventDefault();
+		return false;
+	});
 	
 	jQuery('.cart-contents').on('click',this,function(e){
 		jQuery('#minicart').slideToggle(300);
@@ -129,8 +133,8 @@ jQuery(document).ready(function(e) {
 	
 	
 	jQuery('.lock').on('click',this,function(){
-		//popUp('.premitionPop','.cPop');	
-		//return  false;
+		popUp('.premitionPop','.cPop');	
+		return  false;
 	});	
 	jQuery('.members').on('click',this,function(){
 		//popUp('.loginpop','.cPop');	
@@ -197,7 +201,7 @@ jQuery(document).ready(function(e) {
 	tagFillter();
 	addressEdit();	
 	
-	jQuery('#billing_company,#birth').datepicker({
+	/*jQuery('#billing_company,#birth').datepicker({
 		 dateFormat: 'dd-mm-yy',
 		dayNamesMin: ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'],  
 		 });
@@ -206,10 +210,22 @@ jQuery(document).ready(function(e) {
 		  test: Modernizr.date,
 		  yep : '',
 		  nope: function() {
-					jQuery('#shipping_company,#billing_company').datepicker();
-	  		}
-		});
-		
+					//jQuery('#shipping_company,#billing_company').datepicker();
+	  		jQuery('#billing_company,#birth').datepicker({
+				 dateFormat: 'dd-mm-yy',
+				dayNamesMin: ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'],  
+				 });
+			}
+		});*/
+		jQuery(function(){
+                if(!Modernizr.inputtypes.date) {
+                    console.log("The 'date' input type is not supported, so using JQueryUI datepicker instead.");
+                    jQuery('#billing_company,#birth').datepicker({
+						 dateFormat: 'dd-mm-yy',
+						dayNamesMin: ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'],  
+				 });
+                }
+            });
 		
 		
 	/*jQuery('.wysija-submit.wysija-submit-field').on('click',this,function(){
@@ -222,6 +238,7 @@ jQuery(document).ready(function(e) {
 		
 	});	*/
 	
+
 	jQuery('.minicartval').each(function(index, element) {
 		 pval=jQuery(this).val();
 		jQuery(this).data('count',pval);	
@@ -246,8 +263,45 @@ jQuery(document).ready(function(e) {
 	paginationFix();
 	fixThumbnail();
 	formNews();
+	
+	var maxp=jQuery('#max_price').val();
+	var minp=jQuery('#min_price').val();
+	
+	jQuery('#price_filter-2').hover(function(){
+		if(maxp!=jQuery('#max_price').val()|| minp!=jQuery('#min_price').val()){
+		//	alert('act');
+			filterPriceBilud();
+		}
+	});
+	
+	//if(jQuery('.registerForm').length>0);
+	 formvalid();
+	
+	plusNote();
+	jQuery('.yith_magnifier_zoom.woocommerce-main-image').append('<div class="mousOver"><span>+</span>עבור עם העכבר להגדלה</div>');
 });//dom redy=============================================================================================================
 
+
+function filterPriceBilud(){
+	
+	//jQuery('.toptikpricefilter').on('submit',this,function(){
+				setTimeout(function(){
+			
+				   var sURL = window.document.URL.toString();  
+					 var arrParams = sURL.split("?");         
+					 var arrURLParams = arrParams[1];
+					
+					maxpNew=jQuery('#max_price').val();
+					minpNew=jQuery('#min_price').val();
+						//alert(arrParams[0]);
+					window.location=(arrParams[0]+'?'+arrURLParams+'&min_price='+minpNew+'&max_price='+maxpNew);
+					return false;},3000);
+				return false;
+	//});
+	
+	
+}
+	
 
 
 
@@ -585,4 +639,53 @@ function formNews(){
 
 		
 	});
+}
+
+function formvalid(){
+	jQuery('.registerForm').on('submit',this,function(){
+		valid1=jQuery('#zipcode').val();
+		if(isInt(valid)){
+			return true;
+		}else{
+			alert('אנא הכנס מספרים בלבד');
+			return false;
+		}
+		
+		valid2=jQuery('#phone').val();
+		if(isInt(valid)){
+			return true;
+		}else{
+			alert('אנא הכנס מספרים בלבד');
+			return false;
+		}
+				
+	});
+	
+	jQuery('#zipcode,#phone').on('change',this,function(){
+		valid=jQuery(this).val();
+		if(isInt(valid)){
+			return true;
+		}else{
+			alert('אנא הכנס מספרים בלבד');
+			return false;
+		}
+		
+	
+	});
+
+}
+
+function isInt(value) {
+   return !isNaN(value) && parseInt(value) == value;
+}
+
+function plusNote(){
+	jQuery('.topPlus').on('click',this,function(){
+	var text='טופ-תיק מעניקה לכם קרדיט מזומן לקניות הבאות שלכם באתר טופ-תיק\n קונים מוצר מאחד המוצרים של טופ-תיק ומקבלים כסף מזומן לקניות הבאות באתר.\n בכל קניה  נצבר לך סכום כסף לקנייה חוזרת באתר,על כל מוצר ישנו ערך הקרדיט שלו.\nלדוגמא במידה וקנית מוצר שערך הקרדיט שלו הוא 40 ש"ח תוכל להשתמש בקרדיט ולקבל זיכוי בקניה הבאה באתר.\nהסכום הנצבר מופיע בדף תיאור הפריט.\nסכום  הקרדיט הנצבר  ניתן למימוש ללא הגבלת זמן בקניה הבאה באתר בלבד \n\n בברכה צוות טופ תיק';
+
+alert(text);
+
+
+	});
+
 }

@@ -7,7 +7,6 @@
 	position: relative;
 	float: left;
 	display: block;
-	width:90px !important;
 }
 .yith_magnifier_gallery li.last {
     margin-right: 0;

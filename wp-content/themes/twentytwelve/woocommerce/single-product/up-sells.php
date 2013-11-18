@@ -34,7 +34,7 @@ $woocommerce_loop['columns'] 	= $columns;
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="upsells products">
+	<?php /*?><div class="upsells products">
 
 		<h2><?php _e( 'You may also like&hellip;', 'woocommerce' ) ?></h2>
 
@@ -48,7 +48,7 @@ if ( $products->have_posts() ) : ?>
 
 		<?php woocommerce_product_loop_end(); ?>
 
-	</div>
+	</div><?php */?>
 
 <?php endif;
 

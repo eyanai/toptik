@@ -42,13 +42,16 @@ class TOP_Option{
 	public function register_setting_and_fields(){
 		register_setting('ye_plugin_options','ye_plugin_options');//3rd=optional bd
 		//add_settings_section( $id, $title, $callback, $page );
-		add_settings_section('ye_main_section','הגדרות עמוד הביתי',array($this,'ye_main_section_cb'),__FILE__);
+		add_settings_section('ye_main_section','הגדרות TOPTIK',array($this,'ye_main_section_cb'),__FILE__);
 		// add_settings_field( $id, $title, $callback, $page, $section, $args );
 		add_settings_field('ye_rec_top','מומלצים עליון :',array($this,'ye_rec_top_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_rec_down','מומלצים תחתון :',array($this,'ye_rec_down_setting'),__FILE__,'ye_main_section');
 		add_settings_field('ye_face_mail','עמוד פייסבוק :',array($this,'ye_down_pace'),__FILE__,'ye_main_section');
 		add_settings_field('ye_credit','אחוזי קרדיט :',array($this,'ye_credit_set'),__FILE__,'ye_main_section');
 		add_settings_field('ye_new','כמה ימים חדש :',array($this,'ye_new_set'),__FILE__,'ye_main_section');
+		add_settings_field('ye_tel','טלפון חנות :',array($this,'ye_new_tel'),__FILE__,'ye_main_section');
+		add_settings_field('ye_link',' טקסט עבור כותרת לינקים :',array($this,'ye_new_link'),__FILE__,'ye_main_section');
+		add_settings_field('ye_regMail','טקסט עבור רישום משתמש חדש :',array($this,'ye_new_regMail'),__FILE__,'ye_main_section');
 
 	}
 	
@@ -91,7 +94,15 @@ class TOP_Option{
 		echo "<input type='number' name='ye_plugin_options[ye_new]' min='1' max='365' value='".$this->options['ye_new']."'/>";	
 		}
 
-	
+	public function ye_new_tel(){
+		echo "<input type='text' name='ye_plugin_options[ye_tel]'  value='".$this->options['ye_tel']."'/>";	
+		}
+	public function ye_new_link(){
+		echo "<input type='text' name='ye_plugin_options[ye_link]'  value='".$this->options['ye_link']."'/>";	
+		}
+	public function ye_new_regMail(){
+		echo "<textarea cols='50' rows='10' name='ye_plugin_options[ye_regMail]'/>".$this->options['ye_regMail']."</textarea>";	
+		}
 	
 }
 

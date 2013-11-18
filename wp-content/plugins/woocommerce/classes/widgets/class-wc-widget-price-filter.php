@@ -129,6 +129,8 @@ class WC_Widget_Price_Filter extends WP_Widget {
 			$form_action = remove_query_arg( array( 'page', 'paged' ), add_query_arg( $wp->query_string, '', home_url( $wp->request ) ) );
 		else
 			$form_action = preg_replace( '%\/page/[0-9]+%', '', home_url( $wp->request ) );
+			
+	
 
 		echo '<form method="get" action="' . $form_action . '" class="toptikpricefilter">
 			<div class="price_slider_wrapper">

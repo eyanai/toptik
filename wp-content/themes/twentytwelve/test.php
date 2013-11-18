@@ -7,7 +7,7 @@ get_header(); ?>
 
 <?php woocommerce_breadcrumb();?>
 
-
+<?php do_action('user_register');?>
 
 
 

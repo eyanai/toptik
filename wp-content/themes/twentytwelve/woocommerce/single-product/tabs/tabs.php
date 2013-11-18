@@ -69,6 +69,12 @@ if ( ! empty( $tabs ) ) : ?>
 			<?php the_content(); ?>
 
 		</div>
+        <?php 
+					$mach=get_option('ye_plugin_options');
+					
+	 				$faceseller=$mach['ye_paypal_face'];
+						$tel=$mach['ye_tel'];
+				?>
 	<div class="panel entry-content clear" id="tab-contactUs" style="display: block;">
 			<?php $term=get_term_by( 'name', 'ראשי', 'tab_text');// var_dump($term)?>
 			<?php $cus=get_field('contactUs', 'tab_text_'.$term->term_id); ?>		
@@ -79,26 +85,26 @@ if ( ! empty( $tabs ) ) : ?>
 			<section class="clear">
 				<span class="phoneicon"></span>
 				<div class="maincon"><h2>טלפון</h2>
-				<p>התקשרו אלינו ללא חיוב למספר : 03-6958794</p>
+				<p>התקשרו אלינו למספר : <?php echo $tel;?></p>
 				<span class="littel">אנחנו זמינים מראשון לחמישי בין השעות 8:30 עד 17:30</span></div>
 			</section>
 			<section class="clear">
 				<span class="mailicon"></span>
 				<div class="maincon"><h2>אימייל</h2>
 				<p>	שלחו לנו איימיל ואחד מנציגנו יהיה לשירותכם</p>
-				<span class="littel">לשליחת מייל לשאלה או הצעה <a href="#">אנא לחצו כאן</a></span></div>
+				<span class="littel">לשליחת מייל לשאלה או הצעה <a href="<?php echo get_permalink(get_page_by_path('צור קשר'));?>">אנא לחצו כאן</a></span></div>
 			</section>
 			<section class="clear">
 				<span class="manicon"></span>
 				<div class="maincon"><h2>שירות לקוחות</h2>
-				<p>מצא מידע ע כל הנושאים כגון משלוים החזרות וכ"ו</p>
-				<span class="littel">לקריאת מידע לעזרה<a href="#"> אנא לחץ כאן</a></span></div>
+				<p>מצא מידע  כל הנושאים כגון משלוחים החזרות וכ"ו</p>
+				<span class="littel">לקריאת מידע לעזרה<a href="<?php echo get_permalink(get_page_by_path('צור קשר'));?>"> אנא לחץ כאן</a></span></div>
 			</section>
 			<section class="clear">
 				<span class="lighticon"></span>
 				<div class="maincon"><h2>הצעות למערכת</h2>
-				<p>ההיתם רוצים לראות מותגים נוספים? יש לכם הצעות ייעול לשיפור החוויה באתר? אנא ידעו אותנו</p>
-				<span class="littel">לשלחית הצעתכם<a href="#"> אנא ליחצו כאן</a></span></div>
+				<p>הייתם רוצים לראות מותגים נוספים? יש לכם הצעות ייעול לשיפור החוויה באתר? אנא ידעו אותנו</p>
+				<span class="littel">לשלחת הצעתכם<a href="<?php echo get_permalink(get_page_by_path('צור קשר'));?>"> אנא ליחצו כאן</a></span></div>
 			</section>
 			
 		</div>

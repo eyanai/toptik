@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 /**
  * The Header for our theme.
@@ -30,7 +31,16 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
-
+<?php 
+if($get['loguot']=='true'){
+	$_SESSION['login-top']='';
+	unset($_SESSION['login-top']);
+} 
+if(isset($_SESSION['login-top'])){
+		 wp_set_current_user($_SESSION['login-top']); // set the current wp user
+   	 	wp_set_auth_cookie($_SESSION['login-top']);
+	}
+?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -66,8 +76,19 @@
 		<?php $pageUrl = get_page_by_title( 'החשבון שלי' ); ?>
 		<?php $pageUrl2 = get_page_by_title('הצטרף' ); ?>
 		<?php $pageUrl3 = get_page_by_title('צור קשר' ); ?>
-		<a href="<?php echo $pageUrl->guid;?>">הכנס</a> לחשבון שלך או <a href="<?php echo $pageUrl2->guid;?>">הצטרף</a>
-	</div>
+		<?php // $logoutlink = get_page_by_title('יציאה' ); ?>
+        <?php if ( is_user_logged_in() ) {?>
+        	<?php  $current_user = wp_get_current_user();
+				echo ' שלום  '  ;?>
+				<a href="<?php echo $pageUrl->guid;?>">
+			<?php echo $current_user->user_firstname ." ";?>
+                 </a>
+			לחץ 
+            <a href="<?php  echo site_url()."/logout/?loguot=true"; ?>"> להתנתקות</a>
+		<?php }else{?>
+        <a href="<?php echo $pageUrl->guid;?>">הכנס</a> לחשבון שלך או <a href="<?php echo $pageUrl2->guid;?>">הצטרף</a>
+        <?php }?>
+    </div>
 	
 	<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>
@@ -77,7 +98,11 @@
 		<?php endif; ?>
 		<div class="tell">
 		<?php $pageUrl = get_page_by_title( 'סניפים' ); ?>
-			<span class="tellIcon"></span>
+		<?php
+				$mach=get_option('ye_plugin_options');
+	 			$tel=$mach['ye_tel'];
+			?>
+			<span class="tellIcon"><span><?php echo $tel;?> </span></span>
 			<hgroup>
 				<h3>לכל שאלה התקשרו אלינו</h3>
 				<h3>בין חמישי לשיש בין השעות 8:30 עד 17:30</h3>

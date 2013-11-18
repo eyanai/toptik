@@ -626,8 +626,9 @@
                 this.currU += (this.destU - this.currU) / this.options.smoothMove;
                 this.currV += (this.destV - this.currV) / this.options.smoothMove;
 
-                this.zoomDiv.css('background-position', (-(this.currU >> 0) + 'px ') + (-(this.currV >> 0) + 'px'));
-            }
+                this.zoomDiv.css('background-position', (-(this.currU*2.5 >> 0) + 'px ') + (-(this.currV*2.5 >> 0) + 'px'));
+            //yanai chang the min file (-(this.currU >> 0) + 'px ') + (-(this.currV >> 0) + 'px')
+			}
 
             this.controlTimer = setTimeout(function () {
                 self._controlLoop();

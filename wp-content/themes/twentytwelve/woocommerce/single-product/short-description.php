@@ -52,7 +52,7 @@ global $post;
 			</script>	
 		</span>
 			<span class="socSpan fb">
-				<div class="fb-like" data-href="http://toptik.co.il.tigris.nethost.co.il/shop/luggage/%D7%9E%D7%96%D7%95%D7%95%D7%93%D7%94-tank-trolly-63cm-%D7%9E%D7%A0%D7%93%D7%A8%D7%99%D7%A0%D7%94-%D7%93%D7%90%D7%A7-mandarinaduck/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+				<div class="fb-like" data-href="<?php echo get_permalink( $post->ID ); ?>" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
 			</span>
 				
 					

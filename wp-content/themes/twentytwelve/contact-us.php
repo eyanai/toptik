@@ -22,6 +22,7 @@ get_header();
 	$contace=filter_input(INPUT_POST,'contace',FILTER_SANITIZE_STRING);
 	
 	 $headers = 'From:  <'.$email.'>' . "\r\n";
+	 $subj="נתקבל מייל מהאתר";
 
 	if(!$email){
 		  $mes='אימייל לא תיקני';
@@ -43,19 +44,20 @@ get_header();
 
 
 <section class="contactUs">
-<?php echo the_content();?>
-
+	<div class="contectText">
+	<?php echo the_content();?>
+	</div>
 
 <div class="contactForm">
-<?php if(!empty($mes)){echo "<span class=\"good\">".$mes."</span>";}?>
 
 	<form method="post" action="<?php $_SERVER['PHP_SELF'];?>">
+<?php if(!empty($mes)){echo "<span class=\"red\">".$mes."</span>";}?>
 		<label for="fullname"><span class="red">*</span> שם מלא</label>
-		<input name="fullname" type="text" required="required" id="fullname"><br>
+		<input name="fullname" type="text" required id="fullname"><br>
 		<label for="tel"><span class="red">*</span> טלפון</label>
 		<input type="tel" required name="tel"><br>
 		<label for="email"><span class="red">*</span> אימייל</label>
-		<input name="email" type="email" required="required" id="email"><br>
+		<input name="email" type="email" required id="email"><br>
 		<label for="contace"><span class="red">*</span> תוכן</label>
 		<textarea name="contace" required rows="20" cols="30" ></textarea>
 		<input type="submit" value="שלח" name="consub">

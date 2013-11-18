@@ -33,9 +33,11 @@ global $post, $woocommerce, $product;
 			<?php if ( $product->is_type( array( 'simple', 'variable' ) ) && get_option( 'woocommerce_enable_sku' ) == 'yes' && $product->get_sku() ) : ?>
 		<span itemprop="productID" class="sku_wrapper"><?php _e( 'SKU:', 'woocommerce' ); ?> <span class="sku"><?php echo $product->sku(); ?></span></span><br>
 	<?php endif; ?>
-
+		
 	
 	</div>	
+	
+	
 	<?php
 		if ( has_post_thumbnail() ) {
 

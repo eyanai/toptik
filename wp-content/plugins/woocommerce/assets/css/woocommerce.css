@@ -202,8 +202,8 @@ padding-right: 4px;
 	display: block;
 	width: 100%;
 	height: auto;
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
-	-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0px 2px 0 rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0px 2px 0 rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
 	-webkit-transition: all ease-in-out .2s;
 	-moz-transition: all ease-in-out .2s;
@@ -1076,8 +1076,7 @@ padding-right:1.2em
 .woocommerce table.shop_table th, .woocommerce-page table.shop_table th {
 	font-weight: bold;
 	line-height: 18px;
-	padding: 9px 12px
-}
+	padding: 9px 5px;}
 .woocommerce table.shop_table td, .woocommerce-page table.shop_table td {
 	border-top: 1px solid rgba(0,0,0,0.1);
 	padding: 6px;

@@ -1595,7 +1595,7 @@ img#wpstats {
 		white-space: nowrap;
 		border-bottom: 0;
 		color: #dbdbdb;
-		line-height: 3.692307692;
+		line-height: 49px;
 	
 		width: 90%;
 		display: block;
@@ -1625,7 +1625,7 @@ img#wpstats {
 		padding: 0;
 		position: absolute;
 		top: 100%;
-		z-index: 10;
+		z-index: 12000 !important;
 	}
 	.main-navigation li ul ul {
 		top: 0;
@@ -2142,11 +2142,16 @@ color:#abacac;
 	position: absolute;
 	top: 78px;
 	right: 0;
+	z-index: 50;
 }
-.fbLike{
-	position:absolute;
-	right: 107px;
-	top: 81px;
+.fbLike {
+position: absolute;
+left: 111px;
+top: 81px;
+margin-bottom: 45PX;
+overflow: visible;
+float: left;
+direction: ltr;
 }
 .twitLike{
 	position:absolute;
@@ -2178,6 +2183,9 @@ right: 0px;
 position: absolute;
 bottom: 0px;
 height: 45px;
+}
+.menu-recommend-container a{
+	cursor:default;
 }
 #searchsubmit {
 width: 150px;
