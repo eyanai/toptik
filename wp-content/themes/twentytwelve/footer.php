@@ -45,8 +45,8 @@
 			<div class="linkCats clear">
 			<?php
 			 wp_nav_menu(array('theme_location'  => 'linkrec','container'=> 'div','container_class' => 'linkMenu',));?>
-			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'מפת האתר' ))); ?>" class="proCatLink">מפת האתר</a> 
-			<?php 
+<?php /*?>			<a href="<?php echo esc_url( get_permalink( get_page_by_title( 'מפת האתר' ))); ?>" class="proCatLink">מפת האתר</a> 
+<?php */?>			<?php 
              //foreach( $product_categories as $cat ) { 
 			 //$tarmId=$cat->term_id;
 			 //$cate='product_cat';
@@ -87,10 +87,11 @@
 				<?php echo $tel;?>
 				</span>
 			</a>
+            <a href="http://www.cambium.co.il" class="devby">developed by </a>	
+
 			</section>
 			<?php wp_nav_menu( array( 'menu_class' => 'footer_nav_rec','menu'=>'recommend') ); ?>
 		</div><!-- .site-info -->
-			
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>

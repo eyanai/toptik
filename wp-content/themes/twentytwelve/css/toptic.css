@@ -3442,3 +3442,50 @@ font-size: 20px !important;
 ins .amount {
 font-size: 27px !important;
 }
+.linkMenu ul{
+    max-height: 205px;
+	overflow:hidden;
+}
+.linkMenu ul li{
+    display: block;
+    float: right;
+    width: 32%;
+    margin-left: 0.3%;
+	  line-height: 20px;
+}
+.linkMenu ul li a{
+	text-decoration:none;
+}
+.devby {
+float: left;
+text-decoration: none;
+background-image:url(../images/logo_cambium_convert.png);
+display: block;
+width: 178px;
+height: 50px;
+background-position: 59px -16px;
+background-repeat: no-repeat;
+background-size: 100px;
+text-align: left;
+line-height: 30px;
+position: absolute;
+top: 280px;
+left: 0px;
+}
+.userGhome {
+background: none no-repeat scroll 0 0 #1F1F1F !important;
+border-radius: 35px 35px 35px 35px;
+bottom: 10px !important;
+color: #01AFE4 !important;
+font-size: 0.95em;
+font-weight: bolder;
+height: 30px !important;
+width: 115px !important;
+padding: 0;
+text-decoration: none;
+float: left;
+text-align: center;
+line-height: 30px;
+position: relative;
+z-index: 10;
+}

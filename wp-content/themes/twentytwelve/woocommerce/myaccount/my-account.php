@@ -16,7 +16,7 @@ global $woocommerce, $current_user;
 
 
 $all=get_currentuserinfo();
-var_dump($current_user);
+//var_dump($current_user);
 $user_ID = get_current_user_id();
 //var_dump(get_user_meta($user_ID));
  //echo $user_ID;
@@ -94,6 +94,9 @@ if(isset($_POST['passSub'])){
 $woocommerce->show_messages(); ?>
 
 <p class="myaccount_user">
+
+<a href="<?php echo site_url();?>" class="userGhome">להמשך קנייה</a>
+
 	<?php
 	/*printf(
 		__( 'Hello, <strong>%s</strong>. From your account dashboard you can view your recent orders, manage your shipping and billing addresses and <a href="%s">change your password</a>.', 'woocommerce' ),
